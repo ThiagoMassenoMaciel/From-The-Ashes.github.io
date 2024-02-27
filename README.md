@@ -1,35 +1,34 @@
-# `<From The Ashes>`
 ![](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/blob/versionONE/logo%20jogo.png)
 
 * Link do jogo: [https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io.git]()
 
-## Motivação
+# Motivação
 
 É aplicar os conceitos que venho aprendendo durante minha jornada acadêmica desenvolvendo um jogo como trabalho da disciplina ESTÁGIO SUPERVISIONADO I.
 
-## Objetivo
+# Objetivo
 
 O score é adquirido quando consegue passar de fase e o objetivo do jogo é passar a maior quantidade de níveis em menor tempo.
 
-## Valor Agregado
+# Valor Agregado
 
 Aprender a como transformar a minha ideia em uma abstração expressada em um jogo. O diferencial é a quebra de padrão em relação aos níveis onde a lógica das fases passadas pelo jogador
 não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou difícil deixando a depender qual modo da fase1 o jogo escolheu 
 aleatóriamente 
 
 
-## Fases
+# Fases
 Serão 3 fases . No decorrer que a pessoa for passando não vai aumentar o nível de dificuldade pois o próprio jogo escolhe o modo da fase: fácil , médio ou difícil aleatoriamente
 
 inicialmente o jogador escolhe se dejeja jogar em qual sessão
 
 cada sessão corresponde a um tempo cronometrado com limite para passar nas 3 fases 
 
-## tipos de sessão 
-# noob
+# tipos de sessão 
+## noob
 Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 3 minutos
 
-# pro
+## pro
 Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
 | a musica de fundo vai ser diferente em cada fase |
