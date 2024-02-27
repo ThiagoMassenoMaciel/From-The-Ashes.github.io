@@ -55,8 +55,7 @@ Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador começa a jogar e qu
 | Difícil      | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
 
 ## Esquema de Pontuação
-
-Em cada fase o jogador receberá um score à medida que acertar uma maior quantidade de comandos com a melhor precisão. No entanto, se errar uma quantidade de comandos considerável, será eliminado da fase.
+O score vai ser de acordo com a quantidade de fases passadas pelo jogador por minuto
 
 ## versão 1.0
 | Precisão | Score |
@@ -76,8 +75,15 @@ Em cada fase o jogador receberá um score à medida que acertar uma maior quanti
 | Passar 6 fases em 1 minuto | 80 pts |
 | Passar 6 fases em 1 minuto | 80 pts |
 
-Para ser eliminado, o jogador deve errar 50% dos elementos.
-Chega-se ao fim da fase quando acabar a música. O score será contabilizado então.
+# Game over
+#### Sessão noob
+                        se a pessoa não conseguir passar em alguma fase no tempo de 3 minutos.
+#### Sessão pro
+                        se a pessoa não conseguir passar em alguma fase no tempo de 1 minutos.
+#### Online
+                        aqui não tem game over 
+# #######Placares########
+ver ter um diferente para cada sessão
 
 ## Requisitos
 
