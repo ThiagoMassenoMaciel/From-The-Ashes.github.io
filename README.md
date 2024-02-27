@@ -39,9 +39,9 @@ Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
 | Fases | Descrição |
 | ----- | ----------- |
-| 1     | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. A musica de fundo vai ser da banda Crypta - rise from the ashes e o instrumento vai ser o som de uma guitarra|
-| 2     | A segunda fase do jogo se passará em um ambiente de verão, com a música "Não dá pra não pensar", e terá a velocidade de descida dos comandos igual a 2. |
-| 3     | A terceira fase do jogo se passará em um ambiente de outono, com a música "Quando você passa", e terá a velocidade de descida dos comandos igual a 3. |
+| 1     | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do laberinto vai seguir uma lógica de 5 colunas e 5 linhas .A musica de fundo vai ser da banda Crypta - rise from the ashes e o instrumento vai ser o som de uma guitarra|
+| 2     |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do laberinto vai seguir uma lógica de 10 colunas e 10 linhas .A musica de fundo vai ser da banda Lorna Shore - from the abyses e o instrumento vai ser o som de um baixo |
+| 3     | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .A musica de fundo vai ser da banda Suicid Silence - Unswered e o instrumento vai ser o som de bateria  |
 
 ## Esquema de Pontuação
 
