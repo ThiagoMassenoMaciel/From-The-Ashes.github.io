@@ -154,4 +154,4 @@ npm run build
 6. Vercel - Plataforma de Hospedagem e Implantação.
 
 
-27 fev - editando readme  - 40'
+27 fev - editando readme  - 70'
