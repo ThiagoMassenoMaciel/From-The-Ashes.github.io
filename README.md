@@ -25,10 +25,10 @@ inicialmente o jogador escolhe se dejeja jogar em qual sessão
 cada sessão corresponde a um tempo cronometrado com limite para passar nas 3 fases 
 
 # tipos de sessão 
-## noob
+## #Noob
 Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 3 minutos
 
-## pro
+## #Pro
 Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
 ### isso era pra ser uma tabela
@@ -37,11 +37,19 @@ Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 | fundo musical | a musica de fundo vai ser diferente em cada fase |
 | teclado       | Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
 
+| Modo de fase | Descrição |
+| ----- | ----------- |
+| Fácil    | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do laberinto vai seguir uma lógica de 5 colunas e 5 linhas .|
+| Médio     |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do laberinto vai seguir uma lógica de 10 colunas e 10 linhas . |
+| Difícil    | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
+
+
+
 | Fases | Descrição |
 | ----- | ----------- |
-| 1     | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do laberinto vai seguir uma lógica de 5 colunas e 5 linhas .A musica de fundo vai ser da banda Crypta - rise from the ashes e o instrumento vai ser o som de uma guitarra|
-| 2     |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do laberinto vai seguir uma lógica de 10 colunas e 10 linhas .A musica de fundo vai ser da banda Lorna Shore - from the abyses e o instrumento vai ser o som de um baixo |
-| 3     | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .A musica de fundo vai ser da banda Suicid Silence - Unswered e o instrumento vai ser o som de bateria  |
+| 1     | A musica de fundo vai ser da banda Crypta - rise from the ashes e o instrumento vai ser o som de uma guitarra|
+| 2     |A musica de fundo vai ser da banda Lorna Shore - from the abyses e o instrumento vai ser o som de um baixo|
+| 3     | A musica de fundo vai ser da banda Suicid Silence - Unswered e o instrumento vai ser o som de bateria |
 
 ## Esquema de Pontuação
 
