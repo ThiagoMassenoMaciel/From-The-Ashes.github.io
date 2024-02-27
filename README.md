@@ -1,6 +1,6 @@
 ![](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/blob/versionONE/logo%20jogo.png)
 
-* Link do jogo: [https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io.git]()
+* Link do jogo: [https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io.git]() 
 
 # Motivação
 
