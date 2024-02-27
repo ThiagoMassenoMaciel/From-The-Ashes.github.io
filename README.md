@@ -31,10 +31,11 @@ Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 3 minutos
 ## pro
 Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
+### isso era pra ser uma tabela
 | Descriçao 1   | Descrição 2 |
+| ------------- | ----------- |
 | fundo musical | a musica de fundo vai ser diferente em cada fase |
-| toques        | Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
-
+| teclado       | Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
 
 | Fases | Descrição |
 | ----- | ----------- |
