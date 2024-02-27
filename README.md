@@ -1,5 +1,5 @@
 # `<From The Ashes>`
-![Uploading logo jogo.png…]()
+![](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/blob/versionONE/logo%20jogo.png)
 
 * Link do jogo: [https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io.git]()
 
@@ -32,13 +32,13 @@ Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 3 minutos
 # pro
 Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
-| Fases | Descrição |
 | a musica de fundo vai ser diferente em cada fase |
 |Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
+
+
+| Fases | Descrição |
 | ----- | ----------- |
 | 1     | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. A musica de fundo vai ser da banda Crypta - rise from the ashes e o instrumento vai ser o som de uma guitarra|
-
---
 | 2     | A segunda fase do jogo se passará em um ambiente de verão, com a música "Não dá pra não pensar", e terá a velocidade de descida dos comandos igual a 2. |
 | 3     | A terceira fase do jogo se passará em um ambiente de outono, com a música "Quando você passa", e terá a velocidade de descida dos comandos igual a 3. |
 
