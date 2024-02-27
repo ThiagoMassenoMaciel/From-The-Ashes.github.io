@@ -33,24 +33,26 @@ Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador começa a jogar e qu
 
 # Esquema de fases
 
+#### Som
 | Descriçao 1   | Descrição 2 |
 | ------------- | ----------- |
 | fundo musical | a musica de fundo vai ser diferente em cada fase |
 | teclado       | Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
-
-| Modo de fase | Descrição |
-| ------------ | ----------- |
-| Fácil        | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do laberinto vai seguir uma lógica de 5 colunas e 5 linhas .|
-| Médio        |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do laberinto vai seguir uma lógica de 10 colunas e 10 linhas . |
-| Difícil      | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
-
-
+            --
 
 | Fases | Descrição |
 | ----- | ----------- |
 | 1     | A musica de fundo vai ser da banda Crypta - rise from the ashes e o instrumento vai ser o som de uma guitarra|
 | 2     |A musica de fundo vai ser da banda Lorna Shore - from the abyses e o instrumento vai ser o som de um baixo|
 | 3     | A musica de fundo vai ser da banda Suicid Silence - Unswered e o instrumento vai ser o som de bateria |
+
+
+#### Modo de jogo
+| Modo de fase | Descrição |
+| ------------ | ----------- |
+| Fácil        | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do laberinto vai seguir uma lógica de 5 colunas e 5 linhas .|
+| Médio        |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do laberinto vai seguir uma lógica de 10 colunas e 10 linhas . |
+| Difícil      | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
 
 ## Esquema de Pontuação
 
