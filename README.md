@@ -31,8 +31,7 @@ Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 3 minutos
 ## pro
 Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
-| a musica de fundo vai ser diferente em cada fase |
-|Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
+| a musica de fundo vai ser diferente em cada fase |Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
 
 
 | Fases | Descrição |
@@ -45,11 +44,23 @@ Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
 Em cada fase o jogador receberá um score à medida que acertar uma maior quantidade de comandos com a melhor precisão. No entanto, se errar uma quantidade de comandos considerável, será eliminado da fase.
 
+## versão 1.0
 | Precisão | Score |
 | ----- | ----------- |
-| Entre 90% e 100% | 10 pts |
-| Entre 50% e 89%     | 5 pts |
-| Abaixo de 50%      | 0 pts |
+| Passar 1 fases em 1 minuto | 1 pts |
+| Passar 2 fases em 1 minuto | 5 pts |
+| Passar 3 fases em 1 minuto | 10 pts |
+
+## versão 2.0
+| Precisão | Score |
+| ----- | ----------- |
+| Passar 1 fases em 1 minuto | 1 pts |
+| Passar 2 fases em 1 minuto | 5 pts |
+| Passar 3 fases em 1 minuto | 10 pts |
+| Passar 4 fases em 1 minuto | 20 pts |
+| Passar 5 fases em 1 minuto | 40 pts |
+| Passar 6 fases em 1 minuto | 80 pts |
+| Passar 6 fases em 1 minuto | 80 pts |
 
 Para ser eliminado, o jogador deve errar 50% dos elementos.
 Chega-se ao fim da fase quando acabar a música. O score será contabilizado então.
