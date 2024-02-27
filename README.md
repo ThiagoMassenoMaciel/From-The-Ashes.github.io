@@ -38,7 +38,6 @@ Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador começa a jogar e qu
 | ------------- | ----------- |
 | fundo musical | a musica de fundo vai ser diferente em cada fase |
 | teclado       | Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
-            --
 
 | Fases | Descrição |
 | ----- | ----------- |
