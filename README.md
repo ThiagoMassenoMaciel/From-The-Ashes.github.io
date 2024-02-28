@@ -14,12 +14,11 @@ O score é adquirido quando consegue passar de fase e o objetivo do jogo é pass
 
 Aprender a como transformar a minha ideia em uma abstração expressada em um jogo. O diferencial é a quebra de padrão em relação aos níveis onde a lógica das fases passadas pelo jogador
 não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou difícil deixando a depender qual modo da fase o jogo escolheu 
-aleatóriamente 
+aleatóriamente .
 
 # Fases
-Serão 3 fases . No decorrer que a pessoa for passando não vai aumentar o nível de dificuldade pois o próprio jogo escolhe o modo da fase: fácil , médio ou difícil aleatoriamente
-inicialmente o jogador escolhe em qual sessão deseja jogar 
-cada sessão corresponde a um tempo cronometrado com limite para passar nas 3 fases 
+Serão 3 fases . No decorrer que a pessoa for passando não vai aumentar o nível de dificuldade pois o próprio jogo escolhe o modo da fase: fácil , médio ou difícil aleatoriamente.
+Inicialmente o jogador escolhe em qual sessão deseja jogar.Cada sessão corresponde a um tempo cronometrado com limite para passar nas 3 fases .
 
 # tipos de sessão 
 ## #Noob
@@ -29,7 +28,7 @@ Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 3 minutos
 Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
 ## #Online
-Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador começa a jogar e quando passar as 3 fases o tempo demorado vai aparecer num hanking . diferentes jogadores com diferentes tempo vai  ser hankeado . Ordem 1º é aquele que tiver o menor tempo e maior fase passada
+Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador fica jogando até o tempo que ele quiser sem limite de fases predefinido e o tempo demorado vai aparecer num hanking comparando com outras pessoas . diferentes jogadores com diferentes tempo vai  ser hankeado . Ordem 1º é aquele que tiver o menor tempo e mais fases passadas
 
 # Esquema de fases
 
@@ -49,9 +48,12 @@ Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador começa a jogar e qu
 #### Modo de jogo
 | Modo de fase | Descrição |
 | ------------ | ----------- |
-| Fácil        | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do laberinto vai seguir uma lógica de 5 colunas e 5 linhas .|
-| Médio        |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do laberinto vai seguir uma lógica de 10 colunas e 10 linhas . |
+| Fácil        | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do labirinto vai seguir uma lógica de 5 colunas e 5 linhas .|
+![facil](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/803502c6-e5d7-4459-82e0-d335bdf2a9f3)
+| Médio        |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do labirinto vai seguir uma lógica de 10 colunas e 10 linhas . |
+![medio](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/726132a6-8473-431b-98d3-c838e02649c1)
 | Difícil      | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
+![dificil](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/1e689988-16ae-4b78-bcd6-496075e51608)
 
 ## Esquema de Pontuação
 O score vai ser de acordo com a quantidade de fases passadas pelo jogador por minuto
@@ -59,9 +61,9 @@ O score vai ser de acordo com a quantidade de fases passadas pelo jogador por mi
 ## versão 1.0
 | Precisão | Score |
 | ----- | ----------- |
-| Passar 1 fases em 1 minuto | 1 pts |
-| Passar 2 fases em 1 minuto | 5 pts |
-| Passar 3 fases em 1 minuto | 10 pts |
+| Passar 1 fase em no máximo 1 minuto | 1 pts |
+| Passar 2 fases em no máximo 1 minuto | 5 pts |
+| Passar 3 fases em no máximo 1 minuto | 10 pts |
 
 ## versão 2.0
 | Precisão | Score |
@@ -76,11 +78,12 @@ O score vai ser de acordo com a quantidade de fases passadas pelo jogador por mi
 
 # Game over
 #### Sessão noob
-                        se a pessoa não conseguir passar em alguma fase no tempo de 3 minutos.
+                        se a pessoa não conseguir passar em alguma fase no tempo de 3 minutos vai dar game over para o jogador.
 #### Sessão pro
-                        se a pessoa não conseguir passar em alguma fase no tempo de 1 minutos.
+                        se a pessoa não conseguir passar em alguma fase no tempo de 1 minutos vai dar game over para o jogador.
 #### Online
-                        aqui não tem game over 
+                        aqui não tem game over pois é o jogador que decide o tempo
+                        
 # #######Placares########
 vai ter um diferente para cada sessão
 
@@ -108,8 +111,7 @@ vai ter um diferente para cada sessão
 6. `Som`
    editar as musicas pelo app [tirando vocal e deixando so a trilha sonora]{https://youtu.be/Hj5f2JnbPgQ?si=QOxwRU_ks5ajmBzE}
    minha ideia é fazer misturado DEIXAR A MAIORIA DA MUSICA SO O INSTRUMENTAL e alguns trechos de instrumental mais o vocal
-   Músicas ["[Rise from the ashes]{}", "[Of the abyses (pro)]{https://youtu.be/IhoKdEx2pjI?si=A9ZgfJrEF-vyPXXl}", "[Unswered]{https://youtu.be/G9DGjGot5do?si=5gFXOVx9kAx29XsX}"];
-   outras[terror](https://youtu.be/gV3uMuGwQF0?si=-Fb5e0R28ZLaPr0j) {[terror](https://youtu.be/zVqBpsTuPLc?si=d-9eseNop9b4d4La)} [pro]{https://youtu.be/lugARKhBtX4?si=BR-6e_S6aZuw8d8W}
+   Músicas ["[Rise from the ashes](https://youtu.be/rvYn45PfdcY?si=gKt0P_zg8uU7RtOp)", "[Of the abyses (pro)](https://youtu.be/IhoKdEx2pjI?si=A9ZgfJrEF-vyPXXl)", "[Unswered](https://youtu.be/G9DGjGot5do?si=5gFXOVx9kAx29XsX)",  outras[terror](https://youtu.be/gV3uMuGwQF0?si=-Fb5e0R28ZLaPr0j), [terror](https://youtu.be/zVqBpsTuPLc?si=d-9eseNop9b4d4La) [pro](https://youtu.be/lugARKhBtX4?si=BR-6e_S6aZuw8d8W)"]
    ;
 
 ### Personas
