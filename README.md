@@ -88,40 +88,36 @@ ver ter um diferente para cada sessão
 
 ### Épicos/Funcionalidades
 
-1. `Menu Inicial`
+1. `Home inicial`
    Tutorial;
-   Iniciar;
-   Placar geral;
+   Começar;
+   Placares;
    Créditos
-2. `Seleção de Personagem`
-   Personagem 1: Sandy;
-   Personagem 2: Junior;
-3. `Seleção da fase`
-   Fase Primavera;
-   Fase Verão;
-   Fase Outono;
-   Fase Inverno;
-4. `Placar geral`
-   TOP 10 jogagores com maior score: Nome do jogador (3 letras - Fase jogada);
-5. `Créditos`
+2. `Seleção de Sessão`
+   Sessão 1: Pro;
+   Sessão 2: Noob;
+3. `Placares`
+   Pro
+   TOP 3 jogagores com maior score: Nome do jogador (10 letras - Tempo concluido as 3 fases);
+4. `Créditos`
    Créditos;
-6. `Fases`
-   Cenário de cada fase;
-   Elementos de comando;
-   Músicas ["As quatro estações", "Não dá pra não pensar", "Quando você passa", "Vâmo pulá"];
-   Personagem tocando;
+5. `Fases`
+   Cenário de cada modo de jogo padronizado;
+   Sons de toque e de trilha sonora diferente de acordo com a fase
+   Quantidade de vezes clicado no botão enter ;
+   Músicas ["Rise from the ashes", "Of the abyses", "Unswered"];
+   ;
 
 ### Personas
 
-1. **`<Jogador#1>`** - `<Irá selecionar o personagem Sandy e jogar o jogo.>`.
-2. **`<Jogador#2>`** - `<Irá selecionar o personagem Junior e jogar o jogo.>`.
+1. **`<Jogador#1>`** - `<o mesmo>
 
 ## Protótipos de Tela
 
 ![Diagrama](Diagrama.drawio.png)
 
 ## Instalação
-
+----------------pedaço a fazer 
 Valide se tem [Node.js](https://nodejs.org) instalado.
 
 Clone esse repositório e entre na pasta
@@ -154,3 +150,4 @@ npm run build
 
 
 27 fev - editando readme  - 70'
+28 fev - editando readme  - 10'
