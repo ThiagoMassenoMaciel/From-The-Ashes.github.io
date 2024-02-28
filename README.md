@@ -13,7 +13,7 @@ O score é adquirido quando consegue passar de fase e o objetivo do jogo é pass
 # Valor Agregado
 
 Aprender a como transformar a minha ideia em uma abstração expressada em um jogo. O diferencial é a quebra de padrão em relação aos níveis onde a lógica das fases passadas pelo jogador
-não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou difícil deixando a depender qual modo da fase1 o jogo escolheu 
+não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou difícil deixando a depender qual modo da fase o jogo escolheu 
 aleatóriamente 
 
 # Fases
