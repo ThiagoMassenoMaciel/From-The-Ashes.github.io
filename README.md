@@ -82,7 +82,7 @@ O score vai ser de acordo com a quantidade de fases passadas pelo jogador por mi
 #### Online
                         aqui não tem game over 
 # #######Placares########
-ver ter um diferente para cada sessão
+vai ter um diferente para cada sessão
 
 ## Requisitos
 
@@ -105,7 +105,11 @@ ver ter um diferente para cada sessão
    Cenário de cada modo de jogo padronizado;
    Sons de toque e de trilha sonora diferente de acordo com a fase
    Quantidade de vezes clicado no botão enter ;
-   Músicas ["Rise from the ashes", "Of the abyses", "Unswered"];
+6. `Som`
+   editar as musicas pelo app [tirando vocal e deixando so a trilha sonora]{https://youtu.be/Hj5f2JnbPgQ?si=QOxwRU_ks5ajmBzE}
+   minha ideia é fazer misturado DEIXAR A MAIORIA DA MUSICA SO O INSTRUMENTAL e alguns trechos de instrumental mais o vocal
+   Músicas ["[Rise from the ashes]{}", "[Of the abyses (pro)]{https://youtu.be/IhoKdEx2pjI?si=A9ZgfJrEF-vyPXXl}", "[Unswered]{https://youtu.be/G9DGjGot5do?si=5gFXOVx9kAx29XsX}"];
+   outras[terror](https://youtu.be/gV3uMuGwQF0?si=-Fb5e0R28ZLaPr0j) {[terror](https://youtu.be/zVqBpsTuPLc?si=d-9eseNop9b4d4La)} [pro]{https://youtu.be/lugARKhBtX4?si=BR-6e_S6aZuw8d8W}
    ;
 
 ### Personas
@@ -150,4 +154,4 @@ npm run build
 
 
 27 fev - editando readme  - 70'
-28 fev - editando readme  - 10'
+28 fev - editando readme e escolhendo as musicas - 50'
