@@ -154,6 +154,16 @@ npm run build
 5. Firebase - Banco de Dados para armazenar o ranking;
 6. Vercel - Plataforma de Hospedagem e Implantação.
 
+# Detalhes de implementação
+EMVEZ DE SER AS TECLAS 
+    ArrowUp    ^
+    ArrouDown  v
+    ArrowLeft  <
+    ArrowRight <
+    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER COM INTERVALO DE 1 SEGUNDO PARA EMITIR OUTRO MOVIMENTO
+        exemplo se a pessoa apertou2 vezes e deixou ocioso por 1 segundo , proxima tecla apertada fara parte de outro MOVIMENTO
+#
 
 27 fev - editando readme  - 70'
 28 fev - editando readme e escolhendo as musicas - 50'
+
