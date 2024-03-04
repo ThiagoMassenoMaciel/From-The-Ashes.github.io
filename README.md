@@ -160,12 +160,12 @@ EMVEZ DE SER AS TECLAS
     ArrouDown  v
     ArrowLeft  <
     ArrowRight <
-    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER COM INTERVALO DE 1 SEGUNDO PARA EMITIR OUTRO MOVIMENTO
+    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER COM INTERVALO DE miliSEGUNDO PARA EMITIR OUTRO MOVIMENTO
         exemplo se a pessoa apertou2 vezes e deixou ocioso por 1 segundo , proxima tecla apertada fara parte de outro MOVIMENTO
 #
 
 27 fev - editando readme  - 70'
 28 fev - editando readme e escolhendo as musicas - 50'
 3 mar  - 4h30' entendendo o exemplo do [Ansiwiz](https://youtube.com/playlist?list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&si=BRRccQ-yDsZSClVp)
-4 mar  - 2h20' entendnedo o resto do Ansiwiz
+4 mar  - 2h35' entendnedo o resto do Ansiwiz
 
