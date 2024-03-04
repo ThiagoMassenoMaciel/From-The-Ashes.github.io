@@ -166,4 +166,6 @@ EMVEZ DE SER AS TECLAS
 
 27 fev - editando readme  - 70'
 28 fev - editando readme e escolhendo as musicas - 50'
+3 mar  - 4h30' entendendo o exemplo do [Ansiwiz](https://youtube.com/playlist?list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&si=BRRccQ-yDsZSClVp)
+4 mar  - 2h20' entendnedo o resto do Ansiwiz
 
