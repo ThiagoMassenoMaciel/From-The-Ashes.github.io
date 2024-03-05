@@ -4,10 +4,9 @@
 
 
 montar matriz com zeros e ums
-trnasformar matriz em labirinto
-# 
-1  1  1  1  1  1  1
-1  0  0  0  1  0  1 
+transformar matriz em labirinto
+### 1  1  1  1  1  1  1
+### 1  0  0  0  1  0  1 
 
 
 
