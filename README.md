@@ -211,11 +211,11 @@ npm run build
 
 #
 
-###27 fev - editando readme  - 70'
-###28 fev - editando readme e escolhendo as musicas - 50'
-###3 mar  - 4h30' entendendo o exemplo do [Ansiwiz](https://youtube.com/playlist?list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&si=BRRccQ-yDsZSClVp)
-###4 mar  - 2h35' entendnedo o resto do Ansiwiz
-###5 mar  - 1h    mudando regras do jogo no readme
-###5 mar  - 2h20' fazendo as telas no [figma](https://www.figma.com/file/aMpp40Pn8cx7nd4LXMELJt/Untitled?type=design&node-id=0%3A1&mode=design&t=VNGBI0FCcMe1pED6-1)
+### 27 fev - editando readme  - 70'
+### 28 fev - editando readme e escolhendo as musicas - 50'
+### 3 mar  - 4h30' entendendo o exemplo do [Ansiwiz](https://youtube.com/playlist?list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&si=BRRccQ-yDsZSClVp)
+### 4 mar  - 2h35' entendnedo o resto do Ansiwiz
+### 5 mar  - 1h    mudando regras do jogo no readme
+### 5 mar  - 2h20' fazendo as telas no [figma](https://www.figma.com/file/aMpp40Pn8cx7nd4LXMELJt/Untitled?type=design&node-id=0%3A1&mode=design&t=VNGBI0FCcMe1pED6-1)
 
 
