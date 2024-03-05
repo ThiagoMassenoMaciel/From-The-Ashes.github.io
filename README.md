@@ -30,6 +30,12 @@ Inicialmente o jogador escolhe em qual sessão deseja jogar.Cada sessão corresp
 
 
 ## #Online
+O hanking é daquele jogador que completou todos os labirintos em menos tempo. E vai subir no hanking
+
+uma inteligencia artificial que reconheça os fonemas  
+
+
+
 Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador fica jogando até o tempo que ele quiser sem limite de fases predefinido e o tempo demorado vai aparecer num hanking comparando com outras pessoas . diferentes jogadores com diferentes tempo vai  ser hankeado . Ordem 1º é aquele que tiver o menor tempo e mais fases passadas
 
 # Esquema de fases
