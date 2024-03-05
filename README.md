@@ -120,18 +120,18 @@ vai ter um diferente para cada fase e a ordem vai ser baseado em quem passou o l
 
 
 # Detalhes de implementação do movimento
-EMVEZ DE SER AS TECLAS 
-    ArrowUp    ^
-    ArrouDown  v
-    ArrowLeft  <
-    ArrowRight <
-    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER
-    Apertado 1 vez    - o jogador vai se mover para cima
-    2 vezes           - vai se mover para esquerda
-    3 vezes           - vai se mover para direita
-    4 vezes           - vai se mover para baixo
+#### EMVEZ DE SER AS TECLAS 
+####    ArrowUp    ^
+####    ArrouDown  v
+####    ArrowLeft  <
+####    ArrowRight <
+####    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER
+####    Apertado 1 vez    - o jogador vai se mover para cima
+####    2 vezes           - vai se mover para esquerda
+####    3 vezes           - vai se mover para direita
+####    4 vezes           - vai se mover para baixo
     
-    exemplo se a pessoa apertou 2 vezes e deixou ocioso por 1 segundo , proxima tecla apertada fara parte de outro MOVIMENTO
+####    exemplo se a pessoa apertou 2 vezes e deixou ocioso por 1 segundo , proxima tecla apertada fara parte de outro MOVIMENTO
     
 ## Requisitos
 O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking
@@ -218,5 +218,6 @@ npm run build
 ### 4 mar  - 2h35' entendnedo o resto do Ansiwiz
 ### 5 mar  - 1h    mudando regras do jogo no readme
 ### 5 mar  - 2h20' fazendo as telas no [figma](https://www.figma.com/file/aMpp40Pn8cx7nd4LXMELJt/Untitled?type=design&node-id=0%3A1&mode=design&t=VNGBI0FCcMe1pED6-1)
+### 5 mar  - 31'   fazendo o protótipo das telas 
 
 
