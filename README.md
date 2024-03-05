@@ -174,7 +174,8 @@ Para ganhar escore o jogador deve passar no mínimo em um labirinto em no máxim
 
 ## Protótipos de Tela
 
-![Diagrama](Diagrama.drawio.png)
+![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/f1fe526a-0165-48a6-be74-3a5fc7848cbb)
+
 
 ## Instalação
 ----------------pedaço a fazer 
