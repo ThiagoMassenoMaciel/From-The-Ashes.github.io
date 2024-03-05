@@ -2,6 +2,15 @@
 
 * Link do jogo: [https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io.git]() 
 
+
+montar matriz com zeros e ums
+trnasformar matriz em labirinto
+# 
+1  1  1  1  1  1  1
+1  0  0  0  1  0  1 
+
+
+
 # Motivação
 
 É aplicar os conceitos que venho aprendendo durante minha jornada acadêmica desenvolvendo um jogo como trabalho da disciplina ESTÁGIO SUPERVISIONADO I. Eu tive a ideia do jogo aleatoriamente e gostaria de descobir como ela vai ser aplicada.
@@ -27,6 +36,7 @@ o jogador deve concluir as 3 labirintos com o tempo limite de 2 minutos
 Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 3 minutos
 
 Inicialmente o jogador escolhe em qual sessão deseja jogar.Cada sessão corresponde a um tempo cronometrado com limite para passar nas 3 fases .
+uma api que identifica os fonemas som 
 
 
 ## #Online
