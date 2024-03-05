@@ -25,22 +25,21 @@ Aprender a como transformar a minha ideia em um jogo. O diferencial é a quebra 
 não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou dificil .
 
 # Estilo 
+O jogador escolhe o estilo de jogo : concorrer com outros jogadores online ou concluindo as fases
 
 ## #Fases
 Vai ter as fases para o jogador jogar . E cada fase vai ter uma quantidade de labirintos para ser passado e o tempo limite.
 
 ## #Online
-Aqui o jogador deve passar em todos os labirintos em menos tempo e concorrerá com outros jogadores. O hanking é daquele jogador que completou todos os labirintos em menos tempo. E vai subir no hanking quem passar todos os labirintos em menos tempo.
+Aqui o jogador deve passar em todos os labirintos em menos tempo e concorrerá com outros jogadores. Aquele jogador que completou todos os labirintos em menos tempo vai subir no sua posição no hanking.
 
 # Fases
 
 ## 1 
-Será 2 labirinto .O labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil
-o jogador deve concluir o labirinto com o tempo limite de 2 minutos
+Será 2 labirinto .O labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil o jogador deve concluir o labirinto com o tempo limite de 2 minutos
 
 ## 2 
-Serão 3 labirintos . E cada labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil
-o jogador deve concluir os 2 labirintos com o tempo limite de 2 minutos
+Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente o jogador deve concluir os 2 labirintos com o tempo limite de 2 minutos
 
 ## 3 
 Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 2 minutos
@@ -72,17 +71,34 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 ![dificil](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/1e689988-16ae-4b78-bcd6-496075e51608)
 
 ## Esquema de Pontuação
-O score vai ser de acordo com a quantidade de fases passadas pelo jogador por minuto
+O score vai ser de acordo com a quantidade de labirintos passadas pelo jogador por minuto
 
 ## versão 1.0
 | Precisão | Score |
 | ----- | ----------- |
-| Passar 1 fase no tempo <= 1 minuto | 1 pts |
-| Passar 2 fases no tempo <= 1 minuto | 5 pts |
-| Passar 3 fases no tempo <= 1 minuto | 10 pts |
+| Passar 1 labirinto no tempo <= 1 minuto | 1 pts |
+| Passar 2 labirintos no tempo <= 1 minuto | 5 pts |
+| Passar 3 labirintos no tempo <= 1 minuto | 10 pts |
 
 ## versão 2.0
 | Precisão | Score |
+| ----- | ----------- |
+| Passar 1 fases em 1 minuto | 1 pts |
+| Passar 2 fases em 1 minuto | 5 pts |
+| Passar 3 fases em 1 minuto | 10 pts |
+| Passar 4 fases em 1 minuto | 20 pts |
+| Passar 5 fases em 1 minuto | 40 pts |
+| Passar 6 fases em 1 minuto | 80 pts |
+| Passar 6 fases em 1 minuto | 80 pts |
+
+## versão 3.0
+o jogador vai jogar em grupo de 3 jogadores juntos em tempo real, passando pelos mesmos labirintos e a pontuação do grupo vai ser a pontuação individual somada neste irei incluir outro tipo de pontuação que vai ser baseado no labirinto que foi passado facil = +1 ponto , medio = +2 pontos , dificil = +3 pontos
+
+| Precisão | Score |
+| ----- | ----------- |
+| Passar 1 labirinto fácil | 1 pts |
+| Passar 1 labirinto médio | 2 pts |
+| Passar 1 labirinto dificil | 3 pts |
 | ----- | ----------- |
 | Passar 1 fases em 1 minuto | 1 pts |
 | Passar 2 fases em 1 minuto | 5 pts |
@@ -102,7 +118,25 @@ O score vai ser de acordo com a quantidade de fases passadas pelo jogador por mi
 # #######Placares########
 vai ter um diferente para cada fase e a ordem vai ser baseado em quem passou o labirinto mais rápido
 
+
+# Detalhes de implementação do movimento
+EMVEZ DE SER AS TECLAS 
+    ArrowUp    ^
+    ArrouDown  v
+    ArrowLeft  <
+    ArrowRight <
+    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER
+    Apertado 1 vez    - o jogador vai se mover para cima
+    2 vezes           - vai se mover para esquerda
+    3 vezes           - vai se mover para direita
+    4 vezes           - vai se mover para baixo
+    
+    exemplo se a pessoa apertou 2 vezes e deixou ocioso por 1 segundo , proxima tecla apertada fara parte de outro MOVIMENTO
+    
 ## Requisitos
+O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking
+Para aparecer no hanking a pessoa tem que estar entre os top 3 melhores
+Para ganhar escore o jogador deve passar no mínimo em um labirinto em no máximo 1 minuto
 
 ### Épicos/Funcionalidades
 
@@ -112,20 +146,23 @@ vai ter um diferente para cada fase e a ordem vai ser baseado em quem passou o l
    Placares;
    Créditos
 
-2. `Seleção do jogo `
+2. `Criação de usuário`
+  Aqui o jogador escolhe o nome dele
   
-3. `Seleção de Fase`
+3. `Seleção do estilo do jogo `
+   Fases;
+   Online;
+4. `Seleção de Fase`
    As fases vão ler liberadas no decorrer que a pessoa for passando .
-4. `Placares`
-   Pro
-   TOP 3 jogagores com maior score: Nome do jogador (10 letras - Tempo concluido as 3 fases);
-5. `Créditos`
+5. `Placares`
+   Cada estilo de jogo tera seu hanking das 3 melhores  pontuações
+   TOP 3 jogagores com maior score: Nome do jogador (10 letras - Tempo concluido os labirintos);
+6. `Créditos`
    Créditos;
-6. `Fases`
-   Cenário de cada modo de jogo padronizado;
-   Sons de toque e de trilha sonora diferente de acordo com a fase
-   Quantidade de vezes clicado no botão enter ;
-7. `Som`
+7. `Fases`
+   Os labirintos muda com o modo de jogo diferente : fácil , médio ou difícil;
+   Sons de toque e de trilha sonora diferente de acordo com a fase e o movimento do jogador ;
+8. `Som`
    editar as musicas pelo app [tirando vocal e deixando so a trilha sonora]{https://youtu.be/Hj5f2JnbPgQ?si=QOxwRU_ks5ajmBzE}
    minha ideia é fazer misturado DEIXAR A MAIORIA DA MUSICA SO O INSTRUMENTAL e alguns trechos de instrumental mais o vocal
    Músicas ["[Rise from the ashes](https://youtu.be/rvYn45PfdcY?si=gKt0P_zg8uU7RtOp)", "[Of the abyses (pro)](https://youtu.be/IhoKdEx2pjI?si=A9ZgfJrEF-vyPXXl)", "[Unswered](https://youtu.be/G9DGjGot5do?si=5gFXOVx9kAx29XsX)",  outras[terror](https://youtu.be/gV3uMuGwQF0?si=-Fb5e0R28ZLaPr0j), [terror](https://youtu.be/zVqBpsTuPLc?si=d-9eseNop9b4d4La) [pro](https://youtu.be/lugARKhBtX4?si=BR-6e_S6aZuw8d8W)"]
@@ -171,18 +208,12 @@ npm run build
 5. Firebase - Banco de Dados para armazenar o ranking;
 6. Vercel - Plataforma de Hospedagem e Implantação.
 
-# Detalhes de implementação
-EMVEZ DE SER AS TECLAS 
-    ArrowUp    ^
-    ArrouDown  v
-    ArrowLeft  <
-    ArrowRight <
-    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER COM INTERVALO DE miliSEGUNDO PARA EMITIR OUTRO MOVIMENTO
-        exemplo se a pessoa apertou2 vezes e deixou ocioso por 1 segundo , proxima tecla apertada fara parte de outro MOVIMENTO
+
 #
 
 27 fev - editando readme  - 70'
 28 fev - editando readme e escolhendo as musicas - 50'
 3 mar  - 4h30' entendendo o exemplo do [Ansiwiz](https://youtube.com/playlist?list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&si=BRRccQ-yDsZSClVp)
 4 mar  - 2h35' entendnedo o resto do Ansiwiz
+5 mar  - 1h    mudando regras do jogo no readme
 
