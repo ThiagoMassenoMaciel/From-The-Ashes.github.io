@@ -217,5 +217,6 @@ npm run build
 ### 5 mar  - 1h    mudando regras do jogo no readme
 ### 5 mar  - 2h20' fazendo as telas no [figma](https://www.figma.com/file/aMpp40Pn8cx7nd4LXMELJt/Untitled?type=design&node-id=0%3A1&mode=design&t=VNGBI0FCcMe1pED6-1)
 ### 5 mar  - 31'   fazendo o protótipo das telas 
+### 5 mar  - 30'   desafio1
 
 
