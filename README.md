@@ -4,28 +4,30 @@
 
 # Motivação
 
-É aplicar os conceitos que venho aprendendo durante minha jornada acadêmica desenvolvendo um jogo como trabalho da disciplina ESTÁGIO SUPERVISIONADO I.
+É aplicar os conceitos que venho aprendendo durante minha jornada acadêmica desenvolvendo um jogo como trabalho da disciplina ESTÁGIO SUPERVISIONADO I. Eu tive a ideia do jogo aleatoriamente e gostaria de descobir como ela vai ser aplicada.
 
 # Objetivo
 
-O score é adquirido quando consegue passar de fase e o objetivo do jogo é passar a maior quantidade de níveis em menor tempo.
+É criar um jogo de labirinto , onde o jogador deve conseguir sair do labirinto achando a porta de saída. Objetivo do jogador é conseguir sair de varios labirintos em menos tempo.
 
 # Valor Agregado
 
-Aprender a como transformar a minha ideia em uma abstração expressada em um jogo. O diferencial é a quebra de padrão em relação aos níveis onde a lógica das fases passadas pelo jogador
-não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou difícil deixando a depender qual modo da fase o jogo escolheu 
-aleatóriamente .
+Aprender a como transformar a minha ideia em um jogo. O diferencial é a quebra de padrão em relação aos níveis onde a lógica das fases passadas pelo jogador
+não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou dificil .
 
-# Fases
-Serão 3 fases . No decorrer que a pessoa for passando não vai aumentar o nível de dificuldade pois o próprio jogo escolhe o modo da fase: fácil , médio ou difícil aleatoriamente.
+## Fase 1 
+Serão 1 labirinto .O labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio e dificil
+o jogador deve concluir o labirinto com o tempo limite de 2 minutos
+
+## Fase 2 
+Serão 3 labirintos . E cada labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio e dificil
+o jogador deve concluir as 3 labirintos com o tempo limite de 2 minutos
+
+## Fase 3 
+Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 3 minutos
+
 Inicialmente o jogador escolhe em qual sessão deseja jogar.Cada sessão corresponde a um tempo cronometrado com limite para passar nas 3 fases .
 
-# tipos de sessão 
-## #Noob
-Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 3 minutos
-
-## #Pro
-Esta sessão o jogador deve concluir as 3 fases com o tempo limite de 1 minutos
 
 ## #Online
 Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador fica jogando até o tempo que ele quiser sem limite de fases predefinido e o tempo demorado vai aparecer num hanking comparando com outras pessoas . diferentes jogadores com diferentes tempo vai  ser hankeado . Ordem 1º é aquele que tiver o menor tempo e mais fases passadas
