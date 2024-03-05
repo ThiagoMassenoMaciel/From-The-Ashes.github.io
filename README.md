@@ -24,29 +24,27 @@ trnasformar matriz em labirinto
 Aprender a como transformar a minha ideia em um jogo. O diferencial é a quebra de padrão em relação aos níveis onde a lógica das fases passadas pelo jogador
 não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou dificil .
 
-## Fase 1 
-Serão 1 labirinto .O labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio e dificil
-o jogador deve concluir o labirinto com o tempo limite de 2 minutos
+# Estilo 
 
-## Fase 2 
-Serão 3 labirintos . E cada labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio e dificil
-o jogador deve concluir as 3 labirintos com o tempo limite de 2 minutos
-
-## Fase 3 
-Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 3 minutos
-
-Inicialmente o jogador escolhe em qual sessão deseja jogar.Cada sessão corresponde a um tempo cronometrado com limite para passar nas 3 fases .
-uma api que identifica os fonemas som 
-
+## #Fases
+Vai ter as fases para o jogador jogar . E cada fase vai ter uma quantidade de labirintos para ser passado e o tempo limite.
 
 ## #Online
-O hanking é daquele jogador que completou todos os labirintos em menos tempo. E vai subir no hanking
+Aqui o jogador deve passar em todos os labirintos em menos tempo e concorrerá com outros jogadores. O hanking é daquele jogador que completou todos os labirintos em menos tempo. E vai subir no hanking quem passar todos os labirintos em menos tempo.
 
-uma inteligencia artificial que reconheça os fonemas  
+# Fases
 
+## 1 
+Será 2 labirinto .O labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil
+o jogador deve concluir o labirinto com o tempo limite de 2 minutos
 
+## 2 
+Serão 3 labirintos . E cada labirinto vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil
+o jogador deve concluir os 2 labirintos com o tempo limite de 2 minutos
 
-Esta sessão so vai ser da versao 2 do jogo .Aqui o jogador fica jogando até o tempo que ele quiser sem limite de fases predefinido e o tempo demorado vai aparecer num hanking comparando com outras pessoas . diferentes jogadores com diferentes tempo vai  ser hankeado . Ordem 1º é aquele que tiver o menor tempo e mais fases passadas
+## 3 
+Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 2 minutos
+
 
 # Esquema de fases
 
@@ -79,9 +77,9 @@ O score vai ser de acordo com a quantidade de fases passadas pelo jogador por mi
 ## versão 1.0
 | Precisão | Score |
 | ----- | ----------- |
-| Passar 1 fase em no máximo 1 minuto | 1 pts |
-| Passar 2 fases em no máximo 1 minuto | 5 pts |
-| Passar 3 fases em no máximo 1 minuto | 10 pts |
+| Passar 1 fase no tempo <= 1 minuto | 1 pts |
+| Passar 2 fases no tempo <= 1 minuto | 5 pts |
+| Passar 3 fases no tempo <= 1 minuto | 10 pts |
 
 ## versão 2.0
 | Precisão | Score |
@@ -95,15 +93,14 @@ O score vai ser de acordo com a quantidade de fases passadas pelo jogador por mi
 | Passar 6 fases em 1 minuto | 80 pts |
 
 # Game over
-#### Sessão noob
-                        se a pessoa não conseguir passar em alguma fase no tempo de 3 minutos vai dar game over para o jogador.
-#### Sessão pro
-                        se a pessoa não conseguir passar em alguma fase no tempo de 1 minutos vai dar game over para o jogador.
+#### Fases 1 2 3
+                        se a pessoa não conseguir passar em alguma labirinto no tempo de limite da fase vai dar game over para o jogador.
+
 #### Online
-                        aqui não tem game over pois é o jogador que decide o tempo
+                        aqui não tem game over 
                         
 # #######Placares########
-vai ter um diferente para cada sessão
+vai ter um diferente para cada fase e a ordem vai ser baseado em quem passou o labirinto mais rápido
 
 ## Requisitos
 
@@ -114,19 +111,21 @@ vai ter um diferente para cada sessão
    Começar;
    Placares;
    Créditos
-2. `Seleção de Sessão`
-   Sessão 1: Pro;
-   Sessão 2: Noob;
-3. `Placares`
+
+2. `Seleção do jogo `
+  
+3. `Seleção de Fase`
+   As fases vão ler liberadas no decorrer que a pessoa for passando .
+4. `Placares`
    Pro
    TOP 3 jogagores com maior score: Nome do jogador (10 letras - Tempo concluido as 3 fases);
-4. `Créditos`
+5. `Créditos`
    Créditos;
-5. `Fases`
+6. `Fases`
    Cenário de cada modo de jogo padronizado;
    Sons de toque e de trilha sonora diferente de acordo com a fase
    Quantidade de vezes clicado no botão enter ;
-6. `Som`
+7. `Som`
    editar as musicas pelo app [tirando vocal e deixando so a trilha sonora]{https://youtu.be/Hj5f2JnbPgQ?si=QOxwRU_ks5ajmBzE}
    minha ideia é fazer misturado DEIXAR A MAIORIA DA MUSICA SO O INSTRUMENTAL e alguns trechos de instrumental mais o vocal
    Músicas ["[Rise from the ashes](https://youtu.be/rvYn45PfdcY?si=gKt0P_zg8uU7RtOp)", "[Of the abyses (pro)](https://youtu.be/IhoKdEx2pjI?si=A9ZgfJrEF-vyPXXl)", "[Unswered](https://youtu.be/G9DGjGot5do?si=5gFXOVx9kAx29XsX)",  outras[terror](https://youtu.be/gV3uMuGwQF0?si=-Fb5e0R28ZLaPr0j), [terror](https://youtu.be/zVqBpsTuPLc?si=d-9eseNop9b4d4La) [pro](https://youtu.be/lugARKhBtX4?si=BR-6e_S6aZuw8d8W)"]
