@@ -165,8 +165,12 @@ Para ganhar escore o jogador deve passar no mínimo em um labirinto em no máxim
 7. `Som`
    editar as musicas pelo app [tirando vocal e deixando so a trilha sonora]{https://youtu.be/Hj5f2JnbPgQ?si=QOxwRU_ks5ajmBzE};
    minha ideia é fazer misturado DEIXAR A MAIORIA DA MUSICA SO O INSTRUMENTAL e alguns trechos de instrumental mais o vocal;
-   Músicas ["[Rise from the ashes](https://youtu.be/rvYn45PfdcY?si=gKt0P_zg8uU7RtOp)" essa musica no final dela onde aparece os agradecimentos tem uma trilha sonora que posso colocar no jogo enquanto o usuario fica nas telas ; "[Of the abyses (pro)](https://youtu.be/IhoKdEx2pjI?si=A9ZgfJrEF-vyPXXl)"; "[Unswered](https://youtu.be/G9DGjGot5do?si=5gFXOVx9kAx29XsX)"; outras[terror](https://youtu.be/gV3uMuGwQF0?si=-Fb5e0R28ZLaPr0j); [terror](https://youtu.be/zVqBpsTuPLc?si=d-9eseNop9b4d4La) [pro](https://youtu.be/lugARKhBtX4?si=BR-6e_S6aZuw8d8W)"];
-   ;
+   Músicas ["[Rise from the ashes](https://youtu.be/rvYn45PfdcY?si=gKt0P_zg8uU7RtOp)" essa musica no final dela onde aparece os agradecimentos tem uma trilha sonora que posso colocar no jogo enquanto o usuario fica nas telas ;
+   "[Of the abyses (pro)](https://youtu.be/IhoKdEx2pjI?si=A9ZgfJrEF-vyPXXl)";
+   "[Unswered](https://youtu.be/G9DGjGot5do?si=5gFXOVx9kAx29XsX)";
+   outras[terror](https://youtu.be/gV3uMuGwQF0?si=-Fb5e0R28ZLaPr0j);
+   [terror](https://youtu.be/zVqBpsTuPLc?si=d-9eseNop9b4d4La) ;
+   [pro](https://youtu.be/lugARKhBtX4?si=BR-6e_S6aZuw8d8W)"];
 
 ### Personas
 
