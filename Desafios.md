@@ -11,3 +11,5 @@
 ##### --SE o elemento for 0 isso significa que no labirinto vou adicionar um bloco-espaço que corresponde a linha e coluna deste elemento
 ##### ---chamar a função que coloca a imagem(bloco espaço) no canvas do jogador passando por parametro a linha e coluna deste elemento da matriz
 
+# Desafio 2 
+### 6 mar lógica para os movimentos do personagem dentro do labirinto
