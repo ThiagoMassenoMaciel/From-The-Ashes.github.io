@@ -1,0 +1,78 @@
+/*
+--------------contar quantas vezes foi clicado
+----------------------------------------------
+let contador_do_click = 0
+
+window.addEventListener('keydown', (event)=>{
+  if(event.key === 'Enter'){
+    contador_do_click +=1
+  }
+  print(`foi clicado ${contador_do_click} vezes`)
+ })
+
+
+
+--------------contar quantas vezes foi clicado
+--------------e disparar a ação
+----------------------------------------------   este aqui foi o ultimo teste que funcionou
+let contador_do_click = 0
+
+window.addEventListener('keydown', (event)=>{
+  if(event.key === 'Enter'){
+    contador_do_click +=1
+  }
+ 
+  if(contador_do_click === 1){
+    console.log("^")
+  }else if(contador_do_click === 2){
+    console.log(">")
+  }else if(contador_do_click === 3){
+    console.log("<")
+  }else if(contador_do_click === 4){
+    console.log("V")
+    contador_do_click = 0 // depois que fez a ação tem que zerar
+  }
+
+ })
+=====================================separando funcionalidades
+
+
+let contador_do_click = 0
+
+window.addEventListener('keydown', 
+    (event)=>{       
+      if(event.key === 'Enter'){    contador_do_click +=1 }  
+    }
+)
+
+function agir(count){
+    // antes de testar quantas vezes foi clicado tem que esperar
+  if(count === 1){
+    console.log("^")
+  }else if(count === 2){
+    console.log(">")
+  }else if(count === 3){
+    console.log("<")
+  }else if(count === 4){
+    console.log("V")
+    count = 0 // depois que fez a ação tem que zerar
+  }
+  
+}
+==================================== testando o set time out 
+
+let contador_do_click = 0
+
+window.addEventListener('keydown', (event)=>{
+  if(event.key === 'Enter'){
+    contador_do_click +=1
+  }
+  setTimeout( 
+    ()=>{  if(contador_do_click === 1){
+    console.log("^")
+  }}, 2000)
+
+ })
+
+
+*/
