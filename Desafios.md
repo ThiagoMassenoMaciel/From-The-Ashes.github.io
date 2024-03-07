@@ -13,7 +13,7 @@
 
 # Desafio 2  14h23-14h55   15h-15h21 
 ### 6 mar lógica para os movimentos do personagem dentro do labirinto
-no videio parei no segundo 
+no videio parei no segundo\n 
 fiz 1 click + esperei 2 segundos e num teve nada , então a minha ação é mover o personagem para cima
 fiz 1 click + antes de acabar os 2 segundos teve outro click
 
