@@ -227,5 +227,6 @@ npm run build
 ### 5 mar  - 31'   fazendo o protótipo das telas 
 ### 5 mar  - 30'   desafio1
 ### 6 mar  - 53'   desafio2
+### 7 mar  - 1h    desafio2
 
 
