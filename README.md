@@ -215,8 +215,14 @@ npm run build
 5. Firebase - Banco de Dados para armazenar o ranking;
 6. Vercel - Plataforma de Hospedagem e Implantação.
 
-
-#
+*
+| Atividade | prioridade |
+| ----- | ----------- |
+| Transformar matriz em labirinto     | não depende de outra atividade |
+| movimentos com o botão enter     | não depende de outra ativiade |
+| cronometro das fases | depende de outra atividade |
+| hanking das fases | depende de outras atividades |
+*
 
 ### 27 fev - editando readme  - 70'
 ### 28 fev - editando readme e escolhendo as musicas - 50'
