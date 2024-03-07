@@ -4,8 +4,6 @@
                         `<a href="https://www.fontspace.com/category/deathmetal"><img src="https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png" alt="Death Metal fonts"></a>`
 ###### Markdown for reddit and other forums.
                         `[![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)`
-
-[![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)
                         
 * Link do jogo: [https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io.git]() 
 # Motivação
@@ -66,6 +64,8 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 ![medio](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/726132a6-8473-431b-98d3-c838e02649c1)
 | Difícil      | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
 ![dificil](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/1e689988-16ae-4b78-bcd6-496075e51608)
+
+[![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)
 
 ## Esquema de Pontuação
 O score vai ser de acordo com a quantidade de labirintos passadas pelo jogador por minuto
@@ -180,6 +180,8 @@ Para ganhar escore o jogador deve passar no mínimo em um labirinto em no máxim
 
 ![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/f1fe526a-0165-48a6-be74-3a5fc7848cbb)
 
+
+[![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)
 
 ## Instalação
 ----------------pedaço a fazer 
