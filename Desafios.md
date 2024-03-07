@@ -14,26 +14,27 @@
 # Desafio 2  14h23-14h55   15h-15h21 
 ### 6 mar lógica para os movimentos do personagem dentro do labirinto
 no videio parei no segundo<br/>
-fiz 1 click + esperei 2 segundos e num teve nada , então a minha ação é mover o personagem para cima
-fiz 1 click + antes de acabar os 2 segundos teve outro click
+fiz 1 click + esperei 2 segundos e num teve nada , então a minha ação é mover o personagem para cima<br/>
+fiz 1 click + antes de acabar os 2 segundos teve outro click<br/>
+<br/>
+fiz 1 click + esperei 1.5 segundos  mais um click, então a minha ação é mover o personagem para direita<br/>
+<br/>
+fiz 1 click + antes de acabar os 2 segundos teve outros dois click , ação é mover o personagem para esquerda<br/>
+fiz 1 click + 1s mais um click + 0.5s mais outro click , a ação é mover o personagem para esquerda<br/>
+<br/>
+mas para saber quantos clicks, tenho que esperar passar os 2 segundos<br/>
+<br/>
+1º <br/>
+saber quanto tempo demora para clicar 4 vezes o botão enter<br/>
 
-fiz 1 click + esperei 1.5 segundos  mais um click, então a minha ação é mover o personagem para direita
-
-fiz 1 click + antes de acabar os 2 segundos teve outros dois click , ação é mover o personagem para esquerda
-fiz 1 click + 1s mais um click + 0.5s mais outro click , a ação é mover o personagem para esquerda
-
-
-mas para saber quantos clicks, tenho que esperar passar os 2 segundos
-1º saber quanto tempo demora para clicar 4 vezes o botão enter
-
-2º
+2º<br/>
 esperar ser clicado - e que este esperar n impesa o resto do código de continuar executando pois no proximo clique a função precisa ser executada de novo e o contador contabilizar novo click
-
-3º
-depois vou fazer o teste de quantas vezes foi clicado
-
-4º 
-acontecer a ação
-
-5º
-depois que aconteceu a ação tem que zerar o contador
+<br/>
+3º<br/>
+depois vou fazer o teste de quantas vezes foi clicado<br/>
+<br/>
+4º <br/>
+acontecer a ação<br/>
+<br/>
+5º<br/>
+depois que aconteceu a ação tem que zerar o contador<br/>
