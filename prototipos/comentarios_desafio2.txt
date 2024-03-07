@@ -73,6 +73,68 @@ window.addEventListener('keydown', (event)=>{
   }}, 2000)
 
  })
+============================================================================
+1º <br/>
+saber quanto tempo demora para clicar 4 vezes o botão enter<br/>
 
+let startTime = performance.now();
+minhaFuncao(); // <---- código medido entre startTime e endTime
+let endTime = performance.now();
+console.log(`A função levou ${endTime - startTime} milissegundos para executar.`);
 
+-------------------------n deu certo 
+let contador_do_click = 0
+
+let startTime = performance.now();
+console.log("começando")
+window.addEventListener('keydown', (event)=>{
+  if(event.key === 'Enter'){
+    contador_do_click +=1
+  }
+ 
+  if(contador_do_click === 1){
+    console.log("^")
+  }else if(contador_do_click === 2){
+    console.log(">")
+  }else if(contador_do_click === 3){
+    console.log("<")
+  }else if(contador_do_click === 4){
+    console.log("V")
+    contador_do_click = 0 // depois que fez a ação tem que zerar
+  }
+
+ })
+
+console.log("terminando")
+let endTime = performance.now();
+console.log(`A função levou ${endTime - startTime} milissegundos para executar.`);
+-------------------------------este deu certo----tempo em  teclas clicadas aproximadamente 1 milisegundo = 1 segundo------------
+devo colocar para começar a contar somente quando a função evento é chamada
+----------------------------------
+----------------------------------
+let contador_do_click = 0
+console.log("começando")
+let   startTime = performance.now();
+window.addEventListener('keydown', (event)=>{
+
+  if(event.key === 'Enter'){
+    contador_do_click +=1
+  }
+ 
+  if(contador_do_click === 1){
+    console.log("^")
+  }else if(contador_do_click === 2){
+    console.log(">")
+  }else if(contador_do_click === 3){
+    console.log("<")
+  }else if(contador_do_click === 4){
+    let endTime = performance.now();
+    console.log(`A função levou ${endTime - startTime} milissegundos para executar.`);
+    console.log("V")
+    contador_do_click = 0 // depois que fez a ação tem que zerar
+  }
+
+ })
+
+console.log("terminando")
 */
