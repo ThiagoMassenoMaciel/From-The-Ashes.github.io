@@ -1,4 +1,21 @@
-
+###### preparar ambiente para ir aprendendo o phaser 
+instalei o phaser pelo jeito npm<br/>
+  npm install phaser@v3.80.1<br/>
+<br/>
+  npm install node<br/>
+<br/>
+  npm install --global http-server - isto n fez abrir automaticamente um site<br/>
+<br/>
+  //apertei no botão live server <br/>
+<br/>
+// usar este comando toda vez que quizer executar o servidor web https://www.npmjs.com/package/http-server<br/>
+  npx http-server<br/>
+<br/>
+<br/>
+Set up webroot - o local para onde o servidor web esta olhando e poe isso no localhost no meu caso é o link  http://192.168.0.117:8080<br/>
+<br/>
+  add file index.html and copy from DOCUMENTACION  https://phaser.io/tutorials/getting-started-phaser3/part5 e execute npx http-server<br/>
+    ` `
 ![logo preta](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/77fae5f2-489c-41b6-8e6a-15b5b23d021f)
 ###### html
                         `<a href="https://www.fontspace.com/category/deathmetal"><img src="https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png" alt="Death Metal fonts"></a>`
