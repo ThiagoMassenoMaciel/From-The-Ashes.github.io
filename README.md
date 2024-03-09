@@ -1,6 +1,6 @@
 ###### preparar ambiente para ir aprendendo o phaser 
 instalei o phaser pelo jeito npm<br/>
-  npm install phaser@v3.80.1<br/>
+  `npm install phaser@v3.80.1`<br/>
 <br/>
   `npm install node`<br/>
 <br/>
