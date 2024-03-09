@@ -14,7 +14,7 @@ instalei o phaser pelo jeito npm<br/>
 <br/>
 Set up webroot - o local para onde o servidor web esta olhando e poe isso no localhost no meu caso é o link  http://192.168.0.117:8080<br/>
 <br/>
-  add file index.html and copy from DOCUMENTACION  https://phaser.io/tutorials/getting-started-phaser3/part5 e execute npx http-server<br/>
+  add file index.html and copy from DOCUMENTACION  https://phaser.io/tutorials/getting-started-phaser3/part5 <br/>e execute `npx http-server`<br/>
   
     ` `
 <br/>
