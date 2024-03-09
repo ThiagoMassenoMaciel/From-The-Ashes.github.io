@@ -1,4 +1,6 @@
-###### preparar ambiente para ir aprendendo o phaser 
+### Biblioteca com exemplos do [phaser](https://labs.phaser.io/)
+
+## preparar ambiente para ir aprendendo o phaser 
 instalei o phaser pelo jeito npm<br/>
   `npm install phaser@v3.80.1`<br/>
 <br/>
