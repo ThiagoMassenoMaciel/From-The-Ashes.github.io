@@ -261,5 +261,6 @@ npm run build
 ### 5 mar  - 30'   desafio1
 ### 6 mar  - 53'   desafio2
 ### 7 mar  - 1h    desafio2
+### 9 mar  - 3h28' praticando o exemplo do [ansiwiz](https://youtube.com/playlist?list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&si=BRRccQ-yDsZSClVp) para resolver o desafio1 - até vid 3
 
 
