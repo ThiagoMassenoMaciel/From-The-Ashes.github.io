@@ -2,14 +2,14 @@
 instalei o phaser pelo jeito npm<br/>
   npm install phaser@v3.80.1<br/>
 <br/>
-  npm install node<br/>
+  `npm install node`<br/>
 <br/>
-  npm install --global http-server  isto n fez abrir automaticamente um site<br/>
+  `npm install --global http-server`  isto n fez abrir automaticamente um site<br/>
 <br/>
   //apertei no botão live server <br/>
 <br/>
 // usar este comando toda vez que quizer executar o servidor web https://www.npmjs.com/package/http-server<br/>
-  npx http-server<br/>
+ ` npx http-server`<br/>
 <br/>
 <br/>
 Set up webroot - o local para onde o servidor web esta olhando e poe isso no localhost no meu caso é o link  http://192.168.0.117:8080<br/>
