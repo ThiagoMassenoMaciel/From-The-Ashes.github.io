@@ -223,7 +223,8 @@ npm run build
 | `cronometro das fases` | depende de outra atividade |
 | `hanking das fases` | depende de outras atividades |
 | `trocar cor do chão e parede do labirinto` | depende de outra atividade |
-| `trocar o burado de saída do labirinto de lugar` | depende de outra atividade |
+| `trocar o burado da saída do labirinto de lugar` | depende de outra atividade |
+| `cronometro p/ troca de cor e de buraco da saída`|  depende de outra atividade |
 *
 
 ### 27 fev - editando readme  - 70'
