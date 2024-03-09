@@ -245,7 +245,7 @@ npm run build
 | Atividade | prioridade |
 | ----- | ----------- |
 | `Transformar matriz em labirinto`     | não depende de outra atividade |
-| `movimentos com o botão enter`     | não depende de outra ativiade |
+| `A lógica dos movimentos com o botão enter`     | não depende de outra ativiade |
 | `cronometro das fases` | depende de outra atividade |
 | `hanking das fases` | depende de outras atividades |
 | `trocar cor do chão e parede do labirinto` | depende de outra atividade |
