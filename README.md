@@ -16,13 +16,12 @@ Set up webroot - o local para onde o servidor web esta olhando e poe isso no loc
 <br/>
   add file index.html and copy from DOCUMENTACION  https://phaser.io/tutorials/getting-started-phaser3/part5 <br/>e execute `npx http-server`<br/>
   
-    ` `
 <br/>
 ![logo preta](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/77fae5f2-489c-41b6-8e6a-15b5b23d021f)
 ###### html
-                        `<a href="https://www.fontspace.com/category/deathmetal"><img src="https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png" alt="Death Metal fonts"></a>`
+                        <a href="https://www.fontspace.com/category/deathmetal"><img src="https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png" alt="Death Metal fonts"></a>
 ###### Markdown for reddit and other forums.
-                        `[![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)`
+                        [![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)
                         
 * Link do jogo: [https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io.git]() 
 # Motivação
