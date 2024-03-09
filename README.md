@@ -4,7 +4,7 @@ instalei o phaser pelo jeito npm<br/>
 <br/>
   npm install node<br/>
 <br/>
-  npm install --global http-server - isto n fez abrir automaticamente um site<br/>
+  npm install --global http-server  isto n fez abrir automaticamente um site<br/>
 <br/>
   //apertei no botão live server <br/>
 <br/>
