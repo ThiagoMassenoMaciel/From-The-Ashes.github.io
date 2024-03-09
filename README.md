@@ -17,6 +17,9 @@ Set up webroot - o local para onde o servidor web esta olhando e poe isso no loc
   add file index.html and copy from DOCUMENTACION  https://phaser.io/tutorials/getting-started-phaser3/part5 <br/>e execute `npx http-server`<br/>
   
 <br/>
+<br/>
+<br/>
+<br/>
 
 
 
