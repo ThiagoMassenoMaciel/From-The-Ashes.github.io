@@ -23,8 +23,6 @@ Set up webroot - o local para onde o servidor web esta olhando e poe isso no loc
 <br/>
 <br/>
 
-
-
 ![logo preta](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/77fae5f2-489c-41b6-8e6a-15b5b23d021f)
 ###### html<br/>
                         <a href="https://www.fontspace.com/category/deathmetal"><img src="https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png" alt="Death Metal fonts"></a><br/>
@@ -253,8 +251,8 @@ npm run build
 | `cronometro p/ troca de cor e de buraco da saída`|  depende de outra atividade |
 *
 
-### 27 fev - editando readme  - 70'
-### 28 fev - editando readme e escolhendo as musicas - 50'
+### 27 fev - 70' editando readme 
+### 28 fev - 50' editando readme e escolhendo as musicas
 ### 3 mar  - 4h30' entendendo o exemplo do [Ansiwiz](https://youtube.com/playlist?list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&si=BRRccQ-yDsZSClVp)
 ### 4 mar  - 2h35' entendnedo o resto do Ansiwiz
 ### 5 mar  - 1h    mudando regras do jogo no readme
@@ -267,5 +265,7 @@ npm run build
 ### 10 mar - 1h  feito desafio1 com matriz fácil
 ### 10 mar - 2h30      desafio1 desenhando matriz média e dificil
 ### 10 mar - 1h46      desafio1 feito labirintos medium e dificil
+### 10 mar - 1h50      feito 4 labirintos medium
+### 10 mar - 2h        testando todos os labirintos
 
 

@@ -1,29 +1,30 @@
-class Tela3 extends Phaser.Scene{
+class Tela34 extends Phaser.Scene{
   constructor(){
-    super("playGameMedium")
+    super("34")
   }
 
   create(){
 
-    this.add.text(5,5, "tela 3", {font: "50px Arial" , fill: 'white'})
-    
+    this.add.text(5,5, "tela 34", {font: "50px Arial" , fill: 'white'})
+
     this.timer = this.add.image(config.width - 150 ,  100 ,"tempo")
     this.timer.setScale(0.6)
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
+
 
 //    Ponto de partida: Linha 0, Coluna 1
 //    Ponto final: Linha 9, Coluna 8
     let matrizes = []
     const medium_1 = 
     [
-        [0, 1, 1, 1, 0, 0, 0, 1, 1, 1],
-        [0, 0, 1, 0, 0, 1, 0, 1, 0, 1],
+        [0, 0, 0, 0, 0, 0, 0, 1, 1, 1],
+        [0, 1, 1, 1, 0, 1, 0, 1, 0, 1],
         [0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-        [0, 1, 0, 1, 0, 1, 1, 1, 0, 0],
-        [0, 1, 0, 1, 1, 1, 1, 1, 1, 1],
-        [1, 1, 0, 0, 1, 0, 1, 0, 0, 1],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 1, 0, 1, 0, 1, 0, 1, 0, 0],
+        [0, 1, 0, 1, 1, 1, 0, 1, 1, 1],
+        [1, 1, 0, 0, 1, 0, 0, 0, 0, 1],
+        [0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
         [1, 0, 1, 0, 0, 0, 1, 1, 1, 0],
         [1, 0, 1, 0, 1, 0, 0, 0, 1, 0],
         [1, 0, 0, 0, 1, 1, 1, 0, 0, 0]
@@ -92,7 +93,7 @@ class Tela3 extends Phaser.Scene{
     matrizes.push(medium_3)
     matrizes.push(medium_4)
 
-    let matriz_medium = matrizes[0]
+    let matriz_medium = matrizes[4]
 
     for (let linha = 0; linha < matriz_medium.length; linha++) {
     
@@ -115,13 +116,13 @@ class Tela3 extends Phaser.Scene{
         }
     
       }
-      console.log("----------------")
+      console.log("--------tela 34--------")
           
     }
+
+    console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n===========tela 33=========")
+    setTimeout( ()=>{ this.scene.start("playGameHard")}, 2000)
     
-    setTimeout( ()=>{this.scene.start("31")}, 2000)
-    console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n===========tela 3=========")
-  
   }
     
 }
