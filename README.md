@@ -264,5 +264,8 @@ npm run build
 ### 6 mar  - 53'   desafio2
 ### 7 mar  - 1h    desafio2
 ### 9 mar  - 3h28' praticando o exemplo do [ansiwiz](https://youtube.com/playlist?list=PLDyH9Tk5ZdFzEu_izyqgPFtHJJXkc79no&si=BRRccQ-yDsZSClVp) para resolver o desafio1 - até vid 3
+### 10 mar - 1h  feito desafio1 com matriz fácil
+### 10 mar - 2h30      desafio1 desenhando matriz média e dificil
+### 10 mar - 1h46      desafio1 feito labirintos medium e dificil
 
 
