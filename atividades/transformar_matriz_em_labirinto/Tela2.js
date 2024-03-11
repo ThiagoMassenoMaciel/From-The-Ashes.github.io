@@ -13,13 +13,60 @@ class Tela2 extends Phaser.Scene{
 
     //ponto inicial linha[1] coluna[0]
     //ponto final   linha[4] coluna[4]
-    const matriz = [
+     
+    const matrizes = []
+
+    const easy_0 = [
       [1 , 0 , 1 , 0 , 1],
       [0 , 1 , 0 , 0 , 0],
       [0 , 0 , 0 , 1 , 0],
       [0 , 1 , 0 , 0 , 1],
       [1 , 0 , 1 , 0 , 0]
     ]
+
+    //-------------------
+    const easy_1 = [ 
+      [0, 1, 1, 1, 0],
+      [1, 0, 0, 0, 1],
+      [1, 1, 1, 1, 1],
+      [1, 0, 1, 0, 1],
+      [0, 1, 1, 1, 0]
+    ]
+/*
+    Matriz 2:
+    
+    1 0 1 0 1
+    0 1 0 1 0
+    1 1 1 1 1
+    0 0 0 0 0
+    1 1 1 1 1
+    Matriz 3:
+    
+    1 0 1 0 0
+    0 1 0 1 1
+    1 0 0 0 1
+    0 1 0 1 0
+    1 0 1 0 1
+    Matriz 4:
+    
+    0 1 1 0 1
+    1 0 1 0 1
+    0 0 0 1 0
+    1 1 1 1 1
+    0 1 0 0 0
+    Matriz 5:
+    
+    1 1 1 1 1
+    0 1 0 0 0
+    1 1 1 0 1
+    0 0 0 1 0
+    1 0 1 0 1
+    //-------------------
+*/
+    matrizes.push(easy_0)
+    matrizes.push(easy_1)
+
+    const matriz = matrizes[1]
   
     for (let linha = 0; linha < matriz.length; linha++) {
     // quando eu for transformar este pedaço de código em uma função na hora de mudar a cor 
