@@ -18,7 +18,7 @@ class Tela2 extends Phaser.Scene{
       [0 , 1 , 0 , 0 , 0],
       [0 , 0 , 0 , 1 , 0],
       [0 , 1 , 0 , 0 , 1],
-      [1 , 1 , 1 , 0 , 0]
+      [1 , 0 , 1 , 0 , 0]
     ]
   
     for (let linha = 0; linha < matriz.length; linha++) {

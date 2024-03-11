@@ -1,11 +1,11 @@
-class Tela4 extends Phaser.Scene{
+class Tela41 extends Phaser.Scene{
   constructor(){
-    super("playGameHard")
+    super("41")
   }
 
   create(){ //5h 24' até 6h25
 
-    this.add.text(5,5, "tela hard_0", {font: "50px Arial" , fill: 'white'})
+    this.add.text(5,5, "tela hard_1", {font: "50px Arial" , fill: 'white'})
 
     this.timer = this.add.image(config.width - 150 ,  100 ,"tempo")
     this.timer.setScale(0.6)
@@ -142,7 +142,7 @@ class Tela4 extends Phaser.Scene{
     matrizes.push(hard_3)
     matrizes.push(hard_4)
 
-    const matriz_hard = matrizes[0]
+    const matriz_hard = matrizes[1]
 
     for (let linha = 0; linha < matriz_hard.length; linha++) {
     
@@ -168,7 +168,7 @@ class Tela4 extends Phaser.Scene{
       console.log("----------------")
           
     }
-    setTimeout( ()=>{ this.scene.start("41")}, 2000)
+    setTimeout( ()=>{ this.scene.start("42")}, 2000)
   }
     
 }
