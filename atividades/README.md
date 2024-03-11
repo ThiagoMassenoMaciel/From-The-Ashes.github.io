@@ -8,10 +8,13 @@
 | 6.`Animar o sprite do buraco de saída` | atv 5 | -- | -- | --|
 | 7.`Colisão do jogador com as paredes do labirinto` | -- | -- | -- | -- |
 | 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |
-| 9.`Movimento do personagem` | -- | -- | -- | se der muito problematalvez posso mudar para movimentar assim que move o mouse ou as setas mesmo |
+| 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo |
 | 10.`Escolher aleatoriamente o labirinto , modo de jogo randomico` | -- | -- | -- | não deixar aparecer uma fácil mais de uma vez na mesma fase |
 | 11.`trocar a cor do do chão pela parede` | -- | -- | -- | -- |
 | 12.`Mudar o buraco de canto`| -- | -- | -- | -- |
 | 12.`Ajeitar a organização de cada fase` | -- | -- | -- | -- |
 | 13.`Preparar os cronometros` | -- | -- | -- | -- | 
-| 14.`Organizar as fazes` | -- | -- | -- | separar e criar a funções paea cada fase |
+| 14.`Organizar as fases` | -- | -- | -- | separar e criar a funções para cada fase |
+| 15.`Hanking das fases e online` | atv 14 | Praticamente o grosso do jogo já tem que estar pronto | atv 16 | pode ser feito assim, quando o cronometro tiver 1 minutos eu calculo a pontuação |
+| 16. `Banco de dados`| -- | Escolher como vou fazer a pontuação se vou adicionar mais ponto de acordo com o modo de jogo ou se vai continuar o que tem la na tabela do readme principal do projeto| atv17 | escolher fazer este pedaço do back-end em JavaScript |
+| 17.`Integração com o BD`| atv 16| -- | -- | é neste pedaço que vou fazer , adicionar pontos , colocar o nivel que o jogador esta , incluir o tempo |
