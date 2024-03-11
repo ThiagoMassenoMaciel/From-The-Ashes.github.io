@@ -1,3 +1,11 @@
+Tempo livre
+
+10h - 12h
+14h-15h10
+
+
+
+
 | Atividade | dependente | Pré-condições | Pós-condições | detalhes |
 | :-------- | :--------: | :-----------: | :-----------: | -------: |
 | 1.`Criar 4 labirintos fácil` | -- | -- | -- | talvez eu escolha mudar facil de 5 linhas para 10 e medio para 15 |
