@@ -26,3 +26,4 @@ Tempo livre
 | 15.`Hanking das fases e online` | atv 14 | Praticamente o grosso do jogo já tem que estar pronto | atv 16 | pode ser feito assim, quando o cronometro tiver 1 minutos eu calculo a pontuação |
 | 16. `Banco de dados`| -- | Escolher como vou fazer a pontuação se vou adicionar mais ponto de acordo com o modo de jogo ou se vai continuar o que tem la na tabela do readme principal do projeto| atv17 | escolher fazer este pedaço do back-end em JavaScript |
 | 17.`Integração com o BD`| atv 16| -- | -- | é neste pedaço que vou fazer , adicionar pontos , colocar o nivel que o jogador esta , incluir o tempo |
+|30.`aumentar o tempo do cronometro usando coletaveis`|||| vai aparecer aleatoriamente um budget que aumenta o tempo da artida, precisa de 3 variaves (var 1 : tempo original - tempo limite para sair do labirinto) (var2 : tempo adicional - tempo adicionado pelo badget) (var 3: tempo final {})|
