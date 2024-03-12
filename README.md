@@ -270,7 +270,8 @@ npm run build
 ### 10 mar - 1h46      desafio1 feito labirintos medium e dificil
 ### 10 mar - 1h50      feito 4 labirintos medium
 ### 10 mar - 40'        testando todos os labirintos
-### 10 mar - 1h10'      feito 4 labirintos hard
-### 10 mar - 30'        montado o readme das atividades
+### 11 mar - 1h10'      feito 4 labirintos hard
+### 11 mar - 30'        montado o readme das atividades
+### 12 mar - 1h22       feito 4 labirintos facil e definido todos os pontos inicial e final
 
 
