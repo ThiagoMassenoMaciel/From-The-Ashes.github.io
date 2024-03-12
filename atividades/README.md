@@ -28,3 +28,4 @@ Tempo livre
 | 17.`Integração com o BD`| atv 16| -- | -- | é neste pedaço que vou fazer , adicionar pontos , colocar o nivel que o jogador esta , incluir o tempo |
 |30.`aumentar o tempo do cronometro usando coletaveis`|||| vai aparecer aleatoriamente um budget que aumenta o tempo da artida, precisa de 3 variaves (var 1 : tempo original - tempo limite para sair do labirinto) (var2 : tempo adicional - tempo adicionado pelo badget) (var 3: tempo final {})|
 |18.``||||
+| 20.`guardar posição do jogador quando eu mudar a  cor do labirinto`|||||
