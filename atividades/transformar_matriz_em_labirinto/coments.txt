@@ -1,3 +1,4 @@
+facil
 class Tela2 extends Phaser.Scene{
   constructor(){
     super("playGameEasy")
@@ -21,8 +22,56 @@ class Tela2 extends Phaser.Scene{
       [0 , 1 , 0 , 0 , 1],
       [1 , 0 , 1 , 0 , 0]
     ]
+
+    //-------------------
+    //ponto inicial linha[4] coluna[4]
+    //ponto final   linha[0] coluna[0]
+    const easy_1 = [ 
+      [0, 0, 0, 0, 0],
+      [1, 1, 1, 1, 0],
+      [0, 0, 0, 0, 0],
+      [0, 1, 1, 1, 1],
+      [0, 0, 0, 0, 0]
+    ]
+
+    //ponto inicial linha[2] coluna[2]
+    //ponto final   linha[0] coluna[1]
     
+    const easy_2 = [
+      [ 1, 0, 1, 0, 1],
+      [ 0, 0, 1, 1, 1],
+      [ 0, 1, 0, 0, 0],
+      [ 0, 1, 1, 1, 0],
+      [ 0, 0, 0, 0, 0]
+    ]
+
+    //ponto inicial linha[0] coluna[1]
+    //ponto final   linha[2] coluna[2]   
+
+    const easy_3 = [
+      [ 0, 0, 0, 0, 0],
+      [ 0, 1, 1, 1, 0],
+      [ 0, 1, 0, 1, 0],
+      [ 0, 1, 0, 0, 0],
+      [ 0, 0, 1, 0, 0],
+    ]
+
+    //ponto inicial linha[3] coluna[4]
+    //ponto final   linha[0] coluna[1]
+
+    const easy_4 = [    
+      [1, 0, 1, 0, 1],
+      [0, 0, 0, 1, 0],
+      [1, 0, 1, 0, 1],
+      [0, 0, 0, 0, 0],
+      [1, 0, 1, 0, 1]
+    ]
+
     matrizes.push(easy_0)
+    matrizes.push(easy_1)
+    matrizes.push(easy_2)
+    matrizes.push(easy_3)
+    matrizes.push(easy_4)
 
     const matriz = matrizes[0]
   
@@ -53,7 +102,7 @@ class Tela2 extends Phaser.Scene{
     }
   
   
-    setTimeout( ()=>{this.scene.start("21")}, 2000)
+    setTimeout( ()=>{this.scene.start("playGameMedium")}, 4000)
   }
     
 }

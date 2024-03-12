@@ -1,6 +1,6 @@
-class Tela2 extends Phaser.Scene{
+class Tela22 extends Phaser.Scene{
   constructor(){
-    super("playGameEasy")
+    super("22")
   }
 
   create(){
@@ -12,17 +12,20 @@ class Tela2 extends Phaser.Scene{
     this.button.setScale(0.6)
 
     const matrizes = []
-    //ponto inicial linha[1] coluna[0]
-    //ponto final   linha[4] coluna[4]
-    const easy_0 = [
-      [1 , 0 , 1 , 0 , 1],
-      [0 , 1 , 0 , 0 , 0],
-      [0 , 0 , 0 , 1 , 0],
-      [0 , 1 , 0 , 0 , 1],
-      [1 , 0 , 1 , 0 , 0]
-    ]
+
+
+    //ponto inicial linha[2] coluna[2]
+    //ponto final   linha[0] coluna[1]
     
-    matrizes.push(easy_0)
+    const easy_2 = [
+      [ 1, 0, 1, 0, 1],
+      [ 0, 0, 1, 1, 1],
+      [ 0, 1, 0, 0, 0],
+      [ 0, 1, 1, 1, 0],
+      [ 0, 0, 0, 0, 0]
+    ]
+
+    matrizes.push(easy_2)
 
     const matriz = matrizes[0]
   
@@ -53,7 +56,7 @@ class Tela2 extends Phaser.Scene{
     }
   
   
-    setTimeout( ()=>{this.scene.start("21")}, 2000)
+    setTimeout( ()=>{this.scene.start("23")}, 2000)
   }
     
 }

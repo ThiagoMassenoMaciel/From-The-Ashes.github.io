@@ -12,22 +12,7 @@ class Tela3 extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
 
-//    Ponto de partida: Linha 0, Coluna 1
-//    Ponto final: Linha 9, Coluna 8
     let matrizes = []
-    const medium_1 = 
-    [
-        [0, 1, 1, 1, 0, 0, 0, 1, 1, 1],
-        [0, 0, 1, 0, 0, 1, 0, 1, 0, 1],
-        [0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-        [0, 1, 0, 1, 0, 1, 1, 1, 0, 0],
-        [0, 1, 0, 1, 1, 1, 1, 1, 1, 1],
-        [1, 1, 0, 0, 1, 0, 1, 0, 0, 1],
-        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        [1, 0, 1, 0, 0, 0, 1, 1, 1, 0],
-        [1, 0, 1, 0, 1, 0, 0, 0, 1, 0],
-        [1, 0, 0, 0, 1, 1, 1, 0, 0, 0]
-    ]
 
 //    Ponto de partida: Linha[0], Coluna[1]
 //    Ponto final: Linha[6], Coluna[1]
@@ -42,49 +27,6 @@ class Tela3 extends Phaser.Scene{
       [1 , 0 , 1 , 0 , 0 , 0 , 1 , 1 , 1 , 0],
       [1 , 0 , 1 , 0 , 1 , 0 , 0 , 0 , 1 , 0],
       [1 , 0 , 0 , 0 , 1 , 1 , 1 , 0 , 0 , 0],
-    ]
-//    Ponto de partida: Linha[2] , Coluna[2]
-//     Ponto final: Linha [3], Coluna [0]
-    const medium_2 = [
-        [0, 1, 0, 0, 0, 0, 0, 1, 1, 0],
-        [0, 1, 1, 1, 0, 1, 0, 1, 0, 1],
-        [0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
-        [0, 1, 1, 1, 0, 1, 0, 1, 0, 0],
-        [0, 0, 0, 1, 1, 1, 0, 1, 1, 1],
-        [0, 1, 0, 0, 1, 0, 0, 0, 0, 1],
-        [0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
-        [1, 0, 1, 0, 0, 0, 1, 1, 1, 0],
-        [1, 0, 1, 0, 1, 0, 0, 0, 1, 0],
-        [0, 0, 0, 0, 1, 0, 1, 0, 0, 0]
-    ]
-//    Ponto de partida: Linha [5], Coluna [2]
-//    Ponto final: Linha [6], Coluna [9]
-    const medium_3 = [
-        [0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-        [0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
-        [0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
-        [0, 1, 0, 1, 1, 0, 0, 1, 0, 0],
-        [0, 1, 0, 1, 0, 1, 0, 1, 1, 0],
-        [0, 0, 0, 0, 1, 0, 0, 1, 0, 1], //
-        [0, 1, 1, 1, 1, 1, 0, 0, 1, 0],
-        [1, 0, 1, 0, 0, 0, 0, 1, 1, 0],
-        [0, 0, 1, 0, 1, 1, 1, 0, 1, 0],
-        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-    ]
-
-//    Ponto de partida: Linha [9], Coluna [7]
-//    Ponto final: Linha [0], Coluna [1]
-    const medium_4 =  [
-        [0, 0, 1, 0, 0, 0, 0, 1, 0, 1],
-        [0, 1, 1, 1, 0, 1, 0, 1, 1, 1],
-        [0, 0, 0, 1, 0, 1, 0, 0, 0, 1],
-        [1, 1, 0, 1, 0, 1, 0, 1, 0, 0],
-        [0, 1, 0, 1, 1, 1, 0, 1, 1, 0],
-        [1, 1, 0, 0, 0, 0, 0, 0, 1, 0],
-        [0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
-        [1, 0, 1, 0, 0, 0, 1, 1, 0, 1],
-        [1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
-        [1, 0, 0, 0, 1, 1, 1, 0, 1, 1]
     ]
 
 //    # Ponto de partida: linha 2, coluna 8
@@ -121,10 +63,6 @@ class Tela3 extends Phaser.Scene{
 
 
     matrizes.push(medium_0)
-    matrizes.push(medium_1)
-    matrizes.push(medium_2)
-    matrizes.push(medium_3)
-    matrizes.push(medium_4)
 
     let matriz_medium = matrizes[0]
 

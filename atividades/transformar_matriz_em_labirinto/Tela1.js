@@ -16,7 +16,7 @@ class Tela1 extends Phaser.Scene{
     this.load.image("placares", "../../assents/Placares.png")
     this.load.image("creditos", "../../assents/creditos.png")
   }
-
+  
   create(){
 
     this.add.text(500,500, "carregando jogo ... ", {font: "50px Arial" , fill: 'white'})
