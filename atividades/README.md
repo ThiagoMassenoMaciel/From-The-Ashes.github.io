@@ -8,7 +8,7 @@ Tempo livre
 
 | Atividade | dependente | Pré-condições | Pós-condições | detalhes |
 | :-------- | :--------: | :-----------: | :-----------: | -------: |
-| 1.`Criar 4 labirintos fácil` | -- | -- | -- | talvez eu escolha mudar facil de 5 linhas para 10 e medio para 15 |
+| 1.`Criar 4 labirintos fácil , e definier em todos labirintos ponto inicial e final` | -- | -- | -- | talvez eu escolha mudar facil de 5 linhas para 10 e medio para 15 |
 | 2.`Definir o limite do labirinto arrudiando com blocos parede` | atv 1 | -- | -- | criar nova imagem emvez de por bloco por bloco |
 | 3.`Adicionar o player dentro do labirinto` | atv 1,2 | -- | -- | este player é um sprite mais rapido preto e branco |
 | 4.`Animação do sprite do jogador` | atv 3 | -- | -- | tem que ter velocidade maior que a velocidade do buraco de saída |
