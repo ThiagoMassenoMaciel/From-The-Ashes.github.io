@@ -1,0 +1,3 @@
+para cada labirinto vou colocar uma imagem : borda lado dirento , borda lado esquerdo, borda lado de baixo ,
+  eu não consigo colocar borda em cima . por causa disso será que o personagem vai conseguir sair da boundries do labirinto ?
+    ou será que eu devo abaixar o labirinto para que eu consiga encanixar a borda de cima ?

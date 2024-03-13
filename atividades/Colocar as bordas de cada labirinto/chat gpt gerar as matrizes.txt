@@ -1,0 +1,26 @@
+perguntar ao chat gpt para ajudar a gerar as matrizes
+
+eu estou construindo um jogo de labirinto. O objetivo do jogo é o jogador encontrar um caminho da  saída , ou seja isso quer dizer que tem um ponto inicial onde o jogador esta e outro ponto final que é a saída do labirinto . A maneira como represento os diferentes labirintos é atravez de estruturas de dados chamado matriz . Esta matriz é composta por numeros 0 e 1 . Quando o elemento da matriz é um 0 isso representa um bloco de espaço do labirinto onde o jogador pode se mover sobre, quando o elemento da matriz é o numero 1 isso quer dizer que representa um bloco de parede e o jogador não pode passar por cima da parede, somente por cima dos blocos espaços . Os numeros zero e um representam o mapa do labirinto formado por blocos de espaço e blocos de pareide . A posiçao destes blocos no labirinto é a mesma representado pela linha e coluna de cada um dos elementos da matriz . esta matriz que estou falando tem 10 colunas e 10 linhas. Fica armazenado dentro de uma variavel assim : " const matriz_medium = [
+      [0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 1 , 1],
+      [0 , 1 , 1 , 1 , 0 , 1 , 0 , 1 , 0 , 1],
+      [0 , 1 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 1],
+      [0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 0],
+      [0 , 1 , 0 , 1 , 1 , 1 , 0 , 1 , 1 , 1],
+      [1 , 1 , 0 , 0 , 1 , 0 , 0 , 0 , 0 , 1],
+      [0 , 0 , 1 , 1 , 1 , 1 , 1 , 0 , 0 , 0],
+      [1 , 0 , 1 , 0 , 0 , 0 , 1 , 1 , 1 , 0],
+      [1 , 0 , 1 , 0 , 1 , 0 , 0 , 0 , 1 , 0],
+      [1 , 0 , 0 , 0 , 1 , 1 , 1 , 0 , 0 , 0],
+    ]" Perceba que se o jogador so poderá se mover em um caminho onde so tem bloco espaço , e tem chegar fim. Nesta matriz o ponto inicial do jogador é na linha com o indice 5 e coluna com indice 3, e ponto final é linha com indice 6 e coluna com indice 1 . eu quero que você gera para mim 10 matrizes que seguem a lógica de representação que acabei de te explicar . Lembrando que você deve especificar de qual linha e coluna é o ponto de partida do jogador , e claro , precisa especificar o ponto final
+
+eu quero que você gere 10 labirintos , diferentes entre si e que sejam na logica que eu expliquei
+
+
+pq você não criou matrizes diferentes ?
+
+
+você é burro ? eu pedi 10 labirintos em formato matriz de 10 linhas e 10 colunas com elementos 0 e 1 que sejam diferentes entre si , você fez o mesmo labirinto de 0 e 1 so mudou o ponto inicial e o ponto final . Corrija-se
+
+porque você não esta mudando os zeros e ums ?
+
+o ponto de partida e ponto final , tem que ser obrigatoriamente em um bloco espaço , logo não pode ter ponto de partida nem ponto final com a linha e coluna de um elemento de numero 1 , só de 0, reescreva todos os labirintos com este novo detalhe
