@@ -1,6 +1,7 @@
-# Para executar o pedaço feito entre nestas pastas deste repositorio
+# Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
 ![diretório](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/f0f7a9cb-481e-451a-988c-33a23c6c1760)
-## ou clique neste [link]()
+# ou clique neste [link](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/tree/versionONE/atividades/transformar_matriz_em_labirinto)
+<br/><br/><br/><br/><br/><br/>
 # Biblioteca com exemplos do [phaser](https://labs.phaser.io/)
 
 ## preparar ambiente para ir aprendendo o phaser 
@@ -85,9 +86,9 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 #### Modo de jogo
 | Modo de fase | Descrição |
 | ------------ | ----------- |
-| Fácil        | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do labirinto vai seguir uma lógica de 5 colunas e 5 linhas .|
+| Fácil        | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do labirinto vai seguir uma lógica de 5 colunas e 5 linhas . Talvez eu mude para 10 linhas e colunas|
 ![facil](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/803502c6-e5d7-4459-82e0-d335bdf2a9f3)
-| Médio        |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do labirinto vai seguir uma lógica de 10 colunas e 10 linhas . |
+| Médio        |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 10 segundos. As paredes do labirinto vai seguir uma lógica de 10 colunas e 10 linhas .  Talvez eu mude para 15 linhas e colunas|
 ![medio](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/726132a6-8473-431b-98d3-c838e02649c1)
 | Difícil      | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
 ![dificil](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/1e689988-16ae-4b78-bcd6-496075e51608)
@@ -270,7 +271,8 @@ npm run build
 ### 10 mar - 1h46      desafio1 feito labirintos medium e dificil
 ### 10 mar - 1h50      feito 4 labirintos medium
 ### 10 mar - 40'        testando todos os labirintos
-### 10 mar - 1h10'      feito 4 labirintos hard
-### 10 mar - 30'        montado o readme das atividades
+### 11 mar - 1h10'      feito 4 labirintos hard
+### 11 mar - 30'        montado o readme das atividades
+### 12 mar - 1h22       feito 4 labirintos facil e definido todos os pontos inicial e final
 
 
