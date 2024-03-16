@@ -3,6 +3,9 @@
 
 * Link do jogo: [https://4estacoesgame.vercel.app/](https://4estacoesgame.vercel.app/)
 
+## ideia da arturia
+#### colocar randomicamente um espaço dentro do labirinto que quando o jogador passar por ela ele vai aumentar o tempo limite do cronometro
+
 ## Motivação
 
 A motivação desse projeto é desenvolver um jogo para a disciplina de Estágio Supervisionado 1 da Uni7.
