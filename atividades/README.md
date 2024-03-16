@@ -14,6 +14,7 @@ Tempo livre
 | 4.`Animação do sprite do jogador` | atv 3 | -- | -- | tem que ter velocidade maior que a velocidade do buraco de saída |
 | 5.`Adicionar o buraco de saída no labirinto` | atv 1 | atv 5 | -- | mesmo sprite do jogador diferença é a velociade , mais lenta | 
 | 6.`Animar o sprite do buraco de saída` | atv 5 | -- | -- | --|
+| 6.0.`Ajeitar perfeitamente o jogador e saida cabendo dentro do bloco espaço sem engolhir pedaço` | atv 6 | -- | -- | --|
 | 6.1 `conseguir descobrir como vai colocar o sprite animado na posição do jogo ponto inicial e final` | -- | -- | -- | -- |
 | 6.2 `colocar jogador e saida em suas devidas posições inicial e final em cada labirinto` | -- | -- | -- | -- |
 | 7.`Colisão do jogador com as paredes do labirinto` | -- | -- | -- | -- |
