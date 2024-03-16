@@ -26,11 +26,12 @@ class Tela1 extends Phaser.Scene{
     this.load.spritesheet("achou_saida", "../../assents/AchadoSaida-16px-16px-5-frames.png", { frameWidth: 16, frameHeight: 16 });
 
   }
-  
+
   create(){
 
     this.add.text(500,500, "carregando jogo ... ", {font: "50px Arial" , fill: 'white'})
     setTimeout( ()=>{this.scene.start("playGameEasy")}, 200)
+     
     
   }
 }

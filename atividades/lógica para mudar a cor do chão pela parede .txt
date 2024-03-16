@@ -1,0 +1,14 @@
+so vou fazer esta parte depois que eu ja tiver a logica da função que vai primeiro trocar de lugar os elementos da matriz .
+
+
+
+contador_de_vezes_que_foi_trocado = 1
+
+enquanto o tempo não acabar( eu posso simbolizar enquanto o tempo não acabou a flag == true e quando o tempo acabar a flag vai ser false)
+
+  repetir isso 
+
+  se o contador for impar 
+    espero 10 segundos ( executo a função para trocar de cor -----o chão fica preto e a parede fica branca--- acresentar o contador dentro da função que muda de cor )
+  se for par 
+    espero 10 segundos ( executo a função para trocar de cor -----o chão volta branco e a parede volta preta--- acresentar o contador dentro da função que muda de cor )

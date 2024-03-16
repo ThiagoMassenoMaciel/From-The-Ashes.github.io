@@ -55,7 +55,6 @@ class Tela2 extends Phaser.Scene{
           
     }
   
-    //setTimeout( ()=>{this.scene.start("21")}, 2000)
 
     // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz
     // tamanho da largura do canvas / 3 , volto para esquerda 80 pixel , e volto para esquerda o tamanho da largura da borda para ela ficar delimitando fora do labirinto
@@ -120,6 +119,8 @@ class Tela2 extends Phaser.Scene{
       //executando animação
     this.jogador.play("jogador_anims")
    
+
+    setTimeout( ()=>{this.scene.start("21")}, 4000)
   }
     
 }

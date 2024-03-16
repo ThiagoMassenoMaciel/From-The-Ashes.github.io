@@ -56,7 +56,7 @@ class Tela32 extends Phaser.Scene{
           
     }
     console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n===========tela 32=========")   
-    setTimeout( ()=>{this.scene.start("33")}, 2000)
+    setTimeout( ()=>{this.scene.start("33")}, 4000)
 
     // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz
     // tamanho da largura do canvas / 3 , volto para esquerda 80 pixel , e volto para esquerda o tamanho da largura da borda para ela ficar delimitando fora do labirinto
@@ -71,7 +71,57 @@ class Tela32 extends Phaser.Scene{
     this.borda_bottom.setOrigin(0,0)
     this.borda_bottom.rotation = - Math.PI / 2; // aqui é para deitar o pixel
     
-  
+
+
+
+    // ponto inicial e final
+    // colunaI = coluna do ponto incial
+    // linhaI  = linha do ponto inicial
+    const linhaI = 2
+    const colunaI = 2
+    // ponto  final
+    // colunaF = coluna do ponto incial
+    // linhaF  = linha do ponto inicial
+    const linhaF = 3
+    const colunaF = 0
+
+    this.saida = this.add.sprite( colunaF * 60 + (config.width/3) - 78.5  , ( linhaF * 60 ) + 0.5,"saidaa")
+    this.saida.setOrigin(0,0)
+    this.saida.setScale(0.14925)
+
+    //animando o sprite saida
+    this.anims.create( {
+
+      key: "saidaa_anims",
+      
+      frames: this.anims.generateFrameNumbers("saidaa"),
+      
+      frameRate: 4,
+      
+      repeat: -1
+      
+    })
+      //executando animação
+    this.saida.play("saidaa_anims")
+
+    this.jogador = this.add.sprite(colunaI * 60 + (config.width/3) - 78.5  ,  (linhaI * 60 ) + 0.5,"jogador")
+    this.jogador.setOrigin(0,0)
+    this.jogador.setScale(0.14925)
+
+    
+    console.log("até aqui funcionou ?")
+    //animando o sprite teste = jogador
+    this.anims.create( {
+
+      key: "jogador_anims",
+      frames: this.anims.generateFrameNumbers("jogador"),
+      frameRate: 25,
+      repeat: -1
+      
+    })
+
+      //executando animação
+    this.jogador.play("jogador_anims")
   }
     
 }

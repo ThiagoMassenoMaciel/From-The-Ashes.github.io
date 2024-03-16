@@ -12,24 +12,23 @@ class Tela34 extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
 
-
 //    Ponto de partida: Linha 0, Coluna 1
 //    Ponto final: Linha 9, Coluna 8
     let matrizes = []
 
-//    Ponto de partida: Linha [9], Coluna [7]
+//    Ponto de partida: Linha [9], Coluna [7] ---------- escolhi este 
 //    Ponto final: Linha [0], Coluna [1]
     const medium_4 =  [
-        [0, 0, 1, 0, 0, 0, 0, 1, 0, 1],
-        [0, 1, 1, 1, 0, 1, 0, 1, 1, 1],
-        [0, 0, 0, 1, 0, 1, 0, 0, 0, 1],
-        [1, 1, 0, 1, 0, 1, 0, 1, 0, 0],
-        [0, 1, 0, 1, 1, 1, 0, 1, 1, 0],
-        [1, 1, 0, 0, 0, 0, 0, 0, 1, 0],
-        [0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
-        [1, 0, 1, 0, 0, 0, 1, 1, 0, 1],
-        [1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
-        [1, 0, 0, 0, 1, 1, 1, 0, 1, 1]
+        [ 0, 0, 1, 0, 0, 0, 0, 1, 0, 1],
+        [ 0, 1, 1, 1, 0, 1, 0, 1, 1, 1],
+        [ 0, 0, 0, 1, 0, 1, 0, 0, 0, 1],
+        [ 1, 1, 0, 1, 0, 1, 0, 1, 0, 0],
+        [ 0, 1, 0, 1, 1, 1, 0, 1, 1, 0],
+        [ 1, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+        [ 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
+        [ 1, 0, 1, 0, 0, 0, 1, 1, 0, 1],
+        [ 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
+        [ 1, 0, 0, 0, 1, 1, 1, 0, 1, 1]
     ]
 
     matrizes.push(medium_4)
@@ -62,7 +61,7 @@ class Tela34 extends Phaser.Scene{
     }
 
     console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n===========tela 33=========")
-    setTimeout( ()=>{ this.scene.start("playGameHard")}, 2000)
+    setTimeout( ()=>{ this.scene.start("playGameHard")}, 4000)
   
     // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz
     // tamanho da largura do canvas / 3 , volto para esquerda 80 pixel , e volto para esquerda o tamanho da largura da borda para ela ficar delimitando fora do labirinto
@@ -77,6 +76,57 @@ class Tela34 extends Phaser.Scene{
     this.borda_bottom.setOrigin(0,0)
     this.borda_bottom.rotation = - Math.PI / 2; // aqui é para deitar o pixel
     
+
+
+
+    // ponto inicial e final
+    // colunaI = coluna do ponto incial
+    // linhaI  = linha do ponto inicial
+    const linhaI = 9
+    const colunaI = 7
+    // ponto  final
+    // colunaF = coluna do ponto incial
+    // linhaF  = linha do ponto inicial
+    const linhaF = 0
+    const colunaF = 1
+
+    this.saida = this.add.sprite( colunaF * 60 + (config.width/3) - 78.5  , ( linhaF * 60 ) + 0.5,"saidaa")
+    this.saida.setOrigin(0,0)
+    this.saida.setScale(0.14925)
+
+    //animando o sprite saida
+    this.anims.create( {
+
+      key: "saidaa_anims",
+      
+      frames: this.anims.generateFrameNumbers("saidaa"),
+      
+      frameRate: 4,
+      
+      repeat: -1
+      
+    })
+      //executando animação
+    this.saida.play("saidaa_anims")
+
+    this.jogador = this.add.sprite(colunaI * 60 + (config.width/3) - 78.5  ,  (linhaI * 60 ) + 0.5,"jogador")
+    this.jogador.setOrigin(0,0)
+    this.jogador.setScale(0.14925)
+
+    
+    console.log("até aqui funcionou ?")
+    //animando o sprite teste = jogador
+    this.anims.create( {
+
+      key: "jogador_anims",
+      frames: this.anims.generateFrameNumbers("jogador"),
+      frameRate: 25,
+      repeat: -1
+      
+    })
+
+      //executando animação
+    this.jogador.play("jogador_anims")
   }
     
 }

@@ -76,7 +76,7 @@ class Tela3 extends Phaser.Scene{
                           //tamanho de cada bloco + metade da tela horizontalmente 
           this.chao = this.add.image( coluna * 60 + (config.width/4) + 35,  linha * 60 ,"pareide")
           this.chao.setOrigin(0,0)
-          this.chao.setScale(1.5)  // 3 vezes o tamanho da imagem =  3 x 40px = 120px
+          this.chao.setScale(1.5)  // 1.5 vezes o tamanho da imagem =  1.5 x 40px = 60px
 
         }else{
 
@@ -91,7 +91,7 @@ class Tela3 extends Phaser.Scene{
           
     }
     
-    setTimeout( ()=>{this.scene.start("31")}, 2000)
+    setTimeout( ()=>{this.scene.start("31")}, 4000)
     console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n===========tela 3=========")
     
     // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz
@@ -106,8 +106,55 @@ class Tela3 extends Phaser.Scene{
     this.borda_bottom = this.add.image( (config.width/3) - 80  , (10 * 60 ) + 10, "borda_bottom")
     this.borda_bottom.setOrigin(0,0)
     this.borda_bottom.rotation = - Math.PI / 2; // aqui é para deitar o pixel
+
+    // ponto inicial e final
+    // colunaI = coluna do ponto incial
+    // linhaI  = linha do ponto inicial
+    const linhaI = 0
+    const colunaI = 1
+    // ponto  final
+    // colunaF = coluna do ponto incial
+    // linhaF  = linha do ponto inicial
+    const linhaF = 6
+    const colunaF = 0
+
+    this.saida = this.add.sprite( colunaF * 60 + (config.width/3) - 78.5  , ( linhaF * 60 ) + 0.5,"saidaa")
+    this.saida.setOrigin(0,0)
+    this.saida.setScale(0.14925)
+
+    //animando o sprite saida
+    this.anims.create( {
+
+      key: "saidaa_anims",
+      
+      frames: this.anims.generateFrameNumbers("saidaa"),
+      
+      frameRate: 4,
+      
+      repeat: -1
+      
+    })
+      //executando animação
+    this.saida.play("saidaa_anims")
+
+    this.jogador = this.add.sprite(colunaI * 60 + (config.width/3) - 78.5  ,  (linhaI * 60 ) + 0.5,"jogador")
+    this.jogador.setOrigin(0,0)
+    this.jogador.setScale(0.14925)
+
     
-  
+    console.log("até aqui funcionou ?")
+    //animando o sprite teste = jogador
+    this.anims.create( {
+
+      key: "jogador_anims",
+      frames: this.anims.generateFrameNumbers("jogador"),
+      frameRate: 25,
+      repeat: -1
+      
+    })
+
+      //executando animação
+    this.jogador.play("jogador_anims")
   }
     
 }

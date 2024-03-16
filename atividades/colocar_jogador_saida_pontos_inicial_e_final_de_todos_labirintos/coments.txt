@@ -14,5 +14,30 @@ bloco-espaço tem 40px
 jogador e saida tem aproximadamente 398px
                       foi redimensionado para caber dentro de 120px com escala de 0.3  
                       no espaço da altura e largura pos uma diferença de 0.5 
+bloco-espaço 40px
+jogador e saida 400px - 2
+depois da escala
+bloco-espaço 120px
+jogador e saida 119.4px
 
 neste bug , o codigo n coloca o sprite do jogador dentro do labirinto pois Texture "jogador" not found  eu tinha carregado no preload com o nome jodador por isso deu erro 
+
+observações para quando for modularizar 
+
+add jogador e saida em diferentes labirintos do mesmo modo de jogo preciso 
+    somente mudar a posição
+em diferentes modos de jogo 
+    mudar a posição
+    ajustar tamanho 
+
+
+
+medio---
+
+40px tamanho real de cada bloco do labirinto
+60px tamanho escalado
+
+398px tamanho do jogador 
+tenho que transformar em um tamanho que caiba dentro dos 60px 
+ou seja tenho que chegar no valor ( 60px - 6px) igual a diferença que fiz no modo fácil 
+0,14924 como escala torna o tamanho do jogador/saida muito proximo de 59,5
