@@ -1,0 +1,20 @@
+o que muda de um labirinto para outro é a posição do 
+jogador 
+saida
+e muda tmbm o tamanho do 
+jogador
+saida 
+
+exatamente correspondente ao tamanho de cada bloco 
+
+provavelmente quando for gerar aleatoriamente o labirinto tenho que vir junto as informações do 
+
+ponto inicial 
+e final 
+
+de cada labirinto e também o tamanho da escala para jogador e saída ficar com o tamanho igual do bloco_pareide bloco_espaço
+
+
+
+------------------duvidas , como eu posiciono no lugar do ponto final e inicial -------------
+depois que coloquei animação no 

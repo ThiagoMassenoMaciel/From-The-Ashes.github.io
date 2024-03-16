@@ -276,6 +276,5 @@ npm run build
 ### 12 mar - 1h22       Atv 1 feito 4 labirintos facil e definido todos os pontos inicial e final de cada labirinto
 ### 13 mar - 1h45       Atv 2 feita - Colocar as bordas de cada labirinto
 ### 14 mar - 1h13       Atv 3 feita - colocar jogador mno labirinto + bug
-
-
+### 15 mar - 40'        Atv 4 feita - animar o jogador e refiz os sprites
 

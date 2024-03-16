@@ -12,6 +12,10 @@ class Tela2 extends Phaser.Scene{
     this.button.setScale(0.6)
 
     this.jogador = this.add.sprite( 200 , 200,"jogador")
+    this.jogador.setOrigin(0,0)
+    this.jogador.setScale(3)
+
+
 
     const matrizes = []
     //ponto inicial linha[1] coluna[0]
@@ -54,7 +58,7 @@ class Tela2 extends Phaser.Scene{
           
     }
   
-    //setTimeout( ()=>{this.scene.start("21")}, 2000)
+    setTimeout( ()=>{this.scene.start("playGameMedium")}, 2000)
 
     // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz
     // tamanho da largura do canvas / 3 , volto para esquerda 80 pixel , e volto para esquerda o tamanho da largura da borda para ela ficar delimitando fora do labirinto
@@ -77,11 +81,15 @@ class Tela2 extends Phaser.Scene{
       
       frames: this.anims.generateFrameNumbers("jogador"),
       
-      frameRate: 20,
+      frameRate: 25,
       
       repeat: -1
       
       })
+      //executando animação
+      this.jogador.play("jogador_anims")
+
+
     
   }
     

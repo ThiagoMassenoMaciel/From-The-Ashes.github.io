@@ -12,6 +12,11 @@ class Tela3 extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
 
+    this.jogador = this.add.sprite( 200 , 200,"jogador")
+    this.jogador.setOrigin(0,0)
+    this.jogador.setScale(1.5)
+
+
     let matrizes = []
 
 //    Ponto de partida: Linha[0], Coluna[1]
@@ -91,7 +96,7 @@ class Tela3 extends Phaser.Scene{
           
     }
     
-    setTimeout( ()=>{this.scene.start("31")}, 2000)
+    setTimeout( ()=>{this.scene.start("playGameHard")}, 2000)
     console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n===========tela 3=========")
     
     // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz
@@ -107,7 +112,21 @@ class Tela3 extends Phaser.Scene{
     this.borda_bottom.setOrigin(0,0)
     this.borda_bottom.rotation = - Math.PI / 2; // aqui é para deitar o pixel
     
-  
+    //fazendo animação do jogador
+    this.anims.create( {
+
+      key: "jogador_anims",
+      
+      frames: this.anims.generateFrameNumbers("jogador"),
+      
+      frameRate: 25,
+      
+      repeat: -1
+      
+      })
+      //executando animação
+
+      this.jogador.play("jogador_anims")
   }
     
 }
