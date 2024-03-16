@@ -273,6 +273,7 @@ npm run build
 ### 10 mar - 40'        testando todos os labirintos
 ### 11 mar - 1h10'      feito 4 labirintos hard
 ### 11 mar - 30'        montado o readme das atividades
+
 ### 12 mar - 1h22       Atv 1 feito 4 labirintos facil e definido todos os pontos inicial e final de cada labirinto
 ### 13 mar - 1h45       Atv 2 feita - Colocar as bordas de cada labirinto
 ### 14 mar - 1h13       Atv 3 feita - colocar jogador mno labirinto + bug

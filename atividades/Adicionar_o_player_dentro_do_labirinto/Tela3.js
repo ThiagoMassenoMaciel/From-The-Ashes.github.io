@@ -115,6 +115,7 @@ class Tela3 extends Phaser.Scene{
     //fazendo animação do jogador
     this.anims.create( {
 
+      
       key: "jogador_anims",
       
       frames: this.anims.generateFrameNumbers("jogador"),

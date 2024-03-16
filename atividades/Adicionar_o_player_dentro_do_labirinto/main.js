@@ -5,5 +5,6 @@ var config ={
   backgroundColor: 0xffffff,
   scene: [ Tela1, Tela2, Tela3, Tela4]
 }
+
 var game = new Phaser.Game(config)
 console.log(config.backgroundColor)

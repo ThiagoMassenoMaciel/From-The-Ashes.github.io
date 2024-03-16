@@ -5,6 +5,7 @@ e muda tmbm o tamanho do
 jogador
 saida 
 
+
 exatamente correspondente ao tamanho de cada bloco 
 
 provavelmente quando for gerar aleatoriamente o labirinto tenho que vir junto as informações do 

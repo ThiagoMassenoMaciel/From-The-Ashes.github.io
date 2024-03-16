@@ -15,6 +15,7 @@ class Tela2 extends Phaser.Scene{
     this.jogador.setOrigin(0,0)
     this.jogador.setScale(3)
 
+    
 
 
     const matrizes = []
