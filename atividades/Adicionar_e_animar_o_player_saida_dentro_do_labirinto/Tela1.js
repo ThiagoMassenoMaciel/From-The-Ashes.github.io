@@ -21,6 +21,8 @@ class Tela1 extends Phaser.Scene{
     this.load.image("borda_bottom", "../../assents/borda_b.png")
 
     this.load.spritesheet("jogador", "../../assents/jogador.png", { frameWidth: 40, frameHeight: 40 });
+
+    this.load.spritesheet("saidaa", "../../assents/jogador.png", { frameWidth: 40, frameHeight: 40 });
     this.load.spritesheet("saida", "../../assents/saida.png", { frameWidth: 40, frameHeight: 40 });
     this.load.spritesheet("passou", "../../assents/AchadoSaida-16px-16px-5-frames.png", { frameWidth: 16, frameHeight: 16 });
 

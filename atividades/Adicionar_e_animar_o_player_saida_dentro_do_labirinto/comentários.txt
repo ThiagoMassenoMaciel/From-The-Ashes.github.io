@@ -18,4 +18,4 @@ de cada labirinto e também o tamanho da escala para jogador e saída ficar com 
 
 
 ------------------duvidas , como eu posiciono no lugar do ponto final e inicial -------------
-depois que coloquei animação no 
+na hora que eu adiciono objeto sprite na função create

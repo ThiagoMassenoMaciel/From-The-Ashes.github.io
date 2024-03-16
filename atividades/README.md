@@ -12,7 +12,7 @@ Tempo livre
 | 2.`Definir o limite do labirinto arrudiando com blocos parede` | atv 1 | -- | -- | criar nova imagem emvez de por bloco por bloco |
 | 3.`Adicionar o player dentro do labirinto` | atv 1,2 | -- | -- | este player é um sprite mais rapido preto e branco |
 | 4.`Animação do sprite do jogador` | atv 3 | -- | -- | tem que ter velocidade maior que a velocidade do buraco de saída |
-| 5.`Adicionar o buraco de saída de cada labirinto` | atv 1 | atv 5 | -- | mesmo sprite do jogador diferença é a velociade , mais lenta | 
+| 5.`Adicionar o buraco de saída no labirinto` | atv 1 | atv 5 | -- | mesmo sprite do jogador diferença é a velociade , mais lenta | 
 | 6.`Animar o sprite do buraco de saída` | atv 5 | -- | -- | --|
 | 6.1 `conseguir descobrir como vai colocar o sprite animado na posição do jogo ponto inicial e final` | -- | -- | -- | -- |
 | 6.2 `colocar jogado e saida em suas devidas posições inicial e final em cada labirinto` | -- | -- | -- | -- |

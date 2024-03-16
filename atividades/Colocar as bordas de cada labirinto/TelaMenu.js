@@ -16,7 +16,6 @@ class TelaMenu extends Phaser.Scene{
     this.titleGame = this.add.image( config.width / 3 + 60 , config.height /2 , "tutorial")
     this.titleGame.setOrigin(0,0)
     this.titleGame.setScale(0.6)
-
     
     this.titleGame = this.add.image( config.width / 3 + 60 , config.height /2 + 80, "iniciar")
     this.titleGame.setOrigin(0,0)
