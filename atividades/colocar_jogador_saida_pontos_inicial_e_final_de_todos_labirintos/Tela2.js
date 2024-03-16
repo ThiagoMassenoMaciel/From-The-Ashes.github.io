@@ -13,8 +13,7 @@ class Tela2 extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
 
-
-
+    
     const matrizes = []
     //ponto inicial linha[1] coluna[0]
     //ponto final   linha[4] coluna[4]
@@ -82,65 +81,49 @@ class Tela2 extends Phaser.Scene{
     // linhaF  = linha do ponto inicial
     const linhaF = 4
     const colunaF = 4
-/*
-    this.jogador = this.add.sprite( colunaI * 120 + (config.width/3) - 79  ,  linhaI * 120 ,"jogador")
-    this.jogador.setOrigin(0,0)
-    this.jogador.setScale(3)
-*/
+
     this.saida = this.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saidaa")
     this.saida.setOrigin(0,0)
     this.saida.setScale(0.3)
-    
-
-    this.teste = this.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"teste")
-    this.teste.setOrigin(0,0)
-    this.teste.setScale(0.3)
-
-    //animando o sprite jogador
-    this.anims.create( {
-
-      key: "jogador_anims",
-      
-      frames: this.anims.generateFrameNumbers("jogador"),
-      
-      frameRate: 15,
-      
-      repeat: -1
-      
-      })
-      //executando animação
-      //this.jogador.play("jogador_anims")
-
 
     //animando o sprite saida
     this.anims.create( {
 
-      key: "saida_anims",
+      key: "saidaa_anims",
       
       frames: this.anims.generateFrameNumbers("saidaa"),
       
-      frameRate: 2,
+      frameRate: 12,
       
       repeat: -1
       
-      })
+    })
       //executando animação
-      this.saida.play("saida_anims")
+    this.saida.play("saidaa_anims")
 
-    //animando o sprite teste
+
+    console.log("até aqui funcionou ?")
+
+
+
+
+
+
+    this.jogador = this.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador")
+    this.jogador.setOrigin(0,0)
+    this.jogador.setScale(0.3)
+
+    //animando o sprite teste = jogador
     this.anims.create( {
 
-      key: "teste_anims",
-      
-      frames: this.anims.generateFrameNumbers("teste"),
-      
-      frameRate: 10,
-      
+      key: "jogador_anims",
+      frames: this.anims.generateFrameNumbers("jogador"),
+      frameRate: 2,
       repeat: -1
       
-      })
+    })
       //executando animação
-      this.teste.play("teste_anims")
+    this.jogador.play("jogador_anims")
   }
     
 }

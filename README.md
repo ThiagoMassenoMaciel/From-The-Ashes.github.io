@@ -279,3 +279,4 @@ npm run build
 ### 14 mar - 1h13       Atv 3 feita - colocar jogador mno labirinto + bug
 ### 15 mar - 40'        Atv 4 feita - animar o jogador e refiz os sprites
 ### 16 mar - 11'        Atv 5 e 6 feitas - adicionar e animar o buraco saida
+### 16 mar - 1h40'      Atv 6.0    6.1    6.2  bug texture not found "jogador"

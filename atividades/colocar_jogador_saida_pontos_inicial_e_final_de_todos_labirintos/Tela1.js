@@ -20,11 +20,9 @@ class Tela1 extends Phaser.Scene{
     this.load.image("borda_right", "../../assents/borda_r.png")
     this.load.image("borda_bottom", "../../assents/borda_b.png")
 
-    this.load.spritesheet("jogador", "../../assents/jogador.png", { frameWidth: 40, frameHeight: 40 });
-
     this.load.spritesheet("saidaa", "../../assents/teste.png", { frameWidth: 398, frameHeight: 398 }); // escolhi este 
-    this.load.spritesheet("teste", "../../assents/teste.png", { frameWidth: 398, frameHeight: 398 });
-    this.load.spritesheet("saida", "../../assents/saida.png", { frameWidth: 40, frameHeight: 40 });
+    this.load.spritesheet("jodador", "../../assents/jogador.png", { frameWidth: 398, frameHeight: 398 });
+    
     this.load.spritesheet("achou_saida", "../../assents/AchadoSaida-16px-16px-5-frames.png", { frameWidth: 16, frameHeight: 16 });
 
   }
