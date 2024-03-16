@@ -93,7 +93,7 @@ class Tela2 extends Phaser.Scene{
       
       frames: this.anims.generateFrameNumbers("saidaa"),
       
-      frameRate: 12,
+      frameRate: 4,
       
       repeat: -1
       
@@ -101,29 +101,25 @@ class Tela2 extends Phaser.Scene{
       //executando animação
     this.saida.play("saidaa_anims")
 
-
-    console.log("até aqui funcionou ?")
-
-
-
-
-
-
     this.jogador = this.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador")
     this.jogador.setOrigin(0,0)
     this.jogador.setScale(0.3)
 
+    
+    console.log("até aqui funcionou ?")
     //animando o sprite teste = jogador
     this.anims.create( {
 
       key: "jogador_anims",
       frames: this.anims.generateFrameNumbers("jogador"),
-      frameRate: 2,
+      frameRate: 15,
       repeat: -1
       
     })
+
       //executando animação
     this.jogador.play("jogador_anims")
+   
   }
     
 }

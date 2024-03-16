@@ -15,4 +15,4 @@ jogador e saida tem aproximadamente 398px
                       foi redimensionado para caber dentro de 120px com escala de 0.3  
                       no espaço da altura e largura pos uma diferença de 0.5 
 
-neste bug , o codigo n coloca o sprite do jogador dentro do labirinto pois Texture "jogador" not found
+neste bug , o codigo n coloca o sprite do jogador dentro do labirinto pois Texture "jogador" not found  eu tinha carregado no preload com o nome jodador por isso deu erro 
