@@ -63,3 +63,7 @@ acontecer a ação<br/>
 depois que aconteceu a ação tem que zerar o contador<br/>
 
 
+# Desafio 3<br/> 
+<br/>
+fazer os frames do jogador e saida encaixar perfeitamente dentro do labirinto
+<br/>

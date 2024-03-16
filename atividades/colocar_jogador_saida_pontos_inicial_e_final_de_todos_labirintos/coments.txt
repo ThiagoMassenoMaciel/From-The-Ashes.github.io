@@ -1,0 +1,16 @@
+para cada labirinto vou colocar uma imagem : borda lado dirento , borda lado esquerdo, borda lado de baixo ,
+  eu não consigo colocar borda em cima . por causa disso será que o personagem vai conseguir sair da boundries do labirinto ?
+    ou será que eu devo abaixar o labirinto para que eu consiga encanixar a borda de cima ?
+
+
+
+ponto inicial , eu pego a mesma distancia de largura da do primeiro bloco do labirinto e baseado no indice do ponto inicial e final vou multiplicar com o tamanho do bloco para ir alcançando a distância certa para devida coluna linha .
+
+tenho que adicionar no labirinto o jogador e saida depois que foi gerado os blocos do labirinto
+
+o tamanho do jagador e do bloco de saida tem que ser menor que o tamanho disponivel do bloco 
+bloco-espaço tem 40px
+                      foi redimensionado para ficar 120px com a escala 3
+jogador e saida tem aproximadamente 398px
+                      foi redimensionado para caber dentro de 120px com escala de 0.3  
+                      no espaço da altura e largura pos uma diferença de 0.5 
