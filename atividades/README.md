@@ -6,21 +6,21 @@ Tempo livre
 
 
 
-| Atividade | dependente | Pré-condições | Pós-condições | detalhes |
-| :-------- | :--------: | :-----------: | :-----------: | -------: |
-| 1.`Criar 4 labirintos fácil , e definier em todos labirintos ponto inicial e final` | -- | -- | -- | talvez eu escolha mudar facil de 5 linhas para 10 e medio para 15 |
-| 2.`Definir o limite do labirinto arrudiando com blocos parede` | atv 1 | -- | -- | criar nova imagem emvez de por bloco por bloco |
-| 3.`Adicionar o player dentro do labirinto` | atv 1,2 | -- | -- | este player é um sprite mais rapido preto e branco |
-| 4.`Animação do sprite do jogador` | atv 3 | -- | -- | tem que ter velocidade maior que a velocidade do buraco de saída |
-| 5.`Adicionar o buraco de saída no labirinto` | atv 1 | atv 5 | -- | mesmo sprite do jogador diferença é a velociade , mais lenta | 
-| 6.`Animar o sprite do buraco de saída` | atv 5 | -- | -- | --|
-| 6.0.`Ajeitar perfeitamente o jogador e saida cabendo dentro do bloco espaço sem engolhir pedaço` | atv 6 | -- | -- | --|
-| 6.1 `conseguir descobrir como vai colocar o sprite animado na posição do jogo ponto inicial e final` | -- | -- | -- | -- |
-| 6.2 `colocar jogador e saida em suas devidas posições inicial e final em cada labirinto` | -- | -- | -- | -- |
-| 7.`Colisão do jogador com as paredes do labirinto` | -- | -- | -- | -- |
-| 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |
-| 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo |
-| 9.1`Adicionar animação de colisão quando jogador achar saida`| atv 9| -- | -- | -- |
+| Atividade | dependente | Pré-condições | Pós-condições | detalhes | situação |
+| :-------- | :--------: | :-----------: | :-----------: | -------: | -------: |
+| 1.`Criar 4 labirintos fácil , e definier em todos labirintos ponto inicial e final` | -- | -- | -- | talvez eu escolha mudar facil de 5 linhas para 10 e medio para 15 | feito |
+| 2.`Definir o limite do labirinto arrudiando com blocos parede` | atv 1 | -- | -- | criar nova imagem emvez de por bloco por bloco |  feito |
+| 3.`Adicionar o player dentro do labirinto` | atv 1,2 | -- | -- | este player é um sprite mais rapido preto e branco |  feito |
+| 4.`Animação do sprite do jogador` | atv 3 | -- | -- | tem que ter velocidade maior que a velocidade do buraco de saída |  feito |
+| 5.`Adicionar o buraco de saída no labirinto` | atv 1 | atv 5 | -- | mesmo sprite do jogador diferença é a velociade , mais lenta |  feito |
+| 6.`Animar o sprite do buraco de saída` | atv 5 | -- | -- | --|  feito |
+| 6.0.`Ajeitar perfeitamente o jogador e saida cabendo dentro do bloco espaço sem engolhir pedaço` | atv 6 | -- | -- | --|  feito |
+| 6.1 `conseguir descobrir como vai colocar o sprite animado na posição do jogo ponto inicial e final` | -- | -- | -- | -- |  feito |
+| 6.2 `colocar jogador e saida em suas devidas posições inicial e final em cada labirinto` | -- | -- | -- | -- |  feito |
+| 7.`Colisão do jogador com as paredes do labirinto` | -- | -- | -- | -- | prox aula - 18 mar |
+| 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |  prox aula - 18 mar |
+| 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo |  prox aula - 18 mar |
+| 9.1`Adicionar animação de colisão quando jogador achar saida`| atv 9| -- | -- | -- |  prox aula - 18 mar |
 | 10.`Escolher aleatoriamente o labirinto , modo de jogo randomico` | -- | -- | -- | não deixar aparecer uma fácil mais de uma vez na mesma fase |
 | 11.`trocar a cor do do chão pela parede` | -- | -- | -- | -- |
 | 12.`Mudar o buraco de canto`| -- | -- | -- | -- |
