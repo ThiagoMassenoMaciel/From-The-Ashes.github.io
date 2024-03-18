@@ -282,3 +282,4 @@ npm run build
 ### 16 mar - 1h40'      Atv 6.0    6.1    6.2  bug texture not found "jogador"
 ### 16 mar - 13'        Atv 6.2  bug ajeitado"
 ### 16 mar - 1h11'      Atv 6.2  pontos do modo facil e medium concluido"
+### 18 mar - 56'        Atv 6.2  pontos do modo dificil concluido"

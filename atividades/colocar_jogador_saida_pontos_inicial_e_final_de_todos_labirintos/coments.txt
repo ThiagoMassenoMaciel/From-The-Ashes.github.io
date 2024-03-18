@@ -41,3 +41,7 @@ medio---
 tenho que transformar em um tamanho que caiba dentro dos 60px 
 ou seja tenho que chegar no valor ( 60px - 6px) igual a diferença que fiz no modo fácil 
 0,14924 como escala torna o tamanho do jogador/saida muito proximo de 59,5
+
+
+primeiro posições linha e coluna final e inicial 
+segundo eu tenho que fazer o jogador caber num espaço menor que 30px 

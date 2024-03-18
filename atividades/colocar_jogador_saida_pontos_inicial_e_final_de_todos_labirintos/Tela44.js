@@ -35,8 +35,8 @@ class Tela44 extends Phaser.Scene{
       [0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
       [0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0],
       [0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
-      [1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
-      [1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0],
+      [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
+      [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0],
       [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1]
     ]
 
@@ -82,6 +82,58 @@ class Tela44 extends Phaser.Scene{
     this.borda_bottom.setOrigin(0,0)
     this.borda_bottom.rotation = - Math.PI / 2; // aqui é para deitar o pixel
 
+
+
+    
+    
+    // ponto inicial e final
+    // colunaI = coluna do ponto incial
+    // linhaI  = linha do ponto inicial
+    const linhaI = 19
+    const colunaI = 1
+    // ponto  final
+    // colunaF = coluna do ponto incial
+    // linhaF  = linha do ponto inicial
+    const linhaF = 0
+    const colunaF = 19
+
+    this.saida = this.add.sprite( colunaF * 30 + (config.width/3) - 80  , ( linhaF * 30 ) ,"saidaa")
+    this.saida.setOrigin(0,0)
+    this.saida.setScale(0.075)
+
+    //animando o sprite saida
+    this.anims.create( {
+
+      key: "saidaa_anims",
+      
+      frames: this.anims.generateFrameNumbers("saidaa"),
+      
+      frameRate: 4,
+      
+      repeat: -1
+      
+    })
+      //executando animação
+    this.saida.play("saidaa_anims")
+
+    this.jogador = this.add.sprite(colunaI * 30 + (config.width/3) - 80  ,  (linhaI * 30 ) ,"jogador")
+    this.jogador.setOrigin(0,0)
+    this.jogador.setScale(0.075) // 29,85
+
+    
+    console.log("até aqui funcionou ?")
+    //animando o sprite teste = jogador
+    this.anims.create( {
+
+      key: "jogador_anims",
+      frames: this.anims.generateFrameNumbers("jogador"),
+      frameRate: 25,
+      repeat: -1
+      
+    })
+
+      //executando animação
+    this.jogador.play("jogador_anims")
   }
     
 }

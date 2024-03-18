@@ -91,7 +91,8 @@ class Tela3 extends Phaser.Scene{
           
     }
     
-    setTimeout( ()=>{this.scene.start("31")}, 4000)
+    setTimeout( ()=>{this.scene.start("31")}, 5000)
+
     console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n===========tela 3=========")
     
     // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz

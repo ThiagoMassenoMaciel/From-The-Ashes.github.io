@@ -1,4 +1,5 @@
 class Tela2 extends Phaser.Scene{
+
   constructor(){
     super("playGameEasy")
   }
@@ -12,7 +13,6 @@ class Tela2 extends Phaser.Scene{
 
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
-
     
     const matrizes = []
     //ponto inicial linha[1] coluna[0]
@@ -69,7 +69,6 @@ class Tela2 extends Phaser.Scene{
     this.borda_bottom.setOrigin(0,0)
     this.borda_bottom.rotation = - Math.PI / 2; // aqui é para deitar o pixel
     
-
     // ponto inicial e final
     // colunaI = coluna do ponto incial
     // linhaI  = linha do ponto inicial
@@ -87,7 +86,7 @@ class Tela2 extends Phaser.Scene{
 
     //animando o sprite saida
     this.anims.create( {
-
+    
       key: "saidaa_anims",
       
       frames: this.anims.generateFrameNumbers("saidaa"),
@@ -104,7 +103,6 @@ class Tela2 extends Phaser.Scene{
     this.jogador.setOrigin(0,0)
     this.jogador.setScale(0.3)
 
-    
     console.log("até aqui funcionou ?")
     //animando o sprite teste = jogador
     this.anims.create( {
@@ -116,11 +114,10 @@ class Tela2 extends Phaser.Scene{
       
     })
 
-      //executando animação
+    //executando animação
     this.jogador.play("jogador_anims")
-   
 
-    setTimeout( ()=>{this.scene.start("21")}, 4000)
+    setTimeout( ()=>{this.scene.start("21")}, 5000)
   }
     
 }

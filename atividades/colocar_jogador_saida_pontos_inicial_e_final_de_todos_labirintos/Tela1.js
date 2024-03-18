@@ -30,8 +30,9 @@ class Tela1 extends Phaser.Scene{
   create(){
 
     this.add.text(500,500, "carregando jogo ... ", {font: "50px Arial" , fill: 'white'})
-    setTimeout( ()=>{this.scene.start("playGameEasy")}, 200)
-     
-    
+
+
+
+    setTimeout( ()=>{this.scene.start("playGameEasy")}, 200) 
   }
 }

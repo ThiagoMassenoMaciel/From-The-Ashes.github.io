@@ -120,7 +120,7 @@ class Tela21 extends Phaser.Scene{
       //executando animação
     this.jogador.play("jogador_anims")
 
-    setTimeout( ()=>{this.scene.start("22")}, 4000)
+    setTimeout( ()=>{this.scene.start("22")}, 5000)
   }
     
 }

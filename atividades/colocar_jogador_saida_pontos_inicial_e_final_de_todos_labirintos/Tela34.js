@@ -61,7 +61,8 @@ class Tela34 extends Phaser.Scene{
     }
 
     console.log("\n\n\n\n\n\n\n\n\n\n\n\n\n===========tela 33=========")
-    setTimeout( ()=>{ this.scene.start("playGameHard")}, 4000)
+    
+    setTimeout( ()=>{ this.scene.start("playGameHard")}, 5000)
   
     // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz
     // tamanho da largura do canvas / 3 , volto para esquerda 80 pixel , e volto para esquerda o tamanho da largura da borda para ela ficar delimitando fora do labirinto
