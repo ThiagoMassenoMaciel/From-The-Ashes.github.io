@@ -1,0 +1,1 @@
+definir qual modo fisico  dentro da variavel global de configuração do jogo
