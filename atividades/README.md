@@ -18,6 +18,7 @@ Tempo livre
 | 6.1 `conseguir descobrir como vai colocar o sprite animado na posição do jogo ponto inicial e final` | -- | -- | -- | -- |  feito |
 | 6.2 `colocar jogador e saida em suas devidas posições inicial e final em cada labirinto` | -- | -- | -- | -- |  feito |
 | 7.`Colisão do jogador com as paredes do labirinto` | -- | -- | -- | -- | prox aula - 18 mar |
+| 7.1 `entender todo o exemplo do [phaser](https://github.com/ThiagoMassenoMaciel/exemplo-simples-tutorial-do-phaser.github.io)`||||||
 | 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |  prox aula - 18 mar |
 | 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo |  prox aula - 18 mar |
 | 9.1`Adicionar animação de colisão quando jogador achar saida`| atv 9| -- | -- | -- |  prox aula - 18 mar |
@@ -31,5 +32,6 @@ Tempo livre
 | 16. `Banco de dados`| -- | Escolher como vou fazer a pontuação se vou adicionar mais ponto de acordo com o modo de jogo ou se vai continuar o que tem la na tabela do readme principal do projeto| atv17 | escolher fazer este pedaço do back-end em JavaScript |
 | 17.`Integração com o BD`| atv 16| -- | -- | é neste pedaço que vou fazer , adicionar pontos , colocar o nivel que o jogador esta , incluir o tempo |
 |30.`aumentar o tempo do cronometro usando coletaveis`|||| vai aparecer aleatoriamente um budget que aumenta o tempo da artida, precisa de 3 variaves (var 1 : tempo original - tempo limite para sair do labirinto) (var2 : tempo adicional - tempo adicionado pelo badget) (var 3: tempo final {})|
-|18.``||||
-| 20.`guardar posição do jogador quando eu mudar a  cor do labirinto`|||||
+|18.``||||||
+| 20.`guardar posição do jogador quando eu mudar a  cor do labirinto`||||||
+| `fazer o prototipo de todas as tela drawio`||||||
