@@ -11,6 +11,7 @@ class Tela21 extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
 
+
     const matrizes = []
 
     //-------------------
@@ -96,7 +97,7 @@ class Tela21 extends Phaser.Scene{
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    //setTimeout( ()=>{this.scene.start("22")}, 5000)
+    setTimeout( ()=>{this.scene.start("22")}, 10000)
   }
     
   update(){

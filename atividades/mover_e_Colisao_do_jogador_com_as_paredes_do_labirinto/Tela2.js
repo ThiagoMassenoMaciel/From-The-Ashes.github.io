@@ -89,6 +89,7 @@ class Tela2 extends Phaser.Scene{
     this.saida.anims.play("saidaa_anims", true);
     
 
+
     this.jogadorr = this.physics.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.3).refreshBody(); 
     this.jogadorr.setCollideWorldBounds(true);
 
@@ -108,7 +109,7 @@ class Tela2 extends Phaser.Scene{
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    //setTimeout( ()=>{this.scene.start("21")}, 5000)
+    setTimeout( ()=>{this.scene.start("21")}, 10000)
   }
 
   update(){

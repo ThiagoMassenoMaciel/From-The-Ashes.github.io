@@ -49,6 +49,7 @@ lógica dentro da função update() para mover jogador usando variavel estanciad
       this.jogadorr.setVelocityY(0)
     }
 
+na hora de fazer para cada um dos 15 labirintos eu demoro uma 14 minutos por labirinto , até agora ja fiz 3 labirintos falta 12 lab , logo preciso de tempo para 12 * 14  = 168 minutos 
 o que vai mudar para cada modo de jogo diferente ?
 escala dos objetos
 posição dos objetos 
