@@ -291,7 +291,7 @@ npm run build
 ### 22 mar - 1h15'      Atv 7 continuação -bug so move 1 px
 ### 23 mar - 40'        Atv 7 continuação -bug fixed e atividade concluida
 ### 23 mar - 30'        Atv 7 bug do eixo Y fixed
-### 23 mar -tempo_cronograma +12'
+### 23 mar - 1h27'      Atv 7 feitos lab facil 1 2 3
 
 ### depois deste commit , tirei os comentarios
 ![alt text](image.png)
