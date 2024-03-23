@@ -1,7 +1,14 @@
 definir qual modo fisico  dentro da variavel global de configuração do jogo
 
-
 bug , quando eu executo o arquivo index.html para testar o script que fiz adicionando cada bloco pareide dentro de um grupo fisico estatico aparecia um erro de que não estava conseguindo pegar a scene nova que tinha adicionado na pasta
     solução :::: era para colocar também um script dentro da tag head no index.html do novo scene 
 
 decidi colocar as bordas do limite do labirinto dentro do mesmo grupo fisico estático que os blocos pareide
+
+bug , o jogador n consegue se mover 
+    solução :::: tirar os blocos espaço do grupo fisico estatico 
+
+bug, o jogador não esta colidindo com a borda de baixo (acho que como eu estava usando o .setAngle(-90) o refreshbody não atualizava )
+    solução :::: mudar imagem de vertical para horizontal e tirar o setAngle(-90) na hora que colocou a borda baixo dentro do grupo fisico estático
+
+bug, eu ainda não sei como fazer com que o jogador se movimente dano passada 120 px a cada vez que clica o botão -> , <- , ^ , v 

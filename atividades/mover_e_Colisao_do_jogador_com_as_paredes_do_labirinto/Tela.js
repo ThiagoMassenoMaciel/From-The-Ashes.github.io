@@ -26,7 +26,7 @@ class Tela extends Phaser.Scene{
     //ponto final   linha[4] coluna[4]
     const easy_0 =[
       [ 0, 0, 0, 0, 0],
-      [ 0, 0, 1, 1, 0],
+      [ 0, 1, 1, 1, 0],
       [ 0, 1, 0, 1, 0],
       [ 0, 1, 0, 0, 0],
       [ 0, 0, 1, 0, 0],
@@ -51,7 +51,7 @@ class Tela extends Phaser.Scene{
           //platforms.create(400, 550 , 'ground').setScale(2).refreshBody();
 
         }else{
-          this.todos_blocos_parede.create( coluna * 120 + (config.width/3) - 80  , linha * 120 ,"chao").setOrigin(0,0).setScale(3).refreshBody();
+          this.chao = this.add.image( coluna * 120 + (config.width/3) - 80  , linha * 120 ,"chao").setOrigin(0,0).setScale(3);
 
         }
     
@@ -62,7 +62,7 @@ class Tela extends Phaser.Scene{
 
     this.todos_blocos_parede.create((config.width/3) - 80 - 10           ,  0              , "borda_left").setOrigin(0,0).refreshBody();
     this.todos_blocos_parede.create( ( 5 * 120 ) + (config.width/3) - 80 ,  0              , "borda_right").setOrigin(0,0).refreshBody();
-    this.todos_blocos_parede.create( (config.width/3) - 80               , (5 * 120 ) + 10 , "borda_bottom").setOrigin(0,0).setAngle(-90).refreshBody(); // 
+    this.todos_blocos_parede.create( (config.width/3) - 80               , (5 * 120 )      , "borda_bottom").setOrigin(0,0).refreshBody(); // 
   
     const linhaI = 1
     const colunaI = 0
@@ -117,31 +117,29 @@ class Tela extends Phaser.Scene{
     
     if (this.cursors.left.isDown)
     {
-       this.jogadorr.setVelocityX(-100);
+       this.jogadorr.setVelocityX(-1400);
 
      
     }
     else if (this.cursors.right.isDown)
     {
-       this.jogadorr.setVelocityX(100);
+       this.jogadorr.setVelocityX(1400);
 
 
+    }
+    else if (this.cursors.up.isDown /*&&this.jogadorr.body.touching.down */)
+    {
+       this.jogadorr.setVelocityY(-120);
+
+    }else if( this.cursors.down.isDown){
+
+       this.jogadorr.setVelocityY(120)
     }
     else
     {
        this.jogadorr.setVelocityX(0);
-
-
     }
 
-    if (this.cursors.up.isDown /*&&this.jogadorr.body.touching.down */)
-    {
-       this.jogadorr.setVelocityY(-100);
-
-    }else if( this.cursors.down.isDown){
-
-       this.jogadorr.setVelocityY(100)
-    }
   }
 }
 
