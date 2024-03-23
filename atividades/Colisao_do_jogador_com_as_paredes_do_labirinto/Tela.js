@@ -1,7 +1,7 @@
-class Tela0 extends Phaser.Scene{
+class Tela extends Phaser.Scene{
 
   constructor(){
-    super("a")
+    super("Tela")
   }
 
  
@@ -61,19 +61,11 @@ class Tela0 extends Phaser.Scene{
 
     todos_blocos_parede.create((config.width/3) - 80 - 10           ,  0              , "borda_left").setOrigin(0,0).refreshBody();
     todos_blocos_parede.create( ( 5 * 120 ) + (config.width/3) - 80 ,  0              , "borda_right").setOrigin(0,0).refreshBody();
-    todos_blocos_parede.create( (config.width/3) - 80               , (5 * 120 ) + 10 , "borda_bottom").setOrigin(0,0).setAngle(90).refreshBody();
+    todos_blocos_parede.create( (config.width/3) - 80               , (5 * 120 ) + 10 , "borda_bottom").setOrigin(0,0).setAngle(-90).refreshBody(); // 
   
-    // o pixel que devo colocar para largura é igual o colocado na largura dos blocos que estão na primeira coluna
-    // o pixel para altura é igual o tamanho vertical do labirinto + tamanho da borda , considero o tamanho da borta para não ficar por cima do bloco dentro do labirinto
-
-    // ponto inicial e final
-    // colunaI = coluna do ponto incial
-    // linhaI  = linha do ponto inicial
     const linhaI = 1
     const colunaI = 0
-    // ponto  final
-    // colunaF = coluna do ponto incial
-    // linhaF  = linha do ponto inicial
+
     const linhaF = 4
     const colunaF = 4
 
@@ -114,7 +106,7 @@ class Tela0 extends Phaser.Scene{
     //executando animação
     this.jogador.play("jogador_anims")
 
-    setTimeout( ()=>{this.scene.start("21")}, 5000)
+    //setTimeout( ()=>{this.scene.start("21")}, 5000)
   }
     
 }

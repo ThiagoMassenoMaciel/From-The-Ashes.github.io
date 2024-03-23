@@ -33,6 +33,6 @@ class Tela1 extends Phaser.Scene{
 
     this.paredes = this.physics.add.group()
 
-    setTimeout( ()=>{this.scene.start("a")}, 2000) 
+    setTimeout( ()=>{this.scene.start("Tela")}, 20) 
   }
 }
