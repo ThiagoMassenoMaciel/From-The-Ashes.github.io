@@ -287,4 +287,5 @@ npm run build
 ### 18 mar - 56'        Atv 6.2  pontos do modo dificil concluido"
 ### 18 mar - 24'        Atv 7 começei
 ### 19 mar - 2h30       Vendo exemplos do [phaser](https://github.com/ThiagoMassenoMaciel/exemplo-simples-tutorial-do-phaser.github.io) e parei no ex7 
-### 22 mar - 26'        Atv 7 continnuação
+### 22 mar - 26'        Atv 7 continuação
+### 22 mar - 1h15'      Atv 7 continuação -bug so move 1 px

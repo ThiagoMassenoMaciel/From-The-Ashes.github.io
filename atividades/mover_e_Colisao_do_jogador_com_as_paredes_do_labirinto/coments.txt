@@ -3,3 +3,5 @@ definir qual modo fisico  dentro da variavel global de configuração do jogo
 
 bug , quando eu executo o arquivo index.html para testar o script que fiz adicionando cada bloco pareide dentro de um grupo fisico estatico aparecia um erro de que não estava conseguindo pegar a scene nova que tinha adicionado na pasta
     solução :::: era para colocar também um script dentro da tag head no index.html do novo scene 
+
+decidi colocar as bordas do limite do labirinto dentro do mesmo grupo fisico estático que os blocos pareide
