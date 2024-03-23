@@ -22,7 +22,7 @@ Tempo livre
 | 7.2 `Resolver bugs `|||| tive 5 bugs, so resolvi 4 pois o que faltou não tem muita importância | feito |
 | 7.3 `fazer colisão e movimento do jogador de todos os labirintos, falta 14 `||||||
 | 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |  prox aula - 18 mar |
-| 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo |  prox aula - 18 mar |
+| 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo | feito |
 | 9.1`Adicionar animação de colisão quando jogador achar saida`| atv 9| -- | -- | -- |  prox aula - 18 mar |
 | 10.`Escolher aleatoriamente o labirinto , modo de jogo randomico` | -- | -- | -- | não deixar aparecer uma fácil mais de uma vez na mesma fase |
 | 11.`trocar a cor do do chão pela parede` | -- | -- | -- | -- |
