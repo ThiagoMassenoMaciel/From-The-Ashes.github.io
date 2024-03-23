@@ -15,4 +15,24 @@ bug, eu ainda não sei como fazer com que o jogador se movimente dano passada 12
     quando a tecla up ou down é clicada apenas uma vez o jogador continua se movendo pos o setVelocity é constante , então quando for fazer um
     passo depois de apertar uma tecla tem que parar o jogador so continuar se clicar de novo
 
-    solução :::: colocar um setVelocity(0) depois de cada passo dado
+    bug do eixo Y , pois quando clica uma vez continua movimentando o jogador sem pausar
+
+    solução :::: colocar um setVelocity(0) depois de cada passo dado - não funcionou
+    solução :::: fazer dois ifs aninhados , um if aninhado para lados vertical , outro if aninhado lados horizontal, e um else que execute setVelocity(0) 
+                 quando nos testes aninhados for false, e que seja um else para horizontal e outro para vertical 
+
+                    lógica horizontal 
+                    se clicou para esquerda
+                        empurrar o jogador para esquerda                      setVelocityEIXO()
+                    se clicou para direita
+                        empurrar o jogador para direita                       setVelocityEIXO()
+                    se não clicou 
+                        deixar o jogador parado                               setVelocityEIXO(0)
+
+                    lógica vertical 
+                    se clicou para cima
+                        empurrar o jogador para cima                      setVelocityEIXO()
+                    se clicou para baixo
+                        empurrar o jogador para baixo                     setVelocityEIXO()
+                    se não clicou 
+                        deixar o jogador parado                           setVelocityEIXO(0)

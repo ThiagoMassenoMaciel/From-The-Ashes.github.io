@@ -4,8 +4,6 @@ class Tela extends Phaser.Scene{
     super("Tela")
   }
 
- 
-
   create(){
 
     this.add.text(0,0, "jogo", { font: "60px Arial"})
@@ -16,9 +14,6 @@ class Tela extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
     
-
-
-
 
 
     const matrizes = []
@@ -116,18 +111,19 @@ class Tela extends Phaser.Scene{
   update(){
     
     if (this.cursors.left.isDown) {
-       this.jogadorr.setVelocityX(-1400);
+       this.jogadorr.setVelocityX(-700);
+    }else if (this.cursors.right.isDown) {
+       this.jogadorr.setVelocityX(700);
+    }else{
+      this.jogadorr.setVelocityX(0)
     }
-    else if (this.cursors.right.isDown) {
-       this.jogadorr.setVelocityX(1400);
-    }
-    else if (this.cursors.up.isDown) {
-       this.jogadorr.setVelocityY(-1400);
-    }else if( this.cursors.down.isDown){
-       this.jogadorr.setVelocityY(1400)
-    }
-    else{
-       this.jogadorr.setVelocityX(0);
+    
+    if (this.cursors.up.isDown) {
+      this.jogadorr.setVelocityY(-700);
+    }else  if( this.cursors.down.isDown){
+      this.jogadorr.setVelocityY(700)
+    }else{
+      this.jogadorr.setVelocityY(0)
     }
 
   }
