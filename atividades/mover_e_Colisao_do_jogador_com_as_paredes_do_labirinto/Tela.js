@@ -115,28 +115,18 @@ class Tela extends Phaser.Scene{
     
   update(){
     
-    if (this.cursors.left.isDown)
-    {
+    if (this.cursors.left.isDown) {
        this.jogadorr.setVelocityX(-1400);
-
-     
     }
-    else if (this.cursors.right.isDown)
-    {
+    else if (this.cursors.right.isDown) {
        this.jogadorr.setVelocityX(1400);
-
-
     }
-    else if (this.cursors.up.isDown /*&&this.jogadorr.body.touching.down */)
-    {
+    else if (this.cursors.up.isDown) {
        this.jogadorr.setVelocityY(-1400);
-
     }else if( this.cursors.down.isDown){
-
        this.jogadorr.setVelocityY(1400)
     }
-    else
-    {
+    else{
        this.jogadorr.setVelocityX(0);
     }
 
