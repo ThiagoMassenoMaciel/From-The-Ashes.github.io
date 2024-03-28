@@ -1,3 +1,4 @@
+
 # fazer atividade 7 em apenas um arquivo html primeiro para efeito de teste , depois usa em formato de tela scene
 
 # Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
