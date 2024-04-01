@@ -91,3 +91,22 @@ bug, eu ainda não sei como fazer com que o jogador se movimente dano passada 12
                         empurrar o jogador para baixo                     setVelocityEIXO()
                     se não clicou 
                         deixar o jogador parado                           setVelocityEIXO(0)
+
+bug, quando eu mudei a borda bottom para a imagem ficar com a borda na horizontal ficou com as telas bugadas
+
+    solução :::: será que foi pelo fato de não ter colocado um refresh body em todos os blocos chão ? 
+                 n pois este bloco ésó uma imagem , ele não esta no grupo que tem fisica 
+    solução :::: foi o que fiz na Tela24.js   diminui movimento para o velocity() igual à 300
+                 so que continuasendo um pouco dificil movimentar de um buraco para o outro , tem que ao mesmo tempo clicar em duas teclas para entrar
+    solução :::: diminuir o tamanho do bloco que é o jogador 
+
+bug, borda direita dentro da Tela3.js  posicionada errada , engoliu pedaço do labirinto  
+    solução :::: retroceder 1 pixel em seu posicionamento de x 
+
+
+bug , nos labirintos de nivel dificil eu não consigo entra em algums espaços com a setvelocity 300
+    solução :::: abaixei para 150 isso troxe um problema , a navegação fica mais lenta 
+
+    se eu deixar 300 n fica lento mais fica mais dificil de conseguir alcançar algumas brechas 
+    se eu deixar 150 fica lento mais eu consigo alcançar algumas brechas 
+                 

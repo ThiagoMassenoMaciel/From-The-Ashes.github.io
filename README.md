@@ -292,7 +292,10 @@ npm run build
 ### 22 mar - 1h15'      Atv 7 continuação -bug so move 1 px
 ### 23 mar - 40'        Atv 7 continuação -bug fixed e atividade concluida
 ### 23 mar - 30'        Atv 7 bug do eixo Y fixed
-### 23 mar - 1h27'      Atv 7 feitos lab facil 1 2 3
-
+### 23 mar - 1h27'      Atv 7 feitos lab facil( 1 2 3)
 ### depois deste commit , tirei os comentarios
+### 31 mar - 3h23'      Atv 7 feitos lab facil( 4 5 ) lab medium( 1 2 3 4 5 )  lab hard( 1 )
+###  1 abr - 1h21'      Atv 7 feitos lab hard( 2 3 4 5 )
+
+#ficou faltando atividade 8 e o 9.1
 ![alt text](image.png)

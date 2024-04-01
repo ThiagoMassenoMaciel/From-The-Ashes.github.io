@@ -35,4 +35,5 @@ class Tela1 extends Phaser.Scene{
 
     setTimeout( ()=>{this.scene.start("playGameEasy")}, 20) 
   }
+
 }

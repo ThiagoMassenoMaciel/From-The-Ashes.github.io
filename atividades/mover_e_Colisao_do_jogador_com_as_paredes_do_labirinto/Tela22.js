@@ -96,22 +96,22 @@ class Tela22 extends Phaser.Scene{
     this.cursors = this.input.keyboard.createCursorKeys();
 
 
-   // setTimeout( ()=>{this.scene.start("23")}, 10000)
+    setTimeout( ()=>{this.scene.start("23")}, 10000)
   }
 
   update(){
     if (this.cursors.left.isDown) {
-       this.jogadorr.setVelocityX(-700);
+       this.jogadorr.setVelocityX(-300);
     }else if (this.cursors.right.isDown) {
-       this.jogadorr.setVelocityX(700);
+       this.jogadorr.setVelocityX(300);
     }else{
       this.jogadorr.setVelocityX(0)
     }
     
     if (this.cursors.up.isDown) {
-      this.jogadorr.setVelocityY(-700);
+      this.jogadorr.setVelocityY(-300);
     }else  if( this.cursors.down.isDown){
-      this.jogadorr.setVelocityY(700)
+      this.jogadorr.setVelocityY(300)
     }else{
       this.jogadorr.setVelocityY(0)
     }

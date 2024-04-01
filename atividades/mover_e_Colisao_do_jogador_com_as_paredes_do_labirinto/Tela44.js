@@ -44,64 +44,38 @@ class Tela44 extends Phaser.Scene{
 
     const matriz_hard = matrizes[0]
 
+    this.todos_blocos_parede = this.physics.add.staticGroup();
+
     for (let linha = 0; linha < matriz_hard.length; linha++) {
     
       for (let coluna = 0; coluna < matriz_hard[linha].length; coluna++) {
-            
-        console.log(` linha ${linha} coluna ${coluna}`)
 
         if(matriz_hard[linha][coluna] === 1){
-                          //tamanho de cada bloco + metade da tela horizontalmente 
-          this.chao = this.add.image( coluna * 30 + (config.width/3) - 80 ,  linha * 30 ,"pareide")
-          this.chao.setOrigin(0,0)
-          this.chao.setScale(0.75)  // 3 vezes o tamanho da imagem =  3 x 40px = 120px
+
+          this.todos_blocos_parede.create( coluna * 30 + (config.width/3) - 80 ,  linha * 30 ,"pareide").setOrigin(0,0).setScale(0.75).refreshBody();
 
         }else{
 
-          this.chao = this.add.image(coluna * 30  + (config.width/3) - 80 ,   linha * 30, "chao") // se  colocar 80 vai ficar sem as linhas 
-          this.chao.setOrigin(0,0)
-          this.chao.setScale(0.75)
+          this.chao = this.add.image(coluna * 30  + (config.width/3) - 80 ,   linha * 30, "chao").setOrigin(0,0).setScale(0.75)
 
         }
     
       }
-      console.log("----------------")
-          
+
     }
 
-    // colocar a borda -10px no exixo X igual é colocado a posição da primeira coluna da matriz
-    // tamanho da largura do canvas / 3 , volto para esquerda 80 pixel , e volto para esquerda o tamanho da largura da borda para ela ficar delimitando fora do labirinto
-    this.borda_left = this.add.image((config.width/3) - 80 - 10  ,0, "borda_left")
-    this.borda_left.setOrigin(0,0)
-    // colocar a borda -10px no exixo X igual é colocado a posição da ultima coluna da matriz
-    this.borda_right = this.add.image( ( 20 * 30 ) + (config.width/3) - 80 ,  0  , "borda_right")
-    this.borda_right.setOrigin(0,0)
-    // o pixel que devo colocar para largura é igual o colocado na largura dos blocos que estão na primeira coluna
-    // o pixel para altura é igual o tamanho vertical do labirinto + tamanho da borda , considero o tamanho da borta para não ficar por cima do bloco dentro do labirinto
-    this.borda_bottom = this.add.image( (config.width/3) - 80  , (20 * 30 ) + 10 , "borda_bottom")
-    this.borda_bottom.setOrigin(0,0)
-    this.borda_bottom.rotation = - Math.PI / 2; // aqui é para deitar o pixel
+    this.todos_blocos_parede.create((config.width/3) - 80 - 10           ,       0      , "borda_left").setOrigin(0,0).refreshBody();
+    this.todos_blocos_parede.create( ( 20 * 30 ) + (config.width/3) - 80 ,       0      , "borda_right").setOrigin(0,0).refreshBody();
+    this.todos_blocos_parede.create( (config.width/3) - 80               ,  (20 * 30 )  , "borda_bottom").setOrigin(0,0).refreshBody();
 
-
-
-    
-    
-    // ponto inicial e final
-    // colunaI = coluna do ponto incial
-    // linhaI  = linha do ponto inicial
     const linhaI = 19
     const colunaI = 1
-    // ponto  final
-    // colunaF = coluna do ponto incial
-    // linhaF  = linha do ponto inicial
+
     const linhaF = 0
     const colunaF = 19
 
-    this.saida = this.add.sprite( colunaF * 30 + (config.width/3) - 80  , ( linhaF * 30 ) ,"saidaa")
-    this.saida.setOrigin(0,0)
-    this.saida.setScale(0.075)
+    this.saida = this.physics.add.sprite( colunaF * 30 + (config.width/3) - 80  , ( linhaF * 30 ) ,"saidaa").setOrigin(0,0).setScale(0.075).refreshBody();
 
-    //animando o sprite saida
     this.anims.create( {
 
       key: "saidaa_anims",
@@ -113,16 +87,12 @@ class Tela44 extends Phaser.Scene{
       repeat: -1
       
     })
-      //executando animação
-    this.saida.play("saidaa_anims")
 
-    this.jogador = this.add.sprite(colunaI * 30 + (config.width/3) - 80  ,  (linhaI * 30 ) ,"jogador")
-    this.jogador.setOrigin(0,0)
-    this.jogador.setScale(0.075) // 29,85
+    this.saida.anims.play("saidaa_anims", true);
 
-    
-    console.log("até aqui funcionou ?")
-    //animando o sprite teste = jogador
+    this.jogadorr = this.physics.add.sprite(colunaI * 30 + (config.width/3) - 80  ,  (linhaI * 30 ) ,"jogador").setOrigin(0,0).setScale(0.075).refreshBody(); // 29,85
+    this.jogadorr.setCollideWorldBounds(true);
+
     this.anims.create( {
 
       key: "jogador_anims",
@@ -132,10 +102,33 @@ class Tela44 extends Phaser.Scene{
       
     })
 
-      //executando animação
-    this.jogador.play("jogador_anims")
+    this.jogadorr.anims.play("jogador_anims", true);
+
+    this.physics.add.collider(this.jogadorr, this.todos_blocos_parede);
+
+    this.cursors = this.input.keyboard.createCursorKeys();
   }
+
+  update(){
+    if (this.cursors.left.isDown) {
+        this.jogadorr.setVelocityX(-150);
+
+    }else if (this.cursors.right.isDown) {
+        this.jogadorr.setVelocityX(150);
+
+    }else{
+      this.jogadorr.setVelocityX(0)
+    }
     
+    if (this.cursors.up.isDown) {
+      this.jogadorr.setVelocityY(-150);
+
+    }else  if( this.cursors.down.isDown){
+      this.jogadorr.setVelocityY(150)
+
+    }else{
+      this.jogadorr.setVelocityY(0)
+
+    }
+  }  
 }
-
-
