@@ -148,19 +148,11 @@ vai ter um diferente para cada fase e a ordem vai ser baseado em quem passou o l
 
 
 # Detalhes de implementação do movimento
-#### EMVEZ DE SER AS TECLAS 
-####    ArrowUp    ^
-####    ArrouDown  v
-####    ArrowLeft  <
-####    ArrowRight <
-####    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER
-####    Apertado 1 vez    - o jogador vai se mover para cima
-####    2 vezes           - vai se mover para esquerda
-####    3 vezes           - vai se mover para direita
-####    4 vezes           - vai se mover para baixo
-    
-####    exemplo se a pessoa apertou 2 vezes e deixou ocioso por 1 segundo , proxima tecla apertada fara parte de outro MOVIMENTO
-    
+####    ArrowUp    ^ move para cima 
+####    ArrouDown  v move para baixo
+####    ArrowLeft  < move para esquerda
+####    ArrowRight < move para direita
+
 ## Requisitos
 O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking
 Para aparecer no hanking a pessoa tem que estar entre os top 3 melhores
@@ -240,11 +232,7 @@ npm run build
 
 ## Tecnologias e Ferramentas utilizadas
 1. Phaser 3 - GameEngine;
-2. Webpack - Ferramenta de Empacotamento;
-3. JavaScript - Linguagem de programação fundamental;
-4. TypeScript - Linguagem de programação atuando como superset do JavaScript;
-5. Firebase - Banco de Dados para armazenar o ranking;
-6. Vercel - Plataforma de Hospedagem e Implantação.
+2. JavaScript - Linguagem de programação fundamental;
 
 *
 | Atividade | prioridade |
