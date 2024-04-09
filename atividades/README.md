@@ -21,6 +21,7 @@ Tempo livre
 | 7.1 `entender todo o exemplo do`[phaser](https://github.com/ThiagoMassenoMaciel/exemplo-simples-tutorial-do-phaser.github.io)` `||||| feito |
 | 7.2 `Resolver bugs `|||| tive 5 bugs, so resolvi 4 pois o que faltou não tem muita importância | feito |
 | 7.3 `fazer colisão e movimento do jogador de todos os labirintos, falta 14 `||||| feito|
+| 7.4 `diminuir o tamanho do quadrado do jogador e buraco saida, falta 14`||||||
 | 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |  prox aula - 18 mar |
 | 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo | feito |
 | 9.1`Adicionar animação de colisão quando jogador achar saida`| atv 9| -- | -- | -- |  prox aula - 18 mar |
