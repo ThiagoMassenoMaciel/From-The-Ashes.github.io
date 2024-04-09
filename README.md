@@ -37,7 +37,6 @@ Set up webroot - o local para onde o servidor web esta olhando e poe isso no loc
 ###### Markdown for reddit and other forums.<br/>
                         [![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)<br/>
                         
-* Link do jogo: [https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io.git]() 
 # Motivação
 
 É aplicar os conceitos que venho aprendendo durante minha jornada acadêmica desenvolvendo um jogo como trabalho da disciplina ESTÁGIO SUPERVISIONADO I. Eu tive a ideia do jogo aleatoriamente e gostaria de descobir como ela vai ser aplicada.
@@ -55,7 +54,7 @@ não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer 
 O jogador escolhe o estilo de jogo : concorrer com outros jogadores online ou concluindo as fases
 
 ## #Fases
-Vai ter as fases para o jogador jogar . E cada fase vai ter uma quantidade de labirintos para ser passado e o tempo limite.
+Vai ter 3 fases para o jogador jogar . E cada fase vai ter uma quantidade de labirintos para ser passado com o tempo limitado.
 
 ## #Online
 Aqui o jogador deve passar em todos os labirintos em menos tempo e concorrerá com outros jogadores. Aquele jogador que completou todos os labirintos em menos tempo vai subir no sua posição no hanking.
@@ -105,9 +104,9 @@ O score vai ser de acordo com a quantidade de labirintos passadas pelo jogador p
 ## versão 1.0
 | Precisão | Score |
 | ----- | ----------- |
-| Passar 1 labirinto no tempo <= 1 minuto | 1 pts |
-| Passar 2 labirintos no tempo <= 1 minuto | 5 pts |
-| Passar 3 labirintos no tempo <= 1 minuto | 10 pts |
+| Passar 1 labirinto no tempo <= 30 segundos | 1 pts |
+| Passar 2 labirintos no tempo <= 30 segundos | 5 pts |
+| Passar 3 labirintos no tempo <= 30 segundo | 10 pts |
 
 ## versão 2.0
 | Precisão | Score |
@@ -149,23 +148,15 @@ vai ter um diferente para cada fase e a ordem vai ser baseado em quem passou o l
 
 
 # Detalhes de implementação do movimento
-#### EMVEZ DE SER AS TECLAS 
-####    ArrowUp    ^
-####    ArrouDown  v
-####    ArrowLeft  <
-####    ArrowRight <
-####    VAI SER QUANTIDADES DE VEZES APERTADO A TECLA ENTER
-####    Apertado 1 vez    - o jogador vai se mover para cima
-####    2 vezes           - vai se mover para esquerda
-####    3 vezes           - vai se mover para direita
-####    4 vezes           - vai se mover para baixo
-    
-####    exemplo se a pessoa apertou 2 vezes e deixou ocioso por 1 segundo , proxima tecla apertada fara parte de outro MOVIMENTO
-    
+####    ArrowUp    ^ move para cima 
+####    ArrouDown  v move para baixo
+####    ArrowLeft  < move para esquerda
+####    ArrowRight < move para direita
+
 ## Requisitos
 O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking
 Para aparecer no hanking a pessoa tem que estar entre os top 3 melhores
-Para ganhar escore o jogador deve passar no mínimo em um labirinto em no máximo 1 minuto
+Para ganhar score o jogador deve passar no mínimo em um labirinto em no máximo 1 minuto
 
 ### Épicos/Funcionalidades
 
@@ -241,11 +232,7 @@ npm run build
 
 ## Tecnologias e Ferramentas utilizadas
 1. Phaser 3 - GameEngine;
-2. Webpack - Ferramenta de Empacotamento;
-3. JavaScript - Linguagem de programação fundamental;
-4. TypeScript - Linguagem de programação atuando como superset do JavaScript;
-5. Firebase - Banco de Dados para armazenar o ranking;
-6. Vercel - Plataforma de Hospedagem e Implantação.
+2. JavaScript - Linguagem de programação fundamental;
 
 *
 | Atividade | prioridade |
