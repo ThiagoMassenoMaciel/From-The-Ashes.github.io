@@ -62,7 +62,7 @@ class Tela21 extends Phaser.Scene{
     const linhaF = 0
     const colunaF = 0
 
-    this.saida = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.3)
+    this.saida = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.2).refreshBody();
 
     //animando o sprite saida
     this.anims.create( {
@@ -76,7 +76,7 @@ class Tela21 extends Phaser.Scene{
     //executando animação
     this.saida.anims.play("saidaa_anims", true);
 
-    this.jogadorr = this.physics.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.3);
+    this.jogadorr = this.physics.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.2).refreshBody();
     this.jogadorr.setCollideWorldBounds(true);
 
     console.log("até aqui funcionou ?")

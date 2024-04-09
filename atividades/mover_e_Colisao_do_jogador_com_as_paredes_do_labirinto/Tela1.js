@@ -22,6 +22,7 @@ class Tela1 extends Phaser.Scene{
 
     this.load.spritesheet("saidaa", "../../assents/teste.png", { frameWidth: 398, frameHeight: 398 }); // escolhi este 
     this.load.spritesheet("jogador", "../../assents/jogador.png", { frameWidth: 398, frameHeight: 398 });
+    this.load.spritesheet("frame1", "../../assents/Frame1.png", { frameWidth: 40, frameHeight: 40 });
     
     this.load.spritesheet("achou_saida", "../../assents/AchadoSaida-16px-16px-5-frames.png", { frameWidth: 16, frameHeight: 16 });
 
@@ -33,7 +34,7 @@ class Tela1 extends Phaser.Scene{
 
     this.paredes = this.physics.add.group()
 
-    setTimeout( ()=>{this.scene.start("playGameEasy")}, 20) 
+    setTimeout( ()=>{this.scene.start("GameEasy")}, 20) 
   }
 
 }

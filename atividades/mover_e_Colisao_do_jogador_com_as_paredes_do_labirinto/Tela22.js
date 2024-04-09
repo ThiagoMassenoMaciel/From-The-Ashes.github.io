@@ -62,7 +62,7 @@ class Tela22 extends Phaser.Scene{
     const linhaF = 0
     const colunaF = 1
 
-    this.saida = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.3)
+    this.saida = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.2).refreshBody()
 
     this.anims.create( {
 
@@ -77,7 +77,7 @@ class Tela22 extends Phaser.Scene{
     })
     this.saida.anims.play("saidaa_anims", true);
 
-    this.jogadorr = this.physics.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.3);
+    this.jogadorr = this.physics.add.sprite(colunaI * 120 + (config.width/2) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.2).refreshBody();
     this.jogadorr.setCollideWorldBounds(true);
 
     this.anims.create( {

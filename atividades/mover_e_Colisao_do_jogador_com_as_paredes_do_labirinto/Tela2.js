@@ -1,7 +1,7 @@
 class Tela2 extends Phaser.Scene{
 
   constructor(){
-    super("playGameEasy")
+    super("GameEasy")
   }
 
  
