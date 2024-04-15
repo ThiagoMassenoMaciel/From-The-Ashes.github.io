@@ -1,0 +1,5 @@
+no exemplo mostrado pelo professor do phaser é usado variavel global dentro do script e fora de qualquer função 
+no exemplo que estou fazendo é uma variavel de classe estanciada dentro do create(). pergunto funções fora do create() muda o valor dessa var de classe ?                
+
+bug ,  depois do jogador encostar na saida ele n ta reconhecendo a função que vai executar  a animação Uncaught ReferenceError: saiuDoLabirinto is not defined
+    solução :::: eu não faço a menor ideia
