@@ -23,6 +23,8 @@ Tempo livre
 | 7.3 `fazer colisão e movimento do jogador de todos os labirintos, falta 14 `||||| feito|
 | 7.4 `diminuir o tamanho do quadrado do jogador e buraco saida, falta 14`||||||
 | 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |  prox aula - 18 mar |
+| 8.1 Animação quando o jogador colide com saida | | | | | |
+| 8.2 Colocar o sprite do jogador com a imagem com tamanho normal 40px. | | | | | |
 | 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo | feito |
 | 9.1`Adicionar animação de colisão quando jogador achar saida`| atv 9| -- | -- | -- |  prox aula - 18 mar |
 | 10.`Escolher aleatoriamente o labirinto , modo de jogo randomico` | -- | -- | -- | não deixar aparecer uma fácil mais de uma vez na mesma fase |
