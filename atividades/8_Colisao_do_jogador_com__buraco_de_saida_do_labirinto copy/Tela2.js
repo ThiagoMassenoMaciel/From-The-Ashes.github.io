@@ -4,25 +4,7 @@ class Tela2 extends Phaser.Scene{
     super("GameEasy")
   }
 
-  saiuDoLabirinto( jogadorr, saida ){
 
-    jogadorr.disableBody(true, true);
-    saida.disableBody(true, true);
-
-    this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
-
-    this.anims.create( {
-
-      key: "saiuDoLabirinto_anims",
-      frames: this.anims.generateFrameNumbers("saiuDoLabirinto"),
-      frameRate: 15,
-      repeat: -1
-      
-    })
-
-    this.saiuDoLabirinto.anims.play("saiuDoLabirinto_anims", true);
-
-  }
 
   create(){
 
@@ -53,6 +35,8 @@ class Tela2 extends Phaser.Scene{
     matrizes.push(easy_0)
 
     const matriz = matrizes[0]
+
+    let ramdom = 
 
     this.todos_blocos_parede = this.physics.add.staticGroup();
 
@@ -123,7 +107,7 @@ class Tela2 extends Phaser.Scene{
 
     this.physics.add.collider(this.jogadorr, this.todos_blocos_parede);
 
-    this.physics.add.overlap(this.jogadorr, this.saida, saiuDoLabirinto, null, this);
+    this.physics.add.overlap(this.jogadorr, this.saida, this.saiuDoLabirinto, null, this);
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
@@ -148,6 +132,28 @@ class Tela2 extends Phaser.Scene{
    }
 
   }
+
+  saiuDoLabirinto( jogadorr, saida ){
+
+    this.jogadorr.disableBody(true, true);
+    this.saida.disableBody(true, true);
+
+    //this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
+    this.saiu_do_labirinto = this.physics.add.sprite(saida.x , saida.y ,"saiuDoLabirinto").setOrigin(0,0).setScale(2).refreshBody(); 
+
+    this.anims.create( {
+
+      key: "saiuDoLabirinto_anims",
+      frames: this.anims.generateFrameNumbers("saiuDoLabirinto"),
+      frameRate: 15,
+      repeat: -1
+      
+    })
+
+    this.saiu_do_labirinto.anims.play("saiuDoLabirinto_anims", true);
+    
+  }
+  
     
 }
 

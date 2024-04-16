@@ -283,6 +283,6 @@ npm run build
 ### 31 mar - 3h23'      Atv 7 feitos lab facil( 4 5 ) lab medium( 1 2 3 4 5 )  lab hard( 1 )
 ###  1 abr - 1h21'      Atv 7 feitos lab hard( 2 3 4 5 )
 ###  8 abr - 1h         Atv 7.4 feito
-### 15 abr - 1h10'      Atv 8 começei
+### 15 abr - 1h30'      Atv 8 começei
 #ficou faltando atividade 8 e o 9.1
 ![alt text](image.png)
