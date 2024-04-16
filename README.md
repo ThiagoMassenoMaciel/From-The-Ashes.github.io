@@ -1,6 +1,7 @@
 **
 # Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
-![diretório](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/f0f7a9cb-481e-451a-988c-33a23c6c1760)
+![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/e06053a2-2bcc-48cf-b201-d1c6f456169d)
+
 # ou clique neste [link](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/tree/versionONE/atividades/transformar_matriz_em_labirinto)
 <br/><br/><br/><br/><br/><br/>
 # Biblioteca com exemplos do [phaser](https://labs.phaser.io/)
