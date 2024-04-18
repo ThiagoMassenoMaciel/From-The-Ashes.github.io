@@ -30,13 +30,27 @@ class Tela2 extends Phaser.Scene{
 //---------------------------------------------
     //ponto inicial linha[4] coluna[4]
     //ponto final   linha[0] coluna[0]
-    const easy_1 = [ 
-      [0, 0, 0, 0, 0],
-      [1, 1, 1, 1, 0],
-      [0, 0, 0, 0, 0],
-      [0, 1, 1, 1, 1],
-      [0, 0, 0, 0, 0]
-    ]
+    const easy_1 = {
+      Full_matriz: 
+      [ 
+        [0, 0, 0, 0, 0],
+        [1, 1, 1, 1, 0],
+        [0, 0, 0, 0, 0],
+        [0, 1, 1, 1, 1],
+        [0, 0, 0, 0, 0]
+      ],
+
+      linhaI: 4
+      ,
+      colunaI: 4
+      ,
+      linhaF: 0
+      ,
+      colunaF: 0
+  
+    } 
+    
+    
 //---------------------------------------------
     //ponto inicial linha[2] coluna[2]
     //ponto final   linha[0] coluna[1]    
@@ -74,23 +88,24 @@ class Tela2 extends Phaser.Scene{
     matrizes.push(easy_3)
     matrizes.push(easy_4)
 
-    matrizes.push(easy_0)
-
     let random_number = Math.floor(Math.random() * matrizes.length );
+    
+    //console.log(random_number)
 
-    const matriz = matrizes[random_number]
+    //const matriz = matrizes[random_number]
+    const matriz = matrizes[1]
 
     this.todos_blocos_parede = this.physics.add.staticGroup();
 
-    for (let linha = 0; linha < matriz.length; linha++) {
+    for (let linha = 0; linha < matriz.Full_matriz.length; linha++) {
     // quando eu for transformar este pedaço de código em uma função na hora de mudar a cor 
     //é so eu trocar o objeto de colisão e mudar ordem que passarei os parametros (pareide, espaço) (espaço , pareide) chamando a mesma função
     // e para o jogador não ultrapassar o limete do labirinto eu pego a posição eixo(x,y) da primeira e ultima coluna , da primeira e ultima linha e arrodeio de blocos pareide
-      for (let coluna = 0; coluna < matriz[linha].length; coluna++) {
+      for (let coluna = 0; coluna < matriz.Full_matriz[linha].length; coluna++) {
             
         console.log(` linha ${linha} coluna ${coluna}`)
 
-        if(matriz[linha][coluna] === 1){
+        if(matriz.Full_matriz[linha][coluna] === 1){
                           //tamanho de cada bloco + metade da tela horizontalmente 
           this.todos_blocos_parede.create( coluna * 120 + (config.width/3) - 80 ,  linha * 120 ,"pareide").setOrigin(0,0).setScale(3).refreshBody(); 
 
@@ -109,14 +124,14 @@ class Tela2 extends Phaser.Scene{
     this.todos_blocos_parede.create( ( 5 * 120 ) + (config.width/3) - 80 ,  0              , "borda_right").setOrigin(0,0).refreshBody();
     this.todos_blocos_parede.create( (config.width/3) - 80               , (5 * 120 )      , "borda_bottom").setOrigin(0,0).refreshBody(); 
 
-
+/*
     const linhaI = 1
     const colunaI = 0
 
     const linhaF = 4
     const colunaF = 4
-
-    this.saida = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.2).refreshBody();
+*/
+    this.saida = this.physics.add.sprite( matriz.colunaF * 120 + (config.width/3) - 79.5  , ( matriz.linhaF * 120 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.2).refreshBody();
 
     this.anims.create( {
     
@@ -132,7 +147,7 @@ class Tela2 extends Phaser.Scene{
 
     this.saida.anims.play("saidaa_anims", true);
 
-    this.jogadorr = this.physics.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.2).refreshBody(); 
+    this.jogadorr = this.physics.add.sprite( matriz.colunaI * 120 + (config.width/3) - 79.5  ,  ( matriz.linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.2).refreshBody(); 
     this.jogadorr.setCollideWorldBounds(true);
 
     this.anims.create( {

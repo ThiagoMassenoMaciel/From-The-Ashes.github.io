@@ -287,5 +287,6 @@ npm run build
 ### 15 abr - 1h30'      Atv 8 começei e terminei so fiz de um labirinto
 ### 16 abr - 10'        Atv 8.1 fiz e percebi que n valia mt apena pois aparecia uma lista
 ### 17 abr - 40'        Atv 10 começei , fiz só easy
+### 18 abr - 20'        Atv 10 mantive , easy 1bug + 1fixed
 #ficou faltando atividade 8 e o 9.1
 ![alt text](image.png)

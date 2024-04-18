@@ -3,3 +3,187 @@ no exemplo que estou fazendo é uma variavel de classe estanciada dentro do crea
 
 bug ,  depois do jogador encostar na saida ele n ta reconhecendo a função que vai executar  a animação Uncaught ReferenceError: saiuDoLabirinto is not defined
     solução :::: eu não faço a menor ideia
+
+bug , se eu mudo o labirinto a posição do jogador e saída ficam nos blocos errados 
+        antes de resolver o código era assim 
+
+                const easy_0 = [
+                    [1 , 0 , 1 , 0 , 1],
+                    [0 , 1 , 0 , 0 , 0],
+                    [0 , 0 , 0 , 1 , 0],
+                    [0 , 1 , 0 , 0 , 1],
+                    [1 , 0 , 1 , 0 , 0]
+                    ]
+                
+                //---------------------------------------------
+                    //ponto inicial linha[4] coluna[4]
+                    //ponto final   linha[0] coluna[0]
+                    const easy_1 = {
+                    Full_matriz: 
+                    [ 
+                        [0, 0, 0, 0, 0],
+                        [1, 1, 1, 1, 0],
+                        [0, 0, 0, 0, 0],
+                        [0, 1, 1, 1, 1],
+                        [0, 0, 0, 0, 0]
+                    ],
+
+                    linhaI: 4
+                    ,
+                    colunaI: 4
+                    ,
+                    linhaF: 0
+                    ,
+                    colunaF: 0
+                
+                    } 
+                    
+                    
+                //---------------------------------------------
+                    //ponto inicial linha[2] coluna[2]
+                    //ponto final   linha[0] coluna[1]    
+                    const easy_2 = [
+                    [ 1, 0, 1, 0, 1],
+                    [ 0, 0, 1, 1, 1],
+                    [ 0, 1, 0, 0, 0],
+                    [ 0, 1, 1, 1, 0],
+                    [ 0, 0, 0, 0, 0]
+                    ]
+                //---------------------------------------------
+                    //ponto inicial linha[0] coluna[1]
+                    //ponto final   linha[2] coluna[2]  
+                    const easy_3 = [
+                    [ 0, 0, 0, 0, 0],
+                    [ 0, 1, 1, 1, 0],
+                    [ 0, 1, 0, 1, 0],
+                    [ 0, 1, 0, 0, 0],
+                    [ 0, 0, 1, 0, 0],
+                    ]
+                //---------------------------------------------
+                    //ponto inicial linha[3] coluna[3]
+                    //ponto final   linha[0] coluna[1]
+                    const easy_4 = [    
+                    [1, 0, 1, 0, 1],
+                    [0, 0, 0, 1, 0],
+                    [1, 0, 1, 0, 1],
+                    [0, 0, 0, 0, 0],
+                    [1, 0, 1, 0, 1]
+                    ]
+                //---------------------------------------------
+                    matrizes.push(easy_0)
+                    matrizes.push(easy_1)
+                    matrizes.push(easy_2)
+                    matrizes.push(easy_3)
+                    matrizes.push(easy_4)
+
+                    let random_number = Math.floor(Math.random() * matrizes.length );
+                    
+                    //console.log(random_number)
+
+                    const matriz = matrizes[random_number]
+                    
+                    this.todos_blocos_parede = this.physics.add.staticGroup();
+
+                    for (let linha = 0; linha < matriz.length; linha++) {
+                    
+                    for (let coluna = 0; coluna < matriz[linha].length; coluna++) {
+
+                        if(matriz[linha][coluna] === 1){
+
+                        this.todos_blocos_parede.create( coluna * 60 + (config.width/4) + 35,  linha * 60 ,"pareide").setOrigin(0,0).setScale(1.5).refreshBody();
+
+                        }else{
+
+                        this.chao = this.add.image(coluna * 60  + (config.width/4) + 35 ,   linha * 60, "chao").setOrigin(0,0).setScale(1.5)
+
+                        }
+                    }
+                    }
+                    
+                    this.todos_blocos_parede.create((config.width/3) - 80 - 9            ,0           , "borda_left").setOrigin(0,0).refreshBody();
+                    this.todos_blocos_parede.create( ( 10 * 60 ) + (config.width/3) - 79 ,  0         , "borda_right").setOrigin(0,0).refreshBody();
+                    this.todos_blocos_parede.create( (config.width/3) - 80               , (10 * 60 ) , "borda_bottom").setOrigin(0,0).refreshBody();
+
+                    const linhaI = 0
+                    const colunaI = 1
+
+                    const linhaF = 6
+                    const colunaF = 0
+
+                    this.saida = this.physics.add.sprite( colunaF * 60 + (config.width/3) - 78.5  , ( linhaF * 60 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.1).refreshBody();
+
+                    this.anims.create( {
+
+                    key: "saidaa_anims",
+                    
+                    frames: this.anims.generateFrameNumbers("saidaa"),
+                    
+                    frameRate: 4,
+                    
+                    repeat: -1
+                    
+                    })
+                    this.saida.anims.play("saidaa_anims", true);
+
+                    this.jogadorr = this.physics.add.sprite(colunaI * 60 + (config.width/3) - 78.5  ,  (linhaI * 60 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.1).refreshBody();
+                    this.jogadorr.setCollideWorldBounds(true);
+
+    emvez de serem variaveis simples com uma matriz dentro 
+    se tornou uma variavel que tem um objetos 
+        que tem o atributo com a matriz 
+        e outros atributos correspondente as linhas e colunas ocupadas pelo jogador e buraco saida 
+
+    antes eu tinha estaticamente as variáves de coluna e linha do jogador e saída separado da matriz correspondente 
+        exemplo usado quando eu definia a largura e altura da posição do jogador e saida 
+        antes era so avariavel separada 
+
+                    const linhaI = 0
+                    const colunaI = 1
+
+                    const linhaF = 6
+                    const colunaF = 0
+        agora eu acesso o objeto que tem os atributos de linha e coluna do especifico labirinto 
+
+                    matriz.Full_matriz.linhaI = 0
+                    matriz.Full_matriz.colunaI = 1
+
+                    matriz.Full_matriz.linhaF = 6
+                    matriz.Full_matriz.colunaF = 0
+
+    eu juntei as informações que vão sempre mudar dentro de um unico objeto , centralizei as informações que vai sempre mudar de labirinto para labirinto dentro de cada objeto 
+
+    antes quando eu me referia diretamente a matriz com zeros e ums do labirinto 
+        matriz[linha].length
+        matriz[linha][coluna] === 1
+    agora me refiro ao atributo do objeto do labirinto que contèm como valor a matriz de zeros e ums 
+        matriz.Full_matriz[linha].length
+        matriz.Full_matriz[linha][coluna] === 1
+
+    solução :::: n deixar simplismente uma array de matrizes , mas sem a informação da matriz junto com os pontos inicial e final de cada labirinto 
+                    precisar referenciar so um lugar onde eu possa conseguir todas as informações que variam de labirinto para labirinto 
+
+
+
+                    //--------------------------------------------- fazer isso para cada um das matrizes de zeros e ums 
+                    //ponto inicial linha[4] coluna[4]
+                    //ponto final   linha[0] coluna[0]
+                    const easy_1 = {
+                    Full_matriz: 
+                    [ 
+                        [0, 0, 0, 0, 0],
+                        [1, 1, 1, 1, 0],
+                        [0, 0, 0, 0, 0],
+                        [0, 1, 1, 1, 1],
+                        [0, 0, 0, 0, 0]
+                    ],
+
+                    linhaI: 4
+                    ,
+                    colunaI: 4
+                    ,
+                    linhaF: 0
+                    ,
+                    colunaF: 0
+                
+                    } 
+    
