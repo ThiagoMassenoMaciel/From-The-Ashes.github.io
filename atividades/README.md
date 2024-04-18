@@ -3,9 +3,6 @@ Tempo livre
 10h - 12h
 14h-15h10
 
-
-
-
 | Atividade | dependente | Pré-condições | Pós-condições | detalhes | situação |
 | :-------- | :--------: | :-----------: | :-----------: | -------: | -------: |
 | 1.`Criar 4 labirintos fácil , e definier em todos labirintos ponto inicial e final` | -- | -- | -- | talvez eu escolha mudar facil de 5 linhas para 10 e medio para 15 | feito |
@@ -21,14 +18,12 @@ Tempo livre
 | 7.1 `entender todo o exemplo do`[phaser](https://github.com/ThiagoMassenoMaciel/exemplo-simples-tutorial-do-phaser.github.io)` `||||| feito |
 | 7.2 `Resolver bugs `|||| tive 5 bugs, so resolvi 4 pois o que faltou não tem muita importância | feito |
 | 7.3 `fazer colisão e movimento do jogador de todos os labirintos, falta 14 `||||| feito|
-| 7.4 `diminuir o tamanho do quadrado do jogador e buraco saida, falta 14`||||||
-| 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |  prox aula - 18 mar |
-| 8.1 Animação quando o jogador colide com saida | | | | | |
-| 8.2 Colocar o sprite do jogador com a imagem com tamanho normal 40px. | | | | | |
-| 9.`Movimento do personagem` | -- | -- | -- | se der muito problema talvez posso mudar para movimentar assim que move o mouse ou as setas mesmo | feito |
-| 9.1`Adicionar animação de colisão quando jogador achar saida`| atv 9| -- | -- | -- |  prox aula - 18 mar |
-| 10.`Escolher aleatoriamente o labirinto , modo de jogo randomico` | -- | -- | -- | não deixar aparecer uma fácil mais de uma vez na mesma fase |
-| 11.`trocar a cor do do chão pela parede` | -- | -- | -- | -- |
+| 7.4 `diminuir o tamanho do quadrado do jogador e buraco saida, falta 14`||||| feito|
+| 8.`Colisão do jogador com o buraco de saída` | -- | -- | -- | -- |  feito|
+| 8.1 `Colocar o sprite do jogador com a imagem com tamanho normal 40px. `| | | | | feito|
+| 9.`Adicionar animação de colisão quando jogador achar saida`| atv 9| -- | -- | -- | feito |
+| 10.`Escolher aleatoriamente o labirinto , modo de jogo randomico` | -- | -- | -- | não deixar aparecer uma fácil mais de uma vez na mesma fase | próx aula 22 abr |
+| 11.`trocar a cor do do chão pela parede` | -- | -- | -- | -- | -- | próx aula 22 abr |
 | 12.`Mudar o buraco de canto`| -- | -- | -- | -- |
 | 12.`Ajeitar a organização de cada fase` | -- | -- | -- | -- |
 | 13.`Preparar os cronometros` | -- | -- | -- | -- | 

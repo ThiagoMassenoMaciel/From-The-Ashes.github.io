@@ -16,11 +16,6 @@ class Tela2 extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
     
-
-
-
-
-
     const matrizes = []
     //ponto inicial linha[1] coluna[0]
     //ponto final   linha[4] coluna[4]
@@ -31,12 +26,12 @@ class Tela2 extends Phaser.Scene{
       [0 , 1 , 0 , 0 , 1],
       [1 , 0 , 1 , 0 , 0]
     ]
-    
+
     matrizes.push(easy_0)
 
-    const matriz = matrizes[0]
+    let random_number = Math.floor(Math.random() * matrizes.length );
 
-    let ramdom = 
+    const matriz = matrizes[random_number]
 
     this.todos_blocos_parede = this.physics.add.staticGroup();
 

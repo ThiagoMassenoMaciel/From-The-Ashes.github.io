@@ -4,7 +4,7 @@ class Tela2 extends Phaser.Scene{
     super("GameEasy")
   }
 
- 
+
 
   create(){
 
@@ -16,11 +16,6 @@ class Tela2 extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
     
-
-
-
-
-
     const matrizes = []
     //ponto inicial linha[1] coluna[0]
     //ponto final   linha[4] coluna[4]
@@ -31,10 +26,59 @@ class Tela2 extends Phaser.Scene{
       [0 , 1 , 0 , 0 , 1],
       [1 , 0 , 1 , 0 , 0]
     ]
+  
+//---------------------------------------------
+    //ponto inicial linha[4] coluna[4]
+    //ponto final   linha[0] coluna[0]
+    const easy_1 = [ 
+      [0, 0, 0, 0, 0],
+      [1, 1, 1, 1, 0],
+      [0, 0, 0, 0, 0],
+      [0, 1, 1, 1, 1],
+      [0, 0, 0, 0, 0]
+    ]
+//---------------------------------------------
+    //ponto inicial linha[2] coluna[2]
+    //ponto final   linha[0] coluna[1]    
+    const easy_2 = [
+      [ 1, 0, 1, 0, 1],
+      [ 0, 0, 1, 1, 1],
+      [ 0, 1, 0, 0, 0],
+      [ 0, 1, 1, 1, 0],
+      [ 0, 0, 0, 0, 0]
+    ]
+//---------------------------------------------
+    //ponto inicial linha[0] coluna[1]
+    //ponto final   linha[2] coluna[2]  
+    const easy_3 = [
+      [ 0, 0, 0, 0, 0],
+      [ 0, 1, 1, 1, 0],
+      [ 0, 1, 0, 1, 0],
+      [ 0, 1, 0, 0, 0],
+      [ 0, 0, 1, 0, 0],
+    ]
+//---------------------------------------------
+    //ponto inicial linha[3] coluna[3]
+    //ponto final   linha[0] coluna[1]
+    const easy_4 = [    
+      [1, 0, 1, 0, 1],
+      [0, 0, 0, 1, 0],
+      [1, 0, 1, 0, 1],
+      [0, 0, 0, 0, 0],
+      [1, 0, 1, 0, 1]
+    ]
+//---------------------------------------------
+    matrizes.push(easy_0)
+    matrizes.push(easy_1)
+    matrizes.push(easy_2)
+    matrizes.push(easy_3)
+    matrizes.push(easy_4)
 
     matrizes.push(easy_0)
-    
-    const matriz = matrizes[0]
+
+    let random_number = Math.floor(Math.random() * matrizes.length );
+
+    const matriz = matrizes[random_number]
 
     this.todos_blocos_parede = this.physics.add.staticGroup();
 
@@ -72,7 +116,7 @@ class Tela2 extends Phaser.Scene{
     const linhaF = 4
     const colunaF = 4
 
-    this.saida = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.3).refreshBody(); 
+    this.saida = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.2).refreshBody();
 
     this.anims.create( {
     
@@ -87,10 +131,8 @@ class Tela2 extends Phaser.Scene{
     })
 
     this.saida.anims.play("saidaa_anims", true);
-    
 
-
-    this.jogadorr = this.physics.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.3).refreshBody(); 
+    this.jogadorr = this.physics.add.sprite(colunaI * 120 + (config.width/3) - 79.5  ,  (linhaI * 120 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.2).refreshBody(); 
     this.jogadorr.setCollideWorldBounds(true);
 
     this.anims.create( {
@@ -102,14 +144,16 @@ class Tela2 extends Phaser.Scene{
       
     })
 
-
+    
     this.jogadorr.anims.play("jogador_anims", true);
 
     this.physics.add.collider(this.jogadorr, this.todos_blocos_parede);
 
+    this.physics.add.overlap(this.jogadorr, this.saida, this.saiuDoLabirinto, null, this);
+
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    setTimeout( ()=>{this.scene.start("21")}, 10000)
+    //setTimeout( ()=>{this.scene.start("playGameMedium")}, 10000)
   }
 
   update(){
@@ -130,6 +174,28 @@ class Tela2 extends Phaser.Scene{
    }
 
   }
+
+  saiuDoLabirinto( jogadorr, saida ){
+
+    this.jogadorr.disableBody(true, true);
+    this.saida.disableBody(true, true);
+
+    //this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
+    this.saiu_do_labirinto = this.physics.add.sprite(saida.x , saida.y ,"saiuDoLabirinto").setOrigin(0,0).setScale(2).refreshBody(); 
+
+    this.anims.create( {
+
+      key: "saiuDoLabirinto_anims",
+      frames: this.anims.generateFrameNumbers("saiuDoLabirinto"),
+      frameRate: 15,
+      repeat: -1
+      
+    })
+
+    this.saiu_do_labirinto.anims.play("saiuDoLabirinto_anims", true);
+    
+  }
+  
     
 }
 
