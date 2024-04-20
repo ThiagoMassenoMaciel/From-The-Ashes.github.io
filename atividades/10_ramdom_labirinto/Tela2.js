@@ -19,14 +19,26 @@ class Tela2 extends Phaser.Scene{
     const matrizes = []
     //ponto inicial linha[1] coluna[0]
     //ponto final   linha[4] coluna[4]
-    const easy_0 = [
-      [1 , 0 , 1 , 0 , 1],
-      [0 , 1 , 0 , 0 , 0],
-      [0 , 0 , 0 , 1 , 0],
-      [0 , 1 , 0 , 0 , 1],
-      [1 , 0 , 1 , 0 , 0]
-    ]
+
+    const easy_0 = {
+      Full_matriz: 
+      [ 
+        [1 , 0 , 1 , 0 , 1],
+        [0 , 1 , 0 , 0 , 0],
+        [0 , 0 , 0 , 1 , 0],
+        [0 , 1 , 0 , 0 , 1],
+        [1 , 0 , 1 , 0 , 0]
+      ],
+
+      linhaI: 1
+      ,
+      colunaI: 0
+      ,
+      linhaF: 4
+      ,
+      colunaF: 4
   
+    } 
 //---------------------------------------------
     //ponto inicial linha[4] coluna[4]
     //ponto final   linha[0] coluna[0]
@@ -54,33 +66,70 @@ class Tela2 extends Phaser.Scene{
 //---------------------------------------------
     //ponto inicial linha[2] coluna[2]
     //ponto final   linha[0] coluna[1]    
-    const easy_2 = [
-      [ 1, 0, 1, 0, 1],
-      [ 0, 0, 1, 1, 1],
-      [ 0, 1, 0, 0, 0],
-      [ 0, 1, 1, 1, 0],
-      [ 0, 0, 0, 0, 0]
-    ]
+    const easy_2 = {
+      Full_matriz: 
+      [ 
+        [ 1, 0, 1, 0, 1],
+        [ 0, 0, 1, 1, 1],
+        [ 0, 1, 0, 0, 0],
+        [ 0, 1, 1, 1, 0],
+        [ 0, 0, 0, 0, 0]
+      ],
+
+      linhaI: 2
+      ,
+      colunaI: 2
+      ,
+      linhaF: 0
+      ,
+      colunaF: 1
+  
+    } 
 //---------------------------------------------
     //ponto inicial linha[0] coluna[1]
     //ponto final   linha[2] coluna[2]  
-    const easy_3 = [
-      [ 0, 0, 0, 0, 0],
-      [ 0, 1, 1, 1, 0],
-      [ 0, 1, 0, 1, 0],
-      [ 0, 1, 0, 0, 0],
-      [ 0, 0, 1, 0, 0],
-    ]
+    const easy_3 = {
+      Full_matriz: 
+      [ 
+        [ 0, 0, 0, 0, 0],
+        [ 0, 1, 1, 1, 0],
+        [ 0, 1, 0, 1, 0],
+        [ 0, 1, 0, 0, 0],
+        [ 0, 0, 1, 0, 0],
+      ],
+
+      linhaI: 0
+      ,
+      colunaI: 1
+      ,
+      linhaF: 2
+      ,
+      colunaF: 2
+  
+    } 
 //---------------------------------------------
     //ponto inicial linha[3] coluna[3]
     //ponto final   linha[0] coluna[1]
-    const easy_4 = [    
-      [1, 0, 1, 0, 1],
-      [0, 0, 0, 1, 0],
-      [1, 0, 1, 0, 1],
-      [0, 0, 0, 0, 0],
-      [1, 0, 1, 0, 1]
-    ]
+
+    const easy_4 = {
+      Full_matriz: 
+      [ 
+        [1, 0, 1, 0, 1],
+        [0, 0, 0, 1, 0],
+        [1, 0, 1, 0, 1],
+        [0, 0, 0, 0, 0],
+        [1, 0, 1, 0, 1]
+      ],
+
+      linhaI: 3
+      ,
+      colunaI: 3
+      ,
+      linhaF: 0
+      ,
+      colunaF: 1
+  
+    } 
 //---------------------------------------------
     matrizes.push(easy_0)
     matrizes.push(easy_1)
@@ -92,8 +141,7 @@ class Tela2 extends Phaser.Scene{
     
     //console.log(random_number)
 
-    //const matriz = matrizes[random_number]
-    const matriz = matrizes[1]
+    const matriz = matrizes[random_number]
 
     this.todos_blocos_parede = this.physics.add.staticGroup();
 
