@@ -290,5 +290,3 @@ npm run build
 ### 19 abr - 16'        Atv 10 terminei todos labirinto easy
 ### 20 abr - 44'        Atv 10 terminei todos labirinto medium e deixei clean root foulder
 
-#ficou faltando atividade 8 e o 9.1
-![alt text](image.png)
