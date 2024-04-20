@@ -138,8 +138,6 @@ class Tela2 extends Phaser.Scene{
     matrizes.push(easy_4)
 
     let random_number = Math.floor(Math.random() * matrizes.length );
-    
-    //console.log(random_number)
 
     const matriz = matrizes[random_number]
 

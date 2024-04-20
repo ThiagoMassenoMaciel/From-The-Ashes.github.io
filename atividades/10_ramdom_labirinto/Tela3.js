@@ -15,24 +15,139 @@ class Tela3 extends Phaser.Scene{
 
     let matrizes = []
 
-//    Ponto de partida: Linha[0], Coluna[1]
-//    Ponto final: Linha[6], Coluna[1]
-    const medium_0 = [
-      [0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 1 , 1],
-      [0 , 1 , 1 , 1 , 0 , 1 , 0 , 1 , 0 , 1],
-      [0 , 1 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 1],
-      [0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 0],
-      [0 , 1 , 0 , 1 , 1 , 1 , 0 , 1 , 1 , 1],
-      [1 , 1 , 0 , 0 , 1 , 0 , 0 , 0 , 0 , 1],
-      [0 , 0 , 1 , 1 , 1 , 1 , 1 , 0 , 0 , 0],
-      [1 , 0 , 1 , 0 , 0 , 0 , 1 , 1 , 1 , 0],
-      [1 , 0 , 1 , 0 , 1 , 0 , 0 , 0 , 1 , 0],
-      [1 , 0 , 0 , 0 , 1 , 1 , 1 , 0 , 0 , 0],
-    ]
+    const medium_0 = {
+
+      Full_matriz: 
+      [ 
+        [0, 1, 0, 1, 0, 0, 0, 1, 1, 0],
+        [1, 0, 1, 1, 0, 1, 0, 1, 0, 1],
+        [1, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+        [0, 1, 0, 1, 0, 1, 1, 1, 0, 0],
+        [0, 1, 0, 0, 1, 1, 0, 1, 1, 0],
+        [1, 1, 1, 0, 1, 0, 1, 0, 0, 1],
+        [0, 0, 1, 0, 0, 0, 0, 0, 1, 1],
+        [1, 0, 1, 0, 1, 0, 1, 1, 1, 0],
+        [1, 0, 0, 0, 1, 0, 0, 0, 1, 0],
+        [1, 0, 1, 1, 1, 1, 1, 0, 0, 0]
+      ],
+
+      linhaI: 6
+      ,
+      colunaI: 1
+      ,
+      linhaF: 1
+      ,
+      colunaF: 8
+  
+    } 
+
+    const medium_1 = {
+
+      Full_matriz: 
+      [ 
+        [0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 1 , 1],
+        [0 , 1 , 1 , 1 , 0 , 1 , 0 , 1 , 0 , 1],
+        [0 , 1 , 0 , 0 , 0 , 1 , 0 , 0 , 0 , 1],
+        [0 , 1 , 0 , 1 , 0 , 1 , 0 , 1 , 0 , 0],
+        [0 , 1 , 0 , 1 , 1 , 1 , 0 , 1 , 1 , 1],
+        [1 , 1 , 0 , 0 , 1 , 0 , 0 , 0 , 0 , 1],
+        [0 , 0 , 1 , 1 , 1 , 1 , 1 , 0 , 0 , 0],
+        [1 , 0 , 1 , 0 , 0 , 0 , 1 , 1 , 1 , 0],
+        [1 , 0 , 1 , 0 , 1 , 0 , 0 , 0 , 1 , 0],
+        [1 , 0 , 0 , 0 , 1 , 1 , 1 , 0 , 0 , 0],
+      ],
+
+      linhaI: 0
+      ,
+      colunaI: 1
+      ,
+      linhaF: 6
+      ,
+      colunaF: 1
+  
+    }
+    
+  
+    const medium_2 = {
+      Full_matriz: 
+      [ 
+        [0, 1, 0, 0, 0, 0, 0, 1, 1, 0],
+        [0, 1, 1, 1, 0, 1, 0, 1, 0, 1],
+        [0, 1, 0, 0, 0, 1, 0, 0, 0, 1],
+        [0, 1, 1, 1, 0, 1, 0, 1, 0, 0],
+        [0, 0, 0, 1, 1, 1, 0, 1, 1, 1],
+        [0, 1, 0, 0, 1, 0, 0, 0, 0, 1],
+        [0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
+        [1, 0, 1, 0, 0, 0, 1, 1, 1, 0],
+        [1, 0, 1, 0, 1, 0, 0, 0, 1, 0],
+        [0, 0, 0, 0, 1, 0, 1, 0, 0, 0]
+      ],
+
+      linhaI: 2
+      ,
+      colunaI: 2
+      ,
+      linhaF: 3
+      ,
+      colunaF: 0
+
+    }
+
+
+    const medium_3 = {
+      Full_matriz: 
+      [ 
+        [0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
+        [0, 1, 1, 1, 1, 1, 0, 1, 0, 1],
+        [0, 0, 0, 0, 0, 1, 0, 0, 0, 1],
+        [0, 1, 0, 1, 1, 0, 0, 1, 0, 0],
+        [0, 1, 0, 1, 0, 1, 0, 1, 1, 0],
+        [0, 0, 0, 0, 1, 0, 0, 1, 0, 1], //
+        [0, 1, 1, 1, 1, 1, 0, 0, 1, 0],
+        [1, 0, 1, 0, 0, 0, 0, 1, 1, 0],
+        [0, 0, 1, 0, 1, 1, 1, 0, 1, 0],
+        [1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      ],
+      
+      linhaI: 5
+      ,
+      colunaI: 2
+      ,
+      linhaF: 6
+      ,
+      colunaF: 9
+      
+    }
+      
+    const medium_4 = {
+      Full_matriz: 
+      [ 
+        [ 0, 0, 1, 0, 0, 0, 0, 1, 0, 1],
+        [ 0, 1, 1, 1, 0, 1, 0, 1, 1, 1],
+        [ 0, 0, 0, 1, 0, 1, 0, 0, 0, 1],
+        [ 1, 1, 0, 1, 0, 1, 0, 1, 0, 0],
+        [ 0, 1, 0, 1, 1, 1, 0, 1, 1, 0],
+        [ 1, 1, 0, 0, 0, 0, 0, 0, 1, 0],
+        [ 0, 0, 1, 1, 1, 1, 1, 0, 0, 0],
+        [ 1, 0, 1, 0, 0, 0, 1, 1, 0, 1],
+        [ 1, 0, 1, 0, 1, 0, 0, 0, 0, 1],
+        [ 1, 0, 0, 0, 1, 1, 1, 0, 1, 1]
+      ],
+      
+      linhaI: 9
+      ,
+      colunaI: 7
+      ,
+      linhaF: 0
+      ,
+      colunaF: 1
+      
+    }
+
 
 //    # Ponto de partida: linha 2, coluna 8
 //    # Ponto final: linha 9, coluna 1
-    const medium_5 = [
+    const medium_6 = [
       [0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
       [0, 1, 1, 1, 0, 1, 0, 1, 0, 1],
       [0, 0, 0, 1, 0, 1, 0, 0, 0, 1],
@@ -48,7 +163,7 @@ class Tela3 extends Phaser.Scene{
 
 //    # Ponto de partida: linha 5, coluna 1
 //    # Ponto final: linha 9, coluna 8
-    const medium_6 = [
+    const medium_7 = [
       [0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
       [0, 1, 0, 1, 0, 1, 1, 1, 0, 1],
       [0, 1, 0, 1, 0, 0, 0, 1, 0, 0],
@@ -64,18 +179,24 @@ class Tela3 extends Phaser.Scene{
 
 
     matrizes.push(medium_0)
+    matrizes.push(medium_1)
+    matrizes.push(medium_2)
+    matrizes.push(medium_3)
+    matrizes.push(medium_4)
 
-    let matriz_medium = matrizes[0]
+    let random_number = Math.floor(Math.random() * matrizes.length );
+
+    const matriz_medium = matrizes[random_number]
 
     this.todos_blocos_parede = this.physics.add.staticGroup();
 
-    for (let linha = 0; linha < matriz_medium.length; linha++) {
+    for (let linha = 0; linha < matriz_medium.Full_matriz.length; linha++) {
     
-      for (let coluna = 0; coluna < matriz_medium[linha].length; coluna++) {
+      for (let coluna = 0; coluna < matriz_medium.Full_matriz[linha].length; coluna++) {
 
-        if(matriz_medium[linha][coluna] === 1){
+        if(matriz_medium.Full_matriz[linha][coluna] === 1){
 
-          this.todos_blocos_parede.create( coluna * 60 + (config.width/4) + 35,  linha * 60 ,"pareide").setOrigin(0,0).setScale(1.5).refreshBody();
+          this.todos_blocos_parede.create(coluna * 60 + (config.width/4) + 35,  linha * 60 ,"pareide").setOrigin(0,0).setScale(1.5).refreshBody();
 
         }else{
 
@@ -89,13 +210,8 @@ class Tela3 extends Phaser.Scene{
     this.todos_blocos_parede.create( ( 10 * 60 ) + (config.width/3) - 79 ,  0         , "borda_right").setOrigin(0,0).refreshBody();
     this.todos_blocos_parede.create( (config.width/3) - 80               , (10 * 60 ) , "borda_bottom").setOrigin(0,0).refreshBody();
 
-    const linhaI = 0
-    const colunaI = 1
 
-    const linhaF = 6
-    const colunaF = 0
-
-    this.saida = this.physics.add.sprite( colunaF * 60 + (config.width/3) - 78.5  , ( linhaF * 60 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.1).refreshBody();
+    this.saida = this.physics.add.sprite( matriz_medium.colunaF * 60 + (config.width/3) - 78.5  , ( matriz_medium.linhaF * 60 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.1).refreshBody();
 
     this.anims.create( {
 
@@ -110,7 +226,7 @@ class Tela3 extends Phaser.Scene{
     })
     this.saida.anims.play("saidaa_anims", true);
 
-    this.jogadorr = this.physics.add.sprite(colunaI * 60 + (config.width/3) - 78.5  ,  (linhaI * 60 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.1).refreshBody();
+    this.jogadorr = this.physics.add.sprite( matriz_medium.colunaI * 60 + (config.width/3) - 78.5  ,  ( matriz_medium.linhaI * 60 ) + 0.5,"jogador").setOrigin(0,0).setScale(0.1).refreshBody();
     this.jogadorr.setCollideWorldBounds(true);
 
     this.anims.create( {
@@ -125,9 +241,11 @@ class Tela3 extends Phaser.Scene{
 
     this.physics.add.collider(this.jogadorr, this.todos_blocos_parede);
 
+    this.physics.add.overlap(this.jogadorr, this.saida, this.saiuDoLabirinto, null, this);
+
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    setTimeout( ()=>{this.scene.start("31")}, 10000)
+    //setTimeout( ()=>{this.scene.start("31")}, 10000)
   }
 
   update(){
@@ -147,6 +265,27 @@ class Tela3 extends Phaser.Scene{
       this.jogadorr.setVelocityY(0)
     }
   }  
+
+  saiuDoLabirinto( jogadorr, saida ){
+
+    this.jogadorr.disableBody(true, true);
+    this.saida.disableBody(true, true);
+
+    //this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
+    this.saiu_do_labirinto = this.physics.add.sprite(saida.x , saida.y ,"saiuDoLabirinto").setOrigin(0,0).setScale(1).refreshBody(); 
+
+    this.anims.create( {
+
+      key: "saiuDoLabirinto_anims",
+      frames: this.anims.generateFrameNumbers("saiuDoLabirinto"),
+      frameRate: 15,
+      repeat: -1
+      
+    })
+
+    this.saiu_do_labirinto.anims.play("saiuDoLabirinto_anims", true);
+    
+  }
 
 }
 
