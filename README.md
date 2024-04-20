@@ -1,6 +1,7 @@
 **
 # Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
-![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/e06053a2-2bcc-48cf-b201-d1c6f456169d)
+![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/97b518ae-7808-481c-addc-15079901caef)
+
 
 # ou clique neste [link](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/tree/versionONE/atividades/transformar_matriz_em_labirinto)
 <br/><br/><br/><br/><br/><br/>
