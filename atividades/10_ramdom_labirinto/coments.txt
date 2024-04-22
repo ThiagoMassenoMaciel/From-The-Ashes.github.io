@@ -315,3 +315,14 @@ bug , se eu mudo o labirinto a posição do jogador e saída ficam nos blocos er
     //console.log(random_number)
 
     const matriz = matrizes[random_number]
+
+
+
+bug, animação executada depois que jogador colide com a saída n fica na exata posição da saida , acho que é pq estou executando animação depois que desabilitei o corpo saída , logo os seus dados ficam sem nexo 
+    solução :::: pegar informações da posição X e Y do objeto saida antes de desabilitar .
+    n funcionou 
+
+bug, animação esta sendo adicionada por cima do bloco parede , era para ser adicionada apenas no bloco espaço
+    solução :::: adicionar collider 
+    n mudou 
+    solução :::: talvez 

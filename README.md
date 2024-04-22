@@ -302,4 +302,5 @@ npm run build
 ### 18 abr - 40'        Atv 10 mantive , easy 1bug + 1fixed
 ### 19 abr - 16'        Atv 10 terminei todos labirinto easy
 ### 20 abr - 44'        Atv 10 terminei todos labirinto medium e deixei clean root foulder
+### 22 abr - 1h27'      Atv 10 terminei todos labirinto hard +bug not fixed
 
