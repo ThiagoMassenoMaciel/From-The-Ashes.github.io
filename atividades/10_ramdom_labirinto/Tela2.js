@@ -128,7 +128,7 @@ class Tela2 extends Phaser.Scene{
       linhaF: 0
       ,
       colunaF: 1
-  
+  //quando for esolhido o laboritno eu coloco true em cada um do objeto escolhido LEATORIAMENTE 
     } 
 //---------------------------------------------
     matrizes.push(easy_0)
@@ -137,7 +137,7 @@ class Tela2 extends Phaser.Scene{
     matrizes.push(easy_3)
     matrizes.push(easy_4)
 
-    let random_number = Math.floor(Math.random() * matrizes.length );
+    let random_number = Math.floor(Math.random() * matrizes.length ); //  random
 
     const matriz = matrizes[random_number]
 
@@ -214,22 +214,22 @@ class Tela2 extends Phaser.Scene{
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    //setTimeout( ()=>{this.scene.start("playGameMedium")}, 10000)
+    setTimeout( ()=>{this.scene.start("GameEasy")}, 5000)
   }
 
   update(){
     if (this.cursors.left.isDown) {
-      this.jogadorr.setVelocityX(-300);
+      this.jogadorr.setVelocityX(-700);
    }else if (this.cursors.right.isDown) {
-      this.jogadorr.setVelocityX(300);
+      this.jogadorr.setVelocityX(700);
    }else{
      this.jogadorr.setVelocityX(0)
    }
    
    if (this.cursors.up.isDown) {
-     this.jogadorr.setVelocityY(-300);
+     this.jogadorr.setVelocityY(-700);
    }else  if( this.cursors.down.isDown){
-     this.jogadorr.setVelocityY(300)
+     this.jogadorr.setVelocityY(700)
    }else{
      this.jogadorr.setVelocityY(0)
    }

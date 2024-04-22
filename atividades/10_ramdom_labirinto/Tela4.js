@@ -269,7 +269,7 @@ class Tela4 extends Phaser.Scene{
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    setTimeout( ()=>{this.scene.start("playGameHard")}, 10000)
+   // setTimeout( ()=>{this.scene.start("playGameHard")}, 15000)
   }
     
   update(){
