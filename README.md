@@ -57,6 +57,19 @@ Vai ter 3 fases para o jogador jogar . E cada fase vai ter uma quantidade de lab
 ## #Online
 Aqui o jogador deve passar em todos os labirintos em menos tempo e concorrerá com outros jogadores. Aquele jogador que completou todos os labirintos em menos tempo vai subir no sua posição no hanking.
 
+## #Uma ideia se caso der tempo ( ou uma versão futura)
+talvez este possa ser outro tipo de jogo onde um jogador ver o outro quando no caso deles estiverem jogando o mesmo labirinto 
+ou 
+pode ser formado grupos de 3 jogadores onde a formula para passar de fase vai ser a pontuação do grupo , podeondo acontecer de não precisar passar todos os labirintos para conseguir subir de fase pois é em grupo
+
+outro modo de jogo é so passa a fase 1 se conseguir passar em todos os 5 labirintos desta fase , quando passar em 1 labirinto antes de 10 segundos é acumulado 100 pontos a cada labirinto passado , e para pessoa conseguir passar da fase um ela precisa de 500 pontos , ou seja , passar obrigatoriamente os 5 labirintos em menos de 10 segundos. E a pessoa tem um limite de 10 segundos para passar em cada labirinto , se caso passar os 10 segundo e não encostar na saida vai ser recarregado a pagina do jogo para um  novo labirinto aleatorio desta mesma fase. Enquanto a pessoa não passar labirinto tal este mesmo labirinto pode vir repetido . Se a pessoa passar tal labirinto este mesmo não vai aparecer de novo e continua repetindo somente os que ainda não foi passado em 10 segundos .    
+#### fase 1 
+  tem que passar cada labirinto em 5 segundos
+#### fase 2 
+  tem que passar cada labirinto em 10 segundos
+### fase 3
+  tem que passar cada labirinto em 15 segudos
+
 # Fases
 
 ## 1 
