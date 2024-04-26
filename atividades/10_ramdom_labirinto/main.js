@@ -1,4 +1,4 @@
-
+console.log("so um teste")
 var config ={
   width : 1364,
   height: 764,
@@ -13,3 +13,4 @@ var config ={
 }
 var game = new Phaser.Game(config)
 console.log(config.backgroundColor)
+let arrayEasy =[ 0,1,2,3,4]

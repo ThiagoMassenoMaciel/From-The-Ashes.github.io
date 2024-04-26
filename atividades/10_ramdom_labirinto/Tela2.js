@@ -137,9 +137,13 @@ class Tela2 extends Phaser.Scene{
     matrizes.push(easy_3)
     matrizes.push(easy_4)
 
-    let random_number = Math.floor(Math.random() * matrizes.length ); //  random
+    let random_number = Math.floor(Math.random() * arrayEasy.length ); //  random
 
     const matriz = matrizes[random_number]
+
+    let indice_escolhido = arrayEasy.findIndex((element) => element === random_number)
+    arrayEasy.splice(indice_escolhido)
+    console.log(arrayEasy)
 
     this.todos_blocos_parede = this.physics.add.staticGroup();
 
