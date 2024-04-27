@@ -1,0 +1,34 @@
+a = gerar um numero aleatorio
+pegar o elemento da array com indice a 
+pegar a matriz com o indice que ainda não foi escolhido
+descobrir qual indice do elemento escolhido
+excluir elemento
+
+agora acertei : escolho o elemento da array que ainda não foi escolhido
+erro  :antes eu estava escolhendo numero de indice da array 
+
+
+[0,1,2,3,4]
+
+random_number = 3
+fiz labirinto com matriz que esta neste indice três
+indice_escolhido = 3 
+[0,1,2,4]
+
+	random_numero = 2
+	fiz labirinto com matriz que esta neste indice dois 
+	indice_escolhido = 2
+	[0,1,4]
+
+		random_numero = 2 se for sorteado o mesmo numero 2 
+		fiz labirinto com matriz que esta neste indice dois 
+		indice_escolhido = 2
+		[0,1]
+			random_numero = 2 
+			fiz labirinto com matriz que esta neste indice dois 
+			indice_escolhido = 2
+			[0,1]
+
+
+
+	

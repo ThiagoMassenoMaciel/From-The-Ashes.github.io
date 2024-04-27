@@ -16,6 +16,7 @@ class Tela2 extends Phaser.Scene{
     this.button = this.add.image(config.width/2 , config.height - 80 ,"botao")
     this.button.setScale(0.6)
     
+    console.log("----------------------")
     const matrizes = []
     //ponto inicial linha[1] coluna[0]
     //ponto final   linha[4] coluna[4]
@@ -139,10 +140,17 @@ class Tela2 extends Phaser.Scene{
 
     let random_number = Math.floor(Math.random() * arrayEasy.length ); //  random
 
-    const matriz = matrizes[random_number]
+    let elemento_escolhido = arrayEasy[random_number]
 
-    let indice_escolhido = arrayEasy.findIndex((element) => element === random_number)
-    arrayEasy.splice(indice_escolhido)
+    let indice_escolhido = elemento_escolhido
+
+    const matriz = matrizes[indice_escolhido]
+
+    let apagar_indice_escolhido = arrayEasy.findIndex((element) => element === indice_escolhido)
+
+    console.log(`apagado ->  ${arrayEasy[apagar_indice_escolhido]}`)
+    
+    arrayEasy.splice(apagar_indice_escolhido, 1)
     console.log(arrayEasy)
 
     this.todos_blocos_parede = this.physics.add.staticGroup();
@@ -153,7 +161,7 @@ class Tela2 extends Phaser.Scene{
     // e para o jogador não ultrapassar o limete do labirinto eu pego a posição eixo(x,y) da primeira e ultima coluna , da primeira e ultima linha e arrodeio de blocos pareide
       for (let coluna = 0; coluna < matriz.Full_matriz[linha].length; coluna++) {
             
-        console.log(` linha ${linha} coluna ${coluna}`)
+        //console.log(` linha ${linha} coluna ${coluna}`)
 
         if(matriz.Full_matriz[linha][coluna] === 1){
                           //tamanho de cada bloco + metade da tela horizontalmente 
@@ -237,6 +245,11 @@ class Tela2 extends Phaser.Scene{
    }else{
      this.jogadorr.setVelocityY(0)
    }
+
+   if( arrayEasy.length === 0){
+    arrayEasy = [0,1,2,3,4]
+  }
+  
 
   }
 
