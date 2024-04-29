@@ -19,9 +19,15 @@ class Tela2 extends Phaser.Scene {
     this.button.setScale(0.6)
 
     console.log("----------------------")
+
+    const niveis =  new Array(1)
+     
     const matrizes = []
+    niveis[0] = matrizes
     //ponto inicial linha[1] coluna[0]
     //ponto final   linha[4] coluna[4]
+
+  
 
     const easy_0 = {
       Full_matriz:
@@ -134,11 +140,11 @@ class Tela2 extends Phaser.Scene {
       //quando for esolhido o laboritno eu coloco true em cada um do objeto escolhido LEATORIAMENTE 
     }
     //---------------------------------------------
-    matrizes.push(easy_0)
-    matrizes.push(easy_1)
-    matrizes.push(easy_2)
-    matrizes.push(easy_3)
-    matrizes.push(easy_4)
+    niveis[0].push(easy_0)
+    niveis[0].push(easy_1)
+    niveis[0].push(easy_2)
+    niveis[0].push(easy_3)
+    niveis[0].push(easy_4)
 
     let random_number = Math.floor(Math.random() * arrayEasy.length); //  random
 
@@ -146,7 +152,7 @@ class Tela2 extends Phaser.Scene {
 
     let indice_escolhido = elemento_escolhido
 
-    const matriz = matrizes[indice_escolhido]
+    const matriz = niveis[0][indice_escolhido]
 
     console.log(`apagado ->  ${arrayEasy[random_number]}`)
 
