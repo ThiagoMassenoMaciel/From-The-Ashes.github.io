@@ -304,4 +304,5 @@ npm run build
 ### 20 abr - 44'        Atv 10 terminei todos labirinto medium e deixei clean root foulder
 ### 22 abr - 1h27'      Atv 10 terminei todos labirinto hard +bug not fixed
 ### 25 abr - 42'        Atv 10 travei no bug
+### 30 abr - 1h         Atv 10 travei no bug que é a estrutura array com todos os objetos labirinto
 
