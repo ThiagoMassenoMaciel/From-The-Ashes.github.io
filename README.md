@@ -34,6 +34,14 @@ Set up webroot - o local para onde o servidor web esta olhando e poe isso no loc
                         <a href="https://www.fontspace.com/category/deathmetal"><img src="https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png" alt="Death Metal fonts"></a><br/>
 ###### Markdown for reddit and other forums.<br/>
                         [![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)<br/>
+
+
+
+# tive uma nova ideia 
+##### fazer o jogador cair em um canto aleatório 
+##### ou power ups para ser coletado
+###### 1. escolher 2 numeros randomicos de acordo com o tanto de linhas e colunas 
+###### 2. multiplicar a coluna escolhida com as dimensões necessárias para encaixar o jogador no lugar dele
                         
 # Motivação
 
