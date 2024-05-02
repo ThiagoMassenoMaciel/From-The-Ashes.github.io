@@ -42,6 +42,14 @@ Set up webroot - o local para onde o servidor web esta olhando e poe isso no loc
 ##### ou power ups para ser coletado
 ###### 1. escolher 2 numeros randomicos de acordo com o tanto de linhas e colunas 
 ###### 2. multiplicar a coluna escolhida com as dimensões necessárias para encaixar o jogador no lugar dele
+
+# Casos de qual regra a tela screen tem que recarregar
+##### recarregar para um labirinto aleatório sempre que passar 10 segundos
+##### recarregar para um labirinto aleátório somente quando achar a saida
+
+# Dúvidas
+##### quando eu tiver nas fases , os labirinto que eu passei podem ser repetidos ?
+##### # não 
                         
 # Motivação
 
