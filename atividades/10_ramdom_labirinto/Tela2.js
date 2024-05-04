@@ -25,11 +25,6 @@ class Tela2 extends Phaser.Scene {
     console.log(niveis)
      
     const matrizes = []
-    niveis[0] = matrizes
-    //ponto inicial linha[1] coluna[0]
-    //ponto final   linha[4] coluna[4]
-
-  
 
     const easy_0 = {
       Full_matriz:
@@ -50,9 +45,7 @@ class Tela2 extends Phaser.Scene {
       colunaF: 4
 
     }
-    //---------------------------------------------
-    //ponto inicial linha[4] coluna[4]
-    //ponto final   linha[0] coluna[0]
+
     const easy_1 = {
       Full_matriz:
         [
@@ -73,10 +66,6 @@ class Tela2 extends Phaser.Scene {
 
     }
 
-
-    //---------------------------------------------
-    //ponto inicial linha[2] coluna[2]
-    //ponto final   linha[0] coluna[1]    
     const easy_2 = {
       Full_matriz:
         [
@@ -96,9 +85,7 @@ class Tela2 extends Phaser.Scene {
       colunaF: 1
 
     }
-    //---------------------------------------------
-    //ponto inicial linha[0] coluna[1]
-    //ponto final   linha[2] coluna[2]  
+
     const easy_3 = {
       Full_matriz:
         [
@@ -118,9 +105,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 2
 
     }
-    //---------------------------------------------
-    //ponto inicial linha[3] coluna[3]
-    //ponto final   linha[0] coluna[1]
 
     const easy_4 = {
       Full_matriz:
@@ -139,17 +123,10 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 1
-      //quando for esolhido o laboritno eu coloco true em cada um do objeto escolhido LEATORIAMENTE 
+
     }
-    //---------------------------------------------
-    niveis[0].push(easy_0)
-    niveis[0].push(easy_1)
-    niveis[0].push(easy_2)
-    niveis[0].push(easy_3)
-    niveis[0].push(easy_4)
 
-
-    console.log("até aqui ok ?")
+    niveis[0] = [easy_0, easy_1, easy_2, easy_3, easy_4]
 
     const medium_0 = {
 
@@ -280,12 +257,7 @@ class Tela2 extends Phaser.Scene {
       
     }
 
-    console.log("até aqui ok ?")
-    niveis[1].push(medium_0)
-    niveis[1].push(medium_1)
-    niveis[1].push(medium_2)
-    niveis[1].push(medium_3)
-    niveis[1].push(medium_4)
+    niveis[1] = [medium_0, medium_1, medium_2, medium_3, medium_4]
 
     const hard_0 =  {
       Full_matriz: 
@@ -382,8 +354,7 @@ class Tela2 extends Phaser.Scene {
       [0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1],
       [0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1]
       ],
-          // Ponto inicial : linha[19] coluna[18]
-    // Ponto final : linha[0] coluna[0]
+
       linhaI: 19
       ,
       colunaI: 18
@@ -393,8 +364,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 0
       
     }
-
-
 
     const hard_3 = {
       Full_matriz: 
@@ -420,8 +389,7 @@ class Tela2 extends Phaser.Scene {
       [1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0],
       [1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
       ],
-    // Ponto inicial : linha[19] coluna[10]
-    // Ponto final : linha[0] coluna[19]
+
       linhaI: 19
       ,
       colunaI: 10
@@ -431,7 +399,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 19
       
     }
-
 
     const hard_4 = {
       Full_matriz: 
@@ -458,8 +425,7 @@ class Tela2 extends Phaser.Scene {
       [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0],
       [1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1]
       ],
-    // Ponto inicial : linha[19] coluna[1]
-    // Ponto finall : linha[0] coluna[19]      
+     
       linhaI: 19
       ,
       colunaI: 1
@@ -470,19 +436,16 @@ class Tela2 extends Phaser.Scene {
       
     }
 
-    niveis[2].push(hard_0)
-    niveis[2].push(hard_1)
-    niveis[2].push(hard_2)
-    niveis[2].push(hard_3)
-    niveis[2].push(hard_4)
-
-
-    console.log(`nivel facil${niveis[0]} `)
-    console.log(`nivel medio${niveis[1]} `)
-    console.log(`nivel dificil${niveis[2]} `)
+    niveis[2] = [ hard_0, hard_1, hard_2, hard_3, hard_4]
 
     let random_nivel = Math.floor(Math.random() * arrayNiveis.length); //  random
     let nivel_escolhido = arrayNiveis[random_nivel] 
+    console.log("nivel escolhido")
+    console.log(nivel_escolhido)
+
+    arrayNiveis.splice(random_nivel,1)
+    console.log(arrayNiveis)
+
     let random_labirinto
 
     let elemento_escolhido
@@ -491,31 +454,39 @@ class Tela2 extends Phaser.Scene {
       // se o nivel escolhido foi Easy eu tenho que escolher um elemento do arrayEasy que ainda n foi escolhido
       random_labirinto = Math.floor(Math.random() * arrayEasy.length); // 4
       elemento_escolhido = arrayEasy[random_labirinto]
-
+      
+      console.log(`apagado`)
+      console.log(arrayEasy[random_labirinto])
       arrayEasy.splice(random_labirinto, 1)
-      console.log(`apagado ->  ${arrayEasy[random_labirinto]}`)
 
-      console.log(`arrayEasy ${arrayEasy}`)
+      console.log(`arrayEasy`)
+      console.log(arrayEasy)
 
     }else if(nivel_escolhido === 1){
       // se o nivel escolhido foi Medium eu tenho que escolher um elemento do arrayMedium que ainda n foi escolhido
       random_labirinto = Math.floor(Math.random() * arrayMedium.length); //3
       elemento_escolhido = arrayMedium[random_labirinto]
 
-      arrayEasy.splice(random_labirinto, 1)
-      console.log(`apagado ->  ${arrayMedium[random_labirinto]}`)
-      
-      console.log(`arrayMedium ${arrayEasy}`)
+      console.log(`apagado ->`)
+      console.log(arrayMedium[random_labirinto])
+      arrayMedium.splice(random_labirinto, 1)
+
+      console.log(`arrayMedium`)
+      console.log(arrayMedium)
 
     }else{
       // se o nivel escolhido foi Hard eu tenho que escolher um elemento do arrayHard que ainda n foi escolhido
       random_labirinto = Math.floor(Math.random() * arrayHard.length); // 2
       elemento_escolhido = arrayHard[random_labirinto]
 
-      arrayEasy.splice(random_labirinto, 1)
-      console.log(`apagado ->  ${arrayHard[random_labirinto]}`)
       
-      console.log(`arrayHard ${arrayHard}`)
+      console.log(`apagado ->`)
+      console.log(arrayHard[random_labirinto])
+      arrayHard.splice(random_labirinto, 1)
+
+      console.log(`arrayHard`)
+      console.log(arrayHard)
+
     }
 
     
@@ -624,6 +595,10 @@ class Tela2 extends Phaser.Scene {
 
       if (arrayEasy.length === 0) {
         arrayEasy = [0, 1, 2, 3, 4]
+      }
+
+      if(arrayNiveis.length === 0){
+        arrayNiveis = [ 0, 1, 2]
       }
 
 

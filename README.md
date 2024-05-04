@@ -321,4 +321,5 @@ npm run build
 ### 22 abr - 1h27'      Atv 10 terminei todos labirinto hard +bug not fixed
 ### 25 abr - 42'        Atv 10 travei no bug
 ### 30 abr - 1h         Atv 10 travei no bug que é a estrutura array com todos os objetos labirinto
+### 2  mai - 2h         Atv 10 organizado toda estrutura [link exemplo](https://github.com/ThiagoMassenoMaciel/object) + bug da posição n atualizada
 

@@ -325,4 +325,11 @@ bug, animação executada depois que jogador colide com a saída n fica na exata
 bug, animação esta sendo adicionada por cima do bloco parede , era para ser adicionada apenas no bloco espaço
     solução :::: adicionar collider 
     n mudou 
-    solução :::: talvez 
+    solução :::: tem que excluir o corpo do jogador e saida do labirinto no momento em que acontecer o overlaptela 
+
+bug, n consegui organizar todos labirintos em uma estrutura .
+    solução ::: era so um jeito diferente para fazer array dentro da array 
+                    coloca todo objeto de um labirinto dentro da variavel x 
+                        e os 5 objeto dos labirinto como elementos de uma array 
+                            assim
+                            niveis[0] = [ objeto1, objet 2, ...]
