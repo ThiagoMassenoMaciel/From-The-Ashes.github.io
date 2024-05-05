@@ -346,3 +346,42 @@ bug, n consegui reutilizar o valor da variavel colunaF linhaF dentro do proprio 
     solução :::: colocar o valor seco emvez de reutilizar 
                     
     solução :::: colocar o nome this para reusar a propriedade dentro do objeto 
+
+bug, quando é escolhido o objeto do labirinto o valor da expressão numerica dentro das propriedades posicao_ ... se transforma em um tipo de dado NaN 
+        solução :::: usar casting e converter para double 
+            esta funcao converte string para double 
+            parseFloat()
+
+            proposição de uso 
+            1. transformo a expressão em uma string quando passada expressão como parâmetro
+            2. converto para float armazenando dentro da variavel 
+        desse jeito n funciona
+
+        solução :::: armazenar dentro de uma array= [ expressão 1 , expressão 2 ]
+        n resolveu 
+
+
+        solução :::: usar numero emvez da variavel reutilizada 
+
+bug, os blockinhos estao aparecendo fora do esquadro e faltando
+        solução :::: talvez seja a maneira como estou acessando a propriedade do objeto 
+        n é isso 
+
+        solução :::: desfazer aquelas informações para todo objeto labirinto e fazer 3 if para cada nível 
+                        tem que voltar no jeito que era antes com valores estaticos 
+
+                        antes tava assim 
+
+                                if (matriz.Full_matriz[linha][coluna] === 1) {
+                                    //tamanho de cada bloco + metade da tela horizontalmente 
+
+                                    this.todos_blocos_parede.create(coluna * matriz.largura_bloco , linha * matriz.altura_bloco, "pareide").setOrigin(0, 0).setScale(matriz.escala_bloco).refreshBody();
+
+                                } else {
+
+                                    this.chao = this.add.image(coluna *matriz.largura_bloco , linha * matriz.altura_bloco, "chao") // se  colocar 80 vai ficar sem as linhas 
+                                    this.chao.setOrigin(0, 0)
+                                    this.chao.setScale(matriz.escala_bloco)
+
+
+                        na hora que adicionar os blocos tem que fazer 3 if para mudar 

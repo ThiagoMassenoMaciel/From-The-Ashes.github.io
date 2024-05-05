@@ -8,6 +8,8 @@ class Tela2 extends Phaser.Scene {
 
     this.acabou = false
 
+    this.scale_passado_labirinto = 0
+
     this.add.text(0, 0, "jogo", { font: "60px Arial" })
 
     this.timer = this.add.image(config.width - 150, 100, "tempo")
@@ -48,16 +50,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 3
       ,
-      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      posicao_saida_w : 4 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_saida_h: ( this.linhaF * 120) + 0.5
+      posicao_saida_h:  (4 * 120) + 0.5
 
       ,
       scale_saida_e_jogador: 0.2
       ,
-      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      posicao_jogadorr_w : 0 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_jogadorr_h: ( this.linhaI * 120) + 0.5
+      posicao_jogadorr_h: ( 1 * 120) + 0.5
+
+      ,
+      scale_passado_labirinto: 2
 
     }
 
@@ -85,17 +90,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 3
       ,
-      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      posicao_saida_w : 0 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_saida_h: ( this.colunaF * 120) + 0.5
+      posicao_saida_h: ( 0 * 120) + 0.5
 
       ,
       scale_saida_e_jogador: 0.2
       ,
-      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      posicao_jogadorr_w : 4 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_jogadorr_h: ( this.linhaI * 120) + 0.5
+      posicao_jogadorr_h: ( 4 * 120) + 0.5
 
+      ,
+      scale_passado_labirinto: 2
     }
 
     const easy_2 = {
@@ -122,17 +129,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 3
       ,
-      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      posicao_saida_w : 1 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_saida_h: (this.linhaF * 120) + 0.5  
+      posicao_saida_h: ( 0 * 120) + 0.5  
 
       ,
       scale_saida_e_jogador: 0.2
       ,
-      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      posicao_jogadorr_w : 2 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_jogadorr_h: (this.linhaI * 120) + 0.5
+      posicao_jogadorr_h: ( 2 * 120) + 0.5
 
+      ,
+      scale_passado_labirinto: 2
     }
 
     const easy_3 = {
@@ -159,16 +168,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 3
       ,
-      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      posicao_saida_w : 2 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_saida_h: (this.linhaF * 120) + 0.5
+      posicao_saida_h: (2 * 120) + 0.5
 
       ,
       scale_saida_e_jogador: 0.2
       ,
-      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      posicao_jogadorr_w : 1 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_jogadorr_h: (this.linhaI * 120) + 0.5
+      posicao_jogadorr_h: ( 0 * 120) + 0.5
+
+      ,
+      scale_passado_labirinto: 2
 
     }
 
@@ -196,16 +208,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 3
       ,
-      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      posicao_saida_w : 1 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_saida_h: (this.linhaF * 120) + 0.5
+      posicao_saida_h: ( 0 * 120) + 0.5
 
       ,
       scale_saida_e_jogador: 0.2
       ,
-      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      posicao_jogadorr_w : 3 * 120 + (config.width / 3) - 79.5
       ,
-      posicao_jogadorr_h: (this.linhaI * 120) + 0.5
+      posicao_jogadorr_h: ( 3 * 120) + 0.5
+
+      ,
+      scale_passado_labirinto: 2
 
     }
 
@@ -242,16 +257,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 1.5
       ,
-      posicao_saida_w : this.colunaF * 60 + (config.width/3) - 78.5
+      posicao_saida_w : 8 * 60 + (config.width/3) - 78.5
       ,
-      posicao_saida_h: (this.linhaF * 60 ) + 0.5
+      posicao_saida_h: ( 1 * 60 ) + 0.5
   
       ,
       scale_saida_e_jogador: 0.1
       ,
-      posicao_jogadorr_w : this.colunaI * 60 + (config.width/3) - 78.5  
+      posicao_jogadorr_w : 1 * 60 + (config.width/3) - 78.5  
       ,
-      posicao_jogadorr_h: (this.linhaI * 60 ) + 0.5
+      posicao_jogadorr_h: ( 6 * 60 ) + 0.5
+
+      ,
+      scale_passado_labirinto: 1
   
     } 
 
@@ -286,17 +304,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 1.5
       ,
-      posicao_saida_w : this.colunaF * 60 + (config.width/3) - 78.5
+      posicao_saida_w : 1 * 60 + (config.width/3) - 78.5
       ,
-      posicao_saida_h: (this.linhaF * 60 ) + 0.5
+      posicao_saida_h: ( 6 * 60 ) + 0.5
   
       ,
       scale_saida_e_jogador: 0.1
       ,
-      posicao_jogadorr_w : this.colunaI * 60 + (config.width/3) - 78.5  
+      posicao_jogadorr_w : 1 * 60 + (config.width/3) - 78.5  
       ,
-      posicao_jogadorr_h: (this.linhaI * 60 ) + 0.5
-  
+      posicao_jogadorr_h: ( 0 * 60 ) + 0.5
+
+      ,
+      scale_passado_labirinto: 1
     }
     
   
@@ -330,19 +350,21 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 1.5
       ,
-      posicao_saida_w : this.colunaF * 60 + (config.width/3) - 78.5
+      posicao_saida_w : 0 * 60 + (config.width/3) - 78.5
       ,
-      posicao_saida_h: (this.linhaF * 60 ) + 0.5
+      posicao_saida_h: ( 3 * 60 ) + 0.5
   
       ,
       scale_saida_e_jogador: 0.1
       ,
-      posicao_jogadorr_w : this.colunaI * 60 + (config.width/3) - 78.5  
+      posicao_jogadorr_w : 2 * 60 + (config.width/3) - 78.5  
       ,
-      posicao_jogadorr_h: (this.linhaI * 60 ) + 0.5
+      posicao_jogadorr_h: ( 2 * 60 ) + 0.5
+
+      ,
+      scale_passado_labirinto: 1
 
     }
-//==========================================================================fiz até aqui
 
     const medium_3 = {
       Full_matriz: 
@@ -374,16 +396,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 1.5
       ,
-      posicao_saida_w : colunaF * 60 + (config.width/3) - 78.5
+      posicao_saida_w : 9 * 60 + (config.width/3) - 78.5
       ,
-      posicao_saida_h: (linhaF * 60 ) + 0.5
+      posicao_saida_h: ( 6 * 60 ) + 0.5
   
       ,
       scale_saida_e_jogador: 0.1
       ,
-      posicao_jogadorr_w : colunaI * 60 + (config.width/3) - 78.5  
+      posicao_jogadorr_w : 2 * 60 + (config.width/3) - 78.5  
       ,
-      posicao_jogadorr_h: (linhaI * 60 ) + 0.5
+      posicao_jogadorr_h: ( 5 * 60 ) + 0.5
+
+      ,
+      scale_passado_labirinto: 1
     }
       
     const medium_4 = {
@@ -417,16 +442,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 1.5
       ,
-      posicao_saida_w : colunaF * 60 + (config.width/3) - 78.5
+      posicao_saida_w : 1 * 60 + (config.width/3) - 78.5
       ,
-      posicao_saida_h: (linhaF * 60 ) + 0.5
+      posicao_saida_h: ( 0 * 60 ) + 0.5
   
       ,
       scale_saida_e_jogador: 0.1
       ,
-      posicao_jogadorr_w : colunaI * 60 + (config.width/3) - 78.5  
+      posicao_jogadorr_w : 7 * 60 + (config.width/3) - 78.5  
       ,
-      posicao_jogadorr_h: (linhaI * 60 ) + 0.5
+      posicao_jogadorr_h: ( 9 * 60 ) + 0.5
+
+      ,
+      scale_passado_labirinto: 1
     }
 
     niveis[1] = [medium_0, medium_1, medium_2, medium_3, medium_4]
@@ -471,19 +499,21 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 0.75
       ,
-      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      posicao_saida_w : 0 * 30 + (config.width/3) - 80 
       ,
-      posicao_saida_h: linhaF * 30 
+      posicao_saida_h: 19 * 30 
   
       ,
       scale_saida_e_jogador: 0.050
       ,
-      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      posicao_jogadorr_w : 0 * 30 + (config.width/3) - 80  
       ,
-      posicao_jogadorr_h: linhaI * 30
+      posicao_jogadorr_h: 0 * 30 
+
+      ,
+      scale_passado_labirinto: 0.4
       
     }
-
       
     const hard_1 = {
       Full_matriz: 
@@ -525,16 +555,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 0.75
       ,
-      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      posicao_saida_w : 0 * 30 + (config.width/3) - 80 
       ,
-      posicao_saida_h: linhaF * 30 
+      posicao_saida_h: 0 * 30 
   
       ,
       scale_saida_e_jogador: 0.050
       ,
-      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      posicao_jogadorr_w : 18 * 30 + (config.width/3) - 80  
       ,
-      posicao_jogadorr_h: linhaI * 30
+      posicao_jogadorr_h: 17 * 30
+
+      ,
+      scale_passado_labirinto: 0.4
     }
 
     const hard_2 = {
@@ -577,16 +610,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 0.75
       ,
-      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      posicao_saida_w : 0 * 30 + (config.width/3) - 80 
       ,
-      posicao_saida_h: linhaF * 30 
+      posicao_saida_h: 0 * 30 
   
       ,
       scale_saida_e_jogador: 0.050
       ,
-      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      posicao_jogadorr_w : 18 * 30 + (config.width/3) - 80  
       ,
-      posicao_jogadorr_h: linhaI * 30
+      posicao_jogadorr_h: 19 * 30 
+
+      ,
+      scale_passado_labirinto: 0.4
     }
 
     const hard_3 = {
@@ -629,16 +665,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 0.75
       ,
-      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      posicao_saida_w : 19 * 30 + (config.width/3) - 80 
       ,
-      posicao_saida_h: linhaF * 30 
+      posicao_saida_h: 0 * 30 
   
       ,
       scale_saida_e_jogador: 0.050
       ,
-      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      posicao_jogadorr_w : 10 * 30 + (config.width/3) - 80  
       ,
-      posicao_jogadorr_h: linhaI * 30      
+      posicao_jogadorr_h: 19 * 30
+
+      ,
+      scale_passado_labirinto: 0.4
     }
 
     const hard_4 = {
@@ -682,16 +721,19 @@ class Tela2 extends Phaser.Scene {
       ,
       escala_bloco: 0.75
       ,
-      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      posicao_saida_w : 19 * 30 + (config.width/3) - 80 
       ,
-      posicao_saida_h: linhaF * 30 
+      posicao_saida_h: 0 * 30 
   
       ,
       scale_saida_e_jogador: 0.050
       ,
-      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      posicao_jogadorr_w : 1 * 30 + (config.width/3) - 80  
       ,
-      posicao_jogadorr_h: linhaI * 30
+      posicao_jogadorr_h: 19 * 30
+
+      ,
+      scale_passado_labirinto: 0.4
     }
 
     niveis[2] = [ hard_0, hard_1, hard_2, hard_3, hard_4]
@@ -747,13 +789,14 @@ class Tela2 extends Phaser.Scene {
 
     }
 
-    
-
     let indice_escolhido = elemento_escolhido
 
     const matriz = niveis[nivel_escolhido][indice_escolhido]
 
+    this.scale_passado_labirinto = matriz.scale_passado_labirinto
 
+    console.log(matriz)
+    console.log( this.scale_passado_labirinto)
     this.todos_blocos_parede = this.physics.add.staticGroup();
 
     for (let linha = 0; linha < matriz.Full_matriz.length; linha++) {
@@ -798,9 +841,7 @@ class Tela2 extends Phaser.Scene {
 
     this.saida.anims.play("saidaa_anims", true);
 
-    this.jogadorr = this.physics.add.sprite( matriz.posicao_jogadorr_w, matriz.posicao_jogadorr_h, "jogador").setOrigin(0, 0)
-    this.jogadorr.setScale(matriz.scale_saida_e_jogador).refreshBody();
-    this.jogadorr.setCollideWorldBounds(true);
+    this.jogadorr = this.physics.add.sprite( matriz.posicao_jogadorr_w, matriz.posicao_jogadorr_h, "jogador").setOrigin(0, 0).setScale(matriz.scale_saida_e_jogador).refreshBody().setCollideWorldBounds(true);
 
     this.anims.create({
 
@@ -816,11 +857,15 @@ class Tela2 extends Phaser.Scene {
 
     this.physics.add.collider(this.jogadorr, this.todos_blocos_parede);
 
+    this.physics.add.collider(this.saida, this.todos_blocos_parede);
+
+    //this.physics.add.collider(this.saiu_do_labirinto, this.todos_blocos_parede);
+
     this.physics.add.overlap(this.jogadorr, this.saida, this.saiuDoLabirinto, null, this);
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    setTimeout(() => { this.scene.start("GameEasy") }, 5000)
+    //setTimeout(() => { this.scene.start("GameEasy") }, 10000)
   }
 
   update() {
@@ -860,11 +905,13 @@ class Tela2 extends Phaser.Scene {
 
   saiuDoLabirinto(jogadorr, saida) {
 
-    this.jogadorr.disableBody(true, true);
-    this.saida.disableBody(true, true);
+    this.jogadorr.destroy();
+    this.saida.destroy();
 
     //this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
-    this.saiu_do_labirinto = this.physics.add.sprite(saida.x, saida.y, "saiuDoLabirinto").setOrigin(0, 0).setScale(2).refreshBody();
+    this.saiu_do_labirinto = this.physics.add.sprite(saida.x, saida.y, "saiuDoLabirinto").setOrigin(0, 0).setScale( this.scale_passado_labirinto).refreshBody();
+
+    this.physics.add.collider(this.saiu_do_labirinto, this.todos_blocos_parede);
 
     this.anims.create({
 
@@ -876,11 +923,13 @@ class Tela2 extends Phaser.Scene {
     })
 
     this.saiu_do_labirinto.anims.play("saiuDoLabirinto_anims", true);
+
+
     // executar a funcao que mostra que a pessoa passou de fase 
     this.acabou = true
+
+    setTimeout(() => { this.scene.start("GameEasy") }, 4000)
+    
   }
 
-
 }
-
-

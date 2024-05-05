@@ -326,3 +326,4 @@ npm run build
 ### 30 abr - 1h         Atv 10 travei no bug que é a estrutura array com todos os objetos labirinto
 ### 2  mai - 2h         Atv 10 organizado toda estrutura [link exemplo](https://github.com/ThiagoMassenoMaciel/object) + bug da posição n atualizada
 ### 4  mai - 3h         Atv 10 organizado toda estrutura + centratilando algumas info + bug de n poder reutilizar valor de propriedade - fiz até medium_2
+### 5  mai - 3h         Atv 10.2 feita e + bug n processa todos os blocos parede 
