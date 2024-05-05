@@ -1,3 +1,6 @@
+# coisas interessantes
+1. `estou reusando a propriedade dentro de outra dentro do próprio objeto que a declarou`
+
 **
 # Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
 ![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/97b518ae-7808-481c-addc-15079901caef)
@@ -322,4 +325,4 @@ npm run build
 ### 25 abr - 42'        Atv 10 travei no bug
 ### 30 abr - 1h         Atv 10 travei no bug que é a estrutura array com todos os objetos labirinto
 ### 2  mai - 2h         Atv 10 organizado toda estrutura [link exemplo](https://github.com/ThiagoMassenoMaciel/object) + bug da posição n atualizada
-
+### 4  mai - 3h         Atv 10 organizado toda estrutura + centratilando algumas info + bug de n poder reutilizar valor de propriedade - fiz até medium_2

@@ -210,7 +210,6 @@ class Tela3 extends Phaser.Scene{
     this.todos_blocos_parede.create( ( 10 * 60 ) + (config.width/3) - 79 ,  0         , "borda_right").setOrigin(0,0).refreshBody();
     this.todos_blocos_parede.create( (config.width/3) - 80               , (10 * 60 ) , "borda_bottom").setOrigin(0,0).refreshBody();
 
-
     this.saida = this.physics.add.sprite( matriz_medium.colunaF * 60 + (config.width/3) - 78.5  , ( matriz_medium.linhaF * 60 ) + 0.5,"saidaa").setOrigin(0,0).setScale(0.1).refreshBody();
 
     this.anims.create( {

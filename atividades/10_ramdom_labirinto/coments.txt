@@ -333,3 +333,16 @@ bug, n consegui organizar todos labirintos em uma estrutura .
                         e os 5 objeto dos labirinto como elementos de uma array 
                             assim
                             niveis[0] = [ objeto1, objet 2, ...]
+bug, n consegui reutilizar o valor da variavel colunaF linhaF dentro do proprio objeto 
+    solução :::: criar como uma variavel global dentro de uma função que fica dentro do objeto 
+                        
+                        function minhaFuncao() {
+                            globalThis.minhaVariavelGlobal = "Olá, mundo!";
+                        }
+
+                        minhaFuncao();
+                        console.log(minhaVariavelGlobal); // "Olá, mundo!"
+
+    solução :::: colocar o valor seco emvez de reutilizar 
+                    
+    solução :::: colocar o nome this para reusar a propriedade dentro do objeto 

@@ -3,9 +3,7 @@ class Tela2 extends Phaser.Scene {
   constructor() {
     super("GameEasy")
   }
-
-
-
+  
   create() {
 
     this.acabou = false
@@ -43,6 +41,23 @@ class Tela2 extends Phaser.Scene {
       linhaF: 4
       ,
       colunaF: 4
+      ,
+      largura_bloco : 120 + (config.width / 3) - 80
+      ,
+      altura_bloco  :  120
+      ,
+      escala_bloco: 3
+      ,
+      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_saida_h: ( this.linhaF * 120) + 0.5
+
+      ,
+      scale_saida_e_jogador: 0.2
+      ,
+      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_jogadorr_h: ( this.linhaI * 120) + 0.5
 
     }
 
@@ -63,6 +78,23 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 0
+      ,
+      largura_bloco : 120 + (config.width / 3) - 80
+      ,
+      altura_bloco  :  120
+      ,
+      escala_bloco: 3
+      ,
+      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_saida_h: ( this.colunaF * 120) + 0.5
+
+      ,
+      scale_saida_e_jogador: 0.2
+      ,
+      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_jogadorr_h: ( this.linhaI * 120) + 0.5
 
     }
 
@@ -83,6 +115,23 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 1
+      ,
+      largura_bloco : 120 + (config.width / 3) - 80
+      ,
+      altura_bloco  :  120
+      ,
+      escala_bloco: 3
+      ,
+      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_saida_h: (this.linhaF * 120) + 0.5  
+
+      ,
+      scale_saida_e_jogador: 0.2
+      ,
+      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_jogadorr_h: (this.linhaI * 120) + 0.5
 
     }
 
@@ -103,6 +152,23 @@ class Tela2 extends Phaser.Scene {
       linhaF: 2
       ,
       colunaF: 2
+      ,
+      largura_bloco : 120 + (config.width / 3) - 80
+      ,
+      altura_bloco  :  120
+      ,
+      escala_bloco: 3
+      ,
+      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_saida_h: (this.linhaF * 120) + 0.5
+
+      ,
+      scale_saida_e_jogador: 0.2
+      ,
+      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_jogadorr_h: (this.linhaI * 120) + 0.5
 
     }
 
@@ -123,6 +189,23 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 1
+      ,
+      largura_bloco : 120 + (config.width / 3) - 80
+      ,
+      altura_bloco  :  120
+      ,
+      escala_bloco: 3
+      ,
+      posicao_saida_w : this.colunaF * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_saida_h: (this.linhaF * 120) + 0.5
+
+      ,
+      scale_saida_e_jogador: 0.2
+      ,
+      posicao_jogadorr_w : this.colunaI * 120 + (config.width / 3) - 79.5
+      ,
+      posicao_jogadorr_h: (this.linhaI * 120) + 0.5
 
     }
 
@@ -151,6 +234,24 @@ class Tela2 extends Phaser.Scene {
       linhaF: 1
       ,
       colunaF: 8
+
+      ,
+      largura_bloco :  60 + (config.width/4) + 35
+      ,
+      altura_bloco  :   60
+      ,
+      escala_bloco: 1.5
+      ,
+      posicao_saida_w : this.colunaF * 60 + (config.width/3) - 78.5
+      ,
+      posicao_saida_h: (this.linhaF * 60 ) + 0.5
+  
+      ,
+      scale_saida_e_jogador: 0.1
+      ,
+      posicao_jogadorr_w : this.colunaI * 60 + (config.width/3) - 78.5  
+      ,
+      posicao_jogadorr_h: (this.linhaI * 60 ) + 0.5
   
     } 
 
@@ -177,6 +278,24 @@ class Tela2 extends Phaser.Scene {
       linhaF: 6
       ,
       colunaF: 1
+      
+      ,
+      largura_bloco :  60 + (config.width/4) + 35
+      ,
+      altura_bloco  :   60
+      ,
+      escala_bloco: 1.5
+      ,
+      posicao_saida_w : this.colunaF * 60 + (config.width/3) - 78.5
+      ,
+      posicao_saida_h: (this.linhaF * 60 ) + 0.5
+  
+      ,
+      scale_saida_e_jogador: 0.1
+      ,
+      posicao_jogadorr_w : this.colunaI * 60 + (config.width/3) - 78.5  
+      ,
+      posicao_jogadorr_h: (this.linhaI * 60 ) + 0.5
   
     }
     
@@ -204,8 +323,26 @@ class Tela2 extends Phaser.Scene {
       ,
       colunaF: 0
 
-    }
+      ,
+      largura_bloco :  60 + (config.width/4) + 35
+      ,
+      altura_bloco  :   60
+      ,
+      escala_bloco: 1.5
+      ,
+      posicao_saida_w : this.colunaF * 60 + (config.width/3) - 78.5
+      ,
+      posicao_saida_h: (this.linhaF * 60 ) + 0.5
+  
+      ,
+      scale_saida_e_jogador: 0.1
+      ,
+      posicao_jogadorr_w : this.colunaI * 60 + (config.width/3) - 78.5  
+      ,
+      posicao_jogadorr_h: (this.linhaI * 60 ) + 0.5
 
+    }
+//==========================================================================fiz até aqui
 
     const medium_3 = {
       Full_matriz: 
@@ -230,6 +367,23 @@ class Tela2 extends Phaser.Scene {
       ,
       colunaF: 9
       
+      ,
+      largura_bloco :  60 + (config.width/4) + 35
+      ,
+      altura_bloco  :   60
+      ,
+      escala_bloco: 1.5
+      ,
+      posicao_saida_w : colunaF * 60 + (config.width/3) - 78.5
+      ,
+      posicao_saida_h: (linhaF * 60 ) + 0.5
+  
+      ,
+      scale_saida_e_jogador: 0.1
+      ,
+      posicao_jogadorr_w : colunaI * 60 + (config.width/3) - 78.5  
+      ,
+      posicao_jogadorr_h: (linhaI * 60 ) + 0.5
     }
       
     const medium_4 = {
@@ -255,6 +409,24 @@ class Tela2 extends Phaser.Scene {
       ,
       colunaF: 1
       
+
+      ,
+      largura_bloco :  60 + (config.width/4) + 35
+      ,
+      altura_bloco  :   60
+      ,
+      escala_bloco: 1.5
+      ,
+      posicao_saida_w : colunaF * 60 + (config.width/3) - 78.5
+      ,
+      posicao_saida_h: (linhaF * 60 ) + 0.5
+  
+      ,
+      scale_saida_e_jogador: 0.1
+      ,
+      posicao_jogadorr_w : colunaI * 60 + (config.width/3) - 78.5  
+      ,
+      posicao_jogadorr_h: (linhaI * 60 ) + 0.5
     }
 
     niveis[1] = [medium_0, medium_1, medium_2, medium_3, medium_4]
@@ -291,6 +463,24 @@ class Tela2 extends Phaser.Scene {
       linhaF: 19
       ,
       colunaF: 0
+
+      ,
+      largura_bloco :  30 + (config.width/3) - 80
+      ,
+      altura_bloco  : 30
+      ,
+      escala_bloco: 0.75
+      ,
+      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      ,
+      posicao_saida_h: linhaF * 30 
+  
+      ,
+      scale_saida_e_jogador: 0.050
+      ,
+      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      ,
+      posicao_jogadorr_h: linhaI * 30
       
     }
 
@@ -327,7 +517,24 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 0
-      
+
+      ,
+      largura_bloco :  30 + (config.width/3) - 80
+      ,
+      altura_bloco  : 30
+      ,
+      escala_bloco: 0.75
+      ,
+      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      ,
+      posicao_saida_h: linhaF * 30 
+  
+      ,
+      scale_saida_e_jogador: 0.050
+      ,
+      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      ,
+      posicao_jogadorr_h: linhaI * 30
     }
 
     const hard_2 = {
@@ -362,7 +569,24 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 0
-      
+
+      ,
+      largura_bloco :  30 + (config.width/3) - 80
+      ,
+      altura_bloco  : 30
+      ,
+      escala_bloco: 0.75
+      ,
+      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      ,
+      posicao_saida_h: linhaF * 30 
+  
+      ,
+      scale_saida_e_jogador: 0.050
+      ,
+      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      ,
+      posicao_jogadorr_h: linhaI * 30
     }
 
     const hard_3 = {
@@ -397,7 +621,24 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 19
-      
+
+      ,
+      largura_bloco :  30 + (config.width/3) - 80
+      ,
+      altura_bloco  : 30
+      ,
+      escala_bloco: 0.75
+      ,
+      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      ,
+      posicao_saida_h: linhaF * 30 
+  
+      ,
+      scale_saida_e_jogador: 0.050
+      ,
+      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      ,
+      posicao_jogadorr_h: linhaI * 30      
     }
 
     const hard_4 = {
@@ -433,7 +674,24 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 19
-      
+
+      ,
+      largura_bloco :  30 + (config.width/3) - 80
+      ,
+      altura_bloco  : 30
+      ,
+      escala_bloco: 0.75
+      ,
+      posicao_saida_w : colunaF * 30 + (config.width/3) - 80 
+      ,
+      posicao_saida_h: linhaF * 30 
+  
+      ,
+      scale_saida_e_jogador: 0.050
+      ,
+      posicao_jogadorr_w : colunaI * 30 + (config.width/3) - 80  
+      ,
+      posicao_jogadorr_h: linhaI * 30
     }
 
     niveis[2] = [ hard_0, hard_1, hard_2, hard_3, hard_4]
@@ -503,18 +761,17 @@ class Tela2 extends Phaser.Scene {
       //é so eu trocar o objeto de colisão e mudar ordem que passarei os parametros (pareide, espaço) (espaço , pareide) chamando a mesma função
       // e para o jogador não ultrapassar o limete do labirinto eu pego a posição eixo(x,y) da primeira e ultima coluna , da primeira e ultima linha e arrodeio de blocos pareide
       for (let coluna = 0; coluna < matriz.Full_matriz[linha].length; coluna++) {
-
         //console.log(` linha ${linha} coluna ${coluna}`)
-
         if (matriz.Full_matriz[linha][coluna] === 1) {
           //tamanho de cada bloco + metade da tela horizontalmente 
-          this.todos_blocos_parede.create(coluna * 120 + (config.width / 3) - 80, linha * 120, "pareide").setOrigin(0, 0).setScale(3).refreshBody();
+
+          this.todos_blocos_parede.create(coluna * matriz.largura_bloco , linha * matriz.altura_bloco, "pareide").setOrigin(0, 0).setScale(matriz.escala_bloco).refreshBody();
 
         } else {
 
-          this.chao = this.add.image(coluna * 120 + (config.width / 3) - 80, linha * 120, "chao") // se  colocar 80 vai ficar sem as linhas 
+          this.chao = this.add.image(coluna *matriz.largura_bloco , linha * matriz.altura_bloco, "chao") // se  colocar 80 vai ficar sem as linhas 
           this.chao.setOrigin(0, 0)
-          this.chao.setScale(3)
+          this.chao.setScale(matriz.escala_bloco)
 
         }
 
@@ -525,14 +782,7 @@ class Tela2 extends Phaser.Scene {
     this.todos_blocos_parede.create((5 * 120) + (config.width / 3) - 80, 0, "borda_right").setOrigin(0, 0).refreshBody();
     this.todos_blocos_parede.create((config.width / 3) - 80, (5 * 120), "borda_bottom").setOrigin(0, 0).refreshBody();
 
-    /*
-        const linhaI = 1
-        const colunaI = 0
-    
-        const linhaF = 4
-        const colunaF = 4
-    */
-    this.saida = this.physics.add.sprite(matriz.colunaF * 120 + (config.width / 3) - 79.5, (matriz.linhaF * 120) + 0.5, "saidaa").setOrigin(0, 0).setScale(0.2).refreshBody();
+    this.saida = this.physics.add.sprite(matriz.posicao_saida_w, matriz.posicao_saida_h, "saidaa").setOrigin(0, 0).setScale(matriz.scale_saida_e_jogador).refreshBody();
 
     this.anims.create({
 
@@ -548,7 +798,8 @@ class Tela2 extends Phaser.Scene {
 
     this.saida.anims.play("saidaa_anims", true);
 
-    this.jogadorr = this.physics.add.sprite(matriz.colunaI * 120 + (config.width / 3) - 79.5, (matriz.linhaI * 120) + 0.5, "jogador").setOrigin(0, 0).setScale(0.2).refreshBody();
+    this.jogadorr = this.physics.add.sprite( matriz.posicao_jogadorr_w, matriz.posicao_jogadorr_h, "jogador").setOrigin(0, 0)
+    this.jogadorr.setScale(matriz.scale_saida_e_jogador).refreshBody();
     this.jogadorr.setCollideWorldBounds(true);
 
     this.anims.create({
@@ -574,7 +825,7 @@ class Tela2 extends Phaser.Scene {
 
   update() {
 
-    if (!this.acabou) {
+    if (!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
 
 
       if (this.cursors.left.isDown) {
