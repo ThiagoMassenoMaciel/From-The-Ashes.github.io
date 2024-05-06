@@ -1,3 +1,4 @@
+#### https://newdocs.phaser.io/docs/3.54.0/Phaser.Time.Clock
 # coisas interessantes
 1. `estou reusando a propriedade dentro de outra dentro do próprio objeto que a declarou`
 
