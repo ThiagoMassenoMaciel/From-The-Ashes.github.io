@@ -92,13 +92,13 @@ outro modo de jogo é so passa a fase 1 se conseguir passar em todos os 5 labiri
 # Fases
 
 ## 1 
-Será 2 labirinto .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite de 2 minutos
+Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite de 30 segundos
 
 ## 2 
-Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 2 labirintos com o tempo limite de 2 minutos
+Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 3 labirintos com o tempo limite de 45 segundos
 
 ## 3 
-Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 2 minutos
+Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 1 minuto
 
 
 # Esquema de fases
@@ -134,9 +134,18 @@ O score vai ser de acordo com a quantidade de labirintos passadas pelo jogador p
 ## versão 1.0
 | Precisão | Score |
 | ----- | ----------- |
-| Passar 1 labirinto no tempo <= 30 segundos | 1 pts |
+| Passar 1 labirinto no tempo <= 30 segundos  | 1 pts |
 | Passar 2 labirintos no tempo <= 30 segundos | 5 pts |
-| Passar 3 labirintos no tempo <= 30 segundo | 10 pts |
+| Passar 3 labirintos no tempo <= 30 segundos | 10 pts |
+| Passar 4 labirintos no tempo <= 30 segundos | 20 pts |
+| Passar 1 labirinto no tempo <=  20 segundos | 2 pts |
+| Passar 2 labirintos no tempo <= 20 segundos | 7 pts |
+| Passar 3 labirintos no tempo <= 20 segundos | 15 pts |
+| Passar 4 labirintos no tempo <= 20 segundos | 25 pts |
+| Passar 1 labirinto no tempo <=  10 segundos | 3 pts |
+| Passar 2 labirintos no tempo <= 10 segundos | 8 pts |
+| Passar 3 labirintos no tempo <= 10 segundos | 17 pts |
+| Passar 4 labirintos no tempo <= 10 segundos | 50 pts |
 
 ## versão 2.0
 | Precisão | Score |
