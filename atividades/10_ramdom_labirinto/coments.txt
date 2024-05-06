@@ -385,3 +385,5 @@ bug, os blockinhos estao aparecendo fora do esquadro e faltando
 
 
                         na hora que adicionar os blocos tem que fazer 3 if para mudar 
+
+bug, a função que pinta os quadrados n esta pintando as paredes e nem os blocos espaço , so pintou o ultimo bloco montado do tipo espaço 

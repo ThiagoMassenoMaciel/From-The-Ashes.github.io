@@ -774,6 +774,8 @@ class Tela2 extends Phaser.Scene {
     this.todos_blocos_parede.create((5 * 120) + (config.width / 3) - 80, 0, "borda_right").setOrigin(0, 0).refreshBody();
     this.todos_blocos_parede.create((config.width / 3) - 80, (5 * 120), "borda_bottom").setOrigin(0, 0).refreshBody();
 
+    setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.chao)} , 5000)
+
     this.saida = this.physics.add.sprite(matriz.posicao_saida_w, matriz.posicao_saida_h, "saidaa").setOrigin(0, 0).setScale(matriz.scale_saida_e_jogador).refreshBody();
 
     this.anims.create({
@@ -869,6 +871,25 @@ class Tela2 extends Phaser.Scene {
     }
 
 
+  }
+
+  trocarChaoParede( grupo_parede, grupo_espaco){
+
+    grupo_parede.getChildren().forEach(elemento => {
+      elemento.setTint(0xffffff);
+    });
+  
+    grupo_espaco.setTint(0x000000)
+
+    console.log("entrou")
+  }
+
+  destrocarChaoParede(grupo_parede, grupo_espaco){
+    grupo_parede.getChildren().forEach(elemento => {
+      elemento.setTint(0x000000);
+    });
+  
+    grupo_espaco.setTint(0xffffff)
   }
 
   saiuDoLabirinto(jogadorr, saida) {

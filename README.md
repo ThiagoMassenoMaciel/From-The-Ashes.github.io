@@ -338,3 +338,4 @@ npm run build
 ### 5  mai - 3h         Atv 10.2 feita e + bug n processa todos os blocos parede 
 # para deixar a lógica de so aparecer o fácil unica vez é so dentro do update() atualizar a arrayNiveis quando zerar para ficar igual a [1,2]
 ### 5  mai - 1h30'      Atv 10 concluidíssima
+### 6  mai - 24'        Atv 11 feito a função que muda de cor + bug
