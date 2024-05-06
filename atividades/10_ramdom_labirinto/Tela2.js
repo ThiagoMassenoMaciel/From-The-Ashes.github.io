@@ -10,7 +10,7 @@ class Tela2 extends Phaser.Scene {
 
     this.scale_passado_labirinto = 0
 
-    this.add.text(0, 0, "jogo", { font: "60px Arial" })
+    this.flag
 
     this.timer = this.add.image(config.width - 150, 100, "tempo")
     this.timer.setScale(0.6)
@@ -43,12 +43,8 @@ class Tela2 extends Phaser.Scene {
       linhaF: 4
       ,
       colunaF: 4
-      ,
-      largura_bloco : 120 + (config.width / 3) - 80
-      ,
-      altura_bloco  :  120
-      ,
-      escala_bloco: 3
+
+
       ,
       posicao_saida_w : 4 * 120 + (config.width / 3) - 79.5
       ,
@@ -83,12 +79,8 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 0
-      ,
-      largura_bloco : 120 + (config.width / 3) - 80
-      ,
-      altura_bloco  :  120
-      ,
-      escala_bloco: 3
+
+
       ,
       posicao_saida_w : 0 * 120 + (config.width / 3) - 79.5
       ,
@@ -122,12 +114,8 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 1
-      ,
-      largura_bloco : 120 + (config.width / 3) - 80
-      ,
-      altura_bloco  :  120
-      ,
-      escala_bloco: 3
+
+
       ,
       posicao_saida_w : 1 * 120 + (config.width / 3) - 79.5
       ,
@@ -161,12 +149,8 @@ class Tela2 extends Phaser.Scene {
       linhaF: 2
       ,
       colunaF: 2
-      ,
-      largura_bloco : 120 + (config.width / 3) - 80
-      ,
-      altura_bloco  :  120
-      ,
-      escala_bloco: 3
+
+
       ,
       posicao_saida_w : 2 * 120 + (config.width / 3) - 79.5
       ,
@@ -201,12 +185,8 @@ class Tela2 extends Phaser.Scene {
       linhaF: 0
       ,
       colunaF: 1
-      ,
-      largura_bloco : 120 + (config.width / 3) - 80
-      ,
-      altura_bloco  :  120
-      ,
-      escala_bloco: 3
+
+
       ,
       posicao_saida_w : 1 * 120 + (config.width / 3) - 79.5
       ,
@@ -251,12 +231,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 8
 
       ,
-      largura_bloco :  60 + (config.width/4) + 35
-      ,
-      altura_bloco  :   60
-      ,
-      escala_bloco: 1.5
-      ,
       posicao_saida_w : 8 * 60 + (config.width/3) - 78.5
       ,
       posicao_saida_h: ( 1 * 60 ) + 0.5
@@ -298,12 +272,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 1
       
       ,
-      largura_bloco :  60 + (config.width/4) + 35
-      ,
-      altura_bloco  :   60
-      ,
-      escala_bloco: 1.5
-      ,
       posicao_saida_w : 1 * 60 + (config.width/3) - 78.5
       ,
       posicao_saida_h: ( 6 * 60 ) + 0.5
@@ -343,12 +311,6 @@ class Tela2 extends Phaser.Scene {
       ,
       colunaF: 0
 
-      ,
-      largura_bloco :  60 + (config.width/4) + 35
-      ,
-      altura_bloco  :   60
-      ,
-      escala_bloco: 1.5
       ,
       posicao_saida_w : 0 * 60 + (config.width/3) - 78.5
       ,
@@ -390,12 +352,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 9
       
       ,
-      largura_bloco :  60 + (config.width/4) + 35
-      ,
-      altura_bloco  :   60
-      ,
-      escala_bloco: 1.5
-      ,
       posicao_saida_w : 9 * 60 + (config.width/3) - 78.5
       ,
       posicao_saida_h: ( 6 * 60 ) + 0.5
@@ -434,13 +390,6 @@ class Tela2 extends Phaser.Scene {
       ,
       colunaF: 1
       
-
-      ,
-      largura_bloco :  60 + (config.width/4) + 35
-      ,
-      altura_bloco  :   60
-      ,
-      escala_bloco: 1.5
       ,
       posicao_saida_w : 1 * 60 + (config.width/3) - 78.5
       ,
@@ -493,12 +442,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 0
 
       ,
-      largura_bloco :  30 + (config.width/3) - 80
-      ,
-      altura_bloco  : 30
-      ,
-      escala_bloco: 0.75
-      ,
       posicao_saida_w : 0 * 30 + (config.width/3) - 80 
       ,
       posicao_saida_h: 19 * 30 
@@ -549,12 +492,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 0
 
       ,
-      largura_bloco :  30 + (config.width/3) - 80
-      ,
-      altura_bloco  : 30
-      ,
-      escala_bloco: 0.75
-      ,
       posicao_saida_w : 0 * 30 + (config.width/3) - 80 
       ,
       posicao_saida_h: 0 * 30 
@@ -604,12 +541,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 0
 
       ,
-      largura_bloco :  30 + (config.width/3) - 80
-      ,
-      altura_bloco  : 30
-      ,
-      escala_bloco: 0.75
-      ,
       posicao_saida_w : 0 * 30 + (config.width/3) - 80 
       ,
       posicao_saida_h: 0 * 30 
@@ -658,12 +589,6 @@ class Tela2 extends Phaser.Scene {
       ,
       colunaF: 19
 
-      ,
-      largura_bloco :  30 + (config.width/3) - 80
-      ,
-      altura_bloco  : 30
-      ,
-      escala_bloco: 0.75
       ,
       posicao_saida_w : 19 * 30 + (config.width/3) - 80 
       ,
@@ -715,12 +640,6 @@ class Tela2 extends Phaser.Scene {
       colunaF: 19
 
       ,
-      largura_bloco :  30 + (config.width/3) - 80
-      ,
-      altura_bloco  : 30
-      ,
-      escala_bloco: 0.75
-      ,
       posicao_saida_w : 19 * 30 + (config.width/3) - 80 
       ,
       posicao_saida_h: 0 * 30 
@@ -740,6 +659,9 @@ class Tela2 extends Phaser.Scene {
 
     let random_nivel = Math.floor(Math.random() * arrayNiveis.length); //  random
     let nivel_escolhido = arrayNiveis[random_nivel] 
+
+    this.flag = nivel_escolhido
+
     console.log("nivel escolhido")
     console.log(nivel_escolhido)
 
@@ -808,13 +730,40 @@ class Tela2 extends Phaser.Scene {
         if (matriz.Full_matriz[linha][coluna] === 1) {
           //tamanho de cada bloco + metade da tela horizontalmente 
 
-          this.todos_blocos_parede.create(coluna * matriz.largura_bloco , linha * matriz.altura_bloco, "pareide").setOrigin(0, 0).setScale(matriz.escala_bloco).refreshBody();
+          
+
+          if(nivel_escolhido=== 0){
+
+            this.todos_blocos_parede.create(coluna *120+(config.width / 3) - 80 , linha * 120, "pareide").setOrigin(0, 0).setScale(3).refreshBody();
+
+          }else if(nivel_escolhido===1){
+
+            this.todos_blocos_parede.create(coluna * 60 + (config.width/4) + 35 , linha * 60, "pareide").setOrigin(0, 0).setScale(1.5).refreshBody();
+
+          }else if(nivel_escolhido===2){
+
+            this.todos_blocos_parede.create(coluna * 30 + (config.width/3) - 80 , linha * 30, "pareide").setOrigin(0, 0).setScale(0.75).refreshBody();
+
+          }
 
         } else {
 
-          this.chao = this.add.image(coluna *matriz.largura_bloco , linha * matriz.altura_bloco, "chao") // se  colocar 80 vai ficar sem as linhas 
-          this.chao.setOrigin(0, 0)
-          this.chao.setScale(matriz.escala_bloco)
+          if(nivel_escolhido=== 0){
+            this.chao = this.add.image(coluna * 120+(config.width / 3) - 80 , linha * 120, "chao") // se  colocar 80 vai ficar sem as linhas 
+            this.chao.setOrigin(0, 0)
+            this.chao.setScale(3)
+
+          }else if(nivel_escolhido===1){
+            this.chao = this.add.image(coluna * 60 + (config.width/4) + 35 , linha * 60, "chao") // se  colocar 80 vai ficar sem as linhas 
+            this.chao.setOrigin(0, 0)
+            this.chao.setScale(1.5)
+
+          }else if(nivel_escolhido===2){
+            this.chao = this.add.image(coluna * 30 + (config.width/3) - 80 , linha * 30, "chao") // se  colocar 80 vai ficar sem as linhas 
+            this.chao.setOrigin(0, 0)
+            this.chao.setScale(0.75)
+
+          }
 
         }
 
@@ -873,28 +822,47 @@ class Tela2 extends Phaser.Scene {
     if (!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
 
 
-      if (this.cursors.left.isDown) {
-        this.jogadorr.setVelocityX(-700);
-      } else if (this.cursors.right.isDown) {
-        this.jogadorr.setVelocityX(700);
-      } else {
-        this.jogadorr.setVelocityX(0)
-      }
+      if(this.flag === 2){
+        if (this.cursors.left.isDown) {
+          this.jogadorr.setVelocityX(-195);
+        } else if (this.cursors.right.isDown) {
+          this.jogadorr.setVelocityX(195);
+        } else {
+          this.jogadorr.setVelocityX(0)
+        }
+  
+        if (this.cursors.up.isDown) {
+          this.jogadorr.setVelocityY(-195);
+        } else if (this.cursors.down.isDown) {
+          this.jogadorr.setVelocityY(195)
+        } else {
+          this.jogadorr.setVelocityY(0)
+        }
+      }else{
 
-      if (this.cursors.up.isDown) {
-        this.jogadorr.setVelocityY(-700);
-      } else if (this.cursors.down.isDown) {
-        this.jogadorr.setVelocityY(700)
-      } else {
-        this.jogadorr.setVelocityY(0)
+        if (this.cursors.left.isDown) {
+          this.jogadorr.setVelocityX(-700);
+        } else if (this.cursors.right.isDown) {
+          this.jogadorr.setVelocityX(700);
+        } else {
+          this.jogadorr.setVelocityX(0)
+        }
+  
+        if (this.cursors.up.isDown) {
+          this.jogadorr.setVelocityY(-700);
+        } else if (this.cursors.down.isDown) {
+          this.jogadorr.setVelocityY(700)
+        } else {
+          this.jogadorr.setVelocityY(0)
+        }
       }
-
+/*
       if (arrayEasy.length === 0) {
         arrayEasy = [0, 1, 2, 3, 4]
       }
-
+*/
       if(arrayNiveis.length === 0){
-        arrayNiveis = [ 0, 1, 2]
+        arrayNiveis = [ 1, 2]
       }
 
 
@@ -924,11 +892,10 @@ class Tela2 extends Phaser.Scene {
 
     this.saiu_do_labirinto.anims.play("saiuDoLabirinto_anims", true);
 
-
     // executar a funcao que mostra que a pessoa passou de fase 
     this.acabou = true
 
-    setTimeout(() => { this.scene.start("GameEasy") }, 4000)
+    setTimeout(() => { this.scene.start("GameEasy") }, 1500)
     
   }
 

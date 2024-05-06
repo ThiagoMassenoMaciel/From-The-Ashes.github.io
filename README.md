@@ -327,3 +327,5 @@ npm run build
 ### 2  mai - 2h         Atv 10 organizado toda estrutura [link exemplo](https://github.com/ThiagoMassenoMaciel/object) + bug da posição n atualizada
 ### 4  mai - 3h         Atv 10 organizado toda estrutura + centratilando algumas info + bug de n poder reutilizar valor de propriedade - fiz até medium_2
 ### 5  mai - 3h         Atv 10.2 feita e + bug n processa todos os blocos parede 
+# para deixar a lógica de so aparecer o fácil unica vez é so dentro do update() atualizar a arrayNiveis quando zerar para ficar igual a [1,2]
+### 5  mai - 1h30'      Atv 10 concluidíssima
