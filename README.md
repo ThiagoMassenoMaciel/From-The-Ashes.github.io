@@ -134,9 +134,18 @@ O score vai ser de acordo com a quantidade de labirintos passadas pelo jogador p
 ## versão 1.0
 | Precisão | Score |
 | ----- | ----------- |
-| Passar 1 labirinto no tempo <= 30 segundos | 1 pts |
+| Passar 1 labirinto no tempo <= 30 segundos  | 1 pts |
 | Passar 2 labirintos no tempo <= 30 segundos | 5 pts |
-| Passar 3 labirintos no tempo <= 30 segundo | 10 pts |
+| Passar 3 labirintos no tempo <= 30 segundos | 10 pts |
+| Passar 4 labirintos no tempo <= 30 segundos | 20 pts |
+| Passar 1 labirinto no tempo <=  20 segundos | 2 pts |
+| Passar 2 labirintos no tempo <= 20 segundos | 7 pts |
+| Passar 3 labirintos no tempo <= 20 segundos | 15 pts |
+| Passar 4 labirintos no tempo <= 20 segundos | 25 pts |
+| Passar 1 labirinto no tempo <=  10 segundos | 3 pts |
+| Passar 2 labirintos no tempo <= 10 segundos | 8 pts |
+| Passar 3 labirintos no tempo <= 10 segundos | 17 pts |
+| Passar 4 labirintos no tempo <= 10 segundos | 50 pts |
 
 ## versão 2.0
 | Precisão | Score |
