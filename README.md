@@ -92,13 +92,13 @@ outro modo de jogo é so passa a fase 1 se conseguir passar em todos os 5 labiri
 # Fases
 
 ## 1 
-Será 2 labirinto .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite de 2 minutos
+Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite de 30 segundos
 
 ## 2 
-Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 2 labirintos com o tempo limite de 2 minutos
+Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 3 labirintos com o tempo limite de 45 segundos
 
 ## 3 
-Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 2 minutos
+Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 1 minuto
 
 
 # Esquema de fases
