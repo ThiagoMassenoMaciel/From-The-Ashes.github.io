@@ -4,10 +4,23 @@ class Tela2 extends Phaser.Scene {
     super("GameEasy")
   }
 
+  todos_blocos_parede
+  todos_blocos_chao_espaco
+  
+  saida
+  jogadorr
+  cursors
+
+  flag; // para armazenar o valor do nivel escolhido para baixar a velocidade quando for labirinto dificil e para setOrigin() da animação achouSaidaLabirinto
+  acabou  // para n deixar jogador movimentar esprite jogadorr assim no momento que ele achar a saida 
+
+  scale_passado_labirinto // quando muda o nivel de labirinto muda escala da animacao quando jogador acha a saida
+  saiu_do_labirinto // vai armazenar o sprite da animacao quando o jogador encontra o buraco saida
+
   clockSize = 50;
   timerEvent;
   graphics;
-  flag; // para armazenar o valor do nivel escolhido para baixar a velocidade quando for labirinto dificil e para setOrigin() da animação achouSaidaLabirinto
+
   create() {
 
     this.timerEvent = this.time.addEvent({ delay: 15000});
@@ -15,7 +28,7 @@ class Tela2 extends Phaser.Scene {
 
     this.acabou = false
 
-    this.scale_passado_labirinto = 0
+    //this.scale_passado_labirinto = 0
 
     this.flag
 
@@ -30,8 +43,6 @@ class Tela2 extends Phaser.Scene {
     const niveis = new Array(3)
 
     console.log(niveis)
-     
-    const matrizes = []
 
     const easy_0 = {
       Full_matriz:
@@ -719,15 +730,16 @@ class Tela2 extends Phaser.Scene {
 
     }
 
-    let indice_escolhido = elemento_escolhido
+    let indice_labirinto_escolhido = elemento_escolhido
 
-    const matriz = niveis[nivel_escolhido][indice_escolhido]
+    const matriz = niveis[nivel_escolhido][indice_labirinto_escolhido]
 
     this.scale_passado_labirinto = matriz.scale_passado_labirinto
 
     console.log(matriz)
     console.log( this.scale_passado_labirinto)
     this.todos_blocos_parede = this.physics.add.staticGroup();
+    this.todos_blocos_chao_espaco = this.physics.add.staticGroup();
 
     for (let linha = 0; linha < matriz.Full_matriz.length; linha++) {
       // quando eu for transformar este pedaço de código em uma função na hora de mudar a cor 
@@ -772,7 +784,24 @@ class Tela2 extends Phaser.Scene {
             this.chao.setScale(0.75)
 
           }
+/*
+          if(nivel_escolhido=== 0){
+            this.chao = this.add.image(coluna * 120+(config.width / 3) - 80 , linha * 120, "chao") // se  colocar 80 vai ficar sem as linhas 
+            this.chao.setOrigin(0, 0)
+            this.chao.setScale(3)
 
+          }else if(nivel_escolhido===1){
+            this.chao = this.add.image(coluna * 60 + (config.width/4) + 35 , linha * 60, "chao") // se  colocar 80 vai ficar sem as linhas 
+            this.chao.setOrigin(0, 0)
+            this.chao.setScale(1.5)
+
+          }else if(nivel_escolhido===2){
+            this.chao = this.add.image(coluna * 30 + (config.width/3) - 80 , linha * 30, "chao") // se  colocar 80 vai ficar sem as linhas 
+            this.chao.setOrigin(0, 0)
+            this.chao.setScale(0.75)
+
+          }
+*/
         }
 
       }
@@ -911,7 +940,7 @@ class Tela2 extends Phaser.Scene {
 
     this.jogadorr.destroy();
     this.saida.destroy();
-    
+
     //this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
     
     if(this.flag === 2){
@@ -938,7 +967,7 @@ class Tela2 extends Phaser.Scene {
     // executar a funcao que mostra que a pessoa passou de fase 
     this.acabou = true
 
-    setTimeout(() => { this.scene.start("GameEasy") }, 1500)
+    setTimeout(() => { this.scene.start("GameEasy") }, 1500) // aqui em vez de restartar toda esta cena eu apenas chamo de novo a função que vai montar outro labirinto
     
   }
 

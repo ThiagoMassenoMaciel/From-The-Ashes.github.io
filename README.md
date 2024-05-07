@@ -340,3 +340,5 @@ npm run build
 ### 6  mai - 24'        Atv 11 feito a função que muda de cor + bug
 ### 6  mai - 1h24'      10.1 adicionAR UM RELOGIO DE TEMPO NA TELA
 ### 7  mai - 40'        10.2 fixed O BUG DISABLE REMOVE 
+### 7  mai - 2h'        Tudo acoplado no mesmo file
+### 7  mai - 15'        11.trocar a cor do do chão pela parede.   

@@ -409,3 +409,8 @@ bug, os blockinhos estao aparecendo fora do esquadro e faltando
                         na hora que adicionar os blocos tem que fazer 3 if para mudar 
 
 bug, a função que pinta os quadrados n esta pintando as paredes e nem os blocos espaço , so pintou o ultimo bloco montado do tipo espaço 
+    solução :::: tentar encontrar uma propriedade que mude todo mundo do grupo de uma vez 
+                 tenho que acicionar dentro de um grupo os blocos que é chão espaço
+
+bug, quando muda de labirinto n é para mudar o relogio 
+    solução :::: é colocar este pedaço do código que monta o labirinto separado dentro de uma função que pode ser chamada 
