@@ -338,3 +338,4 @@ npm run build
 # para deixar a lógica de so aparecer o fácil unica vez é so dentro do update() atualizar a arrayNiveis quando zerar para ficar igual a [1,2]
 ### 5  mai - 1h30'      Atv 10 concluidíssima
 ### 6  mai - 24'        Atv 11 feito a função que muda de cor + bug
+### 6  mai - 1h24'      10.1 adicionAR UM RELOGIO DE TEMPO NA TELA
