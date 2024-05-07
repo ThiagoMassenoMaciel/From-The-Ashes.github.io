@@ -322,10 +322,32 @@ bug, animação executada depois que jogador colide com a saída n fica na exata
     solução :::: pegar informações da posição X e Y do objeto saida antes de desabilitar .
     n funcionou 
 
+
+
+
+
+
+=================================================================================================================================
+
+
+
+
 bug, animação esta sendo adicionada por cima do bloco parede , era para ser adicionada apenas no bloco espaço
     solução :::: adicionar collider 
     n mudou 
     solução :::: tem que excluir o corpo do jogador e saida do labirinto no momento em que acontecer o overlaptela 
+    n mudou 
+
+    solução :::: tem que tirar setOrigin() do sprite, que é animação final, quando for o nivel dificil , pois com setOrigin centralizado ele n fica por cima do bloco pareide
+                 e deixar o setOrigin(0,0) para os niveis facil e medio 
+
+                para detectar que é o nivel dificil tenho que conseguir acessar o valor da variavel nivel_escolhido declarada dentro do create 
+                por isso tenho que deixar ela global para minha funcao saiuDoLabirinto tmbm ter acesso a essa variavel 
+
+
+
+
+
 
 bug, n consegui organizar todos labirintos em uma estrutura .
     solução ::: era so um jeito diferente para fazer array dentro da array 

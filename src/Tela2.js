@@ -7,6 +7,7 @@ class Tela2 extends Phaser.Scene {
   clockSize = 50;
   timerEvent;
   graphics;
+  flag; // para armazenar o valor do nivel escolhido para baixar a velocidade quando for labirinto dificil e para setOrigin() da animação achouSaidaLabirinto
   create() {
 
     this.timerEvent = this.time.addEvent({ delay: 15000});
@@ -664,6 +665,7 @@ class Tela2 extends Phaser.Scene {
     niveis[2] = [ hard_0, hard_1, hard_2, hard_3, hard_4]
 
     let random_nivel = Math.floor(Math.random() * arrayNiveis.length); //  random
+   
     let nivel_escolhido = arrayNiveis[random_nivel] 
 
     this.flag = nivel_escolhido
@@ -909,10 +911,17 @@ class Tela2 extends Phaser.Scene {
 
     this.jogadorr.destroy();
     this.saida.destroy();
-
+    
     //this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
-    this.saiu_do_labirinto = this.physics.add.sprite(x,y, "saiuDoLabirinto").setScale( this.scale_passado_labirinto).refreshBody();
-
+    
+    if(this.flag === 2){
+      // quando for adicionar este sprite no labirinto dificil ele vai encaixar dentro do bloco espaço
+      this.saiu_do_labirinto = this.physics.add.sprite(x,y, "saiuDoLabirinto").setScale( this.scale_passado_labirinto).refreshBody();
+    }else{
+      // quando for adicionar este sprite no labirinto facil e medio vai encaixar dentro do bloco espaço
+      this.saiu_do_labirinto = this.physics.add.sprite(x,y, "saiuDoLabirinto").setOrigin(0,0).setScale( this.scale_passado_labirinto).refreshBody();
+    }
+    
     this.physics.add.collider(this.saiu_do_labirinto, this.todos_blocos_parede);
 
     this.anims.create({

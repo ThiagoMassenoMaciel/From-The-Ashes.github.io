@@ -339,3 +339,4 @@ npm run build
 ### 5  mai - 1h30'      Atv 10 concluidíssima
 ### 6  mai - 24'        Atv 11 feito a função que muda de cor + bug
 ### 6  mai - 1h24'      10.1 adicionAR UM RELOGIO DE TEMPO NA TELA
+### 7  mai - 40'        10.2 fixed O BUG DISABLE REMOVE 
