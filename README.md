@@ -118,11 +118,11 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 #### Modo de jogo
 | Modo de fase | Descrição |
 | ------------ | ----------- |
-| Fácil        | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. As paredes do labirinto vai seguir uma lógica de 5 colunas e 5 linhas . Talvez eu mude para 10 linhas e colunas|
+| Fácil        | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Tem o detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos. As paredes do labirinto vai seguir uma lógica de 5 colunas e 5 linhas . Talvez eu mude para 10 linhas e colunas|
 ![facil](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/803502c6-e5d7-4459-82e0-d335bdf2a9f3)
-| Médio        |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos. As paredes do labirinto vai seguir uma lógica de 10 colunas e 10 linhas .  Talvez eu mude para 15 linhas e colunas|
+| Médio        |Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Tem o detalhe da cor das paredes e do chão vai ficar trocando a cada 3 segundos. As paredes do labirinto vai seguir uma lógica de 10 colunas e 10 linhas .  Talvez eu mude para 15 linhas e colunas|
 ![medio](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/726132a6-8473-431b-98d3-c838e02649c1)
-| Difícil      | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 5 segundos . A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
+| Difícil      | Esta fase vai ter a cor das paredes do labirinto branca e o caminho por onde o jogador pode andar é preto. Este detalhe da cor das paredes e do chão vai ficar trocando a cada 1 segundos . so fazer isso se der tempo A cada 30 segundos a bolinha que é o buraco para sair do labirinto vai mudar de lugar. As paredes do laberinto vai seguir uma lógica de 20 colunas e 20 linhas .  |
 ![dificil](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/1e689988-16ae-4b78-bcd6-496075e51608)
 
 [![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)
@@ -341,4 +341,4 @@ npm run build
 ### 6  mai - 1h24'      10.1 adicionAR UM RELOGIO DE TEMPO NA TELA
 ### 7  mai - 40'        10.2 fixed O BUG DISABLE REMOVE 
 ### 7  mai - 2h'        Tudo acoplado no mesmo file
-### 7  mai - 15'        11.trocar a cor do do chão pela parede.   
+### 7  mai - 2h21'      11. feito completo trocar a cor do do chão pela parede.   

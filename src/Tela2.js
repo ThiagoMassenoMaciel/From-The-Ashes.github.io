@@ -769,19 +769,13 @@ class Tela2 extends Phaser.Scene {
         } else {
 
           if(nivel_escolhido=== 0){
-            this.chao = this.add.image(coluna * 120+(config.width / 3) - 80 , linha * 120, "chao") // se  colocar 80 vai ficar sem as linhas 
-            this.chao.setOrigin(0, 0)
-            this.chao.setScale(3)
+            this.todos_blocos_chao_espaco.create(coluna * 120+(config.width / 3) - 80 , linha * 120, "chao").setOrigin(0, 0).setScale(3).refreshBody();
 
           }else if(nivel_escolhido===1){
-            this.chao = this.add.image(coluna * 60 + (config.width/4) + 35 , linha * 60, "chao") // se  colocar 80 vai ficar sem as linhas 
-            this.chao.setOrigin(0, 0)
-            this.chao.setScale(1.5)
+            this.todos_blocos_chao_espaco.create(coluna * 60 + (config.width/4) + 35 , linha * 60, "chao").setOrigin(0, 0).setScale(1.5).refreshBody();
 
           }else if(nivel_escolhido===2){
-            this.chao = this.add.image(coluna * 30 + (config.width/3) - 80 , linha * 30, "chao") // se  colocar 80 vai ficar sem as linhas 
-            this.chao.setOrigin(0, 0)
-            this.chao.setScale(0.75)
+            this.todos_blocos_chao_espaco.create(coluna * 30 + (config.width/3) - 80 , linha * 30, "chao").setOrigin(0, 0).setScale(0.75).refreshBody();
 
           }
 /*
@@ -853,6 +847,67 @@ class Tela2 extends Phaser.Scene {
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
+    if( this.flag === 0){ // de 5 em 5 segundos é mudado a cor das paredes de preto para branco
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 5000)
+      //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 10000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 20000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 25000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
+    }else if(this.flag === 1){ // de 3 em 3 segundos é mudado a cor das paredes de preto para branco
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 3000)
+      //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 6000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 9000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 12000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 18000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 21000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 24000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 27000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
+    }else{                    // de 1 em 1 segundos é mudado a cor das paredes de preto para branco
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 1000)
+      //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 2000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 3000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 4000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 5000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 6000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 7000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 8000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 9000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 10000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 11000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 12000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 13000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 14000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 16000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 17000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 18000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 19000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 20000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 21000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 22000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 23000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 24000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 25000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 26000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 27000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 28000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 29000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 31000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 32000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 33000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 34000)
+      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 35000)
+      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 36000)
+
+    }
+
     //setTimeout(() => { this.scene.start("GameEasy") }, 10000)
   }
 
@@ -860,8 +915,6 @@ class Tela2 extends Phaser.Scene {
 
     this.graphics.clear();
     this.drawClock(100, 100, this.timerEvent);
-
-    setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.chao)} , 5000)
     
     if (!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
 
@@ -917,20 +970,35 @@ class Tela2 extends Phaser.Scene {
   trocarChaoParede( grupo_parede, grupo_espaco){
 
     grupo_parede.getChildren().forEach(elemento => {
-      elemento.setTint(0xffffff);
+      elemento.setTintFill(0xffffff)
+/*
+      setTimeout( ()=>{
+        elemento.setTintFill(0xffffff)
+        elemento = elemento
+        console.log(elemento)
+        console.log(elemento.tint)
+        console.log(elemento.isTinted)
+          }
+        , 3000)
+*/
     });
-  
-    grupo_espaco.setTint(0x000000)
+    
+    grupo_espaco.getChildren().forEach(elemento => {
+      elemento.setTintFill(0x000000)
+    });
 
     console.log("entrou")
   }
 
   destrocarChaoParede(grupo_parede, grupo_espaco){
     grupo_parede.getChildren().forEach(elemento => {
-      elemento.setTint(0x000000);
+      elemento.setTintFill(0x000000)
     });
   
-    grupo_espaco.setTint(0xffffff)
+    grupo_espaco.getChildren().forEach(elemento => {
+      elemento.setTintFill(0xffffff)
+    });
+
   }
 
   saiuDoLabirinto(jogadorr, saida) {
