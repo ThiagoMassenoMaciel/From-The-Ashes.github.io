@@ -3,115 +3,15 @@ class Tela2 extends Phaser.Scene {
   constructor() {
     super("GameEasy")
   }
-  
+
+  clockSize = 50;
+  timerEvent;
+  graphics;
   create() {
-/*
-class Example extends Phaser.Scene
-{
-    clockSize = 240;
-    timerEvent;
-    graphics;
 
-    create ()
-    {
-        this.timerEvent = this.time.addEvent({ delay: 4000, repeat: 9 });
+    this.timerEvent = this.time.addEvent({ delay: 15000});
+    this.graphics = this.add.graphics({ x: 0, y: 0 });
 
-        this.graphics = this.add.graphics({ x: 0, y: 0 });
-    }
-
-    update ()
-    {
-        this.graphics.clear();
-
-        this.drawClock(400, 300, this.timerEvent);
-    }
-
-    drawClock (x, y, timer)
-    {
-        //  Progress is between 0 and 1, where 0 = the hand pointing up and then rotating clockwise a full 360
-
-        //  The frame
-        this.graphics.lineStyle(6, 0xffffff, 1);
-        this.graphics.strokeCircle(x, y, this.clockSize);
-
-        let angle;
-        let dest;
-        let p1;
-        let p2;
-        let size;
-
-        //  The overall progress hand (only if repeat > 0)
-        if (timer.repeat > 0)
-        {
-            size = this.clockSize * 0.9;
-
-            angle = (360 * timer.getOverallProgress()) - 90;
-            dest = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle), size);
-
-            this.graphics.lineStyle(2, 0xff0000, 1);
-
-            this.graphics.beginPath();
-
-            this.graphics.moveTo(x, y);
-
-            p1 = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle - 5), size * 0.7);
-
-            this.graphics.lineTo(p1.x, p1.y);
-            this.graphics.lineTo(dest.x, dest.y);
-
-            this.graphics.moveTo(x, y);
-
-            p2 = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle + 5), size * 0.7);
-
-            this.graphics.lineTo(p2.x, p2.y);
-            this.graphics.lineTo(dest.x, dest.y);
-
-            this.graphics.strokePath();
-            this.graphics.closePath();
-        }
-
-        //  The current iteration hand
-        size = this.clockSize * 0.95;
-
-        angle = (360 * timer.getProgress()) - 90;
-        dest = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle), size);
-
-        this.graphics.lineStyle(2, 0xffff00, 1);
-
-        this.graphics.beginPath();
-
-        this.graphics.moveTo(x, y);
-
-        p1 = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle - 5), size * 0.7);
-
-        this.graphics.lineTo(p1.x, p1.y);
-        this.graphics.lineTo(dest.x, dest.y);
-
-        this.graphics.moveTo(x, y);
-
-        p2 = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle + 5), size * 0.7);
-
-        this.graphics.lineTo(p2.x, p2.y);
-        this.graphics.lineTo(dest.x, dest.y);
-
-        this.graphics.strokePath();
-        this.graphics.closePath();
-    }
-}
-
-const config = {
-    type: Phaser.AUTO,
-    width: 800,
-    height: 600,
-    backgroundColor: '#2d2d2d',
-    parent: 'phaser-example',
-    scene: Example
-};
-
-const game = new Phaser.Game(config);
-
-
-*/
     this.acabou = false
 
     this.scale_passado_labirinto = 0
@@ -880,7 +780,7 @@ const game = new Phaser.Game(config);
     this.todos_blocos_parede.create((5 * 120) + (config.width / 3) - 80, 0, "borda_right").setOrigin(0, 0).refreshBody();
     this.todos_blocos_parede.create((config.width / 3) - 80, (5 * 120), "borda_bottom").setOrigin(0, 0).refreshBody();
 
-    setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.chao)} , 5000)
+    
 
     this.saida = this.physics.add.sprite(matriz.posicao_saida_w, matriz.posicao_saida_h, "saidaa").setOrigin(0, 0).setScale(matriz.scale_saida_e_jogador).refreshBody();
 
@@ -927,8 +827,12 @@ const game = new Phaser.Game(config);
 
   update() {
 
-    if (!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
+    this.graphics.clear();
+    this.drawClock(100, 100, this.timerEvent);
 
+    setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.chao)} , 5000)
+    
+    if (!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
 
       if(this.flag === 2){
         if (this.cursors.left.isDown) {
@@ -1000,11 +904,14 @@ const game = new Phaser.Game(config);
 
   saiuDoLabirinto(jogadorr, saida) {
 
+    let x = saida.x 
+    let y = saida.y 
+
     this.jogadorr.destroy();
     this.saida.destroy();
 
     //this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
-    this.saiu_do_labirinto = this.physics.add.sprite(saida.x, saida.y, "saiuDoLabirinto").setOrigin(0, 0).setScale( this.scale_passado_labirinto).refreshBody();
+    this.saiu_do_labirinto = this.physics.add.sprite(x,y, "saiuDoLabirinto").setScale( this.scale_passado_labirinto).refreshBody();
 
     this.physics.add.collider(this.saiu_do_labirinto, this.todos_blocos_parede);
 
@@ -1024,6 +931,48 @@ const game = new Phaser.Game(config);
 
     setTimeout(() => { this.scene.start("GameEasy") }, 1500)
     
+  }
+
+  drawClock (x, y, timer)
+  {
+      //  Progress is between 0 and 1, where 0 = the hand pointing up and then rotating clockwise a full 360
+
+      //  The frame
+      this.graphics.lineStyle(6, 0xffffff, 1);
+      this.graphics.strokeCircle(x, y, this.clockSize);
+
+      let angle;
+      let dest;
+      let p1;
+      let p2;
+      let size;
+
+      //  The current iteration hand
+      size = this.clockSize * 0.95;
+
+      angle = (360 * timer.getProgress()) - 90;
+      dest = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle), size);
+
+      this.graphics.lineStyle(2, 0xffffff, 1);
+
+      this.graphics.beginPath();
+
+      this.graphics.moveTo(x, y);
+
+      p1 = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle - 5), size * 0.7);
+
+      this.graphics.lineTo(p1.x, p1.y);
+      this.graphics.lineTo(dest.x, dest.y);
+
+      this.graphics.moveTo(x, y);
+
+      p2 = Phaser.Math.RotateAroundDistance({ x: x, y: y }, x, y, Phaser.Math.DegToRad(angle + 5), size * 0.7);
+
+      this.graphics.lineTo(p2.x, p2.y);
+      this.graphics.lineTo(dest.x, dest.y);
+
+      this.graphics.strokePath();
+      this.graphics.closePath();
   }
 
 }

@@ -2,12 +2,12 @@ console.log("so um teste")
 var config ={
   width : 1364,
   height: 764,
-  backgroundColor: 0xffffff,
-  scene: [  Tela1, Tela ,TelaMenu, Tela2, Tela3, Tela4],
+  backgroundColor: 0x000000,
+  scene: [  Tela1, Tela ,TelaMenu, Tela2],
   physics : {  
     default: "arcade", 
     arcade: {  
-      debug: true 
+      debug: false //true 
     }  
   }
 }
