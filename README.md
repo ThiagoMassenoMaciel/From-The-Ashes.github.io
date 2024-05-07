@@ -2,7 +2,7 @@
 ###### https://labs.phaser.io/edit.html?src=src\time\time%20scale.js
 
 # Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
-![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/97b518ae-7808-481c-addc-15079901caef)
+![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/5bcac41c-36ee-4e00-b9c3-59dd2092e25d)
 
 <br/><br/><br/>
 # Biblioteca com exemplos do [phaser](https://labs.phaser.io/)
