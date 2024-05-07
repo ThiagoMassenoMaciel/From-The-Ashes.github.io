@@ -1,9 +1,6 @@
 #### https://newdocs.phaser.io/docs/3.54.0/Phaser.Time.Clock
 ###### https://labs.phaser.io/edit.html?src=src\time\time%20scale.js
-# coisas interessantes
-1. `estou reusando a propriedade dentro de outra dentro do próprio objeto que a declarou`
 
-**
 # Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
 ![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/97b518ae-7808-481c-addc-15079901caef)
 
