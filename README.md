@@ -341,4 +341,6 @@ npm run build
 ### 6  mai - 1h24'      10.1 adicionAR UM RELOGIO DE TEMPO NA TELA
 ### 7  mai - 40'        10.2 fixed O BUG DISABLE REMOVE 
 ### 7  mai - 2h'        Tudo acoplado no mesmo file
-### 7  mai - 2h21'      11. feito completo trocar a cor do do chão pela parede.   
+### 7  mai - 2h21'      11. feito completo trocar a cor do do chão pela parede.  
+### 8  mai - 10'        Adicionar carde no canban para alerta de pessoas epleticas
+### 8  mai - 2h45'      10.3 Transformar os objetos dentro de cada tela em um json - começei assisti [vid1](https://youtu.be/BWPUSXzSWA8?si=sWeBsv8Lsp4z-igo) [vid2](https://youtu.be/PmDtOBtZzhQ?si=F_kClUNGc2K-ArB0)

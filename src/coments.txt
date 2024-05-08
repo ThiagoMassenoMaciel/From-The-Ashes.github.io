@@ -423,3 +423,35 @@ bug, a função que pinta os quadrados n esta pintando as paredes e nem os bloco
 
 bug, quando muda de labirinto n é para mudar o relogio 
     solução :::: é colocar este pedaço do código que monta o labirinto separado dentro de uma função que pode ser chamada 
+
+
+
+
+-------------------------------------------------------------------------------------------
+===========================================================================================
+Para transformar todos os dados da variavel niveis em json 
+===========================================================================================
+-------------------------------------------------------------------------------------------
+
+1. armazenar a matriz de objetos labirinto dentro de uma variavel 
+[ array1, array2, array3]  
+[     [], [], []    ]
+[      [e1, e2, e3],[e1, e2, e3],[ e1, e2, e3]       ]
+
+[
+   [e1, e2, e3]
+    ,
+   [e1, e2, e3]
+   ,
+   [ e1, e2, e3]       
+]
+
+2. converter a variavel matriz em json válido 
+
+3. pegar o conteudo deste json e colar em um arquivo separado 
+
+4. no arquivo com o texto json colado , clica na linha do arquivo , botão direito e format document para organizar todo arquivo json 
+
+5. sempre que for usar os dados do json primeiro converter todo o arquivo em um objeto javascript em outra variavel 
+
+6. usar a variavel que tem todo o json convertido em objeto javascript para logica do jogo 
