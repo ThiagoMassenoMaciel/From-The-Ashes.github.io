@@ -424,7 +424,11 @@ bug, a função que pinta os quadrados n esta pintando as paredes e nem os bloco
 bug, quando muda de labirinto n é para mudar o relogio 
     solução :::: é colocar este pedaço do código que monta o labirinto separado dentro de uma função que pode ser chamada 
 
+bug, depois de usar matriz de objetos labirinto de um file json a variavel global que tem todos objetos convertivos em javascript tem os dados atribuido depois de ser usado 
+     fetch demora atribuir os valores json para javascript dentro da variavel global niveis 
+        o resto do código executa sem ter ainda o valor atribuido da variavel global niveis
 
+    solução :::: pelo fato do fetch demorar atribuir a matriz para dentro da variavel global niveis , tenho que travar a execução e so voltar a executar o resto do script depois de ja ter o valor atribuido 
 
 
 -------------------------------------------------------------------------------------------

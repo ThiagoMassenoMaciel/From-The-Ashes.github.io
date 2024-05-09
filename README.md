@@ -345,3 +345,4 @@ npm run build
 ### 8  mai - 10'        Adicionar carde no canban para alerta de pessoas epleticas
 ### 8  mai - 2h45'      10.3 Transformar os objetos dentro de cada tela em um json - começei assisti [vid1](https://youtu.be/BWPUSXzSWA8?si=sWeBsv8Lsp4z-igo) [vid2](https://youtu.be/PmDtOBtZzhQ?si=F_kClUNGc2K-ArB0)
 ### 8  mai - 38'        10.3 Transformar os objetos dentro de cada tela em um json - continuei
+### 8  mai - 1h40'      10.3 Transformar os objetos dentro de cada tela em um json - bug no fetch
