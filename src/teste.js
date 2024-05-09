@@ -1,3 +1,4 @@
+let variavel_global_para;
 const matrizz= 
 [
   [
@@ -277,3 +278,26 @@ console.log(jsonData)
 console.log("convertendo json para objeto")
 const jsonParaObj = JSON.parse(jsonData)
 console.log(jsonParaObj)
+
+console.log("consumindo dados do file json\n")
+console.log(variavel_global_para)
+fetch("../jsonData.json").then( (response) => {
+	response.json().then( ( matriz_dos_labirintos) => {
+		//aqui eu uso uma variavel global e coloco para dentro dela objeto usuarios
+    console.log("\n\n\ndentro do fetch")
+    console.log(matriz_dos_labirintos)
+    console.log("acessando primeiro elemento[0] array")
+    console.log(matriz_dos_labirintos[0])
+    console.log("acessando primeiro elemento da matris[0][1]")
+    console.log(matriz_dos_labirintos[0][1])
+
+		variavel_global_para = matriz_dos_labirintos
+	})
+
+})
+setTimeout(()=>{
+  console.log("\nfora do fetch")
+  console.log(variavel_global_para)
+  console.log(variavel_global_para[0])
+  console.log(variavel_global_para[0][1])
+}, 5000)
