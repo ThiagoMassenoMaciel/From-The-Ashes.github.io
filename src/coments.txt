@@ -428,9 +428,25 @@ bug, depois de usar matriz de objetos labirinto de um file json a variavel globa
      fetch demora atribuir os valores json para javascript dentro da variavel global niveis 
         o resto do código executa sem ter ainda o valor atribuido da variavel global niveis
 
-    solução :::: pelo fato do fetch demorar atribuir a matriz para dentro da variavel global niveis , tenho que travar a execução e so voltar a executar o resto do script depois de ja ter o valor atribuido 
+    solução :::::tentativa 1 falhada::::: pelo fato do fetch demorar atribuir a matriz para dentro da variavel global niveis , tenho que travar a execução e so voltar a executar o resto do script 
+    depois de ja ter o valor atribuido 
 
+    logo após o fetch colocar um delay( 50 millisegundos) para o resto do código somente executar depois da variavel global nivel ter a matriz de objetos atribuido na sua memória
+        isso fez aparecer um erro na funcionalidade do framework phaser3 quando usado na funcao do update() (this.cursors.left.isDown) pois um pedaço do create foi atrasado
+        Uncaught TypeError: Cannot read properties of undefined (reading 'left')      Tela2.js:327
+        at Tela2.update (Tela2.js:327:26)
+        at initialize.step (phaser.min.js:1:966940)
+        at initialize.update (phaser.min.js:1:954010)
+        at initialize.step (phaser.min.js:1:76119)
+        at initialize.step (phaser.min.js:1:80333)
+        at e (phaser.min.js:1:141058)
+        -acho que esse erro aconteceu pois o pedaço de código do phaser que tem dentro do update funciona depois de executar primeiro o cursor que é dentro do create() 
+         e como pedaço do create esta atrasado ele n funciona direito quando chega no update()
 
+        -quando demora mais de 50 milisegundos para atribuir valor na variavel global aparece esse outro erro 
+        Uncaught TypeError: Cannot read properties of undefined (reading '2')
+        at Tela2.js:120:33
+ 
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 

@@ -52,248 +52,250 @@ class Tela2 extends Phaser.Scene {
     
     })
 
-    console.log(this.niveis)
+    setTimeout( ()=>{ 
+//\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\tem que esperar 24 milisegundos para ter a matriz do json dentro da variavel global\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
 
-    let random_nivel = Math.floor(Math.random() * arrayNiveis.length); //  random
+      console.log(this.niveis)
+      let random_nivel = Math.floor(Math.random() * arrayNiveis.length); //  random
    
-    let nivel_escolhido = arrayNiveis[random_nivel] 
+      let nivel_escolhido = arrayNiveis[random_nivel] 
 
-    this.flag = nivel_escolhido
+      this.flag = nivel_escolhido
 
-    console.log("nivel escolhido")
-    console.log(nivel_escolhido)
+      console.log("nivel escolhido")
+      console.log(nivel_escolhido)
 
-    arrayNiveis.splice(random_nivel,1)
-    console.log(arrayNiveis)
+      arrayNiveis.splice(random_nivel,1)
+      console.log(arrayNiveis)
 
-    let random_labirinto
+      let random_labirinto
 
-    let elemento_escolhido
-//    dependendo de qual nivel foi escolhido eu tenho que acessar o elemento de diferentes arrays
-    if(nivel_escolhido === 0){
-      // se o nivel escolhido foi Easy eu tenho que escolher um elemento do arrayEasy que ainda n foi escolhido
-      random_labirinto = Math.floor(Math.random() * arrayEasy.length); // 4
-      elemento_escolhido = arrayEasy[random_labirinto]
-      
-      console.log(`apagado`)
-      console.log(arrayEasy[random_labirinto])
-      arrayEasy.splice(random_labirinto, 1)
+      let elemento_escolhido
+  //    dependendo de qual nivel foi escolhido eu tenho que acessar o elemento de diferentes arrays
+      if(nivel_escolhido === 0){
+        // se o nivel escolhido foi Easy eu tenho que escolher um elemento do arrayEasy que ainda n foi escolhido
+        random_labirinto = Math.floor(Math.random() * arrayEasy.length); // 4
+        elemento_escolhido = arrayEasy[random_labirinto]
+        
+        console.log(`apagado`)
+        console.log(arrayEasy[random_labirinto])
+        arrayEasy.splice(random_labirinto, 1)
 
-      console.log(`arrayEasy`)
-      console.log(arrayEasy)
+        console.log(`arrayEasy`)
+        console.log(arrayEasy)
 
-    }else if(nivel_escolhido === 1){
-      // se o nivel escolhido foi Medium eu tenho que escolher um elemento do arrayMedium que ainda n foi escolhido
-      random_labirinto = Math.floor(Math.random() * arrayMedium.length); //3
-      elemento_escolhido = arrayMedium[random_labirinto]
+      }else if(nivel_escolhido === 1){
+        // se o nivel escolhido foi Medium eu tenho que escolher um elemento do arrayMedium que ainda n foi escolhido
+        random_labirinto = Math.floor(Math.random() * arrayMedium.length); //3
+        elemento_escolhido = arrayMedium[random_labirinto]
 
-      console.log(`apagado ->`)
-      console.log(arrayMedium[random_labirinto])
-      arrayMedium.splice(random_labirinto, 1)
+        console.log(`apagado ->`)
+        console.log(arrayMedium[random_labirinto])
+        arrayMedium.splice(random_labirinto, 1)
 
-      console.log(`arrayMedium`)
-      console.log(arrayMedium)
+        console.log(`arrayMedium`)
+        console.log(arrayMedium)
 
-    }else{
-      // se o nivel escolhido foi Hard eu tenho que escolher um elemento do arrayHard que ainda n foi escolhido
-      random_labirinto = Math.floor(Math.random() * arrayHard.length); // 2
-      elemento_escolhido = arrayHard[random_labirinto]
+      }else{
+        // se o nivel escolhido foi Hard eu tenho que escolher um elemento do arrayHard que ainda n foi escolhido
+        random_labirinto = Math.floor(Math.random() * arrayHard.length); // 2
+        elemento_escolhido = arrayHard[random_labirinto]
 
-      
-      console.log(`apagado ->`)
-      console.log(arrayHard[random_labirinto])
-      arrayHard.splice(random_labirinto, 1)
+        
+        console.log(`apagado ->`)
+        console.log(arrayHard[random_labirinto])
+        arrayHard.splice(random_labirinto, 1)
 
-      console.log(`arrayHard`)
-      console.log(arrayHard)
-
-    }
-
-    let indice_labirinto_escolhido = elemento_escolhido
-
-    console.log("\n\n\nexibindo matriz objetos labirinto")
-    console.log(this.niveis)
-    console.log("exibindo objeto labirinto sorteado")
-    console.log(this.niveis[nivel_escolhido][indice_labirinto_escolhido])
-
-    const matriz = this.niveis[nivel_escolhido][indice_labirinto_escolhido]
-
-    console.log(matriz)
-    console.log("\n\n\n")
-    this.scale_passado_labirinto = matriz.scale_passado_labirinto
-
-    console.log(matriz)
-    console.log( this.scale_passado_labirinto)
-    this.todos_blocos_parede = this.physics.add.staticGroup();
-    this.todos_blocos_chao_espaco = this.physics.add.staticGroup();
-
-    for (let linha = 0; linha < matriz.Full_matriz.length; linha++) {
-      // quando eu for transformar este pedaço de código em uma função na hora de mudar a cor 
-      //é so eu trocar o objeto de colisão e mudar ordem que passarei os parametros (pareide, espaço) (espaço , pareide) chamando a mesma função
-      // e para o jogador não ultrapassar o limete do labirinto eu pego a posição eixo(x,y) da primeira e ultima coluna , da primeira e ultima linha e arrodeio de blocos pareide
-      for (let coluna = 0; coluna < matriz.Full_matriz[linha].length; coluna++) {
-        //console.log(` linha ${linha} coluna ${coluna}`)
-        if (matriz.Full_matriz[linha][coluna] === 1) {
-          //tamanho de cada bloco + metade da tela horizontalmente 
-
-          
-
-          if(nivel_escolhido=== 0){
-
-            this.todos_blocos_parede.create(coluna *120+(config.width / 3) - 80 , linha * 120, "pareide").setOrigin(0, 0).setScale(3).refreshBody();
-
-          }else if(nivel_escolhido===1){
-
-            this.todos_blocos_parede.create(coluna * 60 + (config.width/4) + 35 , linha * 60, "pareide").setOrigin(0, 0).setScale(1.5).refreshBody();
-
-          }else if(nivel_escolhido===2){
-
-            this.todos_blocos_parede.create(coluna * 30 + (config.width/3) - 80 , linha * 30, "pareide").setOrigin(0, 0).setScale(0.75).refreshBody();
-
-          }
-
-        } else {
-
-          if(nivel_escolhido=== 0){
-            this.todos_blocos_chao_espaco.create(coluna * 120+(config.width / 3) - 80 , linha * 120, "chao").setOrigin(0, 0).setScale(3).refreshBody();
-
-          }else if(nivel_escolhido===1){
-            this.todos_blocos_chao_espaco.create(coluna * 60 + (config.width/4) + 35 , linha * 60, "chao").setOrigin(0, 0).setScale(1.5).refreshBody();
-
-          }else if(nivel_escolhido===2){
-            this.todos_blocos_chao_espaco.create(coluna * 30 + (config.width/3) - 80 , linha * 30, "chao").setOrigin(0, 0).setScale(0.75).refreshBody();
-
-          }
-/*
-          if(nivel_escolhido=== 0){
-            this.chao = this.add.image(coluna * 120+(config.width / 3) - 80 , linha * 120, "chao") // se  colocar 80 vai ficar sem as linhas 
-            this.chao.setOrigin(0, 0)
-            this.chao.setScale(3)
-
-          }else if(nivel_escolhido===1){
-            this.chao = this.add.image(coluna * 60 + (config.width/4) + 35 , linha * 60, "chao") // se  colocar 80 vai ficar sem as linhas 
-            this.chao.setOrigin(0, 0)
-            this.chao.setScale(1.5)
-
-          }else if(nivel_escolhido===2){
-            this.chao = this.add.image(coluna * 30 + (config.width/3) - 80 , linha * 30, "chao") // se  colocar 80 vai ficar sem as linhas 
-            this.chao.setOrigin(0, 0)
-            this.chao.setScale(0.75)
-
-          }
-*/
-        }
+        console.log(`arrayHard`)
+        console.log(arrayHard)
 
       }
 
-    }
-    this.todos_blocos_parede.create((config.width / 3) - 80 - 10, 0, "borda_left").setOrigin(0, 0).refreshBody();
-    this.todos_blocos_parede.create((5 * 120) + (config.width / 3) - 80, 0, "borda_right").setOrigin(0, 0).refreshBody();
-    this.todos_blocos_parede.create((config.width / 3) - 80, (5 * 120), "borda_bottom").setOrigin(0, 0).refreshBody();
+      let indice_labirinto_escolhido = elemento_escolhido
+
+      console.log("\n\n\nexibindo matriz objetos labirinto")
+      console.log(this.niveis)
+      console.log("exibindo objeto labirinto sorteado")
+
+      const matriz = this.niveis[nivel_escolhido][indice_labirinto_escolhido]
+
+      console.log(matriz)
+      console.log("\n\n\n")
+      this.scale_passado_labirinto = matriz.scale_passado_labirinto
+
+      this.todos_blocos_parede = this.physics.add.staticGroup();
+      this.todos_blocos_chao_espaco = this.physics.add.staticGroup();
+
+      for (let linha = 0; linha < matriz.Full_matriz.length; linha++) {
+        // quando eu for transformar este pedaço de código em uma função na hora de mudar a cor 
+        //é so eu trocar o objeto de colisão e mudar ordem que passarei os parametros (pareide, espaço) (espaço , pareide) chamando a mesma função
+        // e para o jogador não ultrapassar o limete do labirinto eu pego a posição eixo(x,y) da primeira e ultima coluna , da primeira e ultima linha e arrodeio de blocos pareide
+        for (let coluna = 0; coluna < matriz.Full_matriz[linha].length; coluna++) {
+          //console.log(` linha ${linha} coluna ${coluna}`)
+          if (matriz.Full_matriz[linha][coluna] === 1) {
+            //tamanho de cada bloco + metade da tela horizontalmente 
+
+            
+
+            if(nivel_escolhido=== 0){
+
+              this.todos_blocos_parede.create(coluna *120+(config.width / 3) - 80 , linha * 120, "pareide").setOrigin(0, 0).setScale(3).refreshBody();
+
+            }else if(nivel_escolhido===1){
+
+              this.todos_blocos_parede.create(coluna * 60 + (config.width/4) + 35 , linha * 60, "pareide").setOrigin(0, 0).setScale(1.5).refreshBody();
+
+            }else if(nivel_escolhido===2){
+
+              this.todos_blocos_parede.create(coluna * 30 + (config.width/3) - 80 , linha * 30, "pareide").setOrigin(0, 0).setScale(0.75).refreshBody();
+
+            }
+
+          } else {
+
+            if(nivel_escolhido=== 0){
+              this.todos_blocos_chao_espaco.create(coluna * 120+(config.width / 3) - 80 , linha * 120, "chao").setOrigin(0, 0).setScale(3).refreshBody();
+
+            }else if(nivel_escolhido===1){
+              this.todos_blocos_chao_espaco.create(coluna * 60 + (config.width/4) + 35 , linha * 60, "chao").setOrigin(0, 0).setScale(1.5).refreshBody();
+
+            }else if(nivel_escolhido===2){
+              this.todos_blocos_chao_espaco.create(coluna * 30 + (config.width/3) - 80 , linha * 30, "chao").setOrigin(0, 0).setScale(0.75).refreshBody();
+
+            }
+  /*
+            if(nivel_escolhido=== 0){
+              this.chao = this.add.image(coluna * 120+(config.width / 3) - 80 , linha * 120, "chao") // se  colocar 80 vai ficar sem as linhas 
+              this.chao.setOrigin(0, 0)
+              this.chao.setScale(3)
+
+            }else if(nivel_escolhido===1){
+              this.chao = this.add.image(coluna * 60 + (config.width/4) + 35 , linha * 60, "chao") // se  colocar 80 vai ficar sem as linhas 
+              this.chao.setOrigin(0, 0)
+              this.chao.setScale(1.5)
+
+            }else if(nivel_escolhido===2){
+              this.chao = this.add.image(coluna * 30 + (config.width/3) - 80 , linha * 30, "chao") // se  colocar 80 vai ficar sem as linhas 
+              this.chao.setOrigin(0, 0)
+              this.chao.setScale(0.75)
+
+            }
+  */
+          }
+
+        }
+
+      }
+      this.todos_blocos_parede.create((config.width / 3) - 80 - 10, 0, "borda_left").setOrigin(0, 0).refreshBody();
+      this.todos_blocos_parede.create((5 * 120) + (config.width / 3) - 80, 0, "borda_right").setOrigin(0, 0).refreshBody();
+      this.todos_blocos_parede.create((config.width / 3) - 80, (5 * 120), "borda_bottom").setOrigin(0, 0).refreshBody();
+
+      
+
+      this.saida = this.physics.add.sprite(matriz.posicao_saida_w, matriz.posicao_saida_h, "saidaa").setOrigin(0, 0).setScale(matriz.scale_saida_e_jogador).refreshBody();
+
+      this.anims.create({
+
+        key: "saidaa_anims",
+
+        frames: this.anims.generateFrameNumbers("saidaa"),
+
+        frameRate: 4,
+
+        repeat: -1
+
+      })
+
+      this.saida.anims.play("saidaa_anims", true);
+
+      this.jogadorr = this.physics.add.sprite( matriz.posicao_jogadorr_w, matriz.posicao_jogadorr_h, "jogador").setOrigin(0, 0).setScale(matriz.scale_saida_e_jogador).refreshBody().setCollideWorldBounds(true);
+
+      this.anims.create({
+
+        key: "jogador_anims",
+        frames: this.anims.generateFrameNumbers("jogador"),
+        frameRate: 15,
+        repeat: -1
+
+      })
+
+
+      this.jogadorr.anims.play("jogador_anims", true);
+
+      this.physics.add.collider(this.jogadorr, this.todos_blocos_parede);
+
+      this.physics.add.collider(this.saida, this.todos_blocos_parede);
+
+      //this.physics.add.collider(this.saiu_do_labirinto, this.todos_blocos_parede);
+
+      this.physics.add.overlap(this.jogadorr, this.saida, this.saiuDoLabirinto, null, this);
+
+      this.cursors = this.input.keyboard.createCursorKeys();
+
+      if( this.flag === 0){ // de 5 em 5 segundos é mudado a cor das paredes de preto para branco
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 5000)
+        //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 10000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 20000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 25000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
+      }else if(this.flag === 1){ // de 3 em 3 segundos é mudado a cor das paredes de preto para branco
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 3000)
+        //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 6000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 9000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 12000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 18000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 21000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 24000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 27000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
+      }else{                    // de 1 em 1 segundos é mudado a cor das paredes de preto para branco
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 1000)
+        //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 2000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 3000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 4000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 5000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 6000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 7000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 8000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 9000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 10000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 11000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 12000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 13000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 14000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 16000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 17000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 18000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 19000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 20000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 21000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 22000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 23000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 24000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 25000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 26000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 27000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 28000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 29000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 31000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 32000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 33000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 34000)
+        setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 35000)
+        setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 36000)
+
+      }
+//\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\tem que esperar 24 milisegundos para ter a matriz do json dentro da variavel global\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-\-
+    }, 50)
 
     
-
-    this.saida = this.physics.add.sprite(matriz.posicao_saida_w, matriz.posicao_saida_h, "saidaa").setOrigin(0, 0).setScale(matriz.scale_saida_e_jogador).refreshBody();
-
-    this.anims.create({
-
-      key: "saidaa_anims",
-
-      frames: this.anims.generateFrameNumbers("saidaa"),
-
-      frameRate: 4,
-
-      repeat: -1
-
-    })
-
-    this.saida.anims.play("saidaa_anims", true);
-
-    this.jogadorr = this.physics.add.sprite( matriz.posicao_jogadorr_w, matriz.posicao_jogadorr_h, "jogador").setOrigin(0, 0).setScale(matriz.scale_saida_e_jogador).refreshBody().setCollideWorldBounds(true);
-
-    this.anims.create({
-
-      key: "jogador_anims",
-      frames: this.anims.generateFrameNumbers("jogador"),
-      frameRate: 15,
-      repeat: -1
-
-    })
-
-
-    this.jogadorr.anims.play("jogador_anims", true);
-
-    this.physics.add.collider(this.jogadorr, this.todos_blocos_parede);
-
-    this.physics.add.collider(this.saida, this.todos_blocos_parede);
-
-    //this.physics.add.collider(this.saiu_do_labirinto, this.todos_blocos_parede);
-
-    this.physics.add.overlap(this.jogadorr, this.saida, this.saiuDoLabirinto, null, this);
-
-    this.cursors = this.input.keyboard.createCursorKeys();
-
-    if( this.flag === 0){ // de 5 em 5 segundos é mudado a cor das paredes de preto para branco
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 5000)
-      //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 10000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 20000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 25000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
-    }else if(this.flag === 1){ // de 3 em 3 segundos é mudado a cor das paredes de preto para branco
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 3000)
-      //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 6000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 9000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 12000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 18000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 21000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 24000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 27000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
-    }else{                    // de 1 em 1 segundos é mudado a cor das paredes de preto para branco
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 1000)
-      //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 2000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 3000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 4000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 5000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 6000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 7000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 8000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 9000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 10000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 11000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 12000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 13000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 14000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 15000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 16000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 17000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 18000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 19000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 20000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 21000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 22000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 23000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 24000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 25000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 26000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 27000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 28000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 29000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 30000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 31000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 32000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 33000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 34000)
-      setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 35000)
-      setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 36000)
-
-    }
-
     //setTimeout(() => { this.scene.start("GameEasy") }, 10000)
   }
 
@@ -302,6 +304,8 @@ class Tela2 extends Phaser.Scene {
     this.graphics.clear();
     this.drawClock(100, 100, this.timerEvent);
     
+    console.log("entendendo o erro Tela2.js:120 Uncaught TypeError Cannot read properties of undefined reading 1 at  ")
+    console.log(this.cursors)
     if (!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
 
       if(this.flag === 2){
