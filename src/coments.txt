@@ -448,6 +448,11 @@ bug, depois de usar matriz de objetos labirinto de um file json a variavel globa
         at Tela2.js:120:33
  
     solução :::: resolvi este bug decidindo não usar json e deixar a matriz de objetos dentro de uma variavel javascript no file `main.js`
+
+
+bug , 10.4.1 bug no labirinto medium a borda esta estranha, parece que n foi pintada completamente quando começa o piscaPisca()
+
+bug , 10.4.2 bug , apartir do segundo labirinto aleatorio gerado , a lógica do pisca pisca fica errada , principalmente no nível medium
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 

@@ -349,3 +349,4 @@ npm run build
 ### 9  mai - 1h2'       10.3.1 bug o fetch demora atribuir os dados que veio do json para dentro da variavel global niveis - tentativa 1 falhada
 
 ### 10 mai - 10'        tirando estrutura json e deixando a matriz de objetos no file `main.js`
+### 10 mai - 1h15'        10.4 bug quando muda de labirinto não é para zerar o relogio

@@ -19,6 +19,8 @@ let arrayEasy =[ 0,1,2,3,4]
 let arrayMedium =[ 0,1,2,3,4]
 let arrayHard =[ 0,1,2,3,4]
 
+const fases = [{ tempo_limite_facil : 30000}, { tempo_limite_medio : 45000}, { tempo_limite_dificil : 60000}]
+
 const matris =
 [
   [
