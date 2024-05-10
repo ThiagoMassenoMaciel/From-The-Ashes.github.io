@@ -447,6 +447,7 @@ bug, depois de usar matriz de objetos labirinto de um file json a variavel globa
         Uncaught TypeError: Cannot read properties of undefined (reading '2')
         at Tela2.js:120:33
  
+    solução :::: resolvi este bug decidindo não usar json e deixar a matriz de objetos dentro de uma variavel javascript no file `main.js`
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 
