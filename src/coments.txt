@@ -453,6 +453,15 @@ bug, depois de usar matriz de objetos labirinto de um file json a variavel globa
 bug , 10.4.1 bug no labirinto medium a borda esta estranha, parece que n foi pintada completamente quando começa o piscaPisca()
 
 bug , 10.4.2 bug , apartir do segundo labirinto aleatorio gerado , a lógica do pisca pisca fica errada , principalmente no nível medium
+
+bug , 10.5.1 quando eu passo de nivel n aparece a tela de aviso quando eu passo de nivel e ultrapassa o limite de 2 labirintos
+        depois de passar em 2 labirintos é para apareceu o aviso que passou de fase e isso n esta acontecendo , a mensagem somente aparece depois dos 30 segundos , so que é para aparecer na hora de passou os 2 labirintos
+        https://github.com/users/ThiagoMassenoMaciel/projects/2/assets/107934374/289a6f11-e785-4fa9-855f-74ac90892ddc
+
+        se caso eu passar 2 labirintos e esperar acabar o tempo aparece o aviso quando acaba o relogio
+        https://github.com/users/ThiagoMassenoMaciel/projects/2/assets/107934374/4a58dabd-0c98-4843-92d7-a0df7411f472
+
+        solucao :::: n faço a menor ideia 
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 

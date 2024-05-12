@@ -351,3 +351,4 @@ npm run build
 ### 10 mai - 10'        tirando estrutura json e deixando a matriz de objetos no file `main.js`
 ### 10 mai - 1h15'      10.4 bug quando muda de labirinto não é para zerar o relogio
 ### 10 mai - 30'        10.5 fazer a primeira fase - definindo escopo desta atividade no canvas --
+### 11 mai - 4h         10.5 fazer a primeira fase - concluido + bug 10.5.1

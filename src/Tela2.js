@@ -4,6 +4,8 @@ class Tela2 extends Phaser.Scene {
     super("GameEasy")
   }
 
+
+  fase
   niveis
   todos_blocos_parede
   todos_blocos_chao_espaco
@@ -22,9 +24,42 @@ class Tela2 extends Phaser.Scene {
   timerEvent;
   graphics;
 
-  create() {
 
-    this.timerEvent = this.time.addEvent({ delay: fases[0].tempo_limite_facil});
+  quantidade_labirintos_passado
+
+  create() {
+    this.quantidade_labirintos_passado = 0
+    console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
+    console.log(this.quantidade_labirintos_passado)
+/*
+    //https://labs.phaser.io/edit.html?src=src/game%20objects\dom%20element\blend%20mode.js
+// para fazer ficar fundo transparente eu  tenho que fazer esta ganbiarra do link 
+
+    const element = this.add.dom(400, 100, 'div', 
+    'background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); width: 100vw; height: 100px; font: 48px Arial; font-weight: bold; color: white', 'Phaser 3');
+    element.setBlendMode('HUE');
+
+    const element2 = this.add.dom(500, 200, 'div', 'background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); width: 220px; height: 100px; font: 48px Arial; font-weight: bold; color: white', 'Phaser 3');
+    element2.setBlendMode('HUE');
+
+    this.tweens.add({
+        targets: [ element, element2 ],
+        y: 500,
+        duration: 3000,
+        ease: 'Sine.easeInOut',
+        loop: -1,
+        yoyo: true
+    });
+*/
+
+    this.fase = 1
+    this.timerEvent = this.time.addEvent({ delay: fases[0].tempo_limite});
+
+    this.text = this.add.text(1170, 100);
+    
+
+    setTimeout(()=>{console.log(this.timerEvent.timerEvent)} , 3000)
+    
     this.graphics = this.add.graphics({ x: 0, y: 0 });
 
     this.acabou = false
@@ -32,9 +67,6 @@ class Tela2 extends Phaser.Scene {
     //this.scale_passado_labirinto = 0
 
     this.flag
-
-    this.button = this.add.image(config.width / 2, config.height - 80, "botao")
-    this.button.setScale(0.6)
 
     console.log("----------------------")
     this.niveis = matris
@@ -50,7 +82,41 @@ class Tela2 extends Phaser.Scene {
 
     this.graphics.clear();
     this.drawClock( 1170, 100, this.timerEvent);
+
+    this.text.setText(this.timerEvent.getElapsedSeconds().toString().substr(0, 2)); //
     
+    if(this.timerEvent.elapsed/1000 === (fases[0].tempo_limite/1000)){
+      this.acabou = true
+      //this.scene.start("menu")
+
+      if(this.fase === 1){
+
+        if(this.quantidade_labirintos_passado < fases[0].quantos_labirintos){// tem que passar em 2 labirintos antes de 30 segundos fase 1
+          this.nao_passou_a_fase() // para executar um metodo dentro desta clase tem que fazer referencia ao objeto com o this. pois é para executar este metodo para este objeto desta clase 
+        }else if( this.quantidade_labirintos_passado === fases[0].quantos_labirintos){
+          this.passou_a_fase()
+        }
+
+      }else if( this.fase === 2){
+        if(this.quantidade_labirintos_passado < fases[1].quantos_labirintos){ // tem que passar em 3 labirintos antes de 45 segundos fase 2
+          this.nao_passou_a_fase() 
+
+        }else if( this.quantidade_labirintos_passado === fases[1].quantos_labirintos){
+          this.passou_a_fase()
+        }
+
+      }else if( this.fase === 3){
+        if(this.quantidade_labirintos_passado < fases[2].quantos_labirintos){ // tem que passar em 4 labirintos antes de 60 segundos fase 3
+          this.nao_passou_a_fase() 
+
+        }else if( this.quantidade_labirintos_passado === fases[2].quantos_labirintos){
+          this.passou_a_fase()
+        }
+
+      }
+         
+    }
+
     if (!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
 
       if(this.flag === 2){
@@ -138,8 +204,14 @@ class Tela2 extends Phaser.Scene {
 
   saiuDoLabirinto(jogadorr, saida) {
 
+    this.quantidade_labirintos_passado += 1
+    console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
+    console.log(this.quantidade_labirintos_passado)
+
     let x = saida.x 
     let y = saida.y 
+
+    
 
     this.jogadorr.destroy();
     this.saida.destroy();
@@ -457,6 +529,26 @@ class Tela2 extends Phaser.Scene {
       setTimeout( ()=>{ this.destrocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 36000)
 
     }
+  }
+
+  nao_passou_a_fase(){
+
+    this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.25)    
+    this.nao_passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "nao_passou_a_fase")
+    this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 110 , (config.height/2) + 130, "Botao_Fase_voltar" )
+    this.Botao_Fase_repetir_ = this.add.image( (config.width/2) + 110 , (config.height/2) + 130, "Botao_Fase_repetir" )
+
+  }
+
+  passou_a_fase(){
+
+    this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.25)   
+
+    this.passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "passou_a_fase_")
+    this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 229 , (config.height/2) + 130, "Botao_Fase_voltar_" )
+    this.Botao_Fase_verPlacar_ = this.add.image( config.width/2 , (config.height/2) + 130, "Botao_Fase_verPlacar" )
+    this.Botao_Fase_proximo_ = this.add.image( (config.width/2) + 229 , (config.height/2) + 130, "Botao_Fase_proximo" )
+
   }
 
 }

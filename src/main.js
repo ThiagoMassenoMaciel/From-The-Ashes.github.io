@@ -3,7 +3,7 @@ var config ={
   width : 1364,
   height: 764,
   backgroundColor: 0x000000,
-  scene: [  Tela1, Tela2],
+  scene: [  Tela1, Tela2, TelaMenu],
   physics : {  
     default: "arcade", 
     arcade: {  
@@ -19,7 +19,14 @@ let arrayEasy =[ 0,1,2,3,4]
 let arrayMedium =[ 0,1,2,3,4]
 let arrayHard =[ 0,1,2,3,4]
 
-const fases = [{ tempo_limite_facil : 30000}, { tempo_limite_medio : 45000}, { tempo_limite_dificil : 60000}]
+const fases = 
+[
+  { tempo_limite : 30000, quantos_labirintos : 2 }
+  ,
+  { tempo_limite : 45000, quantos_labirintos : 3}
+  ,
+  { tempo_limite : 60000, quantos_labirintos : 4}
+]
 
 const matris =
 [
