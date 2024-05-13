@@ -547,7 +547,12 @@ class Tela2 extends Phaser.Scene {
     //  top left, top right, bottom left, bottom right
     //  sea.setAlpha(0.5, 0.5, 0.5, 0.5);
     this.nao_passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "nao_passou_a_fase")
-    this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 110 , (config.height/2) + 130, "Botao_Fase_voltar" )
+    this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 110 , (config.height/2) + 130, "Botao_Fase_voltar" ).setInteractive().on('pointerdown', () =>
+      {
+          console.log('iniciar jogo');
+          setTimeout( ()=>{this.scene.start("TelaFases")}, 500)
+  
+      });
     this.Botao_Fase_repetir_ = this.add.image( (config.width/2) + 110 , (config.height/2) + 130, "Botao_Fase_repetir" )
 
   }
@@ -557,7 +562,12 @@ class Tela2 extends Phaser.Scene {
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);  
 
     this.passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "passou_a_fase_")
-    this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 229 , (config.height/2) + 130, "Botao_Fase_voltar_" )
+    this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 229 , (config.height/2) + 130, "Botao_Fase_voltar_" ).setInteractive().on('pointerdown', () =>
+      {
+          console.log('iniciar jogo');
+          setTimeout( ()=>{this.scene.start("TelaFases")}, 500)
+  
+      });
     this.Botao_Fase_verPlacar_ = this.add.image( config.width/2 , (config.height/2) + 130, "Botao_Fase_verPlacar" )
     this.Botao_Fase_proximo_ = this.add.image( (config.width/2) + 229 , (config.height/2) + 130, "Botao_Fase_proximo" )
 

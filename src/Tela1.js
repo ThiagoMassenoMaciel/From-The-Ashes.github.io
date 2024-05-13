@@ -41,6 +41,9 @@ class Tela1 extends Phaser.Scene{
     
     this.load.spritesheet("saiuDoLabirinto", "../../assents/saiuDoLabirinto.png", { frameWidth: 40, frameHeight: 40 })
 
+    this.load.image("Placar_das_fases", "../assents/Placar_das_fases.png")
+    this.load.image("Tela_Fases", "../assents/Tela_Fases.png")
+
   }
 
   create(){
@@ -49,7 +52,7 @@ class Tela1 extends Phaser.Scene{
 
     this.paredes = this.physics.add.group()
 
-    setTimeout( ()=>{this.scene.start("GameEasy")}, 20) 
+    setTimeout( ()=>{this.scene.start("menu")}, 20) 
   }
 
 }

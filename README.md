@@ -355,3 +355,4 @@ npm run build
 ### 12 mai - 40'        10.5.1 quando eu passo de nivel n aparece a tela de aviso quando eu passo de nivel e ultrapassa o limite de 2 labirintos - fixed 
 ### 12 mai - 52'        fazendo os testes da fase um em 3 cenários de caso de testes
 ### 12 mai - 2h10'      10.6 tornar imagens butoes clicaveis procurando nos exemplos phaser 
+### 13 mai - 3h43'      10.6 troner imagens butoes clicaveis - concluido + bug 10.6.1

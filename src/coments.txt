@@ -467,7 +467,7 @@ bug , 10.5.1 quando eu passo de nivel n aparece a tela de aviso quando eu passo 
                      para exibir o aviso que a pessoa passou de fase eu so preciso de um teste , que é se a quantidade labirintos passados é igual a 2 
 
 
-
+bug , 10.6.1 bug , depois de passar de fase 1 e dps de clicar no botao voltar ele n recarrega depois de 4 segundos a cena do file Tela2.js
                      
 -------------------------------------------------------------------------------------------
 ===========================================================================================
