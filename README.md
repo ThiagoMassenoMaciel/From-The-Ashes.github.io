@@ -353,4 +353,5 @@ npm run build
 ### 10 mai - 30'        10.5 fazer a primeira fase - definindo escopo desta atividade no canvas --
 ### 11 mai - 4h         10.5 fazer a primeira fase - concluido + bug 10.5.1 
 ### 12 mai - 40'        10.5.1 quando eu passo de nivel n aparece a tela de aviso quando eu passo de nivel e ultrapassa o limite de 2 labirintos - fixed 
-### 12 mai - 52'     fazendo os testes da fase um em 3 cenários de caso de testes
+### 12 mai - 52'        fazendo os testes da fase um em 3 cenários de caso de testes
+### 12 mai - 2h10'      10.6 tornar imagens butoes clicaveis procurando nos exemplos phaser 
