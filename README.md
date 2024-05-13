@@ -91,13 +91,13 @@ outro modo de jogo é so passa a fase 1 se conseguir passar em todos os 5 labiri
 # Fases
 
 ## 1 
-Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite de 30 segundos
+Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite menor que 30 segundos
 
 ## 2 
-Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 3 labirintos com o tempo limite de 45 segundos
+Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 3 labirintos com o tempo limite menor que  45 segundos
 
 ## 3 
-Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite de 1 minuto
+Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite menor que 1 minuto
 
 
 # Esquema de fases
@@ -353,4 +353,4 @@ npm run build
 ### 10 mai - 30'        10.5 fazer a primeira fase - definindo escopo desta atividade no canvas --
 ### 11 mai - 4h         10.5 fazer a primeira fase - concluido + bug 10.5.1 
 ### 12 mai - 40'        10.5.1 quando eu passo de nivel n aparece a tela de aviso quando eu passo de nivel e ultrapassa o limite de 2 labirintos - fixed 
-### 12 mai - 20h30'     fazendo os testes da fase um em 3 cenários de caso de testes
+### 12 mai - 52'     fazendo os testes da fase um em 3 cenários de caso de testes
