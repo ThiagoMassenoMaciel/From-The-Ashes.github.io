@@ -62,7 +62,7 @@ class Tela2 extends Phaser.Scene {
     
     this.graphics = this.add.graphics({ x: 0, y: 0 });
 
-    this.acabou = false
+    //this.acabou = false
 
     //this.scale_passado_labirinto = 0
 
@@ -84,40 +84,50 @@ class Tela2 extends Phaser.Scene {
     this.drawClock( 1170, 100, this.timerEvent);
 
     this.text.setText(this.timerEvent.getElapsedSeconds().toString().substr(0, 2)); //
-    
-    if(this.timerEvent.elapsed/1000 === (fases[0].tempo_limite/1000)){
-      this.acabou = true
-      //this.scene.start("menu")
 
-      if(this.fase === 1){
+    if(this.fase === 1){
 
-        if(this.quantidade_labirintos_passado < fases[0].quantos_labirintos){// tem que passar em 2 labirintos antes de 30 segundos fase 1
-          this.nao_passou_a_fase() // para executar um metodo dentro desta clase tem que fazer referencia ao objeto com o this. pois é para executar este metodo para este objeto desta clase 
-        }else if( this.quantidade_labirintos_passado === fases[0].quantos_labirintos){
-          this.passou_a_fase()
-        }
-
-      }else if( this.fase === 2){
-        if(this.quantidade_labirintos_passado < fases[1].quantos_labirintos){ // tem que passar em 3 labirintos antes de 45 segundos fase 2
-          this.nao_passou_a_fase() 
-
-        }else if( this.quantidade_labirintos_passado === fases[1].quantos_labirintos){
-          this.passou_a_fase()
-        }
-
-      }else if( this.fase === 3){
-        if(this.quantidade_labirintos_passado < fases[2].quantos_labirintos){ // tem que passar em 4 labirintos antes de 60 segundos fase 3
-          this.nao_passou_a_fase() 
-
-        }else if( this.quantidade_labirintos_passado === fases[2].quantos_labirintos){
-          this.passou_a_fase()
-        }
-
+      if(this.quantidade_labirintos_passado < fases[0].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[0].tempo_limite/1000)){
+        // tem que passar em 2 labirintos antes de 30 segundos fase 1
+        this.acabou = true
+        //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
+        this.nao_passou_a_fase()
+        // para executar um metodo dentro desta clase tem que fazer referencia ao objeto com o this. pois é para executar este metodo para este objeto desta clase 
+      }else if( this.quantidade_labirintos_passado === fases[0].quantos_labirintos){
+        this.acabou = true
+        //setTimeout( ()=>{this.passou_a_fase() }, 1000)
+        this.passou_a_fase()
       }
-         
+
+    }else if( this.fase === 2){
+      if(this.quantidade_labirintos_passado < fases[1].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[1].tempo_limite/1000)){ 
+        // tem que passar em 3 labirintos antes de 45 segundos fase 2
+        this.acabou = true
+        //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
+        this.nao_passou_a_fase() 
+
+      }else if( this.quantidade_labirintos_passado === fases[1].quantos_labirintos){
+        this.acabou = true
+        //setTimeout( ()=>{ this.passou_a_fase() }, 1000)
+        this.passou_a_fase()
+      }
+
+    }else if( this.fase === 3){
+      if(this.quantidade_labirintos_passado < fases[2].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[2].tempo_limite/1000)){ 
+        // tem que passar em 4 labirintos antes de 60 segundos fase 3
+        this.acabou = true
+        //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
+        this.nao_passou_a_fase() 
+
+      }else if( this.quantidade_labirintos_passado === fases[2].quantos_labirintos){
+        this.acabou = true
+        //setTimeout( ()=>{ this.passou_a_fase() }, 1000)
+        this.passou_a_fase()
+      }
+
     }
 
-    if (!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
+    if(!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
 
       if(this.flag === 2){
         if (this.cursors.left.isDown) {
@@ -164,7 +174,7 @@ class Tela2 extends Phaser.Scene {
 
 
     }
-
+    
 
   }
 
