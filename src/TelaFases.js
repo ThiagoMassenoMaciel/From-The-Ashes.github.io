@@ -4,9 +4,9 @@ class TelaFases extends Phaser.Scene{
   }
 
   create(){
-    console.log("entrei na cena tela iniciar-------------------")
+    console.log("entrei na cena TelaFases-------------------")
 
-    this.Botao_Fase_voltar = this.add.image( config.width /2 , config.height/2, "Tela_Fases")
+    this.TelaFases = this.add.image( config.width /2 , config.height/2, "Tela_Fases")
 
     this.Botao_Fase_voltar = this.add.image( config.width /2 , config.height - 100, "Botao_Fase_voltar")
     this.Botao_Fase_voltar.setInteractive().on('pointerdown', () =>

@@ -57,9 +57,6 @@ class Tela2 extends Phaser.Scene {
 
     this.text = this.add.text(1170, 100);
     
-
-    setTimeout(()=>{console.log(this.timerEvent.timerEvent)} , 3000)
-    
     this.graphics = this.add.graphics({ x: 0, y: 0 });
 
     //this.acabou = false
@@ -170,6 +167,7 @@ class Tela2 extends Phaser.Scene {
 */
       if(arrayNiveis.length === 0){
         arrayNiveis = [ 1, 2]
+        console.log("---------------------------- deixando so niveis médios e dificeis")
       }
 
 
@@ -198,7 +196,7 @@ class Tela2 extends Phaser.Scene {
       elemento.setTintFill(0x000000)
     });
 
-    console.log("entrou")
+    console.log("trocou de cor")
   }
 
   destrocarChaoParede(grupo_parede, grupo_espaco){
@@ -209,13 +207,18 @@ class Tela2 extends Phaser.Scene {
     grupo_espaco.getChildren().forEach(elemento => {
       elemento.setTintFill(0xffffff)
     });
-
+    console.log("trocou de cor -----")
   }
 
   saiuDoLabirinto(jogadorr, saida) {
 
+  
+    this.timerEvent.paused = !this.timerEvent.paused
+    console.log("Foi pausado ? ")
+    console.log(this.timerEvent.paused)
+    console.log("\n")
     this.quantidade_labirintos_passado += 1
-    console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
+    console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:| quantos labirintos passou ?|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
     console.log(this.quantidade_labirintos_passado)
 
     let x = saida.x 
@@ -229,7 +232,7 @@ class Tela2 extends Phaser.Scene {
     //this.saiu_do_labirinto = this.physics.add.sprite( colunaF * 120 + (config.width/3) - 79.5  , ( linhaF * 120 ) + 0.5,"saiuDoLabirinto").setOrigin(0,0).setScale(0.2).refreshBody(); 
     
     if(this.flag === 2){
-      // quando for adicionar este sprite no labirinto dificil ele vai encaixar dentro do bloco espaço
+      // quando for adicionar este sprite no labirinto dificil ele vai encaixar dentro do bloco espaço eu tirei o setOrigin
       this.saiu_do_labirinto = this.physics.add.sprite(x,y, "saiuDoLabirinto").setScale( this.scale_passado_labirinto).refreshBody();
     }else{
       // quando for adicionar este sprite no labirinto facil e medio vai encaixar dentro do bloco espaço
@@ -253,7 +256,16 @@ class Tela2 extends Phaser.Scene {
     this.acabou = true
 
     //setTimeout(() => { this.scene.start("GameEasy") }, 1500) // aqui em vez de restartar toda esta cena eu apenas chamo de novo a função que vai montar outro labirinto
-    setTimeout(() => { this.montar_Um_Labirinto_Aleatorio() , 1000})
+    //setTimeout(() => { , 1000})
+
+    if(this.quantidade_labirintos_passado !== fases[this.fase].quantos_labirintos){
+      setTimeout(()=>{
+        this.montar_Um_Labirinto_Aleatorio()
+        this.timerEvent.paused = !this.timerEvent.paused; // trocando valor boleano para continuar o relogio
+      }, 2000)
+
+    }
+     
     
   }
 
@@ -314,9 +326,10 @@ class Tela2 extends Phaser.Scene {
     arrayNiveis.splice(random_nivel,1)
     console.log(arrayNiveis)
 
-    let random_labirinto
+// coloca eles para iniciar com zero e depois define 
+    let random_labirinto = 0
+    let elemento_escolhido = 0 
 
-    let elemento_escolhido
   //    dependendo de qual nivel foi escolhido eu tenho que acessar o elemento de diferentes arrays
     if(nivel_escolhido === 0){
       // se o nivel escolhido foi Easy eu tenho que escolher um elemento do arrayEasy que ainda n foi escolhido
@@ -476,8 +489,10 @@ class Tela2 extends Phaser.Scene {
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    this.piscaPisca()
-    
+    if(this.quantidade_labirintos_passado !== fases[this.fase].quantos_labirintos ){
+      // so vai executar enquanto não passou em todos os labirintos da fase selecionada
+      this.piscaPisca()
+    }
   }
 
   piscaPisca(){
@@ -541,7 +556,7 @@ class Tela2 extends Phaser.Scene {
     }
   }
 
-  nao_passou_a_fase(){
+  nao_passou_a_fase(){ // vai exibir o aviso
 
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);
     //  top left, top right, bottom left, bottom right
@@ -549,22 +564,27 @@ class Tela2 extends Phaser.Scene {
     this.nao_passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "nao_passou_a_fase")
     this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 110 , (config.height/2) + 130, "Botao_Fase_voltar" ).setInteractive().on('pointerdown', () =>
       {
-          console.log('iniciar jogo');
-          setTimeout( ()=>{this.scene.start("TelaFases")}, 500)
+          console.log('tem que voltar para a tela menu');
+          setTimeout( ()=>{this.scene.start("menu")}, 500)
   
       });
-    this.Botao_Fase_repetir_ = this.add.image( (config.width/2) + 110 , (config.height/2) + 130, "Botao_Fase_repetir" )
+    this.Botao_Fase_repetir_ = this.add.image( (config.width/2) + 110 , (config.height/2) + 130, "Botao_Fase_repetir" ).setInteractive().on('pointerdown', () =>
+      {
+          console.log('tem repetir a fase 1');
+          setTimeout( ()=>{this.scene.start("Tela2")}, 500)
+  
+      });
 
   }
 
-  passou_a_fase(){
+  passou_a_fase(){// vai exibir o aviso
 
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);  
 
     this.passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "passou_a_fase_")
     this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 229 , (config.height/2) + 130, "Botao_Fase_voltar_" ).setInteractive().on('pointerdown', () =>
       {
-          console.log('iniciar jogo');
+          console.log('voltar para cena Tela2');
           setTimeout( ()=>{this.scene.start("TelaFases")}, 500)
   
       });
