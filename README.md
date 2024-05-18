@@ -357,4 +357,5 @@ npm run build
 ### 12 mai - 2h10'      10.6 tornar imagens butoes clicaveis procurando nos exemplos phaser 
 ### 13 mai - 3h43'      10.6 tornar imagens butoes clicaveis - concluido + bug 10.6.1
 ### 14 mai - 1h30'      10.6.1 entendi o bug e propus 2 solucoes 
-### 17 mai - 2h54' 24'  10.6.1 entendi o bug e propus 2 solucoes n consegui resolver
+### 17 mai - 2h54'     10.6.1 entendi o bug e propus 2 solucoes n consegui resolver
+### 17 mai - 44'       10.6.1 ajeitei o bug de gerar 3 labirintos na fase 1

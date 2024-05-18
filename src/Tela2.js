@@ -258,15 +258,13 @@ class Tela2 extends Phaser.Scene {
     //setTimeout(() => { this.scene.start("GameEasy") }, 1500) // aqui em vez de restartar toda esta cena eu apenas chamo de novo a função que vai montar outro labirinto
     //setTimeout(() => { , 1000})
 
-    if(this.quantidade_labirintos_passado !== fases[this.fase].quantos_labirintos){
+    // o valor dentro da variavel this.fase É 1 , e o primeiro elemento da array  fases que tem as informacoes do nivel 1 é o indice zero
+    if(this.quantidade_labirintos_passado !== fases[this.fase - 1 ].quantos_labirintos){
       setTimeout(()=>{
         this.montar_Um_Labirinto_Aleatorio()
         this.timerEvent.paused = !this.timerEvent.paused; // trocando valor boleano para continuar o relogio
       }, 2000)
-
     }
-     
-    
   }
 
   drawClock (x, y, timer)
@@ -489,7 +487,7 @@ class Tela2 extends Phaser.Scene {
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    if(this.quantidade_labirintos_passado !== fases[this.fase].quantos_labirintos ){
+    if(this.quantidade_labirintos_passado !== fases[this.fase - 1].quantos_labirintos ){
       // so vai executar enquanto não passou em todos os labirintos da fase selecionada
       this.piscaPisca()
     }
