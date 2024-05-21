@@ -5,7 +5,7 @@ class Tela2 extends Phaser.Scene {
   }
 
 
-  fase
+  //fase
   niveis
   todos_blocos_parede
   todos_blocos_chao_espaco
@@ -52,7 +52,7 @@ class Tela2 extends Phaser.Scene {
     });
 */
 
-    this.fase = 1
+    fase = 1
     this.timerEvent = this.time.addEvent({ delay: fases[0].tempo_limite});
 
     this.text = this.add.text(1170, 100);
@@ -70,9 +70,12 @@ class Tela2 extends Phaser.Scene {
 
     console.log(this.niveis)
 
+    console.log
+
     this.montar_Um_Labirinto_Aleatorio()
 
     //setTimeout(() => { this.scene.start("GameEasy") }, 10000)
+
   }
 
   update() {
@@ -82,46 +85,18 @@ class Tela2 extends Phaser.Scene {
 
     this.text.setText(this.timerEvent.getElapsedSeconds().toString().substr(0, 2)); //
 
-    if(this.fase === 1){
 
-      if(this.quantidade_labirintos_passado < fases[0].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[0].tempo_limite/1000)){
-        // tem que passar em 2 labirintos antes de 30 segundos fase 1
-        this.acabou = true
-        //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
-        this.nao_passou_a_fase()
-        // para executar um metodo dentro desta clase tem que fazer referencia ao objeto com o this. pois é para executar este metodo para este objeto desta clase 
-      }else if( this.quantidade_labirintos_passado === fases[0].quantos_labirintos){
-        this.acabou = true
-        //setTimeout( ()=>{this.passou_a_fase() }, 1000)
-        this.passou_a_fase()
-      }
 
-    }else if( this.fase === 2){
-      if(this.quantidade_labirintos_passado < fases[1].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[1].tempo_limite/1000)){ 
-        // tem que passar em 3 labirintos antes de 45 segundos fase 2
-        this.acabou = true
-        //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
-        this.nao_passou_a_fase() 
-
-      }else if( this.quantidade_labirintos_passado === fases[1].quantos_labirintos){
-        this.acabou = true
-        //setTimeout( ()=>{ this.passou_a_fase() }, 1000)
-        this.passou_a_fase()
-      }
-
-    }else if( this.fase === 3){
-      if(this.quantidade_labirintos_passado < fases[2].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[2].tempo_limite/1000)){ 
-        // tem que passar em 4 labirintos antes de 60 segundos fase 3
-        this.acabou = true
-        //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
-        this.nao_passou_a_fase() 
-
-      }else if( this.quantidade_labirintos_passado === fases[2].quantos_labirintos){
-        this.acabou = true
-        //setTimeout( ()=>{ this.passou_a_fase() }, 1000)
-        this.passou_a_fase()
-      }
-
+    if(this.quantidade_labirintos_passado < fases[fase -1].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[fase -1].tempo_limite/1000)){
+      // tem que passar em 2 labirintos antes de 30 segundos fase 1
+      this.acabou = true
+      //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
+      this.nao_passou_a_fase()
+      // para executar um metodo dentro desta clase tem que fazer referencia ao objeto com o this. pois é para executar este metodo para este objeto desta clase 
+    }else if( this.quantidade_labirintos_passado === fases[fase -1].quantos_labirintos){
+      this.acabou = true
+      //setTimeout( ()=>{this.passou_a_fase() }, 1000)
+      this.passou_a_fase()
     }
 
     if(!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
@@ -259,7 +234,8 @@ class Tela2 extends Phaser.Scene {
     //setTimeout(() => { , 1000})
 
     // o valor dentro da variavel this.fase É 1 , e o primeiro elemento da array  fases que tem as informacoes do nivel 1 é o indice zero
-    if(this.quantidade_labirintos_passado !== fases[this.fase - 1].quantos_labirintos){
+    if(this.quantidade_labirintos_passado !== fases[fase - 1].quantos_labirintos){
+      console.log(fases[fase - 1].quantos_labirintos)
       setTimeout(()=>{
         this.montar_Um_Labirinto_Aleatorio()
         this.timerEvent.paused = !this.timerEvent.paused; // trocando valor boleano para continuar o relogio
@@ -487,7 +463,7 @@ class Tela2 extends Phaser.Scene {
 
     this.cursors = this.input.keyboard.createCursorKeys();
 
-    if(this.quantidade_labirintos_passado !== fases[this.fase - 1].quantos_labirintos ){
+    if(this.quantidade_labirintos_passado !== fases[fase - 1].quantos_labirintos ){
       // so vai executar enquanto não passou em todos os labirintos da fase selecionada
       this.piscaPisca()
     }

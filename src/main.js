@@ -28,6 +28,8 @@ const fases =
   { tempo_limite : 60000, quantos_labirintos : 4}
 ]
 
+let fase = 0
+
 const matris =
 [
   [
