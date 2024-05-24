@@ -21,7 +21,8 @@ class TelaFases extends Phaser.Scene{
     this.TelaFaseBotaoF1.setInteractive().on('pointerdown', () =>
     {
       console.log('==========entrou para fase 1=========');
-      fase = 0
+      //fase = 0
+      // tenho que zerar toda vez que ele joga uma nova fase a variavel global `quantidade_labirintos_passado`
       fase = 1 
 
       this.scene.start("GameEasy")      
@@ -32,7 +33,7 @@ class TelaFases extends Phaser.Scene{
     this.TelaFaseBotaoF2.setInteractive().on('pointerdown', () =>
     {
       console.log('==========entrou para fase 2=========');
-      fase = 0 
+     // fase = 0 
       fase = 2
       this.scene.start("GameEasy")      
     });
@@ -42,7 +43,7 @@ class TelaFases extends Phaser.Scene{
     this.TelaFaseBotaoF3.setInteractive().on('pointerdown', () =>
     {
       console.log('==========entrou para fase 3=========');
-      fase = 0 
+      //fase = 0 
       fase = 3
       
       this.scene.start("GameEasy")      

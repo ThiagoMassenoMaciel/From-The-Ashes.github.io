@@ -52,8 +52,7 @@ class Tela2 extends Phaser.Scene {
     });
 */
 
-    fase = 1
-    this.timerEvent = this.time.addEvent({ delay: fases[0].tempo_limite});
+    this.timerEvent = this.time.addEvent({ delay: fases[fase-1].tempo_limite});
 
     this.text = this.add.text(1170, 100);
     
@@ -544,8 +543,8 @@ class Tela2 extends Phaser.Scene {
       });
     this.Botao_Fase_repetir_ = this.add.image( (config.width/2) + 110 , (config.height/2) + 130, "Botao_Fase_repetir" ).setInteractive().on('pointerdown', () =>
       {
-          console.log('tem repetir a fase 1');
-          setTimeout( ()=>{this.scene.start("Tela2")}, 500)
+          console.log(`\n\n\n\n\n\n\n\n\n\n\ntem repetir a fase ${fase}\n\n\n\n\n\n\n\n\n\n\n\n\n`);
+          this.scene.start("GameEasy")
   
       });
 
@@ -562,9 +561,45 @@ class Tela2 extends Phaser.Scene {
           setTimeout( ()=>{this.scene.start("TelaFases")}, 500)
   
       });
-    this.Botao_Fase_verPlacar_ = this.add.image( config.width/2 , (config.height/2) + 130, "Botao_Fase_verPlacar" )
-    this.Botao_Fase_proximo_ = this.add.image( (config.width/2) + 229 , (config.height/2) + 130, "Botao_Fase_proximo" )
+    this.Botao_Fase_verPlacar_ = this.add.image( config.width/2 , (config.height/2) + 130, "Botao_Fase_verPlacar" ).setInteractive().on('pointerdown', () =>
+      {
+          console.log(`\n\n\n\n\n\n\n\n\n\n\ntplacares\n\n\n\n\n\n\n\n\n\n\n\n\n`);
+          this.scene.start("TelaPlacares")
+  
+      });
 
+    this.Botao_Fase_proximo_ = this.add.image( (config.width/2) + 229 , (config.height/2) + 130, "Botao_Fase_proximo" ).setInteractive().on('pointerdown', () =>
+      {
+        console.log("clicado botao próximo")
+        if(fase < 4){
+          fase += 1 // pois quer dizer o proximo nivel na situação em que o jogador passaou alguma fase
+          console.log(`\n\n\n\n\n\n\n\n\n\n\nagora vai jogar a fase ${fase}\n\n\n\n\n\n\n\n\n\n\n\n\n`);
+
+          if(fase === 2){
+            console.log(`\n\n\n\n\n\n\n\n\n\naviso fase 2 \n\n\n\n\n\n\n\n\n\n\n\n\n`);
+            this.scene.start("AvisoFase2")
+          }else if(fase === 3){
+            console.log(`\n\n\n\n\n\n\n\n\n\naviso fase 2 \n\n\n\n\n\n\n\n\n\n\n\n\n`);
+            this.scene.start("AvisoFase3")
+          }
+
+        }
+      
+      });
+
+  }
+
+  aviso_fase_3_clicou_botao_proximo(){
+
+    this.Aviso_fase_3_clicou_botao_proximo_ = this.add.image( config.width/2 , config.height/2 , "fase_3_clicou_botao_proximo" )
+    this.Botao_Fase_voltar_ = this.add.image( config.width/2 , (config.height/2) + 130, "Botao_Fase_voltar_" ).setInteractive().on('pointerdown', () =>
+      {
+          console.log('voltar para cena Tela2');
+          setTimeout( ()=>{this.scene.start("TelaFases")}, 500)
+  
+      });
+
+    console.log("\n\n\n\n\n\n\n\n\n\n\namostrado aviso jogo finalizado ")
   }
 
 }

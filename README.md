@@ -360,3 +360,4 @@ npm run build
 ### 17 mai - 2h54'      10.6.1 entendi o bug e propus 2 solucoes n consegui resolver
 ### 17 mai - 44'        10.6.1 ajeitei o bug de gerar 3 labirintos na fase 1
 ### 21 mai - 40'        10.6 tornar as imagens butões clicáveís -  organizar a lógica para exibir certinho o tempo e quants labirintos de cada fase .
+### 23 mai - 2h20'      10.6.1 tornar as imagens clicáveis - faltou um bug no botao proximo quando esta na fase 3

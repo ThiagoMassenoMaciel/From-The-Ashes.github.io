@@ -47,8 +47,11 @@ class Tela1 extends Phaser.Scene{
     this.load.image("TelaFaseBotaoF1", "../assents/TelaFaseBotaoF1_passado.png")
     this.load.image("TelaFaseBotaoF2", "../assents/TelaFaseBotaoF2_passado.png")
     this.load.image("TelaFaseBotaoF3", "../assents/TelaFaseBotaoF3_passado.png")
-    
 
+    this.load.image("fase_3_clicou_botao_proximo", "../assents/fase_3_clicou_botao_proximo.png")
+    this.load.image("Depois_clicado_botao_proximo_Fase3", "../assents/Depois_clicado_botao_proximo_Fase3.png")
+    this.load.image("Depois_clicado_botao_proximo_Fase2", "../assents/Depois_clicado_botao_proximo_Fase2.png")
+    
   }
 
   create(){

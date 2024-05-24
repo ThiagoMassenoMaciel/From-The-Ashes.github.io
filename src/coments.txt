@@ -468,7 +468,9 @@ bug , 10.5.1 quando eu passo de nivel n aparece a tela de aviso quando eu passo 
 
 
 bug , 10.6.1 bug , depois de passar de fase 1 e dps de clicar no botao voltar ele n recarrega depois de 4 segundos a cena do file Tela2.js
-                     
+
+
+bug , 10.6.1 tornar as imagens clicáveis - faltou um bug no botao proximo quando esta na fase 3        
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 
