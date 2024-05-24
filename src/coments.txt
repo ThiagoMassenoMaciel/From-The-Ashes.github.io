@@ -466,11 +466,20 @@ bug , 10.5.1 quando eu passo de nivel n aparece a tela de aviso quando eu passo 
         solução :::: para exibir o aviso que a pessoa n passou de fase preciso ter outro teste alem da quantidade valor da variavel `quantidade_labirintos_passados` , que é o teste para saber se passou os 30 segundos 
                      para exibir o aviso que a pessoa passou de fase eu so preciso de um teste , que é se a quantidade labirintos passados é igual a 2 
 
-
 bug , 10.6.1 bug , depois de passar de fase 1 e dps de clicar no botao voltar ele n recarrega depois de 4 segundos a cena do file Tela2.js
 
 
 bug , 10.6.1 tornar as imagens clicáveis - faltou um bug no botao proximo quando esta na fase 3        
+            quando a pessoa esta na fase 3 e aperta o botao proximo é para aparecer a tela de aviso de jogo finalizado
+
+            isso aconteceu pelo fato de o numero da 
+
+            eu acoplei todo código dentro do if 
+
+            solucao :::: o jeito é emvez de executar uma funcao para colocar por cima imagem que finalizou o Jogo , crie uma cena especifica para isso 
+
+bug , 10.6.1.1 depois de apertar o botao repetir n funciona direito jogar a mesma fase isso é pq os labirintos foram apagados da lista de arrays que controlam para ele n repetir 
+            solucao :::: é atualizar a lista de arrays que controlam para n repetir . antes do momento de gerar aleatoriamente 
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 

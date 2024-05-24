@@ -6,8 +6,8 @@ class TelaFases extends Phaser.Scene{
   create(){
     console.log("entrei na cena TelaFases-------------------")
 
-    this.TelaFases = this.add.image( config.width /2 , config.height/2, "Tela_Fases")
-    this.TelaFaseUm = 
+    //this.TelaFases = this.add.image( config.width /2 , config.height/2, "Tela_Fases")
+  
 
     // this.Botao_Fase_voltar = this.add.image( config.width /2 , config.height - 100, "Botao_Fase_voltar")
     // this.Botao_Fase_voltar.setInteractive().on('pointerdown', () =>
@@ -47,6 +47,13 @@ class TelaFases extends Phaser.Scene{
       fase = 3
       
       this.scene.start("GameEasy")      
+    });
+
+    this.Botao_Fase_voltar = this.add.image( config.width /2 , config.height - 100, "Botao_Fase_voltar")
+    this.Botao_Fase_voltar.setInteractive().on('pointerdown', () =>
+    {
+        console.log('voltar para tela menu');
+        setTimeout( ()=>{this.scene.start("menu")}, 200)
     });
     
     //setTimeout( ()=>{this.scene.start("GameEasy")}, 4000)
