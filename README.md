@@ -362,3 +362,4 @@ npm run build
 ### 21 mai - 40'        10.6 tornar as imagens butões clicáveís -  organizar a lógica para exibir certinho o tempo e quants labirintos de cada fase . 
 ### 23 mai - 2h20'      10.6.1 tornar as imagens clicáveis - faltou um bug no botao proximo quando esta na fase 3 
 ### 24 mai - 1h38'      10.6.1 tornar as imagens clicáveis - botao prox e repetir fase 3 ajeitado
+### 25 mai - 50'        10.7 organizar a pontuaçao da fase 1

@@ -24,6 +24,13 @@ class Tela2 extends Phaser.Scene {
   timerEvent;
   graphics;
 
+  timeStartPlayMaze
+  timeEndPlayMaze
+  tempo_demorou_passar_labirintos 
+
+  //console.log( "\n\n\n\n\n\n\n" )
+  
+
 
   quantidade_labirintos_passado
 
@@ -186,6 +193,19 @@ class Tela2 extends Phaser.Scene {
 
   saiuDoLabirinto(jogadorr, saida) {
 
+    this.timeEndPlayMaze = this.timerEvent.getElapsedSeconds()
+    console.log( "\n\n\n\n\n\n\n tempo de final do contador" )
+    console.log(this.timeEndPlayMaze)
+    console.log( "\n\n\n\n\n\n\n" )
+
+    let tempo_demorou_passar_labirinto = this.timeEndPlayMaze - this.timeStartPlayMaze
+
+
+    console.log("-------------------------------------")
+    console.log(tempo_demorou_passar_labirinto)    
+    console.log("-------------------------------------")
+
+
   
     this.timerEvent.paused = !this.timerEvent.paused
     console.log("Foi pausado ? ")
@@ -240,6 +260,9 @@ class Tela2 extends Phaser.Scene {
         this.timerEvent.paused = !this.timerEvent.paused; // trocando valor boleano para continuar o relogio
       }, 2000)
     }
+
+
+    
   }
 
   drawClock (x, y, timer)
@@ -296,7 +319,11 @@ class Tela2 extends Phaser.Scene {
   }
 
   montar_Um_Labirinto_Aleatorio(){
-
+    this.timeStartPlayMaze = this.timerEvent.getElapsedSeconds()
+    console.log( "\n\n\n\n\n\n\n tempo de inicio do contador" )
+    console.log(this.timeStartPlayMaze)
+    console.log( "\n\n\n\n\n\n\n" )
+    
     this.atualizarSeArrayEstiverZerada()
     this.acabou = false // para habilitar novamente o movimento
 
@@ -461,6 +488,8 @@ class Tela2 extends Phaser.Scene {
       repeat: -1
 
     })
+
+
 
 
     this.jogadorr.anims.play("jogador_anims", true);
