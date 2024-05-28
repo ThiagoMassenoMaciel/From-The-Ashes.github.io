@@ -18,6 +18,7 @@ let arrayNiveis = [0,1,2]
 let arrayEasy =[ 0,1,2,3,4]
 let arrayMedium =[ 0,1,2,3,4]
 let arrayHard =[ 0,1,2,3,4]
+let arrayPassou = [false, false, false]
 
 const fases = 
 [
@@ -65,7 +66,7 @@ const matris =
       posicao_jogadorr_h: ( 1 * 120) + 0.5
 
       ,
-      scale_passado_labirinto: 2
+      scale_passado_labirinto: 1.5
 
     }
     ,
@@ -101,7 +102,7 @@ const matris =
       posicao_jogadorr_h: ( 4 * 120) + 0.5
 
       ,
-      scale_passado_labirinto: 2
+      scale_passado_labirinto: 1.5
     }
     ,
     {
@@ -136,7 +137,7 @@ const matris =
       posicao_jogadorr_h: ( 2 * 120) + 0.5
 
       ,
-      scale_passado_labirinto: 2
+      scale_passado_labirinto: 1.5
     }
     ,
     {
@@ -171,7 +172,7 @@ const matris =
       posicao_jogadorr_h: ( 0 * 120) + 0.5
 
       ,
-      scale_passado_labirinto: 2
+      scale_passado_labirinto: 1.5
 
     }
     ,
@@ -207,7 +208,7 @@ const matris =
       posicao_jogadorr_h: ( 3 * 120) + 0.5
 
       ,
-      scale_passado_labirinto: 2
+      scale_passado_labirinto: 1.5
 
     }
 
@@ -251,7 +252,7 @@ const matris =
       posicao_jogadorr_h: ( 6 * 60 ) + 0.5
 
       ,
-      scale_passado_labirinto: 1
+      scale_passado_labirinto: 0.8
   
     } 
     ,
@@ -292,7 +293,7 @@ const matris =
       posicao_jogadorr_h: ( 0 * 60 ) + 0.5
 
       ,
-      scale_passado_labirinto: 1
+      scale_passado_labirinto: 0.8
     }
     ,
     {
@@ -331,7 +332,7 @@ const matris =
       posicao_jogadorr_h: ( 2 * 60 ) + 0.5
 
       ,
-      scale_passado_labirinto: 1
+      scale_passado_labirinto: 0.8
 
     }
     ,
@@ -371,7 +372,7 @@ const matris =
       posicao_jogadorr_h: ( 5 * 60 ) + 0.5
 
       ,
-      scale_passado_labirinto: 1
+      scale_passado_labirinto: 0.8
     }
     ,
     {
@@ -410,7 +411,7 @@ const matris =
       posicao_jogadorr_h: ( 9 * 60 ) + 0.5
 
       ,
-      scale_passado_labirinto: 1
+      scale_passado_labirinto: 0.8
     }
   ]
   ,
@@ -461,7 +462,7 @@ const matris =
       posicao_jogadorr_h: 0 * 30 
 
       ,
-      scale_passado_labirinto: 0.4
+      scale_passado_labirinto: 0.2
       
     }
     ,
@@ -511,7 +512,7 @@ const matris =
       posicao_jogadorr_h: 17 * 30
 
       ,
-      scale_passado_labirinto: 0.4
+      scale_passado_labirinto: 0.2
     }
     ,
     {
@@ -560,7 +561,7 @@ const matris =
       posicao_jogadorr_h: 19 * 30 
 
       ,
-      scale_passado_labirinto: 0.4
+      scale_passado_labirinto: 0.2
     }
     ,
     {
@@ -609,7 +610,7 @@ const matris =
       posicao_jogadorr_h: 19 * 30
 
       ,
-      scale_passado_labirinto: 0.4
+      scale_passado_labirinto: 0.2
     }
     ,
     {
@@ -659,7 +660,7 @@ const matris =
       posicao_jogadorr_h: 19 * 30
 
       ,
-      scale_passado_labirinto: 0.4
+      scale_passado_labirinto: 0.2
     }
   ]
 ]

@@ -95,14 +95,16 @@ class Tela2 extends Phaser.Scene {
 
     if(this.quantidade_labirintos_passado < fases[fase -1].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[fase -1].tempo_limite/1000)){
       // tem que passar em 2 labirintos antes de 30 segundos fase 1
-      this.acabou = true
+      this.acabou = true // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap
       //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
       this.nao_passou_a_fase()
       // para executar um metodo dentro desta clase tem que fazer referencia ao objeto com o this. pois é para executar este metodo para este objeto desta clase 
     }else if( this.quantidade_labirintos_passado === fases[fase -1].quantos_labirintos){
       this.acabou = true
       //setTimeout( ()=>{this.passou_a_fase() }, 1000)
+      arrayPassou[fase - 1] = true // avisar a TelaFases que a fase foi passada
       this.passou_a_fase()
+
     }
 
     if(!this.acabou) { // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap  
