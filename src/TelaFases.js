@@ -6,8 +6,11 @@ class TelaFases extends Phaser.Scene{
   create(){
     console.log("entrei na cena TelaFases-------------------")
 
-    setTimeout(()=>{ this.scene.start("PerguntarNome") }, 500)
+    if(flagNovoJogador){ // se o valor da flag for true é porque ja foi perguntado nome
 
+    }else{ // se o valor da flag = false isso quer dizer que ainda n foi perguntado 
+      setTimeout(()=>{ this.scene.start("PerguntarNome") }, 500)
+    }
     //this.TelaFases = this.add.image( config.width /2 , config.height/2, "Tela_Fases")
   
     // this.Botao_Fase_voltar = this.add.image( config.width /2 , config.height - 100, "Botao_Fase_voltar")

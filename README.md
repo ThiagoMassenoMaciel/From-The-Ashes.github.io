@@ -364,4 +364,5 @@ npm run build
 ### 24 mai - 1h38'      10.6.1 tornar as imagens clicáveis - botao prox e repetir fase 3 ajeitado
 ### 25 mai - 50'        10.7 organizar a pontuaçao da fase 1
 ### 28 mai - 1h12'      11. lógica da proxima fase liberada quando passada anterior com botao tamanho diferente
-### 29 mai - 2h40''     11.3 criar o input para usuario digitar o nome dele - comecei
+### 29 mai - 2h40''     11.3 criar o input para usuario digitar o nome dele - comecei 
+### 29 mai - 55'        11.3 criar o input para usuario digitar o nome dele - continuei

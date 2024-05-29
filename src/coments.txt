@@ -480,6 +480,11 @@ bug , 10.6.1 tornar as imagens clicáveis - faltou um bug no botao proximo quand
 
 bug , 10.6.1.1 depois de apertar o botao repetir n funciona direito jogar a mesma fase isso é pq os labirintos foram apagados da lista de arrays que controlam para ele n repetir 
             solucao :::: é atualizar a lista de arrays que controlam para n repetir . antes do momento de gerar aleatoriamente 
+
+
+
+bug ,   11.3  a tela perguntar nome ficava num loop e o jogador n conseguia clicar na fase 11 para de fato jogar 
+        solucao :::: colocar uma flag inicializada com falso e deposi trocado valor para n repetir  
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 
