@@ -3,7 +3,7 @@ var config ={
   width : 1364,
   height: 764,
   backgroundColor: 0x000000,
-  scene: [  Tela1, Tela2, TelaMenu,TelaFases,TelaPlacares, TelaCreditos, AvisoFase3 ,AvisoFase2, FinalizouJogo ],
+  scene: [  Tela1, Tela2, TelaMenu,TelaFases,TelaPlacares, TelaCreditos, AvisoFase3 ,AvisoFase2, FinalizouJogo, PerguntarNome ],
   physics : {  
     default: "arcade", 
     arcade: {  
@@ -19,6 +19,8 @@ let arrayEasy =[ 0,1,2,3,4]
 let arrayMedium =[ 0,1,2,3,4]
 let arrayHard =[ 0,1,2,3,4]
 let arrayPassou = [false, false, false]
+
+let flagNovoJogador = false  // logica para n ficar pedindo o nome direto
 
 const fases = 
 [
