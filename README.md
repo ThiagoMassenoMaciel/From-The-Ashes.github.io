@@ -61,20 +61,36 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mais rápido mais score.
 
 ## versão 1.0
+|passar de labirinto fácil |
+| valor > n && valor <= m |
 | Precisão | Score |
 | ----- | ----------- |
-| Passar 1 labirinto no tempo <= 30 segundos  | 1 pts |
-| Passar 2 labirintos no tempo <= 30 segundos | 5 pts |
-| Passar 3 labirintos no tempo <= 30 segundos | 10 pts |
-| Passar 4 labirintos no tempo <= 30 segundos | 20 pts |
-| Passar 1 labirinto no tempo <=  20 segundos | 2 pts |
-| Passar 2 labirintos no tempo <= 20 segundos | 7 pts |
-| Passar 3 labirintos no tempo <= 20 segundos | 15 pts |
-| Passar 4 labirintos no tempo <= 20 segundos | 25 pts |
-| Passar 1 labirinto no tempo <=  10 segundos | 3 pts |
-| Passar 2 labirintos no tempo <= 10 segundos | 8 pts |
-| Passar 3 labirintos no tempo <= 10 segundos | 17 pts |
-| Passar 4 labirintos no tempo <= 10 segundos | 50 pts |
+| entre um tempo de 0   e  5 segundos  | 20 pts|
+| entre um tempo de 5   e  10 segundos | 10 pts|
+| entre um tempo de 10  e  20 segundos | 5 pts|
+| entre um tempo de 20  e  30 segundos | 3 pts|
+| entre um tempo > 30 segundos | 1 pts |
+
+|passar de labirinto médio |
+| valor > n && valor <= m |
+| Precisão | Score |
+| ----- | ----------- |
+| entre um tempo de 0   e  10 segundos | 20 pts|
+| entre um tempo de 10  e  20 segundos | 10 pts|
+| entre um tempo de 20  e  30 segundos | 5 pts|
+| entre um tempo de 30  e  40 segundos | 3 pts|
+| entre um tempo > 40 segundos | 1 pts |
+
+|passar de labirinto dificil |
+| valor > n && valor <= m |
+| Precisão | Score |
+| ----- | ----------- |
+| entre um tempo de 0   e  23 segundos | 20 pts|
+| entre um tempo de 23  e  33 segundos | 10 pts|
+| entre um tempo de 33  e  43 segundos | 5 pts|
+| entre um tempo de 43  e  53 segundos | 3 pts|
+| entre um tempo > 53 segundos | 1 pts |
+
 
 # #######Placares########
 vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado em quem tiver maior score .  
@@ -252,3 +268,4 @@ npm run build
 ### 29 mai - 57'        11.3 criar o input para usuario digitar o nome dele - continuei
 ### 30 mai - 2h'        11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito
 ### 30 mai - 1h'        11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito - fixed
+### 30 mai - 40'        11.4 montar toda logica da pontuação - definido tempo - score 

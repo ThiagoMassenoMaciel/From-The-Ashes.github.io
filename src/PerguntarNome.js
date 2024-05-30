@@ -21,7 +21,6 @@ class PerguntarNome extends Phaser.Scene{
             flagNovoJogador = true // para n exibir de novo tela perguntando o nome
             // aqui eu devo colocar algum metodo para validar o que a pessoa digitou 
 
-
             if(this.nomeRepetido(textEntry.text)){ // se o valor retornado da funcao for verdadeiro isso quer dizer que o nome é repetido e devo avisar isso
               textEntry.text = "" // para pessoa digitar novo nome sem precisar apagar o que digitou antes
               this.TelaNome_nome_repetido = this.add.image( config.width/2, 100, "TelaNome_nome_repetido").setDepth(3)     //.setDepth(3);   console.log(this.TelaNome_nome_repetido)
