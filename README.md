@@ -61,8 +61,7 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mais rápido mais score.
 
 ## versão 1.0
-|passar de labirinto fácil |
-| valor > n && valor <= m |
+|passar de labirinto fácil | valor > n && valor <= m |
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  5 segundos  | 20 pts|
@@ -71,8 +70,7 @@ O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mai
 | entre um tempo de 20  e  30 segundos | 3 pts|
 | entre um tempo > 30 segundos | 1 pts |
 
-|passar de labirinto médio |
-| valor > n && valor <= m |
+|passar de labirinto médio | valor > n && valor <= m |
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  10 segundos | 20 pts|
@@ -81,8 +79,7 @@ O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mai
 | entre um tempo de 30  e  40 segundos | 3 pts|
 | entre um tempo > 40 segundos | 1 pts |
 
-|passar de labirinto dificil |
-| valor > n && valor <= m |
+|passar de labirinto dificil | valor > n && valor <= m |
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  23 segundos | 20 pts|
