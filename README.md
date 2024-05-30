@@ -145,24 +145,16 @@ vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado 
 1. **`<Jogador#1>`** - `<o mesmo>
 
 ## Protótipos de Tela
-
-![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/f1fe526a-0165-48a6-be74-3a5fc7848cbb)
-
-
-[![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)
+![PROTOTIPOtelas drawio](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/7df5aa45-a900-40af-b370-a39c3962b6bf)
 
 ## Instalação
 ----------------pedaço a fazer 
 Valide se tem [Node.js](https://nodejs.org) instalado.
-
 Clone esse repositório e entre na pasta
-
 ```
 npm i
 ```
-
 ### Rode o development server
-
 ```
 npm start
 ```
