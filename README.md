@@ -1,4 +1,4 @@
-# Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
+### Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
 ![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/5bcac41c-36ee-4e00-b9c3-59dd2092e25d)
                 
 # Motivação
