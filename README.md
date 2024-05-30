@@ -61,8 +61,7 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mais rápido mais score.
 
 ## versão 1.0
-###### passar de labirinto fácil 
-###### valor > n && valor <= m 
+###### passar de labirinto fácil ------ valor > n && valor <= m 
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  5 segundos  | 20 pts|
@@ -71,8 +70,7 @@ O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mai
 | entre um tempo de 20  e  30 segundos | 3 pts|
 | entre um tempo > 30 segundos | 1 pts |
 
-###### passar de labirinto médio  
-###### valor > n && valor <= m 
+###### passar de labirinto médio  ------ valor > n && valor <= m 
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  10 segundos | 20 pts|
@@ -81,8 +79,7 @@ O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mai
 | entre um tempo de 30  e  40 segundos | 3 pts|
 | entre um tempo > 40 segundos | 1 pts |
 
-###### passar de labirinto dificil 
-###### valor > n && valor <= m 
+###### passar de labirinto dificil ------ valor > n && valor <= m 
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  23 segundos | 20 pts|
@@ -93,14 +90,14 @@ O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mai
 
 
 # #######Placares########
-vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado em quem tiver maior score .  
-
+vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado em quem tiver maior score . 
 
 # Detalhes de implementação do movimento
-####    ArrowUp    ^ move para cima 
-####    ArrouDown  v move para baixo
-####    ArrowLeft  < move para esquerda
-####    ArrowRight < move para direita
+![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/6f3e98cb-b25e-4763-8065-a93e9c678d6d)
+####  Tecla  ArrowUp    ^ move para cima 
+####  Tecla  ArrouDown  v move para baixo
+####  Tecla  ArrowLeft  < move para esquerda
+####  Tecla  ArrowRight < move para direita
 
 ## Requisitos
 O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking
