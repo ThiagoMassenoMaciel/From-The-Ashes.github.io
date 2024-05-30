@@ -369,3 +369,4 @@ npm run build
 ### 29 mai - 57'        11.3 criar o input para usuario digitar o nome dele - continuei
 ### 29 mai - 57'        11.3 criar o input para usuario digitar o nome dele - continuei
 ### 30 mai - 2h'        11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito
+### 30 mai - 1h'        11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito - fixed
