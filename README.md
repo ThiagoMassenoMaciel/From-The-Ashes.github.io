@@ -366,3 +366,4 @@ npm run build
 ### 28 mai - 1h12'      11. lógica da proxima fase liberada quando passada anterior com botao tamanho diferente
 ### 29 mai - 2h40''     11.3 criar o input para usuario digitar o nome dele - comecei 
 ### 29 mai - 55'        11.3 criar o input para usuario digitar o nome dele - continuei
+### 29 mai - 21h5'      11.3 criar o input para usuario digitar o nome dele - continuei

@@ -21,7 +21,7 @@ let arrayHard =[ 0,1,2,3,4]
 let arrayPassou = [false, false, false]
 
 let flagNovoJogador = false  // logica para n ficar pedindo o nome direto
-let flagManterJogador = false 
+//let flagManterJogador = false 
 const fases = 
 [
   { tempo_limite : 30000, quantos_labirintos : 2 }
