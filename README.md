@@ -15,10 +15,10 @@ Aprender a como transformar a minha ideia em um jogo. O diferencial é a quebra 
 não tem o modo de dificuldade do jogo crescente , pois aleatoriamente qualquer fase pode ter um modo fácil , médio ou dificil .
 
 # Estilo 
-O jogador escolhe o estilo de jogo : concorrer com outros jogadores online ou concluindo as fases
+O jogador inicia o jogo pela fase 1
 
 ## #Fases
-Vai ter 3 fases para o jogador jogar . E cada fase vai ter uma quantidade de labirintos para ser passado com o tempo limitado.
+Vai ter 3 fases para jogar. E cada fase vai ter uma quantidade de labirintos para ser passado com o tempo limitado.
 
 # Fases
 
