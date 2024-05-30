@@ -366,4 +366,6 @@ npm run build
 ### 28 mai - 1h12'      11. lógica da proxima fase liberada quando passada anterior com botao tamanho diferente
 ### 29 mai - 2h40''     11.3 criar o input para usuario digitar o nome dele - comecei 
 ### 29 mai - 55'        11.3 criar o input para usuario digitar o nome dele - continuei
-### 29 mai - 21h5'      11.3 criar o input para usuario digitar o nome dele - continuei
+### 29 mai - 57'        11.3 criar o input para usuario digitar o nome dele - continuei
+### 29 mai - 57'        11.3 criar o input para usuario digitar o nome dele - continuei
+### 30 mai - 2h'        11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito

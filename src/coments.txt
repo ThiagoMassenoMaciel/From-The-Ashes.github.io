@@ -485,6 +485,12 @@ bug , 10.6.1.1 depois de apertar o botao repetir n funciona direito jogar a mesm
 
 bug ,   11.3  a tela perguntar nome ficava num loop e o jogador n conseguia clicar na fase 11 para de fato jogar 
         solucao :::: colocar uma flag inicializada com falso e deposi trocado valor para n repetir  
+
+
+
+
+bug,   11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito
+        solucao :::: rever denovo e debuggar 
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 

@@ -58,8 +58,8 @@ class Tela1 extends Phaser.Scene{
     this.load.image("TelaNome_Botao_jogar", "../assents/TelaNome_Botao_jogar.png")
     this.load.image("TelaNome_Botao_manter", "../assents/TelaNome_Botao_manter.png")
     this.load.image("TelaNome_Botao_jogar_clicado", "../assents/TelaNome_Botao_jogar_clicado.png")
-    
     this.load.image("TelaNome_escrevendo", "../assents/TelaNome_escrevendo.png")
+    this.load.image("TelaNome_nome_repetido", "../assents/TelaNome_nome_repetido.png")
     
   }
 

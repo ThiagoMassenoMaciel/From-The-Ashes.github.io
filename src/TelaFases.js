@@ -16,7 +16,7 @@ class TelaFases extends Phaser.Scene{
           arrayPassou[i] = false
         }
 
-        this.perguntarNome()
+        this.perguntarNome() // vai executar toda vez que o botao [mudar_nome] for clicado
     });
 
     this.perguntarNome() // vai executar a primeira vez 
@@ -87,7 +87,7 @@ class TelaFases extends Phaser.Scene{
     this.Botao_Fase_voltar.setInteractive().on('pointerdown', () =>
     {
         console.log('voltar para tela menu');
-        setTimeout( ()=>{this.scene.start("menu")}, 200)
+        this.scene.start("menu")
     });
     
     //setTimeout( ()=>{this.scene.start("GameEasy")}, 4000)

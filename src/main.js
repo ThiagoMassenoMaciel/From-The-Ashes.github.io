@@ -3,7 +3,7 @@ var config ={
   width : 1364,
   height: 764,
   backgroundColor: 0x000000,
-  scene: [  Tela1, Tela2, TelaMenu,TelaFases,TelaPlacares, TelaCreditos, AvisoFase3 ,AvisoFase2, FinalizouJogo, PerguntarNome ],
+  scene: [  Tela1, Tela2, TelaMenu,TelaFases,TelaPlacares, TelaCreditos, AvisoFase3 ,AvisoFase2, FinalizouJogo, PerguntarNome],
   physics : {  
     default: "arcade", 
     arcade: {  
@@ -22,6 +22,9 @@ let arrayPassou = [false, false, false]
 
 let flagNovoJogador = false  // logica para n ficar pedindo o nome direto
 //let flagManterJogador = false 
+
+let jogadores = [ ]
+
 const fases = 
 [
   { tempo_limite : 30000, quantos_labirintos : 2 }
