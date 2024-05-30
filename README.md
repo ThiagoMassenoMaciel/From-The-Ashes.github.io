@@ -100,9 +100,9 @@ vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado 
 ####  Tecla  ArrowRight < move para direita
 
 ## Requisitos
-O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking
-Para aparecer no hanking a pessoa tem que estar entre os 3 jogadores com maior score
-Para ganhar score o jogador tem que passar de labirinto o mais rápido possível
+- O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking.
+- Para aparecer no hanking a pessoa tem que estar entre os 3 jogadores com maior score.
+- Para ganhar score o jogador tem que passar de labirinto o mais rápido possível.
 
 ### Épicos/Funcionalidades
 
