@@ -1,4 +1,4 @@
-# Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
+### Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
 ![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/5bcac41c-36ee-4e00-b9c3-59dd2092e25d)
                 
 # Motivação
@@ -61,8 +61,7 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mais rápido mais score.
 
 ## versão 1.0
-|passar de labirinto fácil |
-| valor > n && valor <= m |
+###### passar de labirinto fácil ------ valor > n && valor <= m 
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  5 segundos  | 20 pts|
@@ -71,8 +70,7 @@ O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mai
 | entre um tempo de 20  e  30 segundos | 3 pts|
 | entre um tempo > 30 segundos | 1 pts |
 
-|passar de labirinto médio |
-| valor > n && valor <= m |
+###### passar de labirinto médio  ------ valor > n && valor <= m 
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  10 segundos | 20 pts|
@@ -81,8 +79,7 @@ O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mai
 | entre um tempo de 30  e  40 segundos | 3 pts|
 | entre um tempo > 40 segundos | 1 pts |
 
-|passar de labirinto dificil |
-| valor > n && valor <= m |
+###### passar de labirinto dificil ------ valor > n && valor <= m 
 | Precisão | Score |
 | ----- | ----------- |
 | entre um tempo de 0   e  23 segundos | 20 pts|
@@ -93,19 +90,19 @@ O score vai ser de acordo com o tempo que demorou passar o labirinto, quanto mai
 
 
 # #######Placares########
-vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado em quem tiver maior score .  
-
+vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado em quem tiver maior score . 
 
 # Detalhes de implementação do movimento
-####    ArrowUp    ^ move para cima 
-####    ArrouDown  v move para baixo
-####    ArrowLeft  < move para esquerda
-####    ArrowRight < move para direita
+![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/6f3e98cb-b25e-4763-8065-a93e9c678d6d)
+####  Tecla  ArrowUp    ^ move para cima 
+####  Tecla  ArrouDown  v move para baixo
+####  Tecla  ArrowLeft  < move para esquerda
+####  Tecla  ArrowRight < move para direita
 
 ## Requisitos
-O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking
-Para aparecer no hanking a pessoa tem que estar entre os 3 jogadores com maior score
-Para ganhar score o jogador tem que passar de labirinto o mais rápido possível
+- O jogador precisa cadastrar um nome para ser armazenado sua posição no hanking.
+- Para aparecer no hanking a pessoa tem que estar entre os 3 jogadores com maior score.
+- Para ganhar score o jogador tem que passar de labirinto o mais rápido possível.
 
 ### Épicos/Funcionalidades
 
@@ -148,24 +145,16 @@ Para ganhar score o jogador tem que passar de labirinto o mais rápido possível
 1. **`<Jogador#1>`** - `<o mesmo>
 
 ## Protótipos de Tela
-
-![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/f1fe526a-0165-48a6-be74-3a5fc7848cbb)
-
-
-[![Death Metal fonts](https://see.fontimg.com/api/renderfont4/0W9qo/eyJyIjoiZnMiLCJoIjoyMDAsInciOjEwMDAsImZzIjoyMDAsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/RnJvbSAgdGhlICBhc2hlUw/yenisack-demo.png)](https://www.fontspace.com/category/deathmetal)
+![PROTOTIPOtelas drawio](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/7df5aa45-a900-40af-b370-a39c3962b6bf)
 
 ## Instalação
 ----------------pedaço a fazer 
 Valide se tem [Node.js](https://nodejs.org) instalado.
-
 Clone esse repositório e entre na pasta
-
 ```
 npm i
 ```
-
 ### Rode o development server
-
 ```
 npm start
 ```
@@ -269,4 +258,7 @@ npm run build
 ### 30 mai - 2h'        11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito
 ### 30 mai - 1h'        11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito - fixed
 ### 30 mai - 40'        11.4 montar toda logica da pontuação - definido tempo - score 
+<<<<<<< HEAD
 ### 31 mai - 14'        11.4 montar toda logica da pontuação - criar o contador 
+=======
+>>>>>>> 576482b5c74d8a9befb98e74602a05709ded9614
