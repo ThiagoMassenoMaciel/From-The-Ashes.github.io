@@ -34,11 +34,11 @@ class PerguntarNome extends Phaser.Scene{
               let elemento = {
                 nome: textEntry.text
                 ,
-                pontuacaoF1: null 
+                pontuacaoF1: 0 
                 ,
-                pontuacaoF2: null 
+                pontuacaoF2: 0 
                 ,
-                pontuacaoF3: null 
+                pontuacaoF3: 0 
               }
           
               jogadores.push(elemento)

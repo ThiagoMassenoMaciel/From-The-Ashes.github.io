@@ -24,6 +24,7 @@ let flagNovoJogador = false  // logica para n ficar pedindo o nome direto
 //let flagManterJogador = false 
 
 let jogadores = [ ]
+let jogadorAtual = ""
 
 const fases = 
 [

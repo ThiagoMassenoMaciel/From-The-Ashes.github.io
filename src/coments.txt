@@ -493,6 +493,16 @@ bug,   11.3.1 erro logica para n armazenar nome de novo jogador n funciona direi
         solucao :::: rever denovo e debuggar 
                 :::: colocar pedaço do codigo que faz volta para telafases , no pedaço do arquivo dps do código que executa os testes de validacao do nome digitado
                 :::: usar o setDepth() em todas as imagens pois talvez a imagem ta num plano que n é o mais de cima n funcionou 
+
+
+BUG,  11.4.0 NAO VAI FUNCIONAR POIS N ESTOU ACESSANDO DIRETAMENTE O OBJETO global jogadores ESTOU ACESSANDO E ATRIBUINDO A UMA DE SUAS COPIAS
+             CORRIGIR ESTE BUG 11.4.0
+
+
+BUG, 11.4.1 n retornou para o console.log o objeto com a pontuacao calculada
+
+
+
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 
