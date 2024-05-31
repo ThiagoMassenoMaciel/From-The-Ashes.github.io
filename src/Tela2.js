@@ -24,8 +24,8 @@ class Tela2 extends Phaser.Scene {
   timerEvent;
   graphics;
 
-  timeStartPlayMaze
-  timeEndPlayMaze
+  timeStartPlayMaze // capturar o tempo que comecou
+  timeEndPlayMaze   // capturar o tempo que terminou
   tempo_demorou_passar_labirintos 
 
   //console.log( "\n\n\n\n\n\n\n" )
@@ -203,11 +203,12 @@ class Tela2 extends Phaser.Scene {
     let tempo_demorou_passar_labirinto = this.timeEndPlayMaze - this.timeStartPlayMaze
 
 
-    console.log("-------------------------------------")
+    console.log("----------------tempo que demorou passar o labirinto---------------------")
     console.log(tempo_demorou_passar_labirinto)    
     console.log("-------------------------------------")
 
 
+    this.calcularPontuacao( this.flag, this.tempo_demorou_passar_labirintos )
   
     this.timerEvent.paused = !this.timerEvent.paused
     console.log("Foi pausado ? ")
@@ -321,6 +322,7 @@ class Tela2 extends Phaser.Scene {
   }
 
   montar_Um_Labirinto_Aleatorio(){
+
     this.timeStartPlayMaze = this.timerEvent.getElapsedSeconds()
     console.log( "\n\n\n\n\n\n\n tempo de inicio do contador" )
     console.log(this.timeStartPlayMaze)
@@ -635,5 +637,9 @@ class Tela2 extends Phaser.Scene {
           }
         }
       });
+  }
+
+  calcularPontuacao( nivel , tempo ){
+    // toda lógica para pontuacao
   }
 }
