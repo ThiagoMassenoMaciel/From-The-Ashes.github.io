@@ -30,8 +30,6 @@ class Tela2 extends Phaser.Scene {
 
   //console.log( "\n\n\n\n\n\n\n" )
   
-
-
   quantidade_labirintos_passado
 
   create() {
@@ -196,9 +194,9 @@ class Tela2 extends Phaser.Scene {
   saiuDoLabirinto(jogadorr, saida) {
 
     this.timeEndPlayMaze = this.timerEvent.getElapsedSeconds()
-    console.log( "\n\n\n\n\n\n\n tempo de final do contador" )
+    console.log( "\n tempo de final do contador" )
     console.log(this.timeEndPlayMaze)
-    console.log( "\n\n\n\n\n\n\n" )
+    console.log( "\n" )
 
 
 //-------------------------------------------------------------------------------------------------------------------------------- contador para pontuacao
@@ -256,7 +254,7 @@ class Tela2 extends Phaser.Scene {
 
     // o valor dentro da variavel this.fase É 1 , e o primeiro elemento da array  fases que tem as informacoes do nivel 1 é o indice zero
     if(this.quantidade_labirintos_passado !== fases[fase - 1].quantos_labirintos){
-      console.log(fases[fase - 1].quantos_labirintos)
+
       setTimeout(()=>{
         this.montar_Um_Labirinto_Aleatorio()
         this.timerEvent.paused = !this.timerEvent.paused; // trocando valor boleano para continuar o relogio
@@ -501,9 +499,9 @@ class Tela2 extends Phaser.Scene {
 
 //--------------------------------------------------------------------------------------- contador para pontuacao
     this.timeStartPlayMaze = this.timerEvent.getElapsedSeconds()
-    console.log( "\n\n\n\n\n\n\n tempo de inicio do contador" )
+    console.log( "\ntempo de inicio do contador" )
     console.log(this.timeStartPlayMaze)
-    console.log( "\n\n\n\n\n\n\n" )
+    console.log( "\n" )
 //----------------------------------------------------------------------------------------------------------------
 
     if(this.quantidade_labirintos_passado !== fases[fase - 1].quantos_labirintos ){
@@ -619,13 +617,13 @@ class Tela2 extends Phaser.Scene {
         // informar proximo nivel quando clicado no botao proximo
         if(fase < 4){
           fase += 1 // pois quer dizer o proximo nivel na situação em que o jogador passaou alguma fase
-          console.log(`\n\n\n\n\n\n\n\n\n\n\nagora vai jogar a fase ${fase}\n\n\n\n\n\n\n\n\n\n\n\n\n`);
+          console.log(`\nagora vai jogar a fase ${fase}\n`);
 
           if(fase === 2){
-            console.log(`\n\n\n\n\n\n\n\n\n\naviso fase 2 \n\n\n\n\n\n\n\n\n\n\n\n\n`);
+            console.log(`\n\n aviso fase 2 \n\n`);
             this.scene.start("AvisoFase2")
           }else if(fase === 3){
-            console.log(`\n\n\n\n\n\n\n\n\n\naviso fase 3 \n\n\n\n\n\n\n\n\n\n\n\n\n`);
+            console.log(`\n\naviso fase 3 \n\n`);
             this.scene.start("AvisoFase3")
           }else if( fase === 4){ 
             fase -= 1 // voltara a ser 3 e  n vai dar problema la 
@@ -646,12 +644,24 @@ class Tela2 extends Phaser.Scene {
     // eu posso melhorar este código agrupando 3 if aninhados de acordo com o nivel e n precisar repetir varias vezes a mesma informacao
     console.log(jogadores)
     console.log(jogadorAtual)
+//    
+/*
+    procurar_Objeto_JOgador_Atual( arrayJOGADORES, nome_jogador_atual){
+      arrayJOGADORES.forEach(
+      
+      )
+    }
+*/
+    let elementoo = jogadores.filter((jogador) => jogador.nome === jogadorAtual) // filter retornou uma array com um elemento que passou no teste
 
-    let indice_jogador_atual = jogadores.findIndex( jogadores.filter((jogador) => jogador.name === jogadorAtual))
-    
-    console.log("\n\n\n --------------- index do jogador atual ----------------")
+    console.log("elemento do jogadorAtual")
+    console.log(elementoo[0])
+
+    let indice_jogador_atual = jogadores.findIndex((jjogador) => jjogador === elementoo[0])  // tenho que retornar apenas o próprio elemento , por isso n posso por so o nome da variavel
+
+    console.log("--------------- index do jogador atual ----------------")
     console.log(indice_jogador_atual)
-    console.log("\n\n\n -------------------------------------------------------")
+    console.log("-------------------------------------------------------")
 
     if(fase === 1) { 
 
@@ -864,9 +874,9 @@ class Tela2 extends Phaser.Scene {
       }
     }
 
-    console.log("\n\n\n\n\n\n-------------------------pontuacao--------------------------------")
+    console.log("-------------------------pontuacao-----------------------")
     console.log(jogadores[indice_jogador_atual])
-    console.log("---------------------------------------------------------\n\n\n\n\n\n")
+    console.log("---------------------------------------------------------")
     
   }
 
