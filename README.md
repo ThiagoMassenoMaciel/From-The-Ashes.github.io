@@ -259,4 +259,5 @@ npm run build
 ### 30 mai - 1h'        11.3.1 erro logica para n armazenar nome de novo jogador n funciona direito - fixed
 ### 30 mai - 40'        11.4 montar toda logica da pontuação - definido tempo - score 
 ### 31 mai - 14'        11.4 montar toda logica da pontuação - criar o contador 
-### 31 mai - 17h20'     11.4 montar toda logica da pontuação - continuar lógica para pontuacao
+### 31 mai - 1h29'      11.4 montar toda logica da pontuação - +2 bugs  11.4.0 , 11.4.1 
+### 31 mai - 1h20'      11.4 montar toda logica da pontuação - +2 bugs  11.4.0 , 11.4.1

@@ -31,8 +31,10 @@ class PerguntarNome extends Phaser.Scene{
 
             }else{ // se o valor que retornou da funcao for falso quer dizer que o nome n e repetido e pode adicionar na array dos jogadores
 
+              jogadorAtual = textEntry.text // avisar qual é o jogador atual 
+
               let elemento = {
-                nome: textEntry.text
+                nome: jogadorAtual// textEntry.text // e se eu colocasse a variavel global do main aqui ? será que ele armazenaria com aspas duplas ?
                 ,
                 pontuacaoF1: 0 
                 ,

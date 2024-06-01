@@ -206,7 +206,7 @@ class Tela2 extends Phaser.Scene {
     console.log("----------------tempo que demorou passar o labirinto---------------------")
     console.log(this.tempo_demorou_passar_labirinto)    
     console.log("-------------------------------------")
-    this.calcularPontuacao( this.flag, this.tempo_demorou_passar_labirintos )
+    this.calcularPontuacao( this.flag, this.tempo_demorou_passar_labirinto )
 //---------------------------------------------------------------------------------------------------------------------------------------------------------  
 
     this.timerEvent.paused = !this.timerEvent.paused // pausar o cronometro para aparecer animacao do encontrou saida 
@@ -642,176 +642,154 @@ class Tela2 extends Phaser.Scene {
     // arredondo o numero quebrado para cima 
     // verificar o teste 
                      // se passar no teste vai dentro no indice da array que corresponta o objeto do jogador atual e adiciona o ponto correspondente
-
     let ponto = Math.ceil(tempo) 
-    // eu posso melhorar este código agrupando 33 if aninhados de acordo com o nivel e n precisar repetir varias vezes a mesma informacao
+    // eu posso melhorar este código agrupando 3 if aninhados de acordo com o nivel e n precisar repetir varias vezes a mesma informacao
+    console.log(jogadores)
+    console.log(jogadorAtual)
+
+    let indice_jogador_atual = jogadores.findIndex( jogadores.filter((jogador) => jogador.name === jogadorAtual))
+    
+    console.log("\n\n\n --------------- index do jogador atual ----------------")
+    console.log(indice_jogador_atual)
+    console.log("\n\n\n -------------------------------------------------------")
+
     if(fase === 1) { 
 
 
       if(ponto > 0 && ponto <= 5 && nivel === 0){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto FACIL 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 20
+        jogadores[indice_jogador_atual].pontuacaoF1 += 20
 
       }else if(ponto > 5 && ponto <= 10 && nivel === 0){ 
         
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 10
+        jogadores[indice_jogador_atual].pontuacaoF1 += 10
 
       }else if(ponto > 10 && ponto <= 20 && nivel === 0){ 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 5
+        jogadores[indice_jogador_atual].pontuacaoF1 += 5
 
       }else if(ponto > 20 && ponto <= 30 && nivel === 0){
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 3
+        jogadores[indice_jogador_atual].pontuacaoF1 += 3
 
       }else if(ponto > 30 && nivel === 0){ 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 1
+        jogadores[indice_jogador_atual].pontuacaoF1 += 1
 
       }
 
 
       if(ponto > 0 && ponto <= 10 && nivel === 1){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto MEDIO
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 20
+        jogadores[indice_jogador_atual].pontuacaoF1 += 20
 
       }else if(ponto > 10 && ponto <= 20 && nivel === 1){ 
         
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 10
+        jogadores[indice_jogador_atual].pontuacaoF1 += 10
 
       }else if(ponto > 20 && ponto <= 30 && nivel === 1){ 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 5
+        jogadores[indice_jogador_atual].pontuacaoF1 += 5
 
       }else if(ponto > 30 && ponto <= 40 && nivel === 1){
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 3
+        jogadores[indice_jogador_atual].pontuacaoF1 += 3
 
       }else if(ponto > 40 && nivel === 1){ 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 1
+        jogadores[indice_jogador_atual].pontuacaoF1 += 1
         
       }
 
 
       if(ponto > 0 && ponto <= 23 && nivel === 2) { // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto DIFICIL 
         
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 20
+        jogadores[indice_jogador_atual].pontuacaoF1 += 20
 
       }else if(ponto > 23 && ponto <= 33 && nivel === 2) { 
         
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 10
+        jogadores[indice_jogador_atual].pontuacaoF1 += 10
 
       }else if(ponto > 33 && ponto <= 43 && nivel === 2) { 
 
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 5
+        jogadores[indice_jogador_atual].pontuacaoF1 += 5
 
       }else if(ponto > 43 && ponto <= 53 && nivel === 2) {
 
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 3
+        jogadores[indice_jogador_atual].pontuacaoF1 += 3
 
       }else if(ponto > 53 && nivel === 2) { 
 
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF1 += 1
+        jogadores[indice_jogador_atual].pontuacaoF1 += 1
         
       }
     }else if(fase === 2){
 
       if(ponto > 0 && ponto <= 5 && nivel === 0){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto FACIL 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 20
+        jogadores[indice_jogador_atual].pontuacaoF2 += 20
 
       }else if(ponto > 5 && ponto <= 10 && nivel === 0){ 
         
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 10
+        jogadores[indice_jogador_atual].pontuacaoF2 += 10
 
       }else if(ponto > 10 && ponto <= 20 && nivel === 0){ 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 5
+        jogadores[indice_jogador_atual].pontuacaoF2 += 5
 
       }else if(ponto > 20 && ponto <= 30 && nivel === 0){
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 3
+        jogadores[indice_jogador_atual].pontuacaoF2 += 3
 
       }else if(ponto > 30 && nivel === 0){ 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 1
+        jogadores[indice_jogador_atual].pontuacaoF2 += 1
 
       }
 
 
       if(ponto > 0 && ponto <= 10 && nivel === 1){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto MEDIO
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 20
+        jogadores[indice_jogador_atual].pontuacaoF2 += 20
 
       }else if(ponto > 10 && ponto <= 20 && nivel === 1){ 
         
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 10
+        jogadores[indice_jogador_atual].pontuacaoF2 += 10
 
       }else if(ponto > 20 && ponto <= 30 && nivel === 1){ 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 5
+        jogadores[indice_jogador_atual].pontuacaoF2 += 5
 
       }else if(ponto > 30 && ponto <= 40 && nivel === 1){
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 3
+        jogadores[indice_jogador_atual].pontuacaoF2 += 3
 
       }else if(ponto > 40 && nivel === 1){ 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 1
+        jogadores[indice_jogador_atual].pontuacaoF2 += 1
         
       }
 
 
       if(ponto > 0 && ponto <= 23 && nivel === 2) { // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto DIFICIL 
         
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 20
+        jogadores[indice_jogador_atual].pontuacaoF2 += 20
 
       }else if(ponto > 23 && ponto <= 33 && nivel === 2) { 
         
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 10
+        jogadores[indice_jogador_atual].pontuacaoF2 += 10
 
       }else if(ponto > 33 && ponto <= 43 && nivel === 2) { 
 
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 5
+        jogadores[indice_jogador_atual].pontuacaoF2 += 5
 
       }else if(ponto > 43 && ponto <= 53 && nivel === 2) {
 
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 3
+        jogadores[indice_jogador_atual].pontuacaoF2 += 3
 
       }else if(ponto > 53 && nivel === 2) { 
 
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF2 += 1
+        jogadores[indice_jogador_atual].pontuacaoF2 += 1
         
       }
 
@@ -819,97 +797,77 @@ class Tela2 extends Phaser.Scene {
 
       if(ponto > 0 && ponto <= 5 && nivel === 0){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto FACIL 
 
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 20
+        jogadores[indice_jogador_atual].pontuacaoF3 += 20
   
       }else if(ponto > 5 && ponto <= 10 && nivel === 0){ 
         
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 10
+        jogadores[indice_jogador_atual].pontuacaoF3 += 10
   
       }else if(ponto > 10 && ponto <= 20 && nivel === 0){ 
   
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 5
+        jogadores[indice_jogador_atual].pontuacaoF3 += 5
   
       }else if(ponto > 20 && ponto <= 30 && nivel === 0){
   
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 3
+        jogadores[indice_jogador_atual].pontuacaoF3 += 3
   
       }else if(ponto > 30 && nivel === 0){ 
   
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 1
+        jogadores[indice_jogador_atual].pontuacaoF3 += 1
   
       }
   
   
       if(ponto > 0 && ponto <= 10 && nivel === 1){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto MEDIO
   
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 20
+        jogadores[indice_jogador_atual].pontuacaoF3 += 20
   
       }else if(ponto > 10 && ponto <= 20 && nivel === 1){ 
         
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 10
+        jogadores[indice_jogador_atual].pontuacaoF3 += 10
   
       }else if(ponto > 20 && ponto <= 30 && nivel === 1){ 
   
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 5
+        jogadores[indice_jogador_atual].pontuacaoF3 += 5
   
       }else if(ponto > 30 && ponto <= 40 && nivel === 1){
   
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 3
+        jogadores[indice_jogador_atual].pontuacaoF3 += 3
   
       }else if(ponto > 40 && nivel === 1){ 
   
-        let atribuir =this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 1
+        jogadores[indice_jogador_atual].pontuacaoF3 += 1
         
       }
   
   
       if(ponto > 0 && ponto <= 23 && nivel === 2) { // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto DIFICIL 
         
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 20
+        jogadores[indice_jogador_atual].pontuacaoF3 += 20
   
       }else if(ponto > 23 && ponto <= 33 && nivel === 2) { 
         
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 10
+        jogadores[indice_jogador_atual].pontuacaoF3 += 10
   
       }else if(ponto > 33 && ponto <= 43 && nivel === 2) { 
   
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 5
+        jogadores[indice_jogador_atual].pontuacaoF3 += 5
   
       }else if(ponto > 43 && ponto <= 53 && nivel === 2) {
   
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 3
+        jogadores[indice_jogador_atual].pontuacaoF3 += 3
   
       }else if(ponto > 53 && nivel === 2) { 
   
-        let atribuir = this.procurar_Objeto_Jogador_Atual()
-        atribuir.pontuacaoF3 += 1
+        jogadores[indice_jogador_atual].pontuacaoF3 += 1
         
       }
     }
 
     console.log("\n\n\n\n\n\n-------------------------pontuacao--------------------------------")
-    console.log(this.procurar_Objeto_Jogador_Atual())
+    console.log(jogadores[indice_jogador_atual])
     console.log("---------------------------------------------------------\n\n\n\n\n\n")
     
   }
 
-  procurar_Objeto_Jogador_Atual(){
-    //                          retorno objeto que tem nome === jogador atual
-    let objeto = jogadores.filter( jogador => (jogador.name === jogadorAtual))
-    return objeto
-  }
 }
