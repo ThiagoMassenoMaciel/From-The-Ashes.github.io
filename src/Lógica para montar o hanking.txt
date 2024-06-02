@@ -1,0 +1,247 @@
+devo usar o que dentro da variável GUARDADO apenas o valor maior score , ou obj completo e acessar apenas a propriedade GUARDADO.pontuacaoF1 ?
+
+criar uma estrutura array com 3 elementos no maximo
+	cada elemento é um objeto e vai ter duas propriedades
+		nome:
+		pontuacao:
+
+Verificar se array com os jogadores n esta fazia
+	
+	se array jogadores so tiver um elemento
+	percorrer o primeiro elemento
+		adicionar ele dentro da variável maior
+	retornar variável maior
+
+CONTEXTO , todos os jogadores que estão dentro da array jogadores tem alguma pontuação > 0 da fase 1
+
+
+jogadores = [i]
+loop 0 
+	GUARDADO = i
+return GUARDADO
+
+	se array jogadores so tiver dois elemento
+	percorrer so ate o primeiro elemento
+		comparar se ele tem pontuação maior que o próximo elemento
+			SIM add obj_atual dentro de uma variável
+
+			NAO add obj_proximo dentro de uma variável
+	retornar variável maior
+--------------------------------------------
+jogadores = [i,j]
+loop 0 
+	i > j 
+	SIM 
+		GUARDADO = i
+	NAO 
+		GUARDADO =j
+
+return GUARDADO
+-----------------------------------
+jogadores = [30,40]
+loop 0 
+	30 > 40 
+	SIM 
+		GUARDADO = 
+	NAO 
+		GUARDADO = 40
+
+return GUARDADO
+
+------------------------------------
+jogadores = [40,30]
+loop 0 
+	40 > 30 
+	SIM 
+		GUARDADO = 40
+	NAO 
+		GUARDADO = 
+
+return GUARDADO
+
+
+
+
+	se array jogadores so tiver tres elementos
+	percorrer so ate o segunto elemento
+		comparar se ele tem pontuação maior que o próximo elemento
+			SIM add obj_atual dentro de uma variável
+
+			NAO add obj_proximo dentro de uma variável
+	retornar variável maior
+
+-----------------------------------
+jogadores = [10,30,40]
+loop 0 
+	10 > 30 
+	SIM 
+		GUARDADO =
+	NAO 
+		GUARDADO = 30
+
+loop 1
+	30 > 40 
+	SIM 
+		GUARDADO =
+	NAO 
+		GUARDADO = 40
+ 
+
+return GUARDADO
+
+--------------------------------------
+
+-----------------------------------
+jogadores = [40,30,10]
+loop 0 
+	40 > 30 
+	SIM 
+		GUARDADO = 40
+	NAO 
+		GUARDADO = 
+
+loop 1
+	30 > 10 
+	SIM 
+		GUARDADO = 30
+	NAO 
+		GUARDADO =
+ 
+
+return GUARDADO             // 30
+
+-------------------------------------- 
+o 30 n era para ser atribuído ao GUARDADO pois ele não é maior que o valor de GUARDADO anterior
+	eu so devo atribuir novo valor para dentro de GUARDADO se for maior que numero anterior 
+Devo colocar o valor de GUARDADO zerado antes de percorrer a lista , para ser possível a primeira pontuação ser atribuida . Pois qualquer pontuação é > 0
+	e a primeira vez  tem que atribuir pontuação para dentro de GUARDADO , pois ele
+
+
+    se array tiver > 1 elemento
+	zera GUARDADO
+	se array jogadores so tiver tres elementos
+	percorrer so ate o segundo elemento
+		comparar se ele_atual tem pontuação MAIOR que o PROXIMO ELEMENTO
+			SIM 
+				testar se obj_atual > valor dentro da variável GUARDADO 
+					add obj_atual dentro de uma variável  GUARDADO 
+
+			NAO 
+				testar se ele_atual tem posição MENOR que o próximo elemento
+					testar se PROXIMO ELEMENTO > valor dentro da variável GUARDADO
+						add PROXIMO ELEMENTO dentro de uma variável GUARDADO
+	retornar variável maior
+    se array tiver 1 elemento
+	GUARDADO = jogadores[0]
+	retornar GUARDADO
+
+-----------------------------------
+GUARDADO = 0
+jogadores = [10,30,40]
+loop 0 
+	10 > 30 
+	SIM 
+		GUARDADO =
+	NAO 
+	     10 < 30
+	     SIM
+	     	30 > GUARDADO -- 0 
+		SIM
+			GUARDADO = 30
+
+loop 1
+	30 > 40 
+	SIM 
+
+	NAO 
+	     30 < 40
+	     SIM 
+		40 > GUARDADO -- 30
+		SIM
+		   GUARDADO = 40
+ 
+
+return GUARDADO
+
+--------------------------------------
+
+-----------------------------------
+GUARDADO = 0
+jogadores = [40,30,10]
+loop 0 
+	40 > 30 
+	SIM 
+	   40 > GUARDADO -- 0
+	   SIM
+	      GUARDADO = 40
+	NAO 
+
+loop 1
+	30 > 10 
+	SIM 
+	   30 > GUARDADO -- 40
+	   NAO 
+ 	      `entao faz nada`
+
+	NAO 
+
+ 
+
+return GUARDADO             // 40
+
+--------------------------------------
+
+
+-----------------------------------
+GUARDADO = 0
+jogadores = [0,30,10]
+loop 0 
+	0 > 30 
+	SIM 
+
+	NAO 
+	   0 < 30
+	   SIM
+	      30 > GUARDADO -- 0
+	      SIM
+		 GUARDADO = 30
+
+loop 1
+	30 > 10 
+	SIM 
+	   30 > GUARDADO -- 30
+	   NAO 
+ 	      `entao faz nada`
+
+	NAO 
+
+
+return GUARDADO             // 30
+
+--------------------------------------
+
+-----------------------------------
+GUARDADO = 0
+jogadores = [40,0,10]
+loop 0 
+	40 > 0 
+	SIM 
+	   40 > GUARDADO -- 0
+	   SIM 
+		GUARDADO = 40
+	NAO 
+	   
+loop 1
+	0 > 10 
+	SIM 
+	NAO 
+	   0 < 10 
+	   SIM 
+	      10 > GUARDADO --40
+	      NAO 
+		`faz nada`
+
+
+return GUARDADO             // 40
+
+--------------------------------------
