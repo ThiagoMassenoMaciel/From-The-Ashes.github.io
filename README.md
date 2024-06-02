@@ -264,3 +264,4 @@ npm run build
 ### 31 mai - 50'        11.4 montar toda logica da pontuação - +2 bugs  11.4.0 , 11.4.1
 ### 1 jun  - 2h06'      11.4 montar toda logica da pontuação - +2 bugs  11.4.0 , 11.4.1
 ### 1 jun  - 1h'        11.4 montar toda logica da pontuação - bug 11.4.4 resolvido, mas o resto dos bugs continua
+### 1 jun  - 4h03'      11.4 montar toda logica da pontuação - bug 11.4.3 resolvido, mas o resto dos outros bugs continua

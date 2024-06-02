@@ -503,13 +503,17 @@ BUG, 11.4.1 n retornou para o console.log o objeto com a pontuacao calculada
             CORRIGIDO
 
 
-
 bug, 11.4.4  o app atribuir pontuacao do novo jogador para dentro do objeto do jogador anterior
             dividi em 2 pedaços
                 primeiro eu recupero objeto do jogador atualizar teve que fazer um teste 
                 segundo pedaço , eu retorno o indice do objeto , dentro da array jogadores, que for igual o objeto atual aqui tive que obrigatoriamente fazer um teste dentro do findIndex()
 
 
+11.4.3.0 bug , ele incrementa a pontuacao , para dentro da propriedade OBJ.pontuacaoF1:, toda vida que passa de labirinto. Mas na verdade so é para armazenar no objeto se passar de fase e for > que valor score anterior
+                    jogadores[indice_jogador_atual].pontuacaoF3 += this.pontuacao
+                    solucao :::: jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+bug 11.4.3.1, ele esta somando a nova posicao com mais score , somando com score anterior , e n é para fazer isso 
+            solucao :::: vai la na funcao do aviso quando n passou e zera this.pontuacao = 0
 -------------------------------------------------------------------------------------------
 ===========================================================================================
 Para transformar todos os dados da variavel niveis em json 

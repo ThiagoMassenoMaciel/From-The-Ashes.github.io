@@ -31,8 +31,11 @@ class Tela2 extends Phaser.Scene {
   //console.log( "\n\n\n\n\n\n\n" )
   
   quantidade_labirintos_passado
+  indice_jogador_atual_global
 
+  pontuacao = 0
   create() {
+    this.pontuacao = 0
     this.quantidade_labirintos_passado = 0
     console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
     console.log(this.quantidade_labirintos_passado)
@@ -88,8 +91,6 @@ class Tela2 extends Phaser.Scene {
     this.drawClock( 1170, 100, this.timerEvent);
 
     this.text.setText(this.timerEvent.getElapsedSeconds().toString().substr(0, 2)); //
-
-
 
     if(this.quantidade_labirintos_passado < fases[fase -1].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[fase -1].tempo_limite/1000)){
       // tem que passar em 2 labirintos antes de 30 segundos fase 1
@@ -198,6 +199,13 @@ class Tela2 extends Phaser.Scene {
     console.log(this.timeEndPlayMaze)
     console.log( "\n" )
 
+    this.timerEvent.paused = !this.timerEvent.paused // pausar o cronometro para aparecer animacao do encontrou saida 
+    console.log("Foi pausado ? ")
+    console.log(this.timerEvent.paused)
+    console.log("\n")
+    this.quantidade_labirintos_passado += 1
+    console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:| quantos labirintos passou ?|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
+    console.log(this.quantidade_labirintos_passado)
 
 //-------------------------------------------------------------------------------------------------------------------------------- contador para pontuacao
     this.tempo_demorou_passar_labirinto = this.timeEndPlayMaze - this.timeStartPlayMaze
@@ -207,13 +215,6 @@ class Tela2 extends Phaser.Scene {
     this.calcularPontuacao( this.flag, this.tempo_demorou_passar_labirinto )
 //---------------------------------------------------------------------------------------------------------------------------------------------------------  
 
-    this.timerEvent.paused = !this.timerEvent.paused // pausar o cronometro para aparecer animacao do encontrou saida 
-    console.log("Foi pausado ? ")
-    console.log(this.timerEvent.paused)
-    console.log("\n")
-    this.quantidade_labirintos_passado += 1
-    console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:| quantos labirintos passou ?|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
-    console.log(this.quantidade_labirintos_passado)
 
     let x = saida.x 
     let y = saida.y 
@@ -511,6 +512,12 @@ class Tela2 extends Phaser.Scene {
   }
 
   piscaPisca(){
+
+    // talvez se eu va usar ClearSetInterval()
+    // CRIA UMA FUNCAO INTERMEDIARIA q coloca um contador e as vezes que piscas a quantidade de vezes impar executa o trocar e se for par executa o destrocar e uma condicao para pararo setInterval
+    // use    setInterval()
+    // use    funcao intermediaria passando por parametro os grupos de blocos
+    // e dentro da funcao dois controles - um que para de executar o set Interval e outro para ficar alternando trocar destrocar 
     if( this.flag === 0){ // de 5 em 5 segundos é mudado a cor das paredes de preto para branco
       setTimeout( ()=>{ this.trocarChaoParede(this.todos_blocos_parede, this.todos_blocos_chao_espaco)} , 5000)
       //setTimeout( ()=>{ this.trocarChaoParede(this.chao , this.todos_blocos_parede)} , 5000)
@@ -573,6 +580,7 @@ class Tela2 extends Phaser.Scene {
 
   nao_passou_a_fase(){ // vai exibir o aviso
 
+    this.pontuacao = 0 // zera a pontuacao para n acumular pontos de fases jogadas anteriormente
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);
     //  top left, top right, bottom left, bottom right
     //  sea.setAlpha(0.5, 0.5, 0.5, 0.5);
@@ -597,6 +605,30 @@ class Tela2 extends Phaser.Scene {
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);  
 
     this.passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "passou_a_fase_")
+
+    // mesmas posicoes do botao voltar dentro do parabens passou()
+//    retornar_SCORE_obtido_NA_fase( numero_fase){
+
+
+    this.TelaNome_escrevendo = this.add.image((config.width/2) , (config.height/2) + 22, "TelaNome_escrevendo").setDepth(1).scaleX = 0.7;
+    this.text2 = this.add.text( (config.width/2) - 109 , (config.height/2) + 10 ).setTint(0x000000).setDepth(2)
+    this.text2.setFontSize(24)
+    //this.text2.setText(`${jogadores[this.indice_jogador_atual_global].nome} - ${this.retornar_SCORE_obtido_NA_fase(fase)}`)
+
+    if(fase === 1){
+
+      this.text2.setText(`${jogadores[this.indice_jogador_atual_global].nome} - ${jogadores[this.indice_jogador_atual_global].pontuacaoF1}`)
+
+    }else if(fase === 2){
+      
+      this.text2.setText(`${jogadores[this.indice_jogador_atual_global].nome} - ${jogadores[this.indice_jogador_atual_global].pontuacaoF2}`)
+
+    }else if(fase === 3){
+
+      this.text2.setText(`${jogadores[this.indice_jogador_atual_global].nome} - ${jogadores[this.indice_jogador_atual_global].pontuacao3}`)
+
+    }
+  
     this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 229 , (config.height/2) + 130, "Botao_Fase_voltar_" ).setInteractive().on('pointerdown', () =>
       {
           console.log('voltar para cena Tela2');
@@ -659,147 +691,281 @@ class Tela2 extends Phaser.Scene {
 
     let indice_jogador_atual = jogadores.findIndex((jjogador) => jjogador === elementoo[0])  // tenho que retornar apenas o próprio elemento , por isso n posso por so o nome da variavel
 
+    this.indice_jogador_atual_global = indice_jogador_atual
+
     console.log("--------------- index do jogador atual ----------------")
     console.log(indice_jogador_atual)
     console.log("-------------------------------------------------------")
 
     if(fase === 1) { 
-
+      // eu so vou atualizar pontuaçao se for maior que o score anterior e se tiver passado a quantidade de labirintos que a fase exije
 
       if(ponto > 0 && ponto <= 5 && nivel === 0){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto FACIL 
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0 // depois que atribuido a pontuacao acumulada zera para proxima vez que for jogar a fase de novo considere apenas os novos scores        
+          
+
+        }
 
       }else if(ponto > 5 && ponto <= 10 && nivel === 0){ 
         
-        jogadores[indice_jogador_atual].pontuacaoF1 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao         
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 10 && ponto <= 20 && nivel === 0){ 
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 20 && ponto <= 30 && nivel === 0){
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 30 && nivel === 0){ 
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }
 
 
       if(ponto > 0 && ponto <= 10 && nivel === 1){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto MEDIO
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 10 && ponto <= 20 && nivel === 1){ 
         
-        jogadores[indice_jogador_atual].pontuacaoF1 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 20 && ponto <= 30 && nivel === 1){ 
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 30 && ponto <= 40 && nivel === 1){
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 40 && nivel === 1){ 
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
         
       }
 
 
       if(ponto > 0 && ponto <= 23 && nivel === 2) { // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto DIFICIL 
         
-        jogadores[indice_jogador_atual].pontuacaoF1 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 23 && ponto <= 33 && nivel === 2) { 
         
-        jogadores[indice_jogador_atual].pontuacaoF1 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 33 && ponto <= 43 && nivel === 2) { 
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 43 && ponto <= 53 && nivel === 2) {
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 53 && nivel === 2) { 
 
-        jogadores[indice_jogador_atual].pontuacaoF1 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF1 ){
+          jogadores[indice_jogador_atual].pontuacaoF1 = this.pontuacao
+          this.pontuacao = 0
+        }
         
       }
     }else if(fase === 2){
 
       if(ponto > 0 && ponto <= 5 && nivel === 0){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto FACIL 
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 5 && ponto <= 10 && nivel === 0){ 
         
-        jogadores[indice_jogador_atual].pontuacaoF2 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 10 && ponto <= 20 && nivel === 0){ 
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 20 && ponto <= 30 && nivel === 0){
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 30 && nivel === 0){ 
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }
 
 
       if(ponto > 0 && ponto <= 10 && nivel === 1){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto MEDIO
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 10 && ponto <= 20 && nivel === 1){ 
         
-        jogadores[indice_jogador_atual].pontuacaoF2 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 20 && ponto <= 30 && nivel === 1){ 
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 30 && ponto <= 40 && nivel === 1){
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 40 && nivel === 1){ 
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
         
       }
 
 
       if(ponto > 0 && ponto <= 23 && nivel === 2) { // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto DIFICIL 
         
-        jogadores[indice_jogador_atual].pontuacaoF2 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 23 && ponto <= 33 && nivel === 2) { 
         
-        jogadores[indice_jogador_atual].pontuacaoF2 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
 
       }else if(ponto > 33 && ponto <= 43 && nivel === 2) { 
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 43 && ponto <= 53 && nivel === 2) {
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
 
       }else if(ponto > 53 && nivel === 2) { 
 
-        jogadores[indice_jogador_atual].pontuacaoF2 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF2 ){
+          jogadores[indice_jogador_atual].pontuacaoF2 = this.pontuacao
+          this.pontuacao = 0
+        }
         
       }
 
@@ -807,75 +973,142 @@ class Tela2 extends Phaser.Scene {
 
       if(ponto > 0 && ponto <= 5 && nivel === 0){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto FACIL 
 
-        jogadores[indice_jogador_atual].pontuacaoF3 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
   
       }else if(ponto > 5 && ponto <= 10 && nivel === 0){ 
         
-        jogadores[indice_jogador_atual].pontuacaoF3 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
   
       }else if(ponto > 10 && ponto <= 20 && nivel === 0){ 
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
   
       }else if(ponto > 20 && ponto <= 30 && nivel === 0){
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
   
       }else if(ponto > 30 && nivel === 0){ 
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
   
       }
   
   
       if(ponto > 0 && ponto <= 10 && nivel === 1){ // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto MEDIO
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
   
       }else if(ponto > 10 && ponto <= 20 && nivel === 1){ 
         
-        jogadores[indice_jogador_atual].pontuacaoF3 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
   
       }else if(ponto > 20 && ponto <= 30 && nivel === 1){ 
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
   
       }else if(ponto > 30 && ponto <= 40 && nivel === 1){
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
   
       }else if(ponto > 40 && nivel === 1){ 
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
         
       }
   
   
       if(ponto > 0 && ponto <= 23 && nivel === 2) { // tem que ser um numero maior que ZERO , menor ou igual a CINCO , estar no labirinto DIFICIL 
         
-        jogadores[indice_jogador_atual].pontuacaoF3 += 20
+        this.pontuacao += 20
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
   
       }else if(ponto > 23 && ponto <= 33 && nivel === 2) { 
         
-        jogadores[indice_jogador_atual].pontuacaoF3 += 10
+        this.pontuacao += 10
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao         
+          this.pontuacao = 0
+
+        }
   
       }else if(ponto > 33 && ponto <= 43 && nivel === 2) { 
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 5
+        this.pontuacao += 5
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
   
       }else if(ponto > 43 && ponto <= 53 && nivel === 2) {
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 3
+        this.pontuacao += 3
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
   
       }else if(ponto > 53 && nivel === 2) { 
   
-        jogadores[indice_jogador_atual].pontuacaoF3 += 1
+        this.pontuacao += 1
+        if(this.quantidade_labirintos_passado === fases[fase - 1].quantos_labirintos && this.pontuacao > jogadores[indice_jogador_atual].pontuacaoF3 ){
+          jogadores[indice_jogador_atual].pontuacaoF3 = this.pontuacao
+          this.pontuacao = 0
+        }
         
       }
     }
 
+    // usar uma variavel global para ser aquela que vai acumular os pontos
     console.log("-------------------------pontuacao-----------------------")
-    console.log(jogadores[indice_jogador_atual])
+    console.log(this.pontuacao)
     console.log("---------------------------------------------------------")
     
   }
