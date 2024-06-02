@@ -625,7 +625,7 @@ class Tela2 extends Phaser.Scene {
 
     }else if(fase === 3){
 
-      this.text2.setText(`${jogadores[this.indice_jogador_atual_global].nome} - ${jogadores[this.indice_jogador_atual_global].pontuacao3}`)
+      this.text2.setText(`${jogadores[this.indice_jogador_atual_global].nome} - ${jogadores[this.indice_jogador_atual_global].pontuacaoF3}`)
 
     }
   
