@@ -19,10 +19,13 @@
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-eu coloco estes atributos dentro da TelaPlacares.js ? 
-ou coloco no main.js ?
+eu coloco estes variaveis dentro da TelaPlacares.js ? sim
+ou coloco no main.js ? nao
 
-as informações criada por estas variáveis e funções vai gerar valores para aparecer apensa na tela TelaPlacares, por isso n precisa tar dentro do main
+as informações criada por estas variáveis e funções vai gerar valores para aparecer apenas na tela TelaPlacares, por isso n precisa tar dentro do main
+
+hanking tem que ser global
+
 
 devo usar o que dentro da variável GUARDADO apenas o valor maior score , ou obj completo e acessar apenas a propriedade GUARDADO.pontuacaoF1 ?
 
@@ -271,3 +274,5 @@ loop 1
 return GUARDADO             // 40
 
 --------------------------------------
+
+--------------------------------------------------- e na situação que dois jogadores tiver a mesma posicao ? 
