@@ -6,6 +6,13 @@ class TelaPlacares extends Phaser.Scene{
   procurar_jogadores_nao_estam_no_placar
   F1_1 // fase 1 posicao 1º lugar
   F1_2 // fase 1 posicao 2º lugar
+  F1_3 // fase 1 posicao 3º lugar
+  F2_1 // fase 2 posicao 1º lugar
+  F2_2 // fase 2 posicao 2º lugar
+  F2_3 // fase 2 posicao 3º lugar
+  F3_1 // fase 3 posicao 1º lugar
+  F3_2 // fase 3 posicao 2º lugar
+  F3_3 // fase 3 posicao 3º lugar
 
 
   hankingF1 = [
@@ -38,7 +45,6 @@ class TelaPlacares extends Phaser.Scene{
   create(){
     console.log("entrei na cena tela placares-------------------")
 
-    
     this.background = this.add.image(0,0,"back")
     this.background.setOrigin(0,0)
     this.background.setScale(1)
@@ -173,6 +179,66 @@ class TelaPlacares extends Phaser.Scene{
   
       }
 
+
+    }
+
+    if(this.alguem_jogou_fase(jogadores, 3)){ // somente vou fazer os testes de placar posicao 1,2,3 se algum jogador se ja tiver jogado F3
+      if(jogadores.length > 0){ 
+        // é para executar isto quando tiver 1,2,3,4,5,6,7,8 jogadores -------------jogadores.length === 2 | jogadores.length > 2
+
+        this.F3_1 = this.retornarObjetoMaiorPontuacao( jogadores, 3 )
+        console.log("1º lugar hanking fase 3")
+        console.log(jogadores)
+        console.log(this.F3_1)
+    
+        this.exibirF3_1 = this.add.image( ((config.width /3) * 2)  + 100 , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+        
+        this.text7 = this.add.text( ((config.width /3) * 2)- 20 , (config.height/2) + 35).setTint(0xffffff)
+        this.text7.setText(`${this.F3_1.nome} - ${this.F3_1.pontuacaoF3}`).setFontSize(30)
+  
+        if(jogadores.length >= 2 ){ // é para executar isto quando tiver 2 jogadores e quando tiver 3 jogadores -------------jogadores.length === 2 | jogadores.length > 2
+  
+          this.procurar_jogadores_nao_estam_no_placar =  this.retornar_PROXIMOS_objetos(jogadores, this.F3_1) // aqui eu retorno uma array com todos objs MENOS this.F3_1
+  
+          this.F3_2 = this.retornarObjetoMaiorPontuacao( this.procurar_jogadores_nao_estam_no_placar, 3 ) // so vou percorrer os objetos que ainda n estao no placar F3
+          console.log(" - 2º lugar hanking fase 3")
+          console.log(jogadores)
+          console.log(this.procurar_jogadores_nao_estam_no_placar)// vai exibir todos MENOS this.F3_1
+          console.log(this.F3_2)    // vai exibir somente a 2º posicao do hanking 
+      
+          this.exibirF3_2 = this.add.image( ( (config.width /3) * 2)  + 100 , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+          
+          this.text8 = this.add.text(((config.width /3) * 2) - 20 , (config.height/2) + 70).setTint(0xffffff)
+          this.text8.setText(`${this.F3_2.nome} - ${this.F3_2.pontuacaoF3}`).setFontSize(30)
+  
+        }
+  
+        if(jogadores.length >= 3){
+  //------------------------------------------------------------------------------------ tenho que pegar array n tem F3_1 para dela tirar F3_2
+          this.procurar_jogadores_nao_estam_no_placar =  this.retornar_PROXIMOS_objetos(this.procurar_jogadores_nao_estam_no_placar, this.F3_2) // aqui eu retorno uma array com todos objs MENOS this.F3_1
+  
+          this.F3_3 = this.retornarObjetoMaiorPontuacao( this.procurar_jogadores_nao_estam_no_placar, 3 ) // so vou percorrer os objetos que ainda n estao no placar FASE 3
+          console.log(" - 3º lugar hanking fase 3")
+          console.log(jogadores)
+          console.log(this.procurar_jogadores_nao_estam_no_placar)// vai exibir todos MENOS this.F3_1
+          console.log(this.F3_3)    // vai exibir somente a 3º posicao do hanking
+      
+          this.exibirF3_3 = this.add.image( ((config.width /3) * 2)  + 100 , (config.height /2) + 136  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+          
+          this.text9 = this.add.text(((config.width /3) * 2) - 20 , (config.height/2) + 105).setTint(0xffffff)
+          this.text9.setText(`${this.F3_3.nome} - ${this.F3_3.pontuacaoF3}`).setFontSize(30)
+  
+        }
+  
+  //-------------------------------------------------------------------HANKING DA FASE 2 ---------------------------------------------------------------------------------
+        //this.exibirF2_1 = this.add.image( (config.width /2)  , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).scaleX = 0.7
+        //      (config.height /2) + 44 para cada posicao do hanking     [ proxima + 44 + 6]
+        //this.exibirF2_2 = this.add.image( (config.width /2)  , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+  
+  //-------------------------------------------------------------------HANKING DA FASE 3 ---------------------------------------------------------------------------------
+          //  this.exibirF3_1 = this.add.image( ((config.width /3) * 2)  + 100 , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).scaleX = 0.7
+  
+      }
 
     }
   }
