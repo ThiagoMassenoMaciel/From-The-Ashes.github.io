@@ -57,70 +57,83 @@ class TelaPlacares extends Phaser.Scene{
     
     //setTimeout( ()=>{this.scene.start("playGameEasy")}, 5000)
 
+// so vai exibir placar da fase 1 se algum jogador ja tiver jogado      alguem_jogou_fase1
+    if(this.alguem_jogou_fase1(jogadores)){ // somente vou fazer os testes de posicao 1,2,3 se algum jogador se ja tiver jogado F1
+      if(jogadores.length > 0){
 
-    if(jogadores.length > 0){
-
-      this.F1_1 = this.retornarObjetoMaiorPontuacaoF1( jogadores )
-      console.log("1º lugar hanking fase 1")
-      console.log(jogadores)
-      console.log(this.F1_1)
+        this.F1_1 = this.retornarObjetoMaiorPontuacaoF1( jogadores )
+        console.log("1º lugar hanking fase 1")
+        console.log(jogadores)
+        console.log(this.F1_1)
+    
+        this.exibirF1_1 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+        
+        this.text1 = this.add.text( (config.width/3) - 230 , (config.height/2) + 35).setTint(0xffffff)
+        this.text1.setText(`${this.F1_1.nome} - ${this.F1_1.pontuacaoF1}`).setFontSize(30)
   
-      this.exibirF1_1 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+        if(jogadores.length >= 2 ){ // é para executar isto quando tiver 2 jogadores e quando tiver 3 jogadores -------------jogadores.length === 2 | jogadores.length > 2
+  
+          this.procurar_jogadores_nao_estam_no_placar =  this.retornar_PROXIMOS_objetos(jogadores, this.F1_1) // aqui eu retorno uma array com todos objs MENOS this.F1_1
+  
+          this.F1_2 = this.retornarObjetoMaiorPontuacaoF1( this.procurar_jogadores_nao_estam_no_placar ) // so vou percorrer os objetos que ainda n estao no placar
+          console.log(" - 2º lugar hanking fase 1")
+          console.log(jogadores)
+          console.log(this.procurar_jogadores_nao_estam_no_placar)// vai exibir todos MENOS this.F1_1
+          console.log(this.F1_2)    // vai exibir somente a 2º posicao do hanking 
       
-      this.text1 = this.add.text( (config.width/3) - 230 , (config.height/2) + 35).setTint(0xffffff)
-      this.text1.setText(`${this.F1_1.nome} - ${this.F1_1.pontuacaoF1}`).setFontSize(30)
-
-
+          this.exibirF1_2 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+          
+          this.text2 = this.add.text( (config.width/3) - 230 , (config.height/2) + 70).setTint(0xffffff)
+          this.text2.setText(`${this.F1_2.nome} - ${this.F1_2.pontuacaoF1}`).setFontSize(30)
   
-
-      if(jogadores.length >= 2 ){ // é para executar isto quando tiver 2 jogadores e quando tiver 3 jogadores -------------jogadores.length === 2 | jogadores.length > 2
-
-        this.procurar_jogadores_nao_estam_no_placar =  this.retornar_PROXIMOS_objetos(jogadores, this.F1_1) // aqui eu retorno uma array com todos objs MENOS this.F1_1
-
-        this.F1_2 = this.retornarObjetoMaiorPontuacaoF1( this.procurar_jogadores_nao_estam_no_placar ) // so vou percorrer os objetos que ainda n estao no placar
-        console.log(" - 2º lugar hanking fase 1")
-        console.log(jogadores)
-        console.log(this.procurar_jogadores_nao_estam_no_placar)// vai exibir todos MENOS this.F1_1
-        console.log(this.F1_2)    // vai exibir somente a 2º posicao do hanking 
-    
-        this.exibirF1_2 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
-        
-        this.text2 = this.add.text( (config.width/3) - 230 , (config.height/2) + 70).setTint(0xffffff)
-        this.text2.setText(`${this.F1_2.nome} - ${this.F1_2.pontuacaoF1}`).setFontSize(30)
-
+        }
+  
+        if(jogadores.length >= 3){
+  //------------------------------------------------------------------------------------ tenho que pegar array n tem F1_1 para dela tirar F1_2
+          this.procurar_jogadores_nao_estam_no_placar =  this.retornar_PROXIMOS_objetos(this.procurar_jogadores_nao_estam_no_placar, this.F1_2) // aqui eu retorno uma array com todos objs MENOS this.F1_1
+  
+          this.F1_3 = this.retornarObjetoMaiorPontuacaoF1( this.procurar_jogadores_nao_estam_no_placar ) // so vou percorrer os objetos que ainda n estao no placar
+          console.log(" - 3º lugar hanking fase 1")
+          console.log(jogadores)
+          console.log(this.procurar_jogadores_nao_estam_no_placar)// vai exibir todos MENOS this.F1_1
+          console.log(this.F1_3)    // vai exibir somente a 3º posicao do hanking
+      
+          this.exibirF1_3 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 136  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+          
+          this.text2 = this.add.text( (config.width/3) - 230 , (config.height/2) + 105).setTint(0xffffff)
+          this.text2.setText(`${this.F1_3.nome} - ${this.F1_3.pontuacaoF1}`).setFontSize(30)
+  
+        }
+  
+  //-------------------------------------------------------------------HANKING DA FASE 2 ---------------------------------------------------------------------------------
+        //this.exibirF2_1 = this.add.image( (config.width /2)  , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).scaleX = 0.7
+        //      (config.height /2) + 44 para cada posicao do hanking     [ proxima + 44 + 6]
+        //this.exibirF2_2 = this.add.image( (config.width /2)  , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+  
+  //-------------------------------------------------------------------HANKING DA FASE 3 ---------------------------------------------------------------------------------
+          //  this.exibirF3_1 = this.add.image( ((config.width /3) * 2)  + 100 , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).scaleX = 0.7
+  
       }
-
-      if(jogadores.length >= 3){
-//------------------------------------------------------------------------------------ tenho que pegar array n tem F1_1 para dela tirar F1_2
-        this.procurar_jogadores_nao_estam_no_placar =  this.retornar_PROXIMOS_objetos(this.procurar_jogadores_nao_estam_no_placar, this.F1_2) // aqui eu retorno uma array com todos objs MENOS this.F1_1
-
-        this.F1_3 = this.retornarObjetoMaiorPontuacaoF1( this.procurar_jogadores_nao_estam_no_placar ) // so vou percorrer os objetos que ainda n estao no placar
-        console.log(" - 3º lugar hanking fase 1")
-        console.log(jogadores)
-        console.log(this.procurar_jogadores_nao_estam_no_placar)// vai exibir todos MENOS this.F1_1
-        console.log(this.F1_3)    // vai exibir somente a 3º posicao do hanking
-    
-        this.exibirF1_3 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 136  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
-        
-        this.text2 = this.add.text( (config.width/3) - 230 , (config.height/2) + 105).setTint(0xffffff)
-        this.text2.setText(`${this.F1_3.nome} - ${this.F1_3.pontuacaoF1}`).setFontSize(30)
-
-      }
-
-//-------------------------------------------------------------------HANKING DA FASE 2 ---------------------------------------------------------------------------------
-      //this.exibirF2_1 = this.add.image( (config.width /2)  , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).scaleX = 0.7
-      //      (config.height /2) + 44 para cada posicao do hanking     [ proxima + 44 + 6]
-      //this.exibirF2_2 = this.add.image( (config.width /2)  , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
-
-//-------------------------------------------------------------------HANKING DA FASE 3 ---------------------------------------------------------------------------------
-        //  this.exibirF3_1 = this.add.image( ((config.width /3) * 2)  + 100 , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).scaleX = 0.7
-
     }
+  }
+
+  alguem_jogou_fase1( array__jogadores){
+    let flag = false 
+    
+    array__jogadores.forEach(element => {
+      // eu pergunto cado um dos elementos dentro da array dos jogadores e pergunto se algum tem pontuacao > 0 
+      if(element.pontuacaoF1 > 0 ){
+        flag = true 
+      }
+    
+    });
+
+    return flag
   }
 
   retornarObjetoMaiorPontuacaoF1( array ){
    console.log("entrei na f retornarObjetoMaiorPontuacaoF1() ")
-   let  GUARDADO = { PontuacaoF1: 0} // tem o objeto com o maior ponto
+   let  GUARDADO = { pontuacaoF1: 0} // tem o objeto com o maior ponto
 
     if(array.length > 1){
       console.log("-array tem mais de 1 elemento")
@@ -129,31 +142,33 @@ class TelaPlacares extends Phaser.Scene{
       for(let i = 0 ; i < (array.length - 1) ; i++){
         console.log("--percorrer cada elemento")
         console.log(i)
-        if(array[i].pontuacaoF1 > array[i+1].pontuacaoF1){ // atual é maior que próximo ?
-          if(array[i].pontuacaoF1 > GUARDADO.PontuacaoF1){ // atual tem pontos maior que score anterior ?
+        let sucessorr = i+1
+//        console.log(array[sucessorr])
+        if(array[i].pontuacaoF1 > array[sucessorr].pontuacaoF1){ // atual é maior que próximo ?
+          if(array[i].pontuacaoF1 > GUARDADO.pontuacaoF1){ // atual tem pontos maior que score anterior ?
             GUARDADO = array[i]                            // atualizado novo score > anterior
 
             console.log("---achado obj com maior ponto")
             console.log(GUARDADO)
-            console.log(array[i])
+//            console.log(array[i])
           }
-        }else if( array[i].pontuacaoF1 < array[i+1].pontuacaoF1 ){ // atual é menor que próx ?
-          if(array[i+1].pontuacaoF1 > GUARDADO.PontuacaoF1){ // prox tem pontos maior que score anterior ?
-            GUARDADO = array[i+1]                            // atualizado novo score > anterior
+        }else if( array[i].pontuacaoF1 < array[sucessorr].pontuacaoF1 ){ // atual é menor que próx ?
+          if(array[sucessorr].pontuacaoF1 > GUARDADO.pontuacaoF1){ // prox tem pontos maior que score anterior ?
+            GUARDADO = array[sucessorr]                            // atualizado novo score > anterior
 
             console.log("----achado obj com maior ponto")
             console.log(GUARDADO)
-            console.log(array[i+1])
+//            console.log(array[sucessorr])
           }
-        }else if( array[i].pontuacaoF1 === array[i+1].pontuacaoF1 ){
+        }else if( array[i].pontuacaoF1 === array[sucessorr].pontuacaoF1 ){
           // se os pontos do antecessor for igual do sucessor, considerar aquele com nome de ordem alfabetica maior
-          if(  this.ordemAlfabetica( array[i] , array[i+1] )  ){
+          if(  this.ordemAlfabetica( array[i] , array[sucessorr] )  ){
 
             GUARDADO = array[i]
       
           } else {
           
-            GUARDADO = array[i+1]
+            GUARDADO = array[sucessorr]
           
           }
 

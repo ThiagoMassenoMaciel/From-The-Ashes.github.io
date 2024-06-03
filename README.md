@@ -267,3 +267,4 @@ npm run build
 ### 1 jun  - 4h03'      11.4 montar toda logica da pontuação - bug 11.4.3 resolvido, mas o resto dos outros bugs continua
 ### 2 jun  - 1h29'      11.5 Tela Placar - estrutura lógica de hanking para fase 1 
 ### 2 jun  - 6h50'      11.5 Tela Placar - hanking para fase 1 completa
+### 3 jun  - 1h34'      11.5 Tela Placar - hanking para fase 2 comecando - + bug 11.5.6 resolvido
