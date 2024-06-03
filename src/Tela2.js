@@ -88,9 +88,9 @@ class Tela2 extends Phaser.Scene {
   update() {
 
     this.graphics.clear();
-    this.drawClock( 1170, 100, this.timerEvent);
+    this.drawClock( config.width/2 , config.height - 70, this.timerEvent);
 
-    this.text.setText(this.timerEvent.getElapsedSeconds().toString().substr(0, 2)); //
+    //this.text.setText(this.timerEvent.getElapsedSeconds().toString().substr(0, 2)); //
 
     if(this.quantidade_labirintos_passado < fases[fase -1].quantos_labirintos & this.timerEvent.elapsed/1000 === (fases[fase -1].tempo_limite/1000)){
       // tem que passar em 2 labirintos antes de 30 segundos fase 1

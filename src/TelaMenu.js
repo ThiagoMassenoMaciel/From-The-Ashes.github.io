@@ -19,6 +19,8 @@ class TelaMenu extends Phaser.Scene{
     this.tutorialGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela do tutorial');
+        setTimeout( ()=>{this.scene.start("TelaTutorial")}, 100)
+
     });
     
     this.iniciarGame = this.add.image( config.width / 3 + 60 , config.height /2 + 80, "iniciar")
@@ -27,7 +29,7 @@ class TelaMenu extends Phaser.Scene{
     this.iniciarGame.setInteractive().on('pointerdown', () =>
     {
         console.log('iniciar jogo');
-        setTimeout( ()=>{this.scene.start("TelaFases")}, 500)
+        setTimeout( ()=>{this.scene.start("TelaFases")}, 100)
 
     });
 
@@ -37,7 +39,7 @@ class TelaMenu extends Phaser.Scene{
     this.placaresGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela dos placares');
-        setTimeout( ()=>{this.scene.start("TelaPlacares")}, 500)
+        setTimeout( ()=>{this.scene.start("TelaPlacares")}, 100)
     });
     
     this.creditosGame = this.add.image( config.width / 3 + 60 , config.height /2 + 240, "creditos")
@@ -46,10 +48,10 @@ class TelaMenu extends Phaser.Scene{
     this.creditosGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela dos créditos e redes sociais');
-        setTimeout( ()=>{this.scene.start("TelaCreditos")}, 500)
+        setTimeout( ()=>{this.scene.start("TelaCreditos")}, 100)
     });
     
-    //setTimeout( ()=>{this.scene.start("playGameEasy")}, 5000)
+    //setTimeout( ()=>{this.scene.start("playGameEasy")}, 1000)
 
   }
 }

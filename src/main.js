@@ -3,7 +3,7 @@ var config ={
   width : 1364,
   height: 764,
   backgroundColor: 0x000000,
-  scene: [  Tela1, Tela2, TelaMenu,TelaFases,TelaPlacares, TelaCreditos, AvisoFase3 ,AvisoFase2, FinalizouJogo, PerguntarNome],
+  scene: [  Tela1, Tela2, TelaMenu,  TelaTutorial, TelaFases ,TelaPlacares, TelaCreditos, AvisoFase3 ,AvisoFase2, FinalizouJogo, PerguntarNome],
   physics : {  
     default: "arcade", 
     arcade: {  
@@ -28,11 +28,11 @@ let jogadorAtual = ""
 
 const fases = 
 [
-  { tempo_limite : 35000, quantos_labirintos : 2 }
+  { tempo_limite : 40000, quantos_labirintos : 2 }
   ,
   { tempo_limite : 50000, quantos_labirintos : 3}
   ,
-  { tempo_limite : 65000, quantos_labirintos : 4}
+  { tempo_limite : 70000, quantos_labirintos : 4}
 ]
 
 let fase = 0

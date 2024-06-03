@@ -10,7 +10,7 @@ class TelaCreditos extends Phaser.Scene{
     this.background.setOrigin(0,0)
     this.background.setScale(1)
 
-    this.titleGame = this.add.image( config.width/2 ,50, "title")
+    this.titleGame = this.add.image( config.width/2 ,120, "title")
     this.titleGame.setScale(0.2)
 
     this.voltar = this.add.image( config.width /2 , config.height - 100 , "Botao_Fase_voltar")
