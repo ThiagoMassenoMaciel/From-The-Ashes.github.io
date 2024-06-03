@@ -1,0 +1,2 @@
+testando fase 1 
+jogadores = [ { nome: "Maria", pontuacaoF1: 25, pontuacaoF2: 0, pontuacaoF3: 0 },{ nome: "Mariana", pontuacaoF1: 30, pontuacaoF2: 0, pontuacaoF3: 0} , { nome: "Marilia", pontuacaoF1: 40, pontuacaoF2: 0, pontuacaoF3: 0 } ]

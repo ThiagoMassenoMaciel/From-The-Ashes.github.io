@@ -23,13 +23,13 @@ Vai ter 3 fases para jogar. E cada fase vai ter uma quantidade de labirintos par
 # Fases
 
 ## 1 
-Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite menor que 30 segundos
+Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite menor que 35 segundos
 
 ## 2 
-Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 3 labirintos com o tempo limite menor que  45 segundos
+Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 3 labirintos com o tempo limite menor que  50 segundos
 
 ## 3 
-Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite menor que 1 minuto
+Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite menor que 65 segundos
 
 
 # Esquema de fases
@@ -265,4 +265,5 @@ npm run build
 ### 1 jun  - 2h06'      11.4 montar toda logica da pontuação - +2 bugs  11.4.0 , 11.4.1
 ### 1 jun  - 1h'        11.4 montar toda logica da pontuação - bug 11.4.4 resolvido, mas o resto dos bugs continua
 ### 1 jun  - 4h03'      11.4 montar toda logica da pontuação - bug 11.4.3 resolvido, mas o resto dos outros bugs continua
-### 2 jun  - 1h29'      11.5 Tela Placar - estrutura lógica de hanking para fase 1
+### 2 jun  - 1h29'      11.5 Tela Placar - estrutura lógica de hanking para fase 1 
+### 2 jun  - 6h50'      11.5 Tela Placar - hanking para fase 1 completa

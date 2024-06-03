@@ -1,6 +1,32 @@
+||||||||||||||||||||||||||||||||||||||||||||||| Logica para colocar numa lista ordenado hanking|||||||||||||||||||||||||||||||||||||||||||||||||||
+1.pegar o objeto do jogador com maior pontuação, e colocar [nome,pontuacaoF1] dentro do primeiro elemento da lista hanking
+2.pegar o objeto do jogador com maior pontuação, e colocar [nome,pontuacaoF2] dentro do segundo elemento da lista hanking
+3.pegar o objeto do jogador com maior pontuação, e colocar [nome,pontuacaoF3] dentro do terceiro elemento da lista hanking
+
+
+1. retornarObjetoMaiorPontuacaoF1( jogadores )
+   extrair informações [nome, pontuacaoF1] para dentro da propriedade do primeiro elemento da lista hanking
+
+2. criar uma copia da array jogadores para dentro PROXIMASposicoesNOhanking, e da cópia excluir o objeto que retornou para step 1.
+   retornarObjetoMaiorPontuacaoF2(  PROXIMASposicoesNOhanking  ) , aqui estou procurando o 2 maior , já que o 1 maior já foi retirado da array.
+   extrair informações [nome, pontuacaoF2] para dentro da propriedade do primeiro elemento da lista hanking
+
+3. excluir o objeto, dentro da array copia PROXIMASposicoesNOhanking, que retornou para step 2.
+   retornarObjetoMaiorPontuacaoF3(  PROXIMASposicoesNOhanking  )
+   extrair informações [nome, pontuacaoF3] para dentro da propriedade do primeiro elemento da lista hanking
+
+
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+eu coloco estes atributos dentro da TelaPlacares.js ? 
+ou coloco no main.js ?
+
+as informações criada por estas variáveis e funções vai gerar valores para aparecer apensa na tela TelaPlacares, por isso n precisa tar dentro do main
+
 devo usar o que dentro da variável GUARDADO apenas o valor maior score , ou obj completo e acessar apenas a propriedade GUARDADO.pontuacaoF1 ?
 
-criar uma estrutura array com 3 elementos no maximo
+criar uma estrutura array hanking com 3 elementos no maximo
 	cada elemento é um objeto e vai ter duas propriedades
 		nome:
 		pontuacao:

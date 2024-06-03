@@ -28,11 +28,11 @@ let jogadorAtual = ""
 
 const fases = 
 [
-  { tempo_limite : 30000, quantos_labirintos : 2 }
+  { tempo_limite : 35000, quantos_labirintos : 2 }
   ,
-  { tempo_limite : 45000, quantos_labirintos : 3}
+  { tempo_limite : 50000, quantos_labirintos : 3}
   ,
-  { tempo_limite : 60000, quantos_labirintos : 4}
+  { tempo_limite : 65000, quantos_labirintos : 4}
 ]
 
 let fase = 0
