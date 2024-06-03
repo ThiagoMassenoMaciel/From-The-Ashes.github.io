@@ -20,6 +20,7 @@ class TelaCreditos extends Phaser.Scene{
         setTimeout( ()=>{this.scene.start("menu")}, 200)
     });
     
+    this.TelaCreditos = this.add.image( config.width /2 , config.height/2 , "TelaCreditos")
     //setTimeout( ()=>{this.scene.start("playGameEasy")}, 5000)
 
   }

@@ -269,3 +269,4 @@ npm run build
 ### 2 jun  - 6h50'      11.5 Tela Placar - hanking para fase 1 completa
 ### 3 jun  - 2h57'      11.5 Tela Placar - hanking para fase 2 completo - + bug 11.5.6 resolvido
 ### 3 jun  - 1h15'      11.5 Tela Placar - hanking para fase 3 completo + bug 11.5.7 
+### 3 jun  - 40'        11.2 Tela Creditos
