@@ -4,17 +4,17 @@ class Tela1 extends Phaser.Scene{
   }
 
   preload(){
-    this.load.image("chao", "../../assents/bloco-espaco-40px.png")
-    this.load.image("pareide", "../../assents/bloco-pareide-40px.png")
-    this.load.image("tempo", "../../assents/cronometro.png")
-    this.load.image("botao", "../../assents/voltar.png")
+    this.load.image("chao", "../assents/bloco-espaco-40px.png")
+    this.load.image("pareide", "../assents/bloco-pareide-40px.png")
+    this.load.image("tempo", "../assents/cronometro.png")
+    this.load.image("botao", "../assents/voltar.png")
 
-    this.load.image("back", "../../assents/background_1440px-1024px.png")
-    this.load.image("title", "../../assents/logo_preta_1.png")
-    this.load.image("tutorial", "../../assents/Tutorial.png")
-    this.load.image("iniciar", "../../assents/Iniciar.png")
-    this.load.image("placares", "../../assents/Placares.png")
-    this.load.image("creditos", "../../assents/creditos.png")
+    this.load.image("back", "../assents/background_1440px-1024px.png")
+    this.load.image("title", "../assents/logo_preta_1.png")
+    this.load.image("tutorial", "../assents/Tutorial.png")
+    this.load.image("iniciar", "../assents/Iniciar.png")
+    this.load.image("placares", "../assents/Placares.png")
+    this.load.image("creditos", "../assents/creditos.png")
 
    // Botao_Fase_verPlacar
     //Botao_Fase_proximo
@@ -32,13 +32,15 @@ class Tela1 extends Phaser.Scene{
     this.load.image("Botao_Fase_voltar", "../assents/Botao_Fase_voltar.png")
     this.load.image("Botao_Fase_repetir", "../assents/Botao_Fase_repetir.png")
 
-    this.load.image("borda_left", "../../assents/borda_l.png")
-    this.load.image("borda_right", "../../assents/borda_r.png")
-    this.load.image("borda_bottom", "../../assents/borda_b.png")
+    this.load.image("borda_left", "../assents/borda_l.png")
+    this.load.image("borda_right", "../assents/borda_r.png")
+    this.load.image("borda_bottom", "../assents/borda_b.png")
 
-    this.load.spritesheet("saidaa", "../../assents/teste.png", { frameWidth: 398, frameHeight: 398 }); // escolhi este 
-    this.load.spritesheet("jogador", "../../assents/jogador.png", { frameWidth: 398, frameHeight: 398 });
-    this.load.spritesheet("frame1", "../../assents/Frame1.png", { frameWidth: 40, frameHeight: 40 });
+//    this.load.spritesheet("saidaa", "../../assents/teste.png", { frameWidth: 398, frameHeight: 398 }); // escolhi este 
+  //  this.load.spritesheet("jogador", "../../assents/jogador.png", { frameWidth: 398, frameHeight: 398 });
+    this.load.spritesheet("jogador", "../assents/jogador3.png", { frameWidth: 298, frameHeight: 298 }); // escolhi este  reduzido 100 por 100 
+    this.load.spritesheet("saidaa", "../assents/saida2.png", { frameWidth: 298, frameHeight: 298 });
+    this.load.spritesheet("frame1", "../assents/Frame1.png", { frameWidth: 40, frameHeight: 40 });
     
     this.load.spritesheet("saiuDoLabirinto", "../../assents/saiuDoLabirinto.png", { frameWidth: 40, frameHeight: 40 })
 
