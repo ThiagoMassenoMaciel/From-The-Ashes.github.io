@@ -60,6 +60,23 @@ class TelaPlacares extends Phaser.Scene{
     });
 
     this.Placar_das_fases = this.add.image( config.width /2 , config.height/2 , "Placar_das_fases")
+
+    this.Placar_das_fases = this.add.image( config.width /2 , config.height/2 , "Placar_das_fases")
+    // tampar nomes jogadores, pois agora tem 0 jogadores, dentro do ranking fases 1,2,3
+    this.exibirF1_1 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+    this.exibirF1_1 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+    this.exibirF1_1 = this.add.image( (config.width /3)  - 100 , (config.height /2) + 136  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+
+
+    this.exibirF2_1 = this.add.image( (config.width /2) , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+    this.exibirF2_1 = this.add.image( (config.width /2) , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+    this.exibirF2_1 = this.add.image( (config.width /2) , (config.height /2) + 136  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+    
+    
+    this.exibirF3_1 = this.add.image( ((config.width /3) * 2)  + 100 , (config.height /2) + 44  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+    this.exibirF3_1 = this.add.image( ((config.width /3) * 2)  + 100 , (config.height /2) + 90  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7    
+    this.exibirF3_1 = this.add.image( ((config.width /3) * 2)  + 100 , (config.height /2) + 136  , "TelaNome_escrevendo").setScale(0.8).setTint(0x000000).scaleX = 0.7
+
     
     //setTimeout( ()=>{this.scene.start("playGameEasy")}, 5000)
 

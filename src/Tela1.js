@@ -20,6 +20,7 @@ class Tela1 extends Phaser.Scene{
     //Botao_Fase_proximo
     //passou_fase_
     // este é o aviso quando a pessoa passar de fase
+
     this.load.image("passou_a_fase_", "../assents/passou_fase_.png")
     this.load.image("Botao_Fase_voltar_", "../assents/Botao_Fase_voltar_.png")
     this.load.image("Botao_Fase_verPlacar", "../assents/Botao_Fase_verPlacar.png")
