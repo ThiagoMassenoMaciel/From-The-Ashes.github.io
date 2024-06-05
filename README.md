@@ -38,6 +38,7 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 | Descriçao 1   | Descrição 2 |
 | ------------- | ----------- |
 | fundo musical | a musica de fundo vai ser diferente em cada fase |
+
 | Fases | Descrição |
 | ----- | ----------- |
 | 1     | A musica de fundo vai ser da banda Crypta - rise from the ashes |
