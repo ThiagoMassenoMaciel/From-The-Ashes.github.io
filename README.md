@@ -23,13 +23,13 @@ Vai ter 3 fases para jogar. E cada fase vai ter uma quantidade de labirintos par
 # Fases
 
 ## 1 
-Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite menor que 35 segundos
+Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite menor que 40 segundos
 
 ## 2 
 Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 3 labirintos com o tempo limite menor que  50 segundos
 
 ## 3 
-Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite menor que 65 segundos
+Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite menor que 70 segundos
 
 
 # Esquema de fases
