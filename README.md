@@ -23,13 +23,13 @@ Vai ter 3 fases para jogar. E cada fase vai ter uma quantidade de labirintos par
 # Fases
 
 ## 1 
-Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite menor que 35 segundos
+Será 2 labirintos .Cada labirintos vai ter o modo de jogo escolhido aleatoriamente: fácil , médio ou dificil e o jogador deve concluir os labirintos com o tempo limite menor que 40 segundos
 
 ## 2 
 Serão 3 labirintos . E cada labirinto vai ter com o modo de jogo escolhido aleatoriamente e o jogador deve concluir os 3 labirintos com o tempo limite menor que  50 segundos
 
 ## 3 
-Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite menor que 65 segundos
+Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve concluir as 4 labirintos com o tempo limite menor que 70 segundos
 
 
 # Esquema de fases
@@ -38,13 +38,12 @@ Serão 4 labirintos com o modo de jogo escolhido aleatoriamente .O jogador deve 
 | Descriçao 1   | Descrição 2 |
 | ------------- | ----------- |
 | fundo musical | a musica de fundo vai ser diferente em cada fase |
-| teclado       | Cada passo que o jogador faz : < , ^ , >, v corresponde a uma nota de um instrumento e em cada fase diferente vai ser um instrumento diferente |
 
 | Fases | Descrição |
 | ----- | ----------- |
-| 1     | A musica de fundo vai ser da banda Crypta - rise from the ashes e o instrumento vai ser o som de uma guitarra|
-| 2     |A musica de fundo vai ser da banda Lorna Shore - from the abyses e o instrumento vai ser o som de um baixo|
-| 3     | A musica de fundo vai ser da banda Suicid Silence - Unswered e o instrumento vai ser o som de bateria |
+| 1     | A musica de fundo vai ser da banda Crypta - rise from the ashes |
+| 2     |A musica de fundo vai ser da banda Lorna Shore - from the abyses |
+| 3     | A musica de fundo vai ser da banda Suicid Silence - Unswered |
 
 
 #### Modo de jogo
@@ -147,31 +146,11 @@ vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado 
 ## Protótipos de Tela
 ![PROTOTIPOtelas drawio](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/7df5aa45-a900-40af-b370-a39c3962b6bf)
 
-## Instalação
-----------------pedaço a fazer 
-Valide se tem [Node.js](https://nodejs.org) instalado.
-Clone esse repositório e entre na pasta
-```
-npm i
-```
-### Rode o development server
-```
-npm start
-```
-
-Para visualizar localmente: http://localhost:8080/.
-
-### Crie uma production build
-
-```
-npm run build
-```
-
 ## Tecnologias e Ferramentas utilizadas
 1. Phaser 3 - GameEngine;
 2. JavaScript - Linguagem de programação fundamental;
 
-
+# Cronograma de atividades feitas
 
 ### 27 fev - 70' editando readme 
 ### 28 fev - 50' editando readme e escolhendo as musicas
@@ -270,6 +249,9 @@ npm run build
 ### 3 jun  - 2h57'      11.5 Tela Placar - hanking para fase 2 completo - + bug 11.5.6 resolvido
 ### 3 jun  - 1h15'      11.5 Tela Placar - hanking para fase 3 completo + bug 11.5.7 
 ### 3 jun  - 40'        11.2 Tela Creditos
+<<<<<<< HEAD
 ### 4 jun  - 3h'        Ajeitando outras coisas
 ### 5 jun  - 3h'        Adicionar musicas
 
+=======
+>>>>>>> a958f131952ec7a7f08fdc81444b1b5c2330c9a2
