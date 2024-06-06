@@ -5,6 +5,11 @@ class TelaTutorial extends Phaser.Scene{
   
   
     create(){
+
+            
+        const musicOTHER = this.sound.add("outrasTelas");
+        musicOTHER.play()
+        
         this.background = this.add.image(0,0,"back")
         this.background.setOrigin(0,0)
         this.background.setScale(1)

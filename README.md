@@ -255,3 +255,4 @@ vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado 
 
 =======
 >>>>>>> a958f131952ec7a7f08fdc81444b1b5c2330c9a2
+### 6 jun  - 49'        Adicionar musica + bug som tela n passou fica estranho

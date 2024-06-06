@@ -7,6 +7,9 @@ class TelaFases extends Phaser.Scene{
     console.log("entrei na cena TelaFases-------------------")
     const music = this.sound.add("click");
 
+    const musicOTHER = this.sound.add("outrasTelas");
+    musicOTHER.play()
+
     this.mudar_nome = this.add.image( config.width /2 , 100, "mudar_nome").setDepth(2)
     this.mudar_nome.setInteractive().on('pointerdown', () => // quando clicado no botao trocar nome vai aparecer cena para novo input e vai bloquear as antigas fases passadas pelo jogador antes
     {

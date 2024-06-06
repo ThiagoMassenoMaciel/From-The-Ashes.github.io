@@ -5,6 +5,10 @@ class TelaCreditos extends Phaser.Scene{
 
   create(){
     const music = this.sound.add("click");
+    
+    const musicOTHER = this.sound.add("outrasTelas");
+    musicOTHER.play()
+    
     console.log("entrei na cena tela creditos-------------------")
 
     this.background = this.add.image(0,0,"back")

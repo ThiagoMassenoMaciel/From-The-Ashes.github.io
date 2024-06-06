@@ -8,6 +8,10 @@ class TelaMenu extends Phaser.Scene{
     const music = this.sound.add("click");
     const intro = this.sound.add("intro");
 
+    
+    const musicOTHER = this.sound.add("outrasTelas");
+    musicOTHER.play()
+
     intro.play()
 
     this.background = this.add.image(0,0,"back")
