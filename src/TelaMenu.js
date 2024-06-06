@@ -4,10 +4,10 @@ class TelaMenu extends Phaser.Scene{
   }
 
   create(){
-
+    
     const music = this.sound.add("click");
-
     const intro = this.sound.add("intro");
+
     intro.play()
 
     this.background = this.add.image(0,0,"back")
@@ -24,6 +24,7 @@ class TelaMenu extends Phaser.Scene{
     this.tutorialGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela do tutorial');
+        intro.stop()
         music.play();
         setTimeout( ()=>{this.scene.start("TelaTutorial")}, 100)
 
@@ -35,6 +36,7 @@ class TelaMenu extends Phaser.Scene{
     this.iniciarGame.setInteractive().on('pointerdown', () =>
     {
         console.log('iniciar jogo');
+        intro.stop()
         music.play();
         setTimeout( ()=>{this.scene.start("TelaFases")}, 100)
 
@@ -46,6 +48,7 @@ class TelaMenu extends Phaser.Scene{
     this.placaresGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela dos placares');
+        intro.stop()
         music.play();
         setTimeout( ()=>{this.scene.start("TelaPlacares")}, 100)
     });
@@ -56,6 +59,7 @@ class TelaMenu extends Phaser.Scene{
     this.creditosGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela dos créditos e redes sociais');
+        intro.stop()
         music.play();
         setTimeout( ()=>{this.scene.start("TelaCreditos")}, 100)
     });

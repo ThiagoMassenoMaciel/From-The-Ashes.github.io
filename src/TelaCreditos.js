@@ -4,6 +4,7 @@ class TelaCreditos extends Phaser.Scene{
   }
 
   create(){
+    const music = this.sound.add("click");
     console.log("entrei na cena tela creditos-------------------")
 
     this.background = this.add.image(0,0,"back")
@@ -17,6 +18,8 @@ class TelaCreditos extends Phaser.Scene{
     this.voltar.setInteractive().on('pointerdown', () =>
     {
         console.log('voltar para tela menu');
+        music.play()
+
         setTimeout( ()=>{this.scene.start("menu")}, 200)
     });
     

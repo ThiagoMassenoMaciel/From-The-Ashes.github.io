@@ -5,12 +5,14 @@ class PerguntarNome extends Phaser.Scene{
   }
 
   create(){ 
-
+    const music = this.sound.add("click");
+    
     console.log("entrei na funcao perguntarNome()")
     //this.background_preto = this.add.image( config.width /2 , config.height/2, "background_preto")
     this.TelaNome = this.add.image( config.width /2 , config.height/2 , "TelaNome").setDepth(0)
     this.TelaNome_Botao_jogar = this.add.image( (config.width /2) + 400 , 458, "TelaNome_Botao_jogar").setInteractive().on('pointerdown', () =>
       {
+          music.play();
           if(textEntry.text === "" | textEntry.text === " "){ // se dps clicado botao jogar o campo de nome do novo jogador tiver vazio ou com um espaco vai emitir aviso para jogador e digitar um nome , dps de 9 segundos vai desaparecer aviso 
             textEntry.text = "" // para pessoa digitar novo nome sem precisar apagar o que digitou antes
             this.TelaNome_Botao_jogar_clicado = this.add.image( config.width/2, 100, "TelaNome_Botao_jogar_clicado")

@@ -33,32 +33,27 @@ class Tela2 extends Phaser.Scene {
   quantidade_labirintos_passado
   indice_jogador_atual_global
 
+  music_f1
+  music_f2 
+  music_f3
+
   pontuacao = 0
   create() {
+    this.music_f1 = this.sound.add("f1");
+    this.music_f2 = this.sound.add("f2");
+    this.music_f3 = this.sound.add("f3");
+    
+    if(fase === 1){
+      this.music_f1.play();
+    }else if( fase === 2){
+      this.music_f2.play();
+    }else if( fase === 3){
+      this.music_f3.play();
+    }
     this.pontuacao = 0
     this.quantidade_labirintos_passado = 0
     console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
     console.log(this.quantidade_labirintos_passado)
-/*
-    //https://labs.phaser.io/edit.html?src=src/game%20objects\dom%20element\blend%20mode.js
-// para fazer ficar fundo transparente eu  tenho que fazer esta ganbiarra do link 
-
-    const element = this.add.dom(400, 100, 'div', 
-    'background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); width: 100vw; height: 100px; font: 48px Arial; font-weight: bold; color: white', 'Phaser 3');
-    element.setBlendMode('HUE');
-
-    const element2 = this.add.dom(500, 200, 'div', 'background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%); width: 220px; height: 100px; font: 48px Arial; font-weight: bold; color: white', 'Phaser 3');
-    element2.setBlendMode('HUE');
-
-    this.tweens.add({
-        targets: [ element, element2 ],
-        y: 500,
-        duration: 3000,
-        ease: 'Sine.easeInOut',
-        loop: -1,
-        yoyo: true
-    });
-*/
 
     this.timerEvent = this.time.addEvent({ delay: fases[fase-1].tempo_limite});
 
@@ -207,6 +202,16 @@ class Tela2 extends Phaser.Scene {
     console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:| quantos labirintos passou ?|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
     console.log(this.quantidade_labirintos_passado)
 
+    if(this.quantidade_labirintos_passado === fases[fase-1].quantos_labirintos ){
+
+      if(fase === 1){
+        this.music_f1.stop();
+      }else if( fase === 2){
+        this.music_f2.stop();
+      }else if( fase === 3){
+        this.music_f3.stop();
+      }
+    }
 //-------------------------------------------------------------------------------------------------------------------------------- contador para pontuacao
     this.tempo_demorou_passar_labirinto = this.timeEndPlayMaze - this.timeStartPlayMaze
     console.log("----------------tempo que demorou passar o labirinto---------------------")
@@ -580,6 +585,9 @@ class Tela2 extends Phaser.Scene {
 
   nao_passou_a_fase(){ // vai exibir o aviso
 
+    const music_Npassou = this.sound.add("n_passou");
+    music_Npassou.play();
+
     this.pontuacao = 0 // zera a pontuacao para n acumular pontos de fases jogadas anteriormente
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);
     //  top left, top right, bottom left, bottom right
@@ -588,12 +596,16 @@ class Tela2 extends Phaser.Scene {
     this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 110 , (config.height/2) + 130, "Botao_Fase_voltar" ).setInteractive().on('pointerdown', () =>
       {
           console.log('tem que voltar para a tela menu');
+          const music = this.sound.add("click");
+          music.play();
           setTimeout( ()=>{this.scene.start("menu")}, 500)
   
       });
     this.Botao_Fase_repetir_ = this.add.image( (config.width/2) + 110 , (config.height/2) + 130, "Botao_Fase_repetir" ).setInteractive().on('pointerdown', () =>
       {
           console.log(`\n\n\n\n\n\n\n\n\n\n\ntem repetir a fase ${fase}\n\n\n\n\n\n\n\n\n\n\n\n\n`);
+          const music = this.sound.add("click");
+          music.play();
           this.scene.start("GameEasy")
   
       });
@@ -602,6 +614,8 @@ class Tela2 extends Phaser.Scene {
 
   passou_a_fase(){// vai exibir o aviso
 
+    const music_passou = this.sound.add("passou");
+    music_passou.play();
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);  
 
     this.passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "passou_a_fase_")
@@ -632,12 +646,16 @@ class Tela2 extends Phaser.Scene {
     this.Botao_Fase_voltar_ = this.add.image( (config.width/2) - 229 , (config.height/2) + 130, "Botao_Fase_voltar_" ).setInteractive().on('pointerdown', () =>
       {
           console.log('voltar para cena Tela2');
+          const music = this.sound.add("click");
+          music.play();
           setTimeout( ()=>{this.scene.start("TelaFases")}, 500)
   
       });
     this.Botao_Fase_verPlacar_ = this.add.image( config.width/2 , (config.height/2) + 130, "Botao_Fase_verPlacar" ).setInteractive().on('pointerdown', () =>
       {
           console.log(`\n\n\n\n\n\n\n\n\n\n\ntplacares\n\n\n\n\n\n\n\n\n\n\n\n\n`);
+          const music = this.sound.add("click");
+          music.play();
           this.scene.start("TelaPlacares")
   
       });
@@ -645,6 +663,8 @@ class Tela2 extends Phaser.Scene {
     this.Botao_Fase_proximo_ = this.add.image( (config.width/2) + 229 , (config.height/2) + 130, "Botao_Fase_proximo" ).setInteractive().on('pointerdown', () =>
       {
         console.log("clicado botao próximo")
+        const music = this.sound.add("click");
+        music.play();
 
         // informar proximo nivel quando clicado no botao proximo
         if(fase < 4){

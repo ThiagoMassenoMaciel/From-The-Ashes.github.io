@@ -18,6 +18,8 @@ class TelaTutorial extends Phaser.Scene{
         this.Botao_Fase_voltar.setInteractive().on('pointerdown', () =>
         {
             console.log('voltar para tela menu');
+            const music = this.sound.add("click");
+            music.play()
             this.scene.start("menu")
         });
     

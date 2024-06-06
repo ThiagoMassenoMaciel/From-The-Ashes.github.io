@@ -56,6 +56,8 @@ class TelaPlacares extends Phaser.Scene{
     this.Botao_Fase_voltar.setInteractive().on('pointerdown', () =>
     {
         console.log('voltar para tela menu');
+        const music = this.sound.add("click");
+        music.play()
         setTimeout( ()=>{this.scene.start("menu")}, 200)
     });
 

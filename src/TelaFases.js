@@ -5,11 +5,13 @@ class TelaFases extends Phaser.Scene{
 
   create(){
     console.log("entrei na cena TelaFases-------------------")
+    const music = this.sound.add("click");
 
     this.mudar_nome = this.add.image( config.width /2 , 100, "mudar_nome").setDepth(2)
     this.mudar_nome.setInteractive().on('pointerdown', () => // quando clicado no botao trocar nome vai aparecer cena para novo input e vai bloquear as antigas fases passadas pelo jogador antes
     {
         console.log("\n\n\n----trocar de nome para novo jogador----\n\n\n");
+        music.play();
         flagNovoJogador = false 
         // tenho que zerar as fases liberadas pelo jogador anterior
         for( let i = 0 ; i < 3 ; i++){
@@ -45,6 +47,7 @@ class TelaFases extends Phaser.Scene{
     this.TelaFaseBotaoF1.setInteractive().on('pointerdown', () =>
     {
       console.log('==========entrou para fase 1=========');
+      music.play();
       //fase = 0
       // tenho que zerar toda vez que ele joga uma nova fase a variavel global `quantidade_labirintos_passado`
       fase = 1 
@@ -60,6 +63,7 @@ class TelaFases extends Phaser.Scene{
       this.TelaFaseBotaoF2.setInteractive().on('pointerdown', () =>
       {
         console.log('==========entrou para fase 2=========');
+        music.play();
         // fase = 0 
         fase = 2
         this.scene.start("GameEasy")      
@@ -75,6 +79,7 @@ class TelaFases extends Phaser.Scene{
       this.TelaFaseBotaoF3.setInteractive().on('pointerdown', () =>
       {
         console.log('==========entrou para fase 3=========');
+        music.play();
         //fase = 0 
         fase = 3
         
@@ -87,6 +92,7 @@ class TelaFases extends Phaser.Scene{
     this.Botao_Fase_voltar.setInteractive().on('pointerdown', () =>
     {
         console.log('voltar para tela menu');
+        music.play();
         this.scene.start("menu")
     });
     

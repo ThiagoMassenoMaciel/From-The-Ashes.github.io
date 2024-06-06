@@ -14,6 +14,7 @@ var config ={
 var game = new Phaser.Game(config)
 console.log(config.backgroundColor)
 
+
 let arrayNiveis = [0,1,2]
 let arrayEasy =[ 0,1,2,3,4]
 let arrayMedium =[ 0,1,2,3,4]
