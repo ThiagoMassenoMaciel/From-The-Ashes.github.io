@@ -249,10 +249,8 @@ vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado 
 ### 3 jun  - 2h57'      11.5 Tela Placar - hanking para fase 2 completo - + bug 11.5.6 resolvido
 ### 3 jun  - 1h15'      11.5 Tela Placar - hanking para fase 3 completo + bug 11.5.7 
 ### 3 jun  - 40'        11.2 Tela Creditos
-<<<<<<< HEAD
 ### 4 jun  - 3h'        Ajeitando outras coisas
 ### 5 jun  - 3h'        Adicionar musicas
-
-=======
->>>>>>> a958f131952ec7a7f08fdc81444b1b5c2330c9a2
-### 6 jun  - 49'        Adicionar musica + bug som tela n passou fica estranho
+### 5 jun  - 49'        Adicionar musica + bug som tela n passou fica estranho
+### 6 jun  - 1h40'      Adicionar musica + bug som tela n passou fica estranho
+### 7 jun  - 1h         Adicionado todas musica e configurado tela tutorial com scrooling Y

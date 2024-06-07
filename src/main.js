@@ -24,6 +24,10 @@ let arrayPassou = [false, false, false]
 let flagNovoJogador = false  // logica para n ficar pedindo o nome direto
 //let flagManterJogador = false 
 
+let desativarMUSICAfundo = false
+
+let musicaOutrasTelas = ''
+
 let jogadores = [ ]
 let jogadorAtual = ""
 

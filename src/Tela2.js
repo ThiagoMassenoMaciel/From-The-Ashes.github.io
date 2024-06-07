@@ -40,13 +40,10 @@ class Tela2 extends Phaser.Scene {
   pontuacao = 0
   create() {
 
-    
-    
     this.music_f1 = this.sound.add("f1");
     this.music_f2 = this.sound.add("f2");
     this.music_f3 = this.sound.add("f3");
-    this.music_passou = this.sound.add("passou");
-    this.music_Npassou = this.sound.add("n_passou");
+ 
 
     if(fase === 1){
       this.music_f1.play();
@@ -86,6 +83,8 @@ class Tela2 extends Phaser.Scene {
   }
 
   update() {
+    
+
 
     this.graphics.clear();
     this.drawClock( config.width/2 , config.height - 70, this.timerEvent);
@@ -96,6 +95,7 @@ class Tela2 extends Phaser.Scene {
       // tem que passar em 2 labirintos antes de 30 segundos fase 1
       this.acabou = true // feito evitar que o jogador consiga se movimentar depois que acontecer o overlap
       //setTimeout( ()=>{this.nao_passou_a_fase() }, 1000)
+      
       this.nao_passou_a_fase()
       // para executar um metodo dentro desta clase tem que fazer referencia ao objeto com o this. pois é para executar este metodo para este objeto desta clase 
     }else if( this.quantidade_labirintos_passado === fases[fase -1].quantos_labirintos){
@@ -590,8 +590,6 @@ class Tela2 extends Phaser.Scene {
 
   nao_passou_a_fase(){ // vai exibir o aviso
 
-    this.music_Npassou.play();
-
     this.pontuacao = 0 // zera a pontuacao para n acumular pontos de fases jogadas anteriormente
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);
     //  top left, top right, bottom left, bottom right
@@ -618,17 +616,12 @@ class Tela2 extends Phaser.Scene {
 
   passou_a_fase(){// vai exibir o aviso
 
-    
-    this.music_passou.play();
-
     this.Botao_Fase_fundo_transparente_ = this.add.image( config.width / 2 , config.height /2, "Botao_Fase_fundo_transparente").setAlpha(0.2, 0.2, 0.2, 0.2);  
 
     this.passou_a_fase_ = this.add.image( config.width / 2 , config.height /2, "passou_a_fase_")
 
     // mesmas posicoes do botao voltar dentro do parabens passou()
 //    retornar_SCORE_obtido_NA_fase( numero_fase){
-
-
     this.TelaNome_escrevendo = this.add.image((config.width/2) , (config.height/2) + 22, "TelaNome_escrevendo").setDepth(1).scaleX = 0.7;
     this.text2 = this.add.text( (config.width/2) - 109 , (config.height/2) + 10 ).setTint(0x000000).setDepth(2)
     this.text2.setFontSize(24)

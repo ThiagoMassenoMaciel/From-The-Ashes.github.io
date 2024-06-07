@@ -4,6 +4,7 @@ class FinalizouJogo extends Phaser.Scene{
   }
 
   create(){
+
     this.Aviso_fase_3_clicou_botao_proximo_ = this.add.image( config.width/2 , config.height/2 , "fase_3_clicou_botao_proximo" )
     this.Botao_Fase_voltar___ = this.add.image( config.width/2 , (config.height/2) + 130, "Botao_Fase_voltar_" ).setInteractive().on('pointerdown', () =>
       {

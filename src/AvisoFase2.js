@@ -5,6 +5,7 @@ class AvisoFase2 extends Phaser.Scene {
   }
 
   create() {
+
     //this.quantidade_labirintos_passado = 0
     console.log("|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|:|")
     console.log("esta indo para jogar a fase 2")

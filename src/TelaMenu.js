@@ -8,12 +8,21 @@ class TelaMenu extends Phaser.Scene{
     const music = this.sound.add("click");
     const intro = this.sound.add("intro");
 
-    
-    const musicOTHER = this.sound.add("outrasTelas");
-    musicOTHER.play()
-
     intro.play()
 
+    musicaOutrasTelas = this.sound.add("outrasTelas");
+    musicaOutrasTelas.setLoop(true);
+    
+    if( !desativarMUSICAfundo){ // quando esta variavel for false retorna verdadeiro // quando a variavel é verdadeira   true != true RETORNA falso e executa o else
+// o valor que o if ta pedindo é true , o valor que a variavel retorna é false - logo a afirmacção true é diferente de false   true != falso RESULTA EM  true,
+// logo vai executar o primeiro pedaço do if
+// QUANDO A VARIAVEL TIVER VALOR FALSE deixar o som rolar 
+      musicaOutrasTelas.play()
+    }else{ // quando variavel tiver true, parar o som --------- a variavel global vai ficar true quando entrar na tela2 
+      //musicaOutrasTelas.    
+      musicaOutrasTelas.stop()
+    }
+    
     this.background = this.add.image(0,0,"back")
     this.background.setOrigin(0,0)
     this.background.setScale(1)
@@ -28,6 +37,7 @@ class TelaMenu extends Phaser.Scene{
     this.tutorialGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela do tutorial');
+        desativarMUSICAfundo = true
         intro.stop()
         music.play();
         setTimeout( ()=>{this.scene.start("TelaTutorial")}, 100)
@@ -40,6 +50,7 @@ class TelaMenu extends Phaser.Scene{
     this.iniciarGame.setInteractive().on('pointerdown', () =>
     {
         console.log('iniciar jogo');
+        desativarMUSICAfundo = true
         intro.stop()
         music.play();
         setTimeout( ()=>{this.scene.start("TelaFases")}, 100)
@@ -52,6 +63,7 @@ class TelaMenu extends Phaser.Scene{
     this.placaresGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela dos placares');
+        desativarMUSICAfundo = true
         intro.stop()
         music.play();
         setTimeout( ()=>{this.scene.start("TelaPlacares")}, 100)
@@ -63,6 +75,7 @@ class TelaMenu extends Phaser.Scene{
     this.creditosGame.setInteractive().on('pointerdown', () =>
     {
         console.log('carregar a tela dos créditos e redes sociais');
+        desativarMUSICAfundo = true
         intro.stop()
         music.play();
         setTimeout( ()=>{this.scene.start("TelaCreditos")}, 100)

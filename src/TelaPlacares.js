@@ -43,11 +43,9 @@ class TelaPlacares extends Phaser.Scene{
   ]
 
   create(){
+    
     console.log("entrei na cena tela placares-------------------")
 
-    
-    const musicOTHER = this.sound.add("outrasTelas");
-    musicOTHER.play()
     
     this.background = this.add.image(0,0,"back")
     this.background.setOrigin(0,0)
