@@ -254,3 +254,5 @@ vai ter um placar diferente para cada fase e a ordem de hanking vai ser baseado 
 ### 5 jun  - 49'        Adicionar musica + bug som tela n passou fica estranho
 ### 6 jun  - 1h40'      Adicionar musica + bug som tela n passou fica estranho
 ### 7 jun  - 1h         Adicionado todas musica e configurado tela tutorial com scrooling Y
+
+# tirando todos os arquivos que n é código
