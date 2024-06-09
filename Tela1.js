@@ -67,7 +67,6 @@ class Tela1 extends Phaser.Scene{
     this.load.image("TelaCreditos", "./assents/TelaCreditos.png")
 
     this.load.image("TelaTutorial", "./assents/TelaTutorial.png")
-    this.load.image("TelaTutorialVoltar", "./assents/TelaTutorialVoltar.png")
     this.load.image("TelaTutorial_move" , "./assents/TelaTutorial_move.png")
     this.load.image("TelaTutorialheader" , "./assents/TelaTutorialheader.png")
 
@@ -76,10 +75,7 @@ class Tela1 extends Phaser.Scene{
     this.load.audio("f1", "./songs/F1_CRYPTA_1.mp3");
     this.load.audio("f2", "./songs/f2_Lorna_Shore_ Of_the_Abyss_1.mp3");
     this.load.audio("f3", "./songs/f3_unaswered_suicid_silence.mp3");
-    //this.load.audio("n_passou", "./songs/n_passou_fase_JustVOICE_crypta.mp3");
-    this.load.audio("n_passou", "./songs/n_passou.mp3");
-    this.load.audio("passou", "./songs/passou_fase_crypta.mp3");
-    this.load.audio("outrasTelas", "./songs/OutrasTelas.mp3");
+    this.load.audio("outrasTelas", "./songs/outrasTelas.mp3");
     
   }
 
