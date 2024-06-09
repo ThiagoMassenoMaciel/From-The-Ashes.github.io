@@ -42,7 +42,7 @@ class Tela1 extends Phaser.Scene{
     this.load.spritesheet("saidaa", "./assents/saida2.png", { frameWidth: 298, frameHeight: 298 });
     this.load.spritesheet("frame1", "./assents/Frame1.png", { frameWidth: 40, frameHeight: 40 });
     
-    this.load.spritesheet("saiuDoLabirinto", ".././assents/saiuDoLabirinto.png", { frameWidth: 40, frameHeight: 40 })
+    this.load.spritesheet("saiuDoLabirinto", "./assents/saiuDoLabirinto.png", { frameWidth: 40, frameHeight: 40 })
 
     this.load.image("Placar_das_fases", "./assents/Placar_das_fases.png")
     this.load.image("Tela_Fases", "./assents/Tela_Fases.png")
