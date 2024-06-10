@@ -1,4 +1,11 @@
 # Para jogar , acesse o meu perfil no site game jolt [aqui](https://gamejolt.com/games/2024-1/902382)
+![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/0714623b-1e2e-42d2-a59a-f541487b7ed0)
+
+# E click em play 
+
+
+
+``
 # Motivação
 
 É aplicar os conceitos que venho aprendendo durante minha jornada acadêmica desenvolvendo um jogo como trabalho da disciplina ESTÁGIO SUPERVISIONADO I. Eu tive a ideia do jogo aleatoriamente e gostaria de descobir como ela vai ser aplicada.
