@@ -1,6 +1,4 @@
-### Para executar o pedaço feito, entre nestas pastas deste repositorio e execute o index.html
-![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/5bcac41c-36ee-4e00-b9c3-59dd2092e25d)
-                
+# Para jogar , acesse o meu perfil no site game jolt (aqui)[https://gamejolt.com/games/2024-1/902382]
 # Motivação
 
 É aplicar os conceitos que venho aprendendo durante minha jornada acadêmica desenvolvendo um jogo como trabalho da disciplina ESTÁGIO SUPERVISIONADO I. Eu tive a ideia do jogo aleatoriamente e gostaria de descobir como ela vai ser aplicada.
