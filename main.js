@@ -3,7 +3,7 @@ var config ={
   width : 1364,
   height: 764,
   backgroundColor: 0x000000,
-  scene: [  Tela1, Tela2, TelaMenu,  TelaTutorial, TelaFases ,TelaPlacares, TelaCreditos, AvisoFase3 ,AvisoFase2, FinalizouJogo, PerguntarNome],
+  scene: [  Tela1, Tela2, AvisoEpilepsia ,TelaMenu,  TelaTutorial, TelaFases ,TelaPlacares, TelaCreditos, AvisoFase3 ,AvisoFase2, FinalizouJogo, PerguntarNome],
   physics : {  
     default: "arcade", 
     arcade: {  

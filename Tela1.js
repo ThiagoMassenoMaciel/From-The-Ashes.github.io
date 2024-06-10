@@ -76,6 +76,10 @@ class Tela1 extends Phaser.Scene{
     this.load.audio("f2", "./songs/f2_Lorna_Shore_ Of_the_Abyss_1.mp3");
     this.load.audio("f3", "./songs/f3_unaswered_suicid_silence.mp3");
     this.load.audio("outrasTelas", "./songs/outrasTelas.mp3");
+
+    this.load.image("Aviso_epilepsia" , "./assents/Aviso_epilepsia.png")
+    this.load.image("Aviso_epilepsia_continuar" , "./assents/Aviso_epilepsia_continuar.png")
+
     
   }
 
@@ -85,7 +89,8 @@ class Tela1 extends Phaser.Scene{
 
     this.paredes = this.physics.add.group()
 
-    setTimeout( ()=>{this.scene.start("menu")}, 20) 
+    setTimeout( ()=>{this.scene.start("AvisoEpilepsia")}, 20)
+//    setTimeout( ()=>{this.scene.start("menu")}, 20) 
   }
 
 }
