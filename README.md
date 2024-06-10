@@ -1,4 +1,4 @@
-# Para jogar , acesse o meu perfil no site game jolt (aqui)[https://gamejolt.com/games/2024-1/902382]
+# Para jogar , acesse o meu perfil no site game jolt [aqui](https://gamejolt.com/games/2024-1/902382)
 # Motivação
 
 É aplicar os conceitos que venho aprendendo durante minha jornada acadêmica desenvolvendo um jogo como trabalho da disciplina ESTÁGIO SUPERVISIONADO I. Eu tive a ideia do jogo aleatoriamente e gostaria de descobir como ela vai ser aplicada.
