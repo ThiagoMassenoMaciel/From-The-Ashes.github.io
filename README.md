@@ -1,6 +1,8 @@
 # From The Ashes
 #### Para jogar , acesse o meu perfil no site game jolt [aqui](https://gamejolt.com/games/2024-1/902382) ...
 # ... e click em play .
+![image](https://github.com/user-attachments/assets/037d22f0-f6aa-4a4b-9482-a2634e93c043)
+
 ![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/789306a8-5aa3-4146-b663-528f9104c196)
 ![image](https://github.com/user-attachments/assets/3bd52786-1370-4434-bcb7-f9ae7af7637b)
 
