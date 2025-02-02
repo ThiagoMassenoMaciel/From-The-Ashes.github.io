@@ -3,7 +3,7 @@
 # ... e click em play .
 ![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/789306a8-5aa3-4146-b663-528f9104c196)
 
-# Veja meu cronograma de atividades [aqui](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/blob/versionONE/atvidades_README.md)
+# Veja meu cronograma de atividades Kanban [aqui](https://github.com/users/ThiagoMassenoMaciel/projects/2)
 
 # Motivação
 
