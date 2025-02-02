@@ -2,8 +2,10 @@
 #### Para jogar , acesse o meu perfil no site game jolt [aqui](https://gamejolt.com/games/2024-1/902382) ...
 # ... e click em play .
 ![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/789306a8-5aa3-4146-b663-528f9104c196)
+![image](https://github.com/user-attachments/assets/3bd52786-1370-4434-bcb7-f9ae7af7637b)
 
 # Veja meu cronograma de atividades Kanban [aqui](https://github.com/users/ThiagoMassenoMaciel/projects/2)
+#### Percaba que utilizei uma estratégia de gerenciamento de tasks para organização das sprints enquanto desenvolvi o jogo
 
 # Motivação
 
