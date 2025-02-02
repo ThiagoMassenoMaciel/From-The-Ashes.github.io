@@ -1,7 +1,8 @@
 # From The Ashes
-#### Para jogar , acesse o meu perfil no site game jolt neste [link aqui](https://gamejolt.com/games/2024-1/902382) ...
+## Para jogar , acesse o meu perfil no site game jolt neste [link aqui](https://gamejolt.com/games/2024-1/902382) ...
+## ... e click em play .
 ![image](https://github.com/user-attachments/assets/037d22f0-f6aa-4a4b-9482-a2634e93c043)
-# ... e click em play .
+
 ![image](https://github.com/user-attachments/assets/c94d8699-9c36-42c2-8cad-c2e7eb49aca6)
 
 
