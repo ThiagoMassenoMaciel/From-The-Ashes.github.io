@@ -1,10 +1,9 @@
 # From The Ashes
 #### Para jogar , acesse o meu perfil no site game jolt [aqui](https://gamejolt.com/games/2024-1/902382) ...
-# ... e click em play .
 ![image](https://github.com/user-attachments/assets/037d22f0-f6aa-4a4b-9482-a2634e93c043)
+# ... e click em play .
+![image](https://github.com/user-attachments/assets/c94d8699-9c36-42c2-8cad-c2e7eb49aca6)
 
-![image](https://github.com/ThiagoMassenoMaciel/From-The-Ashes.github.io/assets/107934374/789306a8-5aa3-4146-b663-528f9104c196)
-![image](https://github.com/user-attachments/assets/3bd52786-1370-4434-bcb7-f9ae7af7637b)
 
 # Veja meu cronograma de atividades Kanban [aqui](https://github.com/users/ThiagoMassenoMaciel/projects/2)
 #### Percaba que utilizei uma estratégia de gerenciamento de tasks para organização das sprints enquanto desenvolvi o jogo
